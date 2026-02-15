@@ -6,7 +6,7 @@ mysubs:
     tar_topkey: proxies
     only_proxy_file: "only_proxy.yaml"    
     override_file: [override-set.yaml, override-gp-rules.yaml]
-    f_config_path: "./whoisyourdaddy"
+    f_config_path: "./whoisyourdaddy/subs"
     f_config_name: "bpb.yaml"
 
   nmw:
@@ -16,7 +16,7 @@ mysubs:
     tar_topkey: proxies
     only_proxy_file: "only_proxy.yaml"    
     override_file: [override-set.yaml, override-gp-rules.yaml]
-    f_config_path: "./whoisyourdaddy"
+    f_config_path: "./whoisyourdaddy/subs"
     f_config_name: "nmw.yaml"
 
   cm:
@@ -26,7 +26,7 @@ mysubs:
     tar_topkey: proxies
     only_proxy_file: "only_proxy.yaml"    
     override_file: [override-set.yaml, override-gp-rules.yaml]
-    f_config_path: "./whoisyourdaddy"
+    f_config_path: "./whoisyourdaddy/subs"
     f_config_name: "cm.yaml"
 
   kulao:
@@ -36,7 +36,7 @@ mysubs:
     tar_topkey: proxies
     only_proxy_file: "only_proxy.yaml"    
     override_file: [override-set.yaml, override-gp-rules.yaml]
-    f_config_path: "./whoisyourdaddy"
+    f_config_path: "./whoisyourdaddy/subs"
     f_config_name: "kulao.yaml"
 
   ygkkk:
@@ -46,7 +46,7 @@ mysubs:
     tar_topkey: proxies
     only_proxy_file: "only_proxy.yaml"    
     override_file: [override-set.yaml, override-gp-rules.yaml]
-    f_config_path: "./whoisyourdaddy"
+    f_config_path: "./whoisyourdaddy/subs"
     f_config_name: "ygkkk.yaml"
 
   fx:
@@ -56,7 +56,7 @@ mysubs:
     tar_topkey: proxies
     only_proxy_file: "only_proxy.yaml"    
     override_file: [override-set.yaml, override-gp-rules.yaml]
-    f_config_path: "./whoisyourdaddy"
+    f_config_path: "./whoisyourdaddy/subs"
     f_config_name: "fx.yaml"
 
   agg:
@@ -66,5 +66,5 @@ mysubs:
     tar_topkey: proxies
     only_proxy_file: "only_proxy.yaml"    
     override_file: [override-set.yaml, override-gp-rules.yaml]
-    f_config_path: "./whoisyourdaddy"
+    f_config_path: "./whoisyourdaddy/subs"
     f_config_name: "agg.yaml"
