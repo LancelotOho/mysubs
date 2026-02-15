@@ -35,7 +35,7 @@ jobs:
         run: |
           git config --local user.email "hello_world@163.com"
           git config --local user.name "hello_world"
-          git add .
+          git add whoisyourdaddy/subs
           if git diff --staged --quiet; then
             echo "没有检测到文件更新，跳过提交。"
           else
