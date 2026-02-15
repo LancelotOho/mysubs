@@ -40,7 +40,7 @@ jobs:
         run: |
           git config --local user.email "hello_world@163.com"
           git config --local user.name "hello_world"
-          git add whoisyourdaddy/subs
+          git add whoisyourdaddy/**
           if git diff --staged --quiet; then
             echo "No updates,skip to push."
           else
