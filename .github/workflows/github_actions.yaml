@@ -8,37 +8,41 @@ on:
     branches:
       - devdev
     paths:
-      - 'suboverrider.sh'
-      - '.github/workflows/*'
+      - 'hello_world/**'
+      - '.github/workflows/**'
 
 permissions:
-  contents: write  # 必须确保有写入权限
+  contents: write
 
 jobs:
   suboverrider:
     runs-on: ubuntu-latest
+    defaults:
+      run:
+        shell: bash
     env:
       TZ: Asia/Shanghai
     steps:
-      - name: 检出代码
+      - name: checkout
         uses: actions/checkout@v6
         with:
-          persist-credentials: true # 默认为 true，允许使用 GITHUB_TOKEN 进行推送
+          persist-credentials: true
 
-      - name: 执行脚本
+      - name: run script
         run: |
-          chmod +x ./run_it_webdav.sh
-          chmod +x ./suboverrider.sh
-          ./run_it_webdav.sh
+          chmod +x ./hello_world/run_it.sh
+          chmod +x ./hello_world/suboverrider.sh
+          ./hello_world/run_it.sh
 
-      - name: 提交并推送到仓库
+      - name: pust to reporsitory
         run: |
           git config --local user.email "hello_world@163.com"
           git config --local user.name "hello_world"
           git add whoisyourdaddy/subs
           if git diff --staged --quiet; then
-            echo "没有检测到文件更新，跳过提交。"
+            echo "No updates,skip to push."
           else
-            git commit -m "自动更新:($(date +'%Y-%m-%d %H:%M:%S'))"
+            git commit -m "updated:($(date +'%Y-%m-%d %H:%M:%S'))"
             git push origin devdev
           fi
+          
