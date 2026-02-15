@@ -1,0 +1,44 @@
+name: suboverrider
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '5 */3 * * *'  
+  push:
+    branches:
+      - devlans
+    paths:
+      - 'suboverrider.sh'
+      - '.github/workflows/*'
+
+permissions:
+  contents: write  # 必须确保有写入权限
+
+jobs:
+  suboverrider:
+    runs-on: ubuntu-latest
+    env:
+      TZ: Asia/Shanghai
+    steps:
+      - name: 检出代码
+        uses: actions/checkout@v6
+        with:
+          persist-credentials: true # 默认为 true，允许使用 GITHUB_TOKEN 进行推送
+
+      - name: 执行脚本
+        run: |
+          chmod +x ./run_it_webdav.sh
+          chmod +x ./suboverrider.sh
+          ./run_it_webdav.sh
+
+      - name: 提交并推送到仓库
+        run: |
+          git config --local user.email "lancelot@163.com"
+          git config --local user.name "lancelot"
+          git add .
+          if git diff --staged --quiet; then
+            echo "没有检测到文件更新，跳过提交。"
+          else
+            git commit -m "自动更新:($(date +'%Y-%m-%d %H:%M:%S'))"
+            git push origin devlans
+          fi
