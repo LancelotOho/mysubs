@@ -1,0 +1,3910 @@
+{
+    "mixed-port": 7890,
+    "ipv6": true,
+    "allow-lan": true,
+    "unified-delay": false,
+    "log-level": "warning",
+    "mode": "rule",
+    "disable-keep-alive": false,
+    "keep-alive-idle": 10,
+    "keep-alive-interval": 15,
+    "tcp-concurrent": true,
+    "geo-auto-update": true,
+    "geo-update-interval": 168,
+    "external-controller": "127.0.0.1:9090",
+    "external-controller-cors": {
+        "allow-origins": [
+            "*"
+        ],
+        "allow-private-network": true
+    },
+    "external-ui": "ui",
+    "external-ui-url": "https://github.com/MetaCubeX/metacubexd/archive/refs/heads/gh-pages.zip",
+    "profile": {
+        "store-selected": true,
+        "store-fake-ip": true
+    },
+    "dns": {
+        "enable": true,
+        "respect-rules": true,
+        "use-system-hosts": false,
+        "listen": "0.0.0.0:1053",
+        "ipv6": true,
+        "hosts": {
+            "dns.google": [
+                "8.8.8.8",
+                "8.8.4.4",
+                "2001:4860:4860::8888",
+                "2001:4860:4860::8844"
+            ]
+        },
+        "nameserver": [
+            "https://dns.google/dns-query#✅ Selector"
+        ],
+        "proxy-server-nameserver": [
+            "223.5.5.5#DIRECT"
+        ],
+        "direct-nameserver": [
+            "223.5.5.5#DIRECT"
+        ],
+        "direct-nameserver-follow-policy": true,
+        "nameserver-policy": {
+            "rule-set:cn": "223.5.5.5#DIRECT"
+        },
+        "enhanced-mode": "redir-host"
+    },
+    "tun": {
+        "enable": true,
+        "stack": "mixed",
+        "auto-route": true,
+        "strict-route": true,
+        "auto-detect-interface": true,
+        "dns-hijack": [
+            "any:53",
+            "tcp://any:53"
+        ],
+        "mtu": 9000
+    },
+    "sniffer": {
+        "enable": true,
+        "force-dns-mapping": true,
+        "parse-pure-ip": true,
+        "override-destination": true,
+        "sniff": {
+            "HTTP": {
+                "ports": [
+                    80,
+                    8080,
+                    8880,
+                    2052,
+                    2082,
+                    2086,
+                    2095
+                ]
+            },
+            "TLS": {
+                "ports": [
+                    443,
+                    8443,
+                    2053,
+                    2083,
+                    2087,
+                    2096
+                ]
+            }
+        }
+    },
+    "proxies": [
+        {
+            "name": "💦 1 - VLESS - Domain : 443",
+            "type": "vless",
+            "server": "bpb.lancelot.dpdns.org",
+            "port": 443,
+            "ip-version": "ipv4-prefer",
+            "tfo": false,
+            "udp": false,
+            "uuid": "db991e3e-91d5-48ab-9776-39b99c6a0168",
+            "packet-encoding": "",
+            "tls": true,
+            "servername": "BPB.LaNceloT.DPDnS.Org",
+            "client-fingerprint": "chrome",
+            "skip-cert-verify": false,
+            "alpn": [
+                "http/1.1"
+            ],
+            "network": "ws",
+            "ws-opts": {
+                "path": "/eyJqdW5rIjoia0JIZDh2WUpjZjVrdlJBIiwicHJvdG9jb2wiOiJ2bCIsIm1vZGUiOiJwcm94eWlwIiwicGFuZWxJUHMiOlsiYnBiLnlvdXNlZi5pc2VnYXJvLmNvbSJdfQ==",
+                "max-early-data": 2560,
+                "early-data-header-name": "Sec-WebSocket-Protocol",
+                "headers": {
+                    "Host": "bpb.lancelot.dpdns.org"
+                }
+            }
+        },
+        {
+            "name": "💦 2 - VLESS - Domain : 443",
+            "type": "vless",
+            "server": "www.speedtest.net",
+            "port": 443,
+            "ip-version": "ipv4-prefer",
+            "tfo": false,
+            "udp": false,
+            "uuid": "db991e3e-91d5-48ab-9776-39b99c6a0168",
+            "packet-encoding": "",
+            "tls": true,
+            "servername": "BpB.lancEloT.Dpdns.orG",
+            "client-fingerprint": "chrome",
+            "skip-cert-verify": false,
+            "alpn": [
+                "http/1.1"
+            ],
+            "network": "ws",
+            "ws-opts": {
+                "path": "/eyJqdW5rIjoiZWZiRmNMMG5jeiIsInByb3RvY29sIjoidmwiLCJtb2RlIjoicHJveHlpcCIsInBhbmVsSVBzIjpbImJwYi55b3VzZWYuaXNlZ2Fyby5jb20iXX0=",
+                "max-early-data": 2560,
+                "early-data-header-name": "Sec-WebSocket-Protocol",
+                "headers": {
+                    "Host": "bpb.lancelot.dpdns.org"
+                }
+            }
+        },
+        {
+            "name": "💦 3 - VLESS - IPv4 : 443",
+            "type": "vless",
+            "server": "104.21.46.3",
+            "port": 443,
+            "ip-version": "ipv4-prefer",
+            "tfo": false,
+            "udp": false,
+            "uuid": "db991e3e-91d5-48ab-9776-39b99c6a0168",
+            "packet-encoding": "",
+            "tls": true,
+            "servername": "BPb.lAnCElOT.DPDNS.oRg",
+            "client-fingerprint": "chrome",
+            "skip-cert-verify": false,
+            "alpn": [
+                "http/1.1"
+            ],
+            "network": "ws",
+            "ws-opts": {
+                "path": "/eyJqdW5rIjoicDNVam14M05oOTU1SjltYyIsInByb3RvY29sIjoidmwiLCJtb2RlIjoicHJveHlpcCIsInBhbmVsSVBzIjpbImJwYi55b3VzZWYuaXNlZ2Fyby5jb20iXX0=",
+                "max-early-data": 2560,
+                "early-data-header-name": "Sec-WebSocket-Protocol",
+                "headers": {
+                    "Host": "bpb.lancelot.dpdns.org"
+                }
+            }
+        },
+        {
+            "name": "💦 4 - VLESS - IPv4 : 443",
+            "type": "vless",
+            "server": "172.67.221.242",
+            "port": 443,
+            "ip-version": "ipv4-prefer",
+            "tfo": false,
+            "udp": false,
+            "uuid": "db991e3e-91d5-48ab-9776-39b99c6a0168",
+            "packet-encoding": "",
+            "tls": true,
+            "servername": "BpB.LanCelOT.DpDns.OrG",
+            "client-fingerprint": "chrome",
+            "skip-cert-verify": false,
+            "alpn": [
+                "http/1.1"
+            ],
+            "network": "ws",
+            "ws-opts": {
+                "path": "/eyJqdW5rIjoiWVRsNkRHeHhTMXhwODQiLCJwcm90b2NvbCI6InZsIiwibW9kZSI6InByb3h5aXAiLCJwYW5lbElQcyI6WyJicGIueW91c2VmLmlzZWdhcm8uY29tIl19",
+                "max-early-data": 2560,
+                "early-data-header-name": "Sec-WebSocket-Protocol",
+                "headers": {
+                    "Host": "bpb.lancelot.dpdns.org"
+                }
+            }
+        },
+        {
+            "name": "💦 5 - VLESS - IPv6 : 443",
+            "type": "vless",
+            "server": "2606:4700:3036::ac43:ddf2",
+            "port": 443,
+            "ip-version": "ipv4-prefer",
+            "tfo": false,
+            "udp": false,
+            "uuid": "db991e3e-91d5-48ab-9776-39b99c6a0168",
+            "packet-encoding": "",
+            "tls": true,
+            "servername": "bPb.lancelot.dPDNS.ORG",
+            "client-fingerprint": "chrome",
+            "skip-cert-verify": false,
+            "alpn": [
+                "http/1.1"
+            ],
+            "network": "ws",
+            "ws-opts": {
+                "path": "/eyJqdW5rIjoiR3M1MDhQZ092MkZIIiwicHJvdG9jb2wiOiJ2bCIsIm1vZGUiOiJwcm94eWlwIiwicGFuZWxJUHMiOlsiYnBiLnlvdXNlZi5pc2VnYXJvLmNvbSJdfQ==",
+                "max-early-data": 2560,
+                "early-data-header-name": "Sec-WebSocket-Protocol",
+                "headers": {
+                    "Host": "bpb.lancelot.dpdns.org"
+                }
+            }
+        },
+        {
+            "name": "💦 6 - VLESS - IPv6 : 443",
+            "type": "vless",
+            "server": "2606:4700:3030::6815:2e03",
+            "port": 443,
+            "ip-version": "ipv4-prefer",
+            "tfo": false,
+            "udp": false,
+            "uuid": "db991e3e-91d5-48ab-9776-39b99c6a0168",
+            "packet-encoding": "",
+            "tls": true,
+            "servername": "Bpb.LANcELOT.dPDNs.oRg",
+            "client-fingerprint": "chrome",
+            "skip-cert-verify": false,
+            "alpn": [
+                "http/1.1"
+            ],
+            "network": "ws",
+            "ws-opts": {
+                "path": "/eyJqdW5rIjoiRlh2WkpQRUtsNkRycUYiLCJwcm90b2NvbCI6InZsIiwibW9kZSI6InByb3h5aXAiLCJwYW5lbElQcyI6WyJicGIueW91c2VmLmlzZWdhcm8uY29tIl19",
+                "max-early-data": 2560,
+                "early-data-header-name": "Sec-WebSocket-Protocol",
+                "headers": {
+                    "Host": "bpb.lancelot.dpdns.org"
+                }
+            }
+        },
+        {
+            "name": "💦 7 - VLESS - Clean IP : 443",
+            "type": "vless",
+            "server": "youxuan.cf.090227.xyz",
+            "port": 443,
+            "ip-version": "ipv4-prefer",
+            "tfo": false,
+            "udp": false,
+            "uuid": "db991e3e-91d5-48ab-9776-39b99c6a0168",
+            "packet-encoding": "",
+            "tls": true,
+            "servername": "BpB.lAncELOT.DpdNs.Org",
+            "client-fingerprint": "chrome",
+            "skip-cert-verify": false,
+            "alpn": [
+                "http/1.1"
+            ],
+            "network": "ws",
+            "ws-opts": {
+                "path": "/eyJqdW5rIjoiQVhmb1o3VE5oNHMiLCJwcm90b2NvbCI6InZsIiwibW9kZSI6InByb3h5aXAiLCJwYW5lbElQcyI6WyJicGIueW91c2VmLmlzZWdhcm8uY29tIl19",
+                "max-early-data": 2560,
+                "early-data-header-name": "Sec-WebSocket-Protocol",
+                "headers": {
+                    "Host": "bpb.lancelot.dpdns.org"
+                }
+            }
+        },
+        {
+            "name": "💦 8 - VLESS - Clean IP : 443",
+            "type": "vless",
+            "server": "www.visa.cn",
+            "port": 443,
+            "ip-version": "ipv4-prefer",
+            "tfo": false,
+            "udp": false,
+            "uuid": "db991e3e-91d5-48ab-9776-39b99c6a0168",
+            "packet-encoding": "",
+            "tls": true,
+            "servername": "BPB.laNCELoT.DPdnS.Org",
+            "client-fingerprint": "chrome",
+            "skip-cert-verify": false,
+            "alpn": [
+                "http/1.1"
+            ],
+            "network": "ws",
+            "ws-opts": {
+                "path": "/eyJqdW5rIjoiU1NPS1Y4dGFMNzlrZnoiLCJwcm90b2NvbCI6InZsIiwibW9kZSI6InByb3h5aXAiLCJwYW5lbElQcyI6WyJicGIueW91c2VmLmlzZWdhcm8uY29tIl19",
+                "max-early-data": 2560,
+                "early-data-header-name": "Sec-WebSocket-Protocol",
+                "headers": {
+                    "Host": "bpb.lancelot.dpdns.org"
+                }
+            }
+        },
+        {
+            "name": "💦 9 - VLESS - Clean IP : 443",
+            "type": "vless",
+            "server": "mfa.gov.ua",
+            "port": 443,
+            "ip-version": "ipv4-prefer",
+            "tfo": false,
+            "udp": false,
+            "uuid": "db991e3e-91d5-48ab-9776-39b99c6a0168",
+            "packet-encoding": "",
+            "tls": true,
+            "servername": "BPB.LAnCelot.dPDns.oRG",
+            "client-fingerprint": "chrome",
+            "skip-cert-verify": false,
+            "alpn": [
+                "http/1.1"
+            ],
+            "network": "ws",
+            "ws-opts": {
+                "path": "/eyJqdW5rIjoidWxMZWxYNGREbU54WGxZIiwicHJvdG9jb2wiOiJ2bCIsIm1vZGUiOiJwcm94eWlwIiwicGFuZWxJUHMiOlsiYnBiLnlvdXNlZi5pc2VnYXJvLmNvbSJdfQ==",
+                "max-early-data": 2560,
+                "early-data-header-name": "Sec-WebSocket-Protocol",
+                "headers": {
+                    "Host": "bpb.lancelot.dpdns.org"
+                }
+            }
+        },
+        {
+            "name": "💦 10 - VLESS - Clean IP : 443",
+            "type": "vless",
+            "server": "www.shopify.com",
+            "port": 443,
+            "ip-version": "ipv4-prefer",
+            "tfo": false,
+            "udp": false,
+            "uuid": "db991e3e-91d5-48ab-9776-39b99c6a0168",
+            "packet-encoding": "",
+            "tls": true,
+            "servername": "bpb.laNCelot.DpDNS.Org",
+            "client-fingerprint": "chrome",
+            "skip-cert-verify": false,
+            "alpn": [
+                "http/1.1"
+            ],
+            "network": "ws",
+            "ws-opts": {
+                "path": "/eyJqdW5rIjoiakMzanp3b0hsbyIsInByb3RvY29sIjoidmwiLCJtb2RlIjoicHJveHlpcCIsInBhbmVsSVBzIjpbImJwYi55b3VzZWYuaXNlZ2Fyby5jb20iXX0=",
+                "max-early-data": 2560,
+                "early-data-header-name": "Sec-WebSocket-Protocol",
+                "headers": {
+                    "Host": "bpb.lancelot.dpdns.org"
+                }
+            }
+        },
+        {
+            "name": "💦 11 - VLESS - Clean IP : 443",
+            "type": "vless",
+            "server": "saas.sin.fan",
+            "port": 443,
+            "ip-version": "ipv4-prefer",
+            "tfo": false,
+            "udp": false,
+            "uuid": "db991e3e-91d5-48ab-9776-39b99c6a0168",
+            "packet-encoding": "",
+            "tls": true,
+            "servername": "BpB.lancEloT.DpDns.oRg",
+            "client-fingerprint": "chrome",
+            "skip-cert-verify": false,
+            "alpn": [
+                "http/1.1"
+            ],
+            "network": "ws",
+            "ws-opts": {
+                "path": "/eyJqdW5rIjoiSTQ1bkZMRGRzZWFVMyIsInByb3RvY29sIjoidmwiLCJtb2RlIjoicHJveHlpcCIsInBhbmVsSVBzIjpbImJwYi55b3VzZWYuaXNlZ2Fyby5jb20iXX0=",
+                "max-early-data": 2560,
+                "early-data-header-name": "Sec-WebSocket-Protocol",
+                "headers": {
+                    "Host": "bpb.lancelot.dpdns.org"
+                }
+            }
+        },
+        {
+            "name": "💦 12 - VLESS - Domain : 8443",
+            "type": "vless",
+            "server": "bpb.lancelot.dpdns.org",
+            "port": 8443,
+            "ip-version": "ipv4-prefer",
+            "tfo": false,
+            "udp": false,
+            "uuid": "db991e3e-91d5-48ab-9776-39b99c6a0168",
+            "packet-encoding": "",
+            "tls": true,
+            "servername": "Bpb.lAncEloT.dPDns.Org",
+            "client-fingerprint": "chrome",
+            "skip-cert-verify": false,
+            "alpn": [
+                "http/1.1"
+            ],
+            "network": "ws",
+            "ws-opts": {
+                "path": "/eyJqdW5rIjoiZ3RiZDRRenluWFAiLCJwcm90b2NvbCI6InZsIiwibW9kZSI6InByb3h5aXAiLCJwYW5lbElQcyI6WyJicGIueW91c2VmLmlzZWdhcm8uY29tIl19",
+                "max-early-data": 2560,
+                "early-data-header-name": "Sec-WebSocket-Protocol",
+                "headers": {
+                    "Host": "bpb.lancelot.dpdns.org"
+                }
+            }
+        },
+        {
+            "name": "💦 13 - VLESS - Domain : 8443",
+            "type": "vless",
+            "server": "www.speedtest.net",
+            "port": 8443,
+            "ip-version": "ipv4-prefer",
+            "tfo": false,
+            "udp": false,
+            "uuid": "db991e3e-91d5-48ab-9776-39b99c6a0168",
+            "packet-encoding": "",
+            "tls": true,
+            "servername": "bPb.lANcELOt.DpDNS.OrG",
+            "client-fingerprint": "chrome",
+            "skip-cert-verify": false,
+            "alpn": [
+                "http/1.1"
+            ],
+            "network": "ws",
+            "ws-opts": {
+                "path": "/eyJqdW5rIjoiaXlrZld4Y2NkNDlaNzVSIiwicHJvdG9jb2wiOiJ2bCIsIm1vZGUiOiJwcm94eWlwIiwicGFuZWxJUHMiOlsiYnBiLnlvdXNlZi5pc2VnYXJvLmNvbSJdfQ==",
+                "max-early-data": 2560,
+                "early-data-header-name": "Sec-WebSocket-Protocol",
+                "headers": {
+                    "Host": "bpb.lancelot.dpdns.org"
+                }
+            }
+        },
+        {
+            "name": "💦 14 - VLESS - IPv4 : 8443",
+            "type": "vless",
+            "server": "104.21.46.3",
+            "port": 8443,
+            "ip-version": "ipv4-prefer",
+            "tfo": false,
+            "udp": false,
+            "uuid": "db991e3e-91d5-48ab-9776-39b99c6a0168",
+            "packet-encoding": "",
+            "tls": true,
+            "servername": "bPb.lanceLoT.DPdns.oRG",
+            "client-fingerprint": "chrome",
+            "skip-cert-verify": false,
+            "alpn": [
+                "http/1.1"
+            ],
+            "network": "ws",
+            "ws-opts": {
+                "path": "/eyJqdW5rIjoianZCa1JWSEFmT2o0bHgiLCJwcm90b2NvbCI6InZsIiwibW9kZSI6InByb3h5aXAiLCJwYW5lbElQcyI6WyJicGIueW91c2VmLmlzZWdhcm8uY29tIl19",
+                "max-early-data": 2560,
+                "early-data-header-name": "Sec-WebSocket-Protocol",
+                "headers": {
+                    "Host": "bpb.lancelot.dpdns.org"
+                }
+            }
+        },
+        {
+            "name": "💦 15 - VLESS - IPv4 : 8443",
+            "type": "vless",
+            "server": "172.67.221.242",
+            "port": 8443,
+            "ip-version": "ipv4-prefer",
+            "tfo": false,
+            "udp": false,
+            "uuid": "db991e3e-91d5-48ab-9776-39b99c6a0168",
+            "packet-encoding": "",
+            "tls": true,
+            "servername": "bpB.LANcELOT.Dpdns.org",
+            "client-fingerprint": "chrome",
+            "skip-cert-verify": false,
+            "alpn": [
+                "http/1.1"
+            ],
+            "network": "ws",
+            "ws-opts": {
+                "path": "/eyJqdW5rIjoiNXBkeFVOZmphIiwicHJvdG9jb2wiOiJ2bCIsIm1vZGUiOiJwcm94eWlwIiwicGFuZWxJUHMiOlsiYnBiLnlvdXNlZi5pc2VnYXJvLmNvbSJdfQ==",
+                "max-early-data": 2560,
+                "early-data-header-name": "Sec-WebSocket-Protocol",
+                "headers": {
+                    "Host": "bpb.lancelot.dpdns.org"
+                }
+            }
+        },
+        {
+            "name": "💦 16 - VLESS - IPv6 : 8443",
+            "type": "vless",
+            "server": "2606:4700:3036::ac43:ddf2",
+            "port": 8443,
+            "ip-version": "ipv4-prefer",
+            "tfo": false,
+            "udp": false,
+            "uuid": "db991e3e-91d5-48ab-9776-39b99c6a0168",
+            "packet-encoding": "",
+            "tls": true,
+            "servername": "BpB.lANcEloT.DPDNs.ORg",
+            "client-fingerprint": "chrome",
+            "skip-cert-verify": false,
+            "alpn": [
+                "http/1.1"
+            ],
+            "network": "ws",
+            "ws-opts": {
+                "path": "/eyJqdW5rIjoiVHBGNXFHVVA4bE8iLCJwcm90b2NvbCI6InZsIiwibW9kZSI6InByb3h5aXAiLCJwYW5lbElQcyI6WyJicGIueW91c2VmLmlzZWdhcm8uY29tIl19",
+                "max-early-data": 2560,
+                "early-data-header-name": "Sec-WebSocket-Protocol",
+                "headers": {
+                    "Host": "bpb.lancelot.dpdns.org"
+                }
+            }
+        },
+        {
+            "name": "💦 17 - VLESS - IPv6 : 8443",
+            "type": "vless",
+            "server": "2606:4700:3030::6815:2e03",
+            "port": 8443,
+            "ip-version": "ipv4-prefer",
+            "tfo": false,
+            "udp": false,
+            "uuid": "db991e3e-91d5-48ab-9776-39b99c6a0168",
+            "packet-encoding": "",
+            "tls": true,
+            "servername": "bPB.LANCelOT.DpDNs.Org",
+            "client-fingerprint": "chrome",
+            "skip-cert-verify": false,
+            "alpn": [
+                "http/1.1"
+            ],
+            "network": "ws",
+            "ws-opts": {
+                "path": "/eyJqdW5rIjoiMWI0M09STnF6R2ciLCJwcm90b2NvbCI6InZsIiwibW9kZSI6InByb3h5aXAiLCJwYW5lbElQcyI6WyJicGIueW91c2VmLmlzZWdhcm8uY29tIl19",
+                "max-early-data": 2560,
+                "early-data-header-name": "Sec-WebSocket-Protocol",
+                "headers": {
+                    "Host": "bpb.lancelot.dpdns.org"
+                }
+            }
+        },
+        {
+            "name": "💦 18 - VLESS - Clean IP : 8443",
+            "type": "vless",
+            "server": "youxuan.cf.090227.xyz",
+            "port": 8443,
+            "ip-version": "ipv4-prefer",
+            "tfo": false,
+            "udp": false,
+            "uuid": "db991e3e-91d5-48ab-9776-39b99c6a0168",
+            "packet-encoding": "",
+            "tls": true,
+            "servername": "bpB.LanCELOT.DpDnS.ORG",
+            "client-fingerprint": "chrome",
+            "skip-cert-verify": false,
+            "alpn": [
+                "http/1.1"
+            ],
+            "network": "ws",
+            "ws-opts": {
+                "path": "/eyJqdW5rIjoiNXZMd3k4aWtTeCIsInByb3RvY29sIjoidmwiLCJtb2RlIjoicHJveHlpcCIsInBhbmVsSVBzIjpbImJwYi55b3VzZWYuaXNlZ2Fyby5jb20iXX0=",
+                "max-early-data": 2560,
+                "early-data-header-name": "Sec-WebSocket-Protocol",
+                "headers": {
+                    "Host": "bpb.lancelot.dpdns.org"
+                }
+            }
+        },
+        {
+            "name": "💦 19 - VLESS - Clean IP : 8443",
+            "type": "vless",
+            "server": "www.visa.cn",
+            "port": 8443,
+            "ip-version": "ipv4-prefer",
+            "tfo": false,
+            "udp": false,
+            "uuid": "db991e3e-91d5-48ab-9776-39b99c6a0168",
+            "packet-encoding": "",
+            "tls": true,
+            "servername": "BPb.lAnCeLOt.DPdNs.ORG",
+            "client-fingerprint": "chrome",
+            "skip-cert-verify": false,
+            "alpn": [
+                "http/1.1"
+            ],
+            "network": "ws",
+            "ws-opts": {
+                "path": "/eyJqdW5rIjoicUJqU0doRXVpWUFuIiwicHJvdG9jb2wiOiJ2bCIsIm1vZGUiOiJwcm94eWlwIiwicGFuZWxJUHMiOlsiYnBiLnlvdXNlZi5pc2VnYXJvLmNvbSJdfQ==",
+                "max-early-data": 2560,
+                "early-data-header-name": "Sec-WebSocket-Protocol",
+                "headers": {
+                    "Host": "bpb.lancelot.dpdns.org"
+                }
+            }
+        },
+        {
+            "name": "💦 20 - VLESS - Clean IP : 8443",
+            "type": "vless",
+            "server": "mfa.gov.ua",
+            "port": 8443,
+            "ip-version": "ipv4-prefer",
+            "tfo": false,
+            "udp": false,
+            "uuid": "db991e3e-91d5-48ab-9776-39b99c6a0168",
+            "packet-encoding": "",
+            "tls": true,
+            "servername": "bpB.lAnceLot.dpdns.ORg",
+            "client-fingerprint": "chrome",
+            "skip-cert-verify": false,
+            "alpn": [
+                "http/1.1"
+            ],
+            "network": "ws",
+            "ws-opts": {
+                "path": "/eyJqdW5rIjoiZ0pwdTJSWGtMR3luSEo3IiwicHJvdG9jb2wiOiJ2bCIsIm1vZGUiOiJwcm94eWlwIiwicGFuZWxJUHMiOlsiYnBiLnlvdXNlZi5pc2VnYXJvLmNvbSJdfQ==",
+                "max-early-data": 2560,
+                "early-data-header-name": "Sec-WebSocket-Protocol",
+                "headers": {
+                    "Host": "bpb.lancelot.dpdns.org"
+                }
+            }
+        },
+        {
+            "name": "💦 21 - VLESS - Clean IP : 8443",
+            "type": "vless",
+            "server": "www.shopify.com",
+            "port": 8443,
+            "ip-version": "ipv4-prefer",
+            "tfo": false,
+            "udp": false,
+            "uuid": "db991e3e-91d5-48ab-9776-39b99c6a0168",
+            "packet-encoding": "",
+            "tls": true,
+            "servername": "bpb.LanCelot.DPdns.ORG",
+            "client-fingerprint": "chrome",
+            "skip-cert-verify": false,
+            "alpn": [
+                "http/1.1"
+            ],
+            "network": "ws",
+            "ws-opts": {
+                "path": "/eyJqdW5rIjoickJXZjRUZ3FKdXdZTklUSSIsInByb3RvY29sIjoidmwiLCJtb2RlIjoicHJveHlpcCIsInBhbmVsSVBzIjpbImJwYi55b3VzZWYuaXNlZ2Fyby5jb20iXX0=",
+                "max-early-data": 2560,
+                "early-data-header-name": "Sec-WebSocket-Protocol",
+                "headers": {
+                    "Host": "bpb.lancelot.dpdns.org"
+                }
+            }
+        },
+        {
+            "name": "💦 22 - VLESS - Clean IP : 8443",
+            "type": "vless",
+            "server": "saas.sin.fan",
+            "port": 8443,
+            "ip-version": "ipv4-prefer",
+            "tfo": false,
+            "udp": false,
+            "uuid": "db991e3e-91d5-48ab-9776-39b99c6a0168",
+            "packet-encoding": "",
+            "tls": true,
+            "servername": "bpB.LAncElOt.dpdnS.oRG",
+            "client-fingerprint": "chrome",
+            "skip-cert-verify": false,
+            "alpn": [
+                "http/1.1"
+            ],
+            "network": "ws",
+            "ws-opts": {
+                "path": "/eyJqdW5rIjoidDJ2eVJCZVBLZVFTRE42IiwicHJvdG9jb2wiOiJ2bCIsIm1vZGUiOiJwcm94eWlwIiwicGFuZWxJUHMiOlsiYnBiLnlvdXNlZi5pc2VnYXJvLmNvbSJdfQ==",
+                "max-early-data": 2560,
+                "early-data-header-name": "Sec-WebSocket-Protocol",
+                "headers": {
+                    "Host": "bpb.lancelot.dpdns.org"
+                }
+            }
+        },
+        {
+            "name": "💦 23 - VLESS - Domain : 2053",
+            "type": "vless",
+            "server": "bpb.lancelot.dpdns.org",
+            "port": 2053,
+            "ip-version": "ipv4-prefer",
+            "tfo": false,
+            "udp": false,
+            "uuid": "db991e3e-91d5-48ab-9776-39b99c6a0168",
+            "packet-encoding": "",
+            "tls": true,
+            "servername": "BPb.lancelOT.Dpdns.Org",
+            "client-fingerprint": "chrome",
+            "skip-cert-verify": false,
+            "alpn": [
+                "http/1.1"
+            ],
+            "network": "ws",
+            "ws-opts": {
+                "path": "/eyJqdW5rIjoidnhQcFY3Z0dMbiIsInByb3RvY29sIjoidmwiLCJtb2RlIjoicHJveHlpcCIsInBhbmVsSVBzIjpbImJwYi55b3VzZWYuaXNlZ2Fyby5jb20iXX0=",
+                "max-early-data": 2560,
+                "early-data-header-name": "Sec-WebSocket-Protocol",
+                "headers": {
+                    "Host": "bpb.lancelot.dpdns.org"
+                }
+            }
+        },
+        {
+            "name": "💦 24 - VLESS - Domain : 2053",
+            "type": "vless",
+            "server": "www.speedtest.net",
+            "port": 2053,
+            "ip-version": "ipv4-prefer",
+            "tfo": false,
+            "udp": false,
+            "uuid": "db991e3e-91d5-48ab-9776-39b99c6a0168",
+            "packet-encoding": "",
+            "tls": true,
+            "servername": "bPB.LAnCeLoT.dPdNS.Org",
+            "client-fingerprint": "chrome",
+            "skip-cert-verify": false,
+            "alpn": [
+                "http/1.1"
+            ],
+            "network": "ws",
+            "ws-opts": {
+                "path": "/eyJqdW5rIjoiZHlBVDJrTHRBVkoiLCJwcm90b2NvbCI6InZsIiwibW9kZSI6InByb3h5aXAiLCJwYW5lbElQcyI6WyJicGIueW91c2VmLmlzZWdhcm8uY29tIl19",
+                "max-early-data": 2560,
+                "early-data-header-name": "Sec-WebSocket-Protocol",
+                "headers": {
+                    "Host": "bpb.lancelot.dpdns.org"
+                }
+            }
+        },
+        {
+            "name": "💦 25 - VLESS - IPv4 : 2053",
+            "type": "vless",
+            "server": "104.21.46.3",
+            "port": 2053,
+            "ip-version": "ipv4-prefer",
+            "tfo": false,
+            "udp": false,
+            "uuid": "db991e3e-91d5-48ab-9776-39b99c6a0168",
+            "packet-encoding": "",
+            "tls": true,
+            "servername": "bPb.LanCeLot.DpDnS.OrG",
+            "client-fingerprint": "chrome",
+            "skip-cert-verify": false,
+            "alpn": [
+                "http/1.1"
+            ],
+            "network": "ws",
+            "ws-opts": {
+                "path": "/eyJqdW5rIjoiTEIxUTJXdm0iLCJwcm90b2NvbCI6InZsIiwibW9kZSI6InByb3h5aXAiLCJwYW5lbElQcyI6WyJicGIueW91c2VmLmlzZWdhcm8uY29tIl19",
+                "max-early-data": 2560,
+                "early-data-header-name": "Sec-WebSocket-Protocol",
+                "headers": {
+                    "Host": "bpb.lancelot.dpdns.org"
+                }
+            }
+        },
+        {
+            "name": "💦 26 - VLESS - IPv4 : 2053",
+            "type": "vless",
+            "server": "172.67.221.242",
+            "port": 2053,
+            "ip-version": "ipv4-prefer",
+            "tfo": false,
+            "udp": false,
+            "uuid": "db991e3e-91d5-48ab-9776-39b99c6a0168",
+            "packet-encoding": "",
+            "tls": true,
+            "servername": "BpB.lAnCelot.DpdNs.org",
+            "client-fingerprint": "chrome",
+            "skip-cert-verify": false,
+            "alpn": [
+                "http/1.1"
+            ],
+            "network": "ws",
+            "ws-opts": {
+                "path": "/eyJqdW5rIjoiMnN0cXpFTW5KQndpcldsIiwicHJvdG9jb2wiOiJ2bCIsIm1vZGUiOiJwcm94eWlwIiwicGFuZWxJUHMiOlsiYnBiLnlvdXNlZi5pc2VnYXJvLmNvbSJdfQ==",
+                "max-early-data": 2560,
+                "early-data-header-name": "Sec-WebSocket-Protocol",
+                "headers": {
+                    "Host": "bpb.lancelot.dpdns.org"
+                }
+            }
+        },
+        {
+            "name": "💦 27 - VLESS - IPv6 : 2053",
+            "type": "vless",
+            "server": "2606:4700:3036::ac43:ddf2",
+            "port": 2053,
+            "ip-version": "ipv4-prefer",
+            "tfo": false,
+            "udp": false,
+            "uuid": "db991e3e-91d5-48ab-9776-39b99c6a0168",
+            "packet-encoding": "",
+            "tls": true,
+            "servername": "bPb.lAncELOT.dpDNs.oRg",
+            "client-fingerprint": "chrome",
+            "skip-cert-verify": false,
+            "alpn": [
+                "http/1.1"
+            ],
+            "network": "ws",
+            "ws-opts": {
+                "path": "/eyJqdW5rIjoiR0ljSWJVcVZiQSIsInByb3RvY29sIjoidmwiLCJtb2RlIjoicHJveHlpcCIsInBhbmVsSVBzIjpbImJwYi55b3VzZWYuaXNlZ2Fyby5jb20iXX0=",
+                "max-early-data": 2560,
+                "early-data-header-name": "Sec-WebSocket-Protocol",
+                "headers": {
+                    "Host": "bpb.lancelot.dpdns.org"
+                }
+            }
+        },
+        {
+            "name": "💦 28 - VLESS - IPv6 : 2053",
+            "type": "vless",
+            "server": "2606:4700:3030::6815:2e03",
+            "port": 2053,
+            "ip-version": "ipv4-prefer",
+            "tfo": false,
+            "udp": false,
+            "uuid": "db991e3e-91d5-48ab-9776-39b99c6a0168",
+            "packet-encoding": "",
+            "tls": true,
+            "servername": "BPb.LANCelOT.dPdnS.oRG",
+            "client-fingerprint": "chrome",
+            "skip-cert-verify": false,
+            "alpn": [
+                "http/1.1"
+            ],
+            "network": "ws",
+            "ws-opts": {
+                "path": "/eyJqdW5rIjoiN3pLWGVjQnFQZDVlQU93IiwicHJvdG9jb2wiOiJ2bCIsIm1vZGUiOiJwcm94eWlwIiwicGFuZWxJUHMiOlsiYnBiLnlvdXNlZi5pc2VnYXJvLmNvbSJdfQ==",
+                "max-early-data": 2560,
+                "early-data-header-name": "Sec-WebSocket-Protocol",
+                "headers": {
+                    "Host": "bpb.lancelot.dpdns.org"
+                }
+            }
+        },
+        {
+            "name": "💦 29 - VLESS - Clean IP : 2053",
+            "type": "vless",
+            "server": "youxuan.cf.090227.xyz",
+            "port": 2053,
+            "ip-version": "ipv4-prefer",
+            "tfo": false,
+            "udp": false,
+            "uuid": "db991e3e-91d5-48ab-9776-39b99c6a0168",
+            "packet-encoding": "",
+            "tls": true,
+            "servername": "BpB.LaNcEloT.dPDNs.Org",
+            "client-fingerprint": "chrome",
+            "skip-cert-verify": false,
+            "alpn": [
+                "http/1.1"
+            ],
+            "network": "ws",
+            "ws-opts": {
+                "path": "/eyJqdW5rIjoiMDNSRnk1blciLCJwcm90b2NvbCI6InZsIiwibW9kZSI6InByb3h5aXAiLCJwYW5lbElQcyI6WyJicGIueW91c2VmLmlzZWdhcm8uY29tIl19",
+                "max-early-data": 2560,
+                "early-data-header-name": "Sec-WebSocket-Protocol",
+                "headers": {
+                    "Host": "bpb.lancelot.dpdns.org"
+                }
+            }
+        },
+        {
+            "name": "💦 30 - VLESS - Clean IP : 2053",
+            "type": "vless",
+            "server": "www.visa.cn",
+            "port": 2053,
+            "ip-version": "ipv4-prefer",
+            "tfo": false,
+            "udp": false,
+            "uuid": "db991e3e-91d5-48ab-9776-39b99c6a0168",
+            "packet-encoding": "",
+            "tls": true,
+            "servername": "bpb.LAnCEloT.DPDNs.orG",
+            "client-fingerprint": "chrome",
+            "skip-cert-verify": false,
+            "alpn": [
+                "http/1.1"
+            ],
+            "network": "ws",
+            "ws-opts": {
+                "path": "/eyJqdW5rIjoidVQ3a09HVXpHTW4wREsiLCJwcm90b2NvbCI6InZsIiwibW9kZSI6InByb3h5aXAiLCJwYW5lbElQcyI6WyJicGIueW91c2VmLmlzZWdhcm8uY29tIl19",
+                "max-early-data": 2560,
+                "early-data-header-name": "Sec-WebSocket-Protocol",
+                "headers": {
+                    "Host": "bpb.lancelot.dpdns.org"
+                }
+            }
+        },
+        {
+            "name": "💦 31 - VLESS - Clean IP : 2053",
+            "type": "vless",
+            "server": "mfa.gov.ua",
+            "port": 2053,
+            "ip-version": "ipv4-prefer",
+            "tfo": false,
+            "udp": false,
+            "uuid": "db991e3e-91d5-48ab-9776-39b99c6a0168",
+            "packet-encoding": "",
+            "tls": true,
+            "servername": "BpB.LAnCELOT.dpdNs.ORG",
+            "client-fingerprint": "chrome",
+            "skip-cert-verify": false,
+            "alpn": [
+                "http/1.1"
+            ],
+            "network": "ws",
+            "ws-opts": {
+                "path": "/eyJqdW5rIjoiN2xTb21JVWQzWCIsInByb3RvY29sIjoidmwiLCJtb2RlIjoicHJveHlpcCIsInBhbmVsSVBzIjpbImJwYi55b3VzZWYuaXNlZ2Fyby5jb20iXX0=",
+                "max-early-data": 2560,
+                "early-data-header-name": "Sec-WebSocket-Protocol",
+                "headers": {
+                    "Host": "bpb.lancelot.dpdns.org"
+                }
+            }
+        },
+        {
+            "name": "💦 32 - VLESS - Clean IP : 2053",
+            "type": "vless",
+            "server": "www.shopify.com",
+            "port": 2053,
+            "ip-version": "ipv4-prefer",
+            "tfo": false,
+            "udp": false,
+            "uuid": "db991e3e-91d5-48ab-9776-39b99c6a0168",
+            "packet-encoding": "",
+            "tls": true,
+            "servername": "BpB.lAncelOt.DPdNs.ORg",
+            "client-fingerprint": "chrome",
+            "skip-cert-verify": false,
+            "alpn": [
+                "http/1.1"
+            ],
+            "network": "ws",
+            "ws-opts": {
+                "path": "/eyJqdW5rIjoiNVZ2Mll6QkN1RSIsInByb3RvY29sIjoidmwiLCJtb2RlIjoicHJveHlpcCIsInBhbmVsSVBzIjpbImJwYi55b3VzZWYuaXNlZ2Fyby5jb20iXX0=",
+                "max-early-data": 2560,
+                "early-data-header-name": "Sec-WebSocket-Protocol",
+                "headers": {
+                    "Host": "bpb.lancelot.dpdns.org"
+                }
+            }
+        },
+        {
+            "name": "💦 33 - VLESS - Clean IP : 2053",
+            "type": "vless",
+            "server": "saas.sin.fan",
+            "port": 2053,
+            "ip-version": "ipv4-prefer",
+            "tfo": false,
+            "udp": false,
+            "uuid": "db991e3e-91d5-48ab-9776-39b99c6a0168",
+            "packet-encoding": "",
+            "tls": true,
+            "servername": "BPb.lanCElot.DpdnS.oRG",
+            "client-fingerprint": "chrome",
+            "skip-cert-verify": false,
+            "alpn": [
+                "http/1.1"
+            ],
+            "network": "ws",
+            "ws-opts": {
+                "path": "/eyJqdW5rIjoiTkFWQjJwQUhDS24iLCJwcm90b2NvbCI6InZsIiwibW9kZSI6InByb3h5aXAiLCJwYW5lbElQcyI6WyJicGIueW91c2VmLmlzZWdhcm8uY29tIl19",
+                "max-early-data": 2560,
+                "early-data-header-name": "Sec-WebSocket-Protocol",
+                "headers": {
+                    "Host": "bpb.lancelot.dpdns.org"
+                }
+            }
+        },
+        {
+            "name": "💦 34 - VLESS - Domain : 2083",
+            "type": "vless",
+            "server": "bpb.lancelot.dpdns.org",
+            "port": 2083,
+            "ip-version": "ipv4-prefer",
+            "tfo": false,
+            "udp": false,
+            "uuid": "db991e3e-91d5-48ab-9776-39b99c6a0168",
+            "packet-encoding": "",
+            "tls": true,
+            "servername": "Bpb.lanCeLot.dpdns.ORg",
+            "client-fingerprint": "chrome",
+            "skip-cert-verify": false,
+            "alpn": [
+                "http/1.1"
+            ],
+            "network": "ws",
+            "ws-opts": {
+                "path": "/eyJqdW5rIjoicU9NSEZqa25lT2sxdyIsInByb3RvY29sIjoidmwiLCJtb2RlIjoicHJveHlpcCIsInBhbmVsSVBzIjpbImJwYi55b3VzZWYuaXNlZ2Fyby5jb20iXX0=",
+                "max-early-data": 2560,
+                "early-data-header-name": "Sec-WebSocket-Protocol",
+                "headers": {
+                    "Host": "bpb.lancelot.dpdns.org"
+                }
+            }
+        },
+        {
+            "name": "💦 35 - VLESS - Domain : 2083",
+            "type": "vless",
+            "server": "www.speedtest.net",
+            "port": 2083,
+            "ip-version": "ipv4-prefer",
+            "tfo": false,
+            "udp": false,
+            "uuid": "db991e3e-91d5-48ab-9776-39b99c6a0168",
+            "packet-encoding": "",
+            "tls": true,
+            "servername": "bpB.LancEloT.dPDns.ORg",
+            "client-fingerprint": "chrome",
+            "skip-cert-verify": false,
+            "alpn": [
+                "http/1.1"
+            ],
+            "network": "ws",
+            "ws-opts": {
+                "path": "/eyJqdW5rIjoiZ1Z5N1QxY2hQanAiLCJwcm90b2NvbCI6InZsIiwibW9kZSI6InByb3h5aXAiLCJwYW5lbElQcyI6WyJicGIueW91c2VmLmlzZWdhcm8uY29tIl19",
+                "max-early-data": 2560,
+                "early-data-header-name": "Sec-WebSocket-Protocol",
+                "headers": {
+                    "Host": "bpb.lancelot.dpdns.org"
+                }
+            }
+        },
+        {
+            "name": "💦 36 - VLESS - IPv4 : 2083",
+            "type": "vless",
+            "server": "104.21.46.3",
+            "port": 2083,
+            "ip-version": "ipv4-prefer",
+            "tfo": false,
+            "udp": false,
+            "uuid": "db991e3e-91d5-48ab-9776-39b99c6a0168",
+            "packet-encoding": "",
+            "tls": true,
+            "servername": "BpB.lAnCelOt.DPDNs.Org",
+            "client-fingerprint": "chrome",
+            "skip-cert-verify": false,
+            "alpn": [
+                "http/1.1"
+            ],
+            "network": "ws",
+            "ws-opts": {
+                "path": "/eyJqdW5rIjoiWm5uRHRzOEJhIiwicHJvdG9jb2wiOiJ2bCIsIm1vZGUiOiJwcm94eWlwIiwicGFuZWxJUHMiOlsiYnBiLnlvdXNlZi5pc2VnYXJvLmNvbSJdfQ==",
+                "max-early-data": 2560,
+                "early-data-header-name": "Sec-WebSocket-Protocol",
+                "headers": {
+                    "Host": "bpb.lancelot.dpdns.org"
+                }
+            }
+        },
+        {
+            "name": "💦 37 - VLESS - IPv4 : 2083",
+            "type": "vless",
+            "server": "172.67.221.242",
+            "port": 2083,
+            "ip-version": "ipv4-prefer",
+            "tfo": false,
+            "udp": false,
+            "uuid": "db991e3e-91d5-48ab-9776-39b99c6a0168",
+            "packet-encoding": "",
+            "tls": true,
+            "servername": "bPB.laNcelot.dPDNS.ORG",
+            "client-fingerprint": "chrome",
+            "skip-cert-verify": false,
+            "alpn": [
+                "http/1.1"
+            ],
+            "network": "ws",
+            "ws-opts": {
+                "path": "/eyJqdW5rIjoiOVRnWU9ONUl2YiIsInByb3RvY29sIjoidmwiLCJtb2RlIjoicHJveHlpcCIsInBhbmVsSVBzIjpbImJwYi55b3VzZWYuaXNlZ2Fyby5jb20iXX0=",
+                "max-early-data": 2560,
+                "early-data-header-name": "Sec-WebSocket-Protocol",
+                "headers": {
+                    "Host": "bpb.lancelot.dpdns.org"
+                }
+            }
+        },
+        {
+            "name": "💦 38 - VLESS - IPv6 : 2083",
+            "type": "vless",
+            "server": "2606:4700:3036::ac43:ddf2",
+            "port": 2083,
+            "ip-version": "ipv4-prefer",
+            "tfo": false,
+            "udp": false,
+            "uuid": "db991e3e-91d5-48ab-9776-39b99c6a0168",
+            "packet-encoding": "",
+            "tls": true,
+            "servername": "BpB.laNCeLoT.DPdNs.orG",
+            "client-fingerprint": "chrome",
+            "skip-cert-verify": false,
+            "alpn": [
+                "http/1.1"
+            ],
+            "network": "ws",
+            "ws-opts": {
+                "path": "/eyJqdW5rIjoiZUNlWll0REV5aDRaMG1FSCIsInByb3RvY29sIjoidmwiLCJtb2RlIjoicHJveHlpcCIsInBhbmVsSVBzIjpbImJwYi55b3VzZWYuaXNlZ2Fyby5jb20iXX0=",
+                "max-early-data": 2560,
+                "early-data-header-name": "Sec-WebSocket-Protocol",
+                "headers": {
+                    "Host": "bpb.lancelot.dpdns.org"
+                }
+            }
+        },
+        {
+            "name": "💦 39 - VLESS - IPv6 : 2083",
+            "type": "vless",
+            "server": "2606:4700:3030::6815:2e03",
+            "port": 2083,
+            "ip-version": "ipv4-prefer",
+            "tfo": false,
+            "udp": false,
+            "uuid": "db991e3e-91d5-48ab-9776-39b99c6a0168",
+            "packet-encoding": "",
+            "tls": true,
+            "servername": "bPb.LAncEloT.Dpdns.oRg",
+            "client-fingerprint": "chrome",
+            "skip-cert-verify": false,
+            "alpn": [
+                "http/1.1"
+            ],
+            "network": "ws",
+            "ws-opts": {
+                "path": "/eyJqdW5rIjoiU2lWUzVpNG4yS0hnUm4iLCJwcm90b2NvbCI6InZsIiwibW9kZSI6InByb3h5aXAiLCJwYW5lbElQcyI6WyJicGIueW91c2VmLmlzZWdhcm8uY29tIl19",
+                "max-early-data": 2560,
+                "early-data-header-name": "Sec-WebSocket-Protocol",
+                "headers": {
+                    "Host": "bpb.lancelot.dpdns.org"
+                }
+            }
+        },
+        {
+            "name": "💦 40 - VLESS - Clean IP : 2083",
+            "type": "vless",
+            "server": "youxuan.cf.090227.xyz",
+            "port": 2083,
+            "ip-version": "ipv4-prefer",
+            "tfo": false,
+            "udp": false,
+            "uuid": "db991e3e-91d5-48ab-9776-39b99c6a0168",
+            "packet-encoding": "",
+            "tls": true,
+            "servername": "bPb.LAnceLOt.DpDnS.Org",
+            "client-fingerprint": "chrome",
+            "skip-cert-verify": false,
+            "alpn": [
+                "http/1.1"
+            ],
+            "network": "ws",
+            "ws-opts": {
+                "path": "/eyJqdW5rIjoia3NvYlluUXBjYk1VeSIsInByb3RvY29sIjoidmwiLCJtb2RlIjoicHJveHlpcCIsInBhbmVsSVBzIjpbImJwYi55b3VzZWYuaXNlZ2Fyby5jb20iXX0=",
+                "max-early-data": 2560,
+                "early-data-header-name": "Sec-WebSocket-Protocol",
+                "headers": {
+                    "Host": "bpb.lancelot.dpdns.org"
+                }
+            }
+        },
+        {
+            "name": "💦 41 - VLESS - Clean IP : 2083",
+            "type": "vless",
+            "server": "www.visa.cn",
+            "port": 2083,
+            "ip-version": "ipv4-prefer",
+            "tfo": false,
+            "udp": false,
+            "uuid": "db991e3e-91d5-48ab-9776-39b99c6a0168",
+            "packet-encoding": "",
+            "tls": true,
+            "servername": "bpb.lancELot.DpdnS.oRG",
+            "client-fingerprint": "chrome",
+            "skip-cert-verify": false,
+            "alpn": [
+                "http/1.1"
+            ],
+            "network": "ws",
+            "ws-opts": {
+                "path": "/eyJqdW5rIjoiSmhSZllyZFR0TiIsInByb3RvY29sIjoidmwiLCJtb2RlIjoicHJveHlpcCIsInBhbmVsSVBzIjpbImJwYi55b3VzZWYuaXNlZ2Fyby5jb20iXX0=",
+                "max-early-data": 2560,
+                "early-data-header-name": "Sec-WebSocket-Protocol",
+                "headers": {
+                    "Host": "bpb.lancelot.dpdns.org"
+                }
+            }
+        },
+        {
+            "name": "💦 42 - VLESS - Clean IP : 2083",
+            "type": "vless",
+            "server": "mfa.gov.ua",
+            "port": 2083,
+            "ip-version": "ipv4-prefer",
+            "tfo": false,
+            "udp": false,
+            "uuid": "db991e3e-91d5-48ab-9776-39b99c6a0168",
+            "packet-encoding": "",
+            "tls": true,
+            "servername": "bPB.LANcElot.DpDNS.oRg",
+            "client-fingerprint": "chrome",
+            "skip-cert-verify": false,
+            "alpn": [
+                "http/1.1"
+            ],
+            "network": "ws",
+            "ws-opts": {
+                "path": "/eyJqdW5rIjoiS1k2Q3hHTTg1IiwicHJvdG9jb2wiOiJ2bCIsIm1vZGUiOiJwcm94eWlwIiwicGFuZWxJUHMiOlsiYnBiLnlvdXNlZi5pc2VnYXJvLmNvbSJdfQ==",
+                "max-early-data": 2560,
+                "early-data-header-name": "Sec-WebSocket-Protocol",
+                "headers": {
+                    "Host": "bpb.lancelot.dpdns.org"
+                }
+            }
+        },
+        {
+            "name": "💦 43 - VLESS - Clean IP : 2083",
+            "type": "vless",
+            "server": "www.shopify.com",
+            "port": 2083,
+            "ip-version": "ipv4-prefer",
+            "tfo": false,
+            "udp": false,
+            "uuid": "db991e3e-91d5-48ab-9776-39b99c6a0168",
+            "packet-encoding": "",
+            "tls": true,
+            "servername": "bpB.lAncELOt.dPDNS.Org",
+            "client-fingerprint": "chrome",
+            "skip-cert-verify": false,
+            "alpn": [
+                "http/1.1"
+            ],
+            "network": "ws",
+            "ws-opts": {
+                "path": "/eyJqdW5rIjoiR3FjQWZtUTBuQ2t3IiwicHJvdG9jb2wiOiJ2bCIsIm1vZGUiOiJwcm94eWlwIiwicGFuZWxJUHMiOlsiYnBiLnlvdXNlZi5pc2VnYXJvLmNvbSJdfQ==",
+                "max-early-data": 2560,
+                "early-data-header-name": "Sec-WebSocket-Protocol",
+                "headers": {
+                    "Host": "bpb.lancelot.dpdns.org"
+                }
+            }
+        },
+        {
+            "name": "💦 44 - VLESS - Clean IP : 2083",
+            "type": "vless",
+            "server": "saas.sin.fan",
+            "port": 2083,
+            "ip-version": "ipv4-prefer",
+            "tfo": false,
+            "udp": false,
+            "uuid": "db991e3e-91d5-48ab-9776-39b99c6a0168",
+            "packet-encoding": "",
+            "tls": true,
+            "servername": "Bpb.LAncElot.dpDNs.OrG",
+            "client-fingerprint": "chrome",
+            "skip-cert-verify": false,
+            "alpn": [
+                "http/1.1"
+            ],
+            "network": "ws",
+            "ws-opts": {
+                "path": "/eyJqdW5rIjoiZnpHQ0x0MExDb2MzIiwicHJvdG9jb2wiOiJ2bCIsIm1vZGUiOiJwcm94eWlwIiwicGFuZWxJUHMiOlsiYnBiLnlvdXNlZi5pc2VnYXJvLmNvbSJdfQ==",
+                "max-early-data": 2560,
+                "early-data-header-name": "Sec-WebSocket-Protocol",
+                "headers": {
+                    "Host": "bpb.lancelot.dpdns.org"
+                }
+            }
+        },
+        {
+            "name": "💦 45 - VLESS - Domain : 2087",
+            "type": "vless",
+            "server": "bpb.lancelot.dpdns.org",
+            "port": 2087,
+            "ip-version": "ipv4-prefer",
+            "tfo": false,
+            "udp": false,
+            "uuid": "db991e3e-91d5-48ab-9776-39b99c6a0168",
+            "packet-encoding": "",
+            "tls": true,
+            "servername": "bPb.LanCELOt.dPDNS.oRG",
+            "client-fingerprint": "chrome",
+            "skip-cert-verify": false,
+            "alpn": [
+                "http/1.1"
+            ],
+            "network": "ws",
+            "ws-opts": {
+                "path": "/eyJqdW5rIjoiVURUTTJ3b0ZlN3pZIiwicHJvdG9jb2wiOiJ2bCIsIm1vZGUiOiJwcm94eWlwIiwicGFuZWxJUHMiOlsiYnBiLnlvdXNlZi5pc2VnYXJvLmNvbSJdfQ==",
+                "max-early-data": 2560,
+                "early-data-header-name": "Sec-WebSocket-Protocol",
+                "headers": {
+                    "Host": "bpb.lancelot.dpdns.org"
+                }
+            }
+        },
+        {
+            "name": "💦 46 - VLESS - Domain : 2087",
+            "type": "vless",
+            "server": "www.speedtest.net",
+            "port": 2087,
+            "ip-version": "ipv4-prefer",
+            "tfo": false,
+            "udp": false,
+            "uuid": "db991e3e-91d5-48ab-9776-39b99c6a0168",
+            "packet-encoding": "",
+            "tls": true,
+            "servername": "bpB.lanCEloT.dPDNs.ORg",
+            "client-fingerprint": "chrome",
+            "skip-cert-verify": false,
+            "alpn": [
+                "http/1.1"
+            ],
+            "network": "ws",
+            "ws-opts": {
+                "path": "/eyJqdW5rIjoiVkdUWFdKQzM1TnIiLCJwcm90b2NvbCI6InZsIiwibW9kZSI6InByb3h5aXAiLCJwYW5lbElQcyI6WyJicGIueW91c2VmLmlzZWdhcm8uY29tIl19",
+                "max-early-data": 2560,
+                "early-data-header-name": "Sec-WebSocket-Protocol",
+                "headers": {
+                    "Host": "bpb.lancelot.dpdns.org"
+                }
+            }
+        },
+        {
+            "name": "💦 47 - VLESS - IPv4 : 2087",
+            "type": "vless",
+            "server": "104.21.46.3",
+            "port": 2087,
+            "ip-version": "ipv4-prefer",
+            "tfo": false,
+            "udp": false,
+            "uuid": "db991e3e-91d5-48ab-9776-39b99c6a0168",
+            "packet-encoding": "",
+            "tls": true,
+            "servername": "Bpb.LAncELoT.DPDNs.oRG",
+            "client-fingerprint": "chrome",
+            "skip-cert-verify": false,
+            "alpn": [
+                "http/1.1"
+            ],
+            "network": "ws",
+            "ws-opts": {
+                "path": "/eyJqdW5rIjoidWc1dmNZSG0iLCJwcm90b2NvbCI6InZsIiwibW9kZSI6InByb3h5aXAiLCJwYW5lbElQcyI6WyJicGIueW91c2VmLmlzZWdhcm8uY29tIl19",
+                "max-early-data": 2560,
+                "early-data-header-name": "Sec-WebSocket-Protocol",
+                "headers": {
+                    "Host": "bpb.lancelot.dpdns.org"
+                }
+            }
+        },
+        {
+            "name": "💦 48 - VLESS - IPv4 : 2087",
+            "type": "vless",
+            "server": "172.67.221.242",
+            "port": 2087,
+            "ip-version": "ipv4-prefer",
+            "tfo": false,
+            "udp": false,
+            "uuid": "db991e3e-91d5-48ab-9776-39b99c6a0168",
+            "packet-encoding": "",
+            "tls": true,
+            "servername": "bPB.LanCelOt.dPDNS.ORg",
+            "client-fingerprint": "chrome",
+            "skip-cert-verify": false,
+            "alpn": [
+                "http/1.1"
+            ],
+            "network": "ws",
+            "ws-opts": {
+                "path": "/eyJqdW5rIjoiV0V3Vjd4cUhNIiwicHJvdG9jb2wiOiJ2bCIsIm1vZGUiOiJwcm94eWlwIiwicGFuZWxJUHMiOlsiYnBiLnlvdXNlZi5pc2VnYXJvLmNvbSJdfQ==",
+                "max-early-data": 2560,
+                "early-data-header-name": "Sec-WebSocket-Protocol",
+                "headers": {
+                    "Host": "bpb.lancelot.dpdns.org"
+                }
+            }
+        },
+        {
+            "name": "💦 49 - VLESS - IPv6 : 2087",
+            "type": "vless",
+            "server": "2606:4700:3036::ac43:ddf2",
+            "port": 2087,
+            "ip-version": "ipv4-prefer",
+            "tfo": false,
+            "udp": false,
+            "uuid": "db991e3e-91d5-48ab-9776-39b99c6a0168",
+            "packet-encoding": "",
+            "tls": true,
+            "servername": "BpB.lancElOT.Dpdns.oRG",
+            "client-fingerprint": "chrome",
+            "skip-cert-verify": false,
+            "alpn": [
+                "http/1.1"
+            ],
+            "network": "ws",
+            "ws-opts": {
+                "path": "/eyJqdW5rIjoiWnZRbk1iNnZaeEZ3UyIsInByb3RvY29sIjoidmwiLCJtb2RlIjoicHJveHlpcCIsInBhbmVsSVBzIjpbImJwYi55b3VzZWYuaXNlZ2Fyby5jb20iXX0=",
+                "max-early-data": 2560,
+                "early-data-header-name": "Sec-WebSocket-Protocol",
+                "headers": {
+                    "Host": "bpb.lancelot.dpdns.org"
+                }
+            }
+        },
+        {
+            "name": "💦 50 - VLESS - IPv6 : 2087",
+            "type": "vless",
+            "server": "2606:4700:3030::6815:2e03",
+            "port": 2087,
+            "ip-version": "ipv4-prefer",
+            "tfo": false,
+            "udp": false,
+            "uuid": "db991e3e-91d5-48ab-9776-39b99c6a0168",
+            "packet-encoding": "",
+            "tls": true,
+            "servername": "bpb.lAncElot.dpdNS.ORG",
+            "client-fingerprint": "chrome",
+            "skip-cert-verify": false,
+            "alpn": [
+                "http/1.1"
+            ],
+            "network": "ws",
+            "ws-opts": {
+                "path": "/eyJqdW5rIjoidGRGY0t2ZkFselZDZHZHbCIsInByb3RvY29sIjoidmwiLCJtb2RlIjoicHJveHlpcCIsInBhbmVsSVBzIjpbImJwYi55b3VzZWYuaXNlZ2Fyby5jb20iXX0=",
+                "max-early-data": 2560,
+                "early-data-header-name": "Sec-WebSocket-Protocol",
+                "headers": {
+                    "Host": "bpb.lancelot.dpdns.org"
+                }
+            }
+        },
+        {
+            "name": "💦 51 - VLESS - Clean IP : 2087",
+            "type": "vless",
+            "server": "youxuan.cf.090227.xyz",
+            "port": 2087,
+            "ip-version": "ipv4-prefer",
+            "tfo": false,
+            "udp": false,
+            "uuid": "db991e3e-91d5-48ab-9776-39b99c6a0168",
+            "packet-encoding": "",
+            "tls": true,
+            "servername": "BPB.LAnceLOT.dpdNs.OrG",
+            "client-fingerprint": "chrome",
+            "skip-cert-verify": false,
+            "alpn": [
+                "http/1.1"
+            ],
+            "network": "ws",
+            "ws-opts": {
+                "path": "/eyJqdW5rIjoiUnpKY01wOGVaIiwicHJvdG9jb2wiOiJ2bCIsIm1vZGUiOiJwcm94eWlwIiwicGFuZWxJUHMiOlsiYnBiLnlvdXNlZi5pc2VnYXJvLmNvbSJdfQ==",
+                "max-early-data": 2560,
+                "early-data-header-name": "Sec-WebSocket-Protocol",
+                "headers": {
+                    "Host": "bpb.lancelot.dpdns.org"
+                }
+            }
+        },
+        {
+            "name": "💦 52 - VLESS - Clean IP : 2087",
+            "type": "vless",
+            "server": "www.visa.cn",
+            "port": 2087,
+            "ip-version": "ipv4-prefer",
+            "tfo": false,
+            "udp": false,
+            "uuid": "db991e3e-91d5-48ab-9776-39b99c6a0168",
+            "packet-encoding": "",
+            "tls": true,
+            "servername": "bpB.lanCElOt.DPdnS.OrG",
+            "client-fingerprint": "chrome",
+            "skip-cert-verify": false,
+            "alpn": [
+                "http/1.1"
+            ],
+            "network": "ws",
+            "ws-opts": {
+                "path": "/eyJqdW5rIjoicFU0ZEc2Wk5kWiIsInByb3RvY29sIjoidmwiLCJtb2RlIjoicHJveHlpcCIsInBhbmVsSVBzIjpbImJwYi55b3VzZWYuaXNlZ2Fyby5jb20iXX0=",
+                "max-early-data": 2560,
+                "early-data-header-name": "Sec-WebSocket-Protocol",
+                "headers": {
+                    "Host": "bpb.lancelot.dpdns.org"
+                }
+            }
+        },
+        {
+            "name": "💦 53 - VLESS - Clean IP : 2087",
+            "type": "vless",
+            "server": "mfa.gov.ua",
+            "port": 2087,
+            "ip-version": "ipv4-prefer",
+            "tfo": false,
+            "udp": false,
+            "uuid": "db991e3e-91d5-48ab-9776-39b99c6a0168",
+            "packet-encoding": "",
+            "tls": true,
+            "servername": "Bpb.LancElot.dPdns.org",
+            "client-fingerprint": "chrome",
+            "skip-cert-verify": false,
+            "alpn": [
+                "http/1.1"
+            ],
+            "network": "ws",
+            "ws-opts": {
+                "path": "/eyJqdW5rIjoiaU52UXcxNXciLCJwcm90b2NvbCI6InZsIiwibW9kZSI6InByb3h5aXAiLCJwYW5lbElQcyI6WyJicGIueW91c2VmLmlzZWdhcm8uY29tIl19",
+                "max-early-data": 2560,
+                "early-data-header-name": "Sec-WebSocket-Protocol",
+                "headers": {
+                    "Host": "bpb.lancelot.dpdns.org"
+                }
+            }
+        },
+        {
+            "name": "💦 54 - VLESS - Clean IP : 2087",
+            "type": "vless",
+            "server": "www.shopify.com",
+            "port": 2087,
+            "ip-version": "ipv4-prefer",
+            "tfo": false,
+            "udp": false,
+            "uuid": "db991e3e-91d5-48ab-9776-39b99c6a0168",
+            "packet-encoding": "",
+            "tls": true,
+            "servername": "BpB.LancELot.dPdns.oRg",
+            "client-fingerprint": "chrome",
+            "skip-cert-verify": false,
+            "alpn": [
+                "http/1.1"
+            ],
+            "network": "ws",
+            "ws-opts": {
+                "path": "/eyJqdW5rIjoiV1U5WjlxR3dFIiwicHJvdG9jb2wiOiJ2bCIsIm1vZGUiOiJwcm94eWlwIiwicGFuZWxJUHMiOlsiYnBiLnlvdXNlZi5pc2VnYXJvLmNvbSJdfQ==",
+                "max-early-data": 2560,
+                "early-data-header-name": "Sec-WebSocket-Protocol",
+                "headers": {
+                    "Host": "bpb.lancelot.dpdns.org"
+                }
+            }
+        },
+        {
+            "name": "💦 55 - VLESS - Clean IP : 2087",
+            "type": "vless",
+            "server": "saas.sin.fan",
+            "port": 2087,
+            "ip-version": "ipv4-prefer",
+            "tfo": false,
+            "udp": false,
+            "uuid": "db991e3e-91d5-48ab-9776-39b99c6a0168",
+            "packet-encoding": "",
+            "tls": true,
+            "servername": "BPB.LaNcelOT.dPDnS.orG",
+            "client-fingerprint": "chrome",
+            "skip-cert-verify": false,
+            "alpn": [
+                "http/1.1"
+            ],
+            "network": "ws",
+            "ws-opts": {
+                "path": "/eyJqdW5rIjoiV1kya2dXUVhGajkiLCJwcm90b2NvbCI6InZsIiwibW9kZSI6InByb3h5aXAiLCJwYW5lbElQcyI6WyJicGIueW91c2VmLmlzZWdhcm8uY29tIl19",
+                "max-early-data": 2560,
+                "early-data-header-name": "Sec-WebSocket-Protocol",
+                "headers": {
+                    "Host": "bpb.lancelot.dpdns.org"
+                }
+            }
+        },
+        {
+            "name": "💦 56 - VLESS - Domain : 2096",
+            "type": "vless",
+            "server": "bpb.lancelot.dpdns.org",
+            "port": 2096,
+            "ip-version": "ipv4-prefer",
+            "tfo": false,
+            "udp": false,
+            "uuid": "db991e3e-91d5-48ab-9776-39b99c6a0168",
+            "packet-encoding": "",
+            "tls": true,
+            "servername": "BPB.LAnCELOt.DpdNS.ORg",
+            "client-fingerprint": "chrome",
+            "skip-cert-verify": false,
+            "alpn": [
+                "http/1.1"
+            ],
+            "network": "ws",
+            "ws-opts": {
+                "path": "/eyJqdW5rIjoiN3VZYlpNemRCR2RwNDgiLCJwcm90b2NvbCI6InZsIiwibW9kZSI6InByb3h5aXAiLCJwYW5lbElQcyI6WyJicGIueW91c2VmLmlzZWdhcm8uY29tIl19",
+                "max-early-data": 2560,
+                "early-data-header-name": "Sec-WebSocket-Protocol",
+                "headers": {
+                    "Host": "bpb.lancelot.dpdns.org"
+                }
+            }
+        },
+        {
+            "name": "💦 57 - VLESS - Domain : 2096",
+            "type": "vless",
+            "server": "www.speedtest.net",
+            "port": 2096,
+            "ip-version": "ipv4-prefer",
+            "tfo": false,
+            "udp": false,
+            "uuid": "db991e3e-91d5-48ab-9776-39b99c6a0168",
+            "packet-encoding": "",
+            "tls": true,
+            "servername": "BPb.lAnCelOt.DPdnS.oRG",
+            "client-fingerprint": "chrome",
+            "skip-cert-verify": false,
+            "alpn": [
+                "http/1.1"
+            ],
+            "network": "ws",
+            "ws-opts": {
+                "path": "/eyJqdW5rIjoidWJaZGxQVjd4T2NqIiwicHJvdG9jb2wiOiJ2bCIsIm1vZGUiOiJwcm94eWlwIiwicGFuZWxJUHMiOlsiYnBiLnlvdXNlZi5pc2VnYXJvLmNvbSJdfQ==",
+                "max-early-data": 2560,
+                "early-data-header-name": "Sec-WebSocket-Protocol",
+                "headers": {
+                    "Host": "bpb.lancelot.dpdns.org"
+                }
+            }
+        },
+        {
+            "name": "💦 58 - VLESS - IPv4 : 2096",
+            "type": "vless",
+            "server": "104.21.46.3",
+            "port": 2096,
+            "ip-version": "ipv4-prefer",
+            "tfo": false,
+            "udp": false,
+            "uuid": "db991e3e-91d5-48ab-9776-39b99c6a0168",
+            "packet-encoding": "",
+            "tls": true,
+            "servername": "Bpb.laNCELot.dpdnS.ORG",
+            "client-fingerprint": "chrome",
+            "skip-cert-verify": false,
+            "alpn": [
+                "http/1.1"
+            ],
+            "network": "ws",
+            "ws-opts": {
+                "path": "/eyJqdW5rIjoiS1JXdmROOTJzTCIsInByb3RvY29sIjoidmwiLCJtb2RlIjoicHJveHlpcCIsInBhbmVsSVBzIjpbImJwYi55b3VzZWYuaXNlZ2Fyby5jb20iXX0=",
+                "max-early-data": 2560,
+                "early-data-header-name": "Sec-WebSocket-Protocol",
+                "headers": {
+                    "Host": "bpb.lancelot.dpdns.org"
+                }
+            }
+        },
+        {
+            "name": "💦 59 - VLESS - IPv4 : 2096",
+            "type": "vless",
+            "server": "172.67.221.242",
+            "port": 2096,
+            "ip-version": "ipv4-prefer",
+            "tfo": false,
+            "udp": false,
+            "uuid": "db991e3e-91d5-48ab-9776-39b99c6a0168",
+            "packet-encoding": "",
+            "tls": true,
+            "servername": "BpB.LAncelOt.dpDns.OrG",
+            "client-fingerprint": "chrome",
+            "skip-cert-verify": false,
+            "alpn": [
+                "http/1.1"
+            ],
+            "network": "ws",
+            "ws-opts": {
+                "path": "/eyJqdW5rIjoiMnhCWEEzYnVaVEwyZiIsInByb3RvY29sIjoidmwiLCJtb2RlIjoicHJveHlpcCIsInBhbmVsSVBzIjpbImJwYi55b3VzZWYuaXNlZ2Fyby5jb20iXX0=",
+                "max-early-data": 2560,
+                "early-data-header-name": "Sec-WebSocket-Protocol",
+                "headers": {
+                    "Host": "bpb.lancelot.dpdns.org"
+                }
+            }
+        },
+        {
+            "name": "💦 60 - VLESS - IPv6 : 2096",
+            "type": "vless",
+            "server": "2606:4700:3036::ac43:ddf2",
+            "port": 2096,
+            "ip-version": "ipv4-prefer",
+            "tfo": false,
+            "udp": false,
+            "uuid": "db991e3e-91d5-48ab-9776-39b99c6a0168",
+            "packet-encoding": "",
+            "tls": true,
+            "servername": "bPB.LaNCELOt.DPdNs.OrG",
+            "client-fingerprint": "chrome",
+            "skip-cert-verify": false,
+            "alpn": [
+                "http/1.1"
+            ],
+            "network": "ws",
+            "ws-opts": {
+                "path": "/eyJqdW5rIjoiMnpndDZXODk3WGhEb0siLCJwcm90b2NvbCI6InZsIiwibW9kZSI6InByb3h5aXAiLCJwYW5lbElQcyI6WyJicGIueW91c2VmLmlzZWdhcm8uY29tIl19",
+                "max-early-data": 2560,
+                "early-data-header-name": "Sec-WebSocket-Protocol",
+                "headers": {
+                    "Host": "bpb.lancelot.dpdns.org"
+                }
+            }
+        },
+        {
+            "name": "💦 61 - VLESS - IPv6 : 2096",
+            "type": "vless",
+            "server": "2606:4700:3030::6815:2e03",
+            "port": 2096,
+            "ip-version": "ipv4-prefer",
+            "tfo": false,
+            "udp": false,
+            "uuid": "db991e3e-91d5-48ab-9776-39b99c6a0168",
+            "packet-encoding": "",
+            "tls": true,
+            "servername": "bpB.lanCELot.dPDns.ORG",
+            "client-fingerprint": "chrome",
+            "skip-cert-verify": false,
+            "alpn": [
+                "http/1.1"
+            ],
+            "network": "ws",
+            "ws-opts": {
+                "path": "/eyJqdW5rIjoiZWdWaWhRSkp1eSIsInByb3RvY29sIjoidmwiLCJtb2RlIjoicHJveHlpcCIsInBhbmVsSVBzIjpbImJwYi55b3VzZWYuaXNlZ2Fyby5jb20iXX0=",
+                "max-early-data": 2560,
+                "early-data-header-name": "Sec-WebSocket-Protocol",
+                "headers": {
+                    "Host": "bpb.lancelot.dpdns.org"
+                }
+            }
+        },
+        {
+            "name": "💦 62 - VLESS - Clean IP : 2096",
+            "type": "vless",
+            "server": "youxuan.cf.090227.xyz",
+            "port": 2096,
+            "ip-version": "ipv4-prefer",
+            "tfo": false,
+            "udp": false,
+            "uuid": "db991e3e-91d5-48ab-9776-39b99c6a0168",
+            "packet-encoding": "",
+            "tls": true,
+            "servername": "bPb.LanCeLOT.DPdNs.orG",
+            "client-fingerprint": "chrome",
+            "skip-cert-verify": false,
+            "alpn": [
+                "http/1.1"
+            ],
+            "network": "ws",
+            "ws-opts": {
+                "path": "/eyJqdW5rIjoiRG9rbmJSUHhxMUp2TyIsInByb3RvY29sIjoidmwiLCJtb2RlIjoicHJveHlpcCIsInBhbmVsSVBzIjpbImJwYi55b3VzZWYuaXNlZ2Fyby5jb20iXX0=",
+                "max-early-data": 2560,
+                "early-data-header-name": "Sec-WebSocket-Protocol",
+                "headers": {
+                    "Host": "bpb.lancelot.dpdns.org"
+                }
+            }
+        },
+        {
+            "name": "💦 63 - VLESS - Clean IP : 2096",
+            "type": "vless",
+            "server": "www.visa.cn",
+            "port": 2096,
+            "ip-version": "ipv4-prefer",
+            "tfo": false,
+            "udp": false,
+            "uuid": "db991e3e-91d5-48ab-9776-39b99c6a0168",
+            "packet-encoding": "",
+            "tls": true,
+            "servername": "bPb.LaNcELot.DPDnS.ORG",
+            "client-fingerprint": "chrome",
+            "skip-cert-verify": false,
+            "alpn": [
+                "http/1.1"
+            ],
+            "network": "ws",
+            "ws-opts": {
+                "path": "/eyJqdW5rIjoibmtxVnR2YzhvVXp4diIsInByb3RvY29sIjoidmwiLCJtb2RlIjoicHJveHlpcCIsInBhbmVsSVBzIjpbImJwYi55b3VzZWYuaXNlZ2Fyby5jb20iXX0=",
+                "max-early-data": 2560,
+                "early-data-header-name": "Sec-WebSocket-Protocol",
+                "headers": {
+                    "Host": "bpb.lancelot.dpdns.org"
+                }
+            }
+        },
+        {
+            "name": "💦 64 - VLESS - Clean IP : 2096",
+            "type": "vless",
+            "server": "mfa.gov.ua",
+            "port": 2096,
+            "ip-version": "ipv4-prefer",
+            "tfo": false,
+            "udp": false,
+            "uuid": "db991e3e-91d5-48ab-9776-39b99c6a0168",
+            "packet-encoding": "",
+            "tls": true,
+            "servername": "bpb.lAnCELOt.dpdns.org",
+            "client-fingerprint": "chrome",
+            "skip-cert-verify": false,
+            "alpn": [
+                "http/1.1"
+            ],
+            "network": "ws",
+            "ws-opts": {
+                "path": "/eyJqdW5rIjoiR0t5MnRFOTdHQXdBSXEiLCJwcm90b2NvbCI6InZsIiwibW9kZSI6InByb3h5aXAiLCJwYW5lbElQcyI6WyJicGIueW91c2VmLmlzZWdhcm8uY29tIl19",
+                "max-early-data": 2560,
+                "early-data-header-name": "Sec-WebSocket-Protocol",
+                "headers": {
+                    "Host": "bpb.lancelot.dpdns.org"
+                }
+            }
+        },
+        {
+            "name": "💦 65 - VLESS - Clean IP : 2096",
+            "type": "vless",
+            "server": "www.shopify.com",
+            "port": 2096,
+            "ip-version": "ipv4-prefer",
+            "tfo": false,
+            "udp": false,
+            "uuid": "db991e3e-91d5-48ab-9776-39b99c6a0168",
+            "packet-encoding": "",
+            "tls": true,
+            "servername": "bPB.LANcELot.dPdNs.Org",
+            "client-fingerprint": "chrome",
+            "skip-cert-verify": false,
+            "alpn": [
+                "http/1.1"
+            ],
+            "network": "ws",
+            "ws-opts": {
+                "path": "/eyJqdW5rIjoiR3BlekxpSEpzVGhzIiwicHJvdG9jb2wiOiJ2bCIsIm1vZGUiOiJwcm94eWlwIiwicGFuZWxJUHMiOlsiYnBiLnlvdXNlZi5pc2VnYXJvLmNvbSJdfQ==",
+                "max-early-data": 2560,
+                "early-data-header-name": "Sec-WebSocket-Protocol",
+                "headers": {
+                    "Host": "bpb.lancelot.dpdns.org"
+                }
+            }
+        },
+        {
+            "name": "💦 66 - VLESS - Clean IP : 2096",
+            "type": "vless",
+            "server": "saas.sin.fan",
+            "port": 2096,
+            "ip-version": "ipv4-prefer",
+            "tfo": false,
+            "udp": false,
+            "uuid": "db991e3e-91d5-48ab-9776-39b99c6a0168",
+            "packet-encoding": "",
+            "tls": true,
+            "servername": "bpB.LANCeLOt.dpDNS.orG",
+            "client-fingerprint": "chrome",
+            "skip-cert-verify": false,
+            "alpn": [
+                "http/1.1"
+            ],
+            "network": "ws",
+            "ws-opts": {
+                "path": "/eyJqdW5rIjoiOGJRSGROcnhTIiwicHJvdG9jb2wiOiJ2bCIsIm1vZGUiOiJwcm94eWlwIiwicGFuZWxJUHMiOlsiYnBiLnlvdXNlZi5pc2VnYXJvLmNvbSJdfQ==",
+                "max-early-data": 2560,
+                "early-data-header-name": "Sec-WebSocket-Protocol",
+                "headers": {
+                    "Host": "bpb.lancelot.dpdns.org"
+                }
+            }
+        },
+        {
+            "name": "💦 1 - Trojan - Domain : 443",
+            "type": "trojan",
+            "server": "bpb.lancelot.dpdns.org",
+            "port": 443,
+            "ip-version": "ipv4-prefer",
+            "tfo": false,
+            "udp": false,
+            "password": "li19882008",
+            "tls": true,
+            "sni": "BpB.LANCeLOT.DPdNs.ORG",
+            "client-fingerprint": "chrome",
+            "skip-cert-verify": false,
+            "alpn": [
+                "http/1.1"
+            ],
+            "network": "ws",
+            "ws-opts": {
+                "path": "/eyJqdW5rIjoicFQwNEJ5ZmMiLCJwcm90b2NvbCI6InRyIiwibW9kZSI6InByb3h5aXAiLCJwYW5lbElQcyI6WyJicGIueW91c2VmLmlzZWdhcm8uY29tIl19",
+                "max-early-data": 2560,
+                "early-data-header-name": "Sec-WebSocket-Protocol",
+                "headers": {
+                    "Host": "bpb.lancelot.dpdns.org"
+                }
+            }
+        },
+        {
+            "name": "💦 2 - Trojan - Domain : 443",
+            "type": "trojan",
+            "server": "www.speedtest.net",
+            "port": 443,
+            "ip-version": "ipv4-prefer",
+            "tfo": false,
+            "udp": false,
+            "password": "li19882008",
+            "tls": true,
+            "sni": "BpB.lAnCELot.dpdNs.org",
+            "client-fingerprint": "chrome",
+            "skip-cert-verify": false,
+            "alpn": [
+                "http/1.1"
+            ],
+            "network": "ws",
+            "ws-opts": {
+                "path": "/eyJqdW5rIjoia1A5UzM0aGZ1Y1BRIiwicHJvdG9jb2wiOiJ0ciIsIm1vZGUiOiJwcm94eWlwIiwicGFuZWxJUHMiOlsiYnBiLnlvdXNlZi5pc2VnYXJvLmNvbSJdfQ==",
+                "max-early-data": 2560,
+                "early-data-header-name": "Sec-WebSocket-Protocol",
+                "headers": {
+                    "Host": "bpb.lancelot.dpdns.org"
+                }
+            }
+        },
+        {
+            "name": "💦 3 - Trojan - IPv4 : 443",
+            "type": "trojan",
+            "server": "104.21.46.3",
+            "port": 443,
+            "ip-version": "ipv4-prefer",
+            "tfo": false,
+            "udp": false,
+            "password": "li19882008",
+            "tls": true,
+            "sni": "BpB.LanCelOT.dpdns.org",
+            "client-fingerprint": "chrome",
+            "skip-cert-verify": false,
+            "alpn": [
+                "http/1.1"
+            ],
+            "network": "ws",
+            "ws-opts": {
+                "path": "/eyJqdW5rIjoibWg0TWwyVXc3ekhPM2xOIiwicHJvdG9jb2wiOiJ0ciIsIm1vZGUiOiJwcm94eWlwIiwicGFuZWxJUHMiOlsiYnBiLnlvdXNlZi5pc2VnYXJvLmNvbSJdfQ==",
+                "max-early-data": 2560,
+                "early-data-header-name": "Sec-WebSocket-Protocol",
+                "headers": {
+                    "Host": "bpb.lancelot.dpdns.org"
+                }
+            }
+        },
+        {
+            "name": "💦 4 - Trojan - IPv4 : 443",
+            "type": "trojan",
+            "server": "172.67.221.242",
+            "port": 443,
+            "ip-version": "ipv4-prefer",
+            "tfo": false,
+            "udp": false,
+            "password": "li19882008",
+            "tls": true,
+            "sni": "bPB.LaNCeLoT.dpDns.orG",
+            "client-fingerprint": "chrome",
+            "skip-cert-verify": false,
+            "alpn": [
+                "http/1.1"
+            ],
+            "network": "ws",
+            "ws-opts": {
+                "path": "/eyJqdW5rIjoiRHplQXN3RzJXSnIiLCJwcm90b2NvbCI6InRyIiwibW9kZSI6InByb3h5aXAiLCJwYW5lbElQcyI6WyJicGIueW91c2VmLmlzZWdhcm8uY29tIl19",
+                "max-early-data": 2560,
+                "early-data-header-name": "Sec-WebSocket-Protocol",
+                "headers": {
+                    "Host": "bpb.lancelot.dpdns.org"
+                }
+            }
+        },
+        {
+            "name": "💦 5 - Trojan - IPv6 : 443",
+            "type": "trojan",
+            "server": "2606:4700:3036::ac43:ddf2",
+            "port": 443,
+            "ip-version": "ipv4-prefer",
+            "tfo": false,
+            "udp": false,
+            "password": "li19882008",
+            "tls": true,
+            "sni": "bPB.LAncElOt.dPdnS.OrG",
+            "client-fingerprint": "chrome",
+            "skip-cert-verify": false,
+            "alpn": [
+                "http/1.1"
+            ],
+            "network": "ws",
+            "ws-opts": {
+                "path": "/eyJqdW5rIjoiQnExTVNYS09hYXEiLCJwcm90b2NvbCI6InRyIiwibW9kZSI6InByb3h5aXAiLCJwYW5lbElQcyI6WyJicGIueW91c2VmLmlzZWdhcm8uY29tIl19",
+                "max-early-data": 2560,
+                "early-data-header-name": "Sec-WebSocket-Protocol",
+                "headers": {
+                    "Host": "bpb.lancelot.dpdns.org"
+                }
+            }
+        },
+        {
+            "name": "💦 6 - Trojan - IPv6 : 443",
+            "type": "trojan",
+            "server": "2606:4700:3030::6815:2e03",
+            "port": 443,
+            "ip-version": "ipv4-prefer",
+            "tfo": false,
+            "udp": false,
+            "password": "li19882008",
+            "tls": true,
+            "sni": "bpb.lANcelot.dpDnS.oRg",
+            "client-fingerprint": "chrome",
+            "skip-cert-verify": false,
+            "alpn": [
+                "http/1.1"
+            ],
+            "network": "ws",
+            "ws-opts": {
+                "path": "/eyJqdW5rIjoiSDJQZE1EQzhLRlUiLCJwcm90b2NvbCI6InRyIiwibW9kZSI6InByb3h5aXAiLCJwYW5lbElQcyI6WyJicGIueW91c2VmLmlzZWdhcm8uY29tIl19",
+                "max-early-data": 2560,
+                "early-data-header-name": "Sec-WebSocket-Protocol",
+                "headers": {
+                    "Host": "bpb.lancelot.dpdns.org"
+                }
+            }
+        },
+        {
+            "name": "💦 7 - Trojan - Clean IP : 443",
+            "type": "trojan",
+            "server": "youxuan.cf.090227.xyz",
+            "port": 443,
+            "ip-version": "ipv4-prefer",
+            "tfo": false,
+            "udp": false,
+            "password": "li19882008",
+            "tls": true,
+            "sni": "bPb.LancElot.dpdNS.orG",
+            "client-fingerprint": "chrome",
+            "skip-cert-verify": false,
+            "alpn": [
+                "http/1.1"
+            ],
+            "network": "ws",
+            "ws-opts": {
+                "path": "/eyJqdW5rIjoiWHV4TmZHNWc1TmZCcUgiLCJwcm90b2NvbCI6InRyIiwibW9kZSI6InByb3h5aXAiLCJwYW5lbElQcyI6WyJicGIueW91c2VmLmlzZWdhcm8uY29tIl19",
+                "max-early-data": 2560,
+                "early-data-header-name": "Sec-WebSocket-Protocol",
+                "headers": {
+                    "Host": "bpb.lancelot.dpdns.org"
+                }
+            }
+        },
+        {
+            "name": "💦 8 - Trojan - Clean IP : 443",
+            "type": "trojan",
+            "server": "www.visa.cn",
+            "port": 443,
+            "ip-version": "ipv4-prefer",
+            "tfo": false,
+            "udp": false,
+            "password": "li19882008",
+            "tls": true,
+            "sni": "bPb.LANCeloT.DPdns.OrG",
+            "client-fingerprint": "chrome",
+            "skip-cert-verify": false,
+            "alpn": [
+                "http/1.1"
+            ],
+            "network": "ws",
+            "ws-opts": {
+                "path": "/eyJqdW5rIjoiVEV1NElGUGRtTk1KdjMiLCJwcm90b2NvbCI6InRyIiwibW9kZSI6InByb3h5aXAiLCJwYW5lbElQcyI6WyJicGIueW91c2VmLmlzZWdhcm8uY29tIl19",
+                "max-early-data": 2560,
+                "early-data-header-name": "Sec-WebSocket-Protocol",
+                "headers": {
+                    "Host": "bpb.lancelot.dpdns.org"
+                }
+            }
+        },
+        {
+            "name": "💦 9 - Trojan - Clean IP : 443",
+            "type": "trojan",
+            "server": "mfa.gov.ua",
+            "port": 443,
+            "ip-version": "ipv4-prefer",
+            "tfo": false,
+            "udp": false,
+            "password": "li19882008",
+            "tls": true,
+            "sni": "Bpb.LAnCeLOt.DpDnS.orG",
+            "client-fingerprint": "chrome",
+            "skip-cert-verify": false,
+            "alpn": [
+                "http/1.1"
+            ],
+            "network": "ws",
+            "ws-opts": {
+                "path": "/eyJqdW5rIjoia0tqTkpicEkxdFBPIiwicHJvdG9jb2wiOiJ0ciIsIm1vZGUiOiJwcm94eWlwIiwicGFuZWxJUHMiOlsiYnBiLnlvdXNlZi5pc2VnYXJvLmNvbSJdfQ==",
+                "max-early-data": 2560,
+                "early-data-header-name": "Sec-WebSocket-Protocol",
+                "headers": {
+                    "Host": "bpb.lancelot.dpdns.org"
+                }
+            }
+        },
+        {
+            "name": "💦 10 - Trojan - Clean IP : 443",
+            "type": "trojan",
+            "server": "www.shopify.com",
+            "port": 443,
+            "ip-version": "ipv4-prefer",
+            "tfo": false,
+            "udp": false,
+            "password": "li19882008",
+            "tls": true,
+            "sni": "BPB.LANCeLoT.Dpdns.org",
+            "client-fingerprint": "chrome",
+            "skip-cert-verify": false,
+            "alpn": [
+                "http/1.1"
+            ],
+            "network": "ws",
+            "ws-opts": {
+                "path": "/eyJqdW5rIjoiNExMVVM3VDJ1IiwicHJvdG9jb2wiOiJ0ciIsIm1vZGUiOiJwcm94eWlwIiwicGFuZWxJUHMiOlsiYnBiLnlvdXNlZi5pc2VnYXJvLmNvbSJdfQ==",
+                "max-early-data": 2560,
+                "early-data-header-name": "Sec-WebSocket-Protocol",
+                "headers": {
+                    "Host": "bpb.lancelot.dpdns.org"
+                }
+            }
+        },
+        {
+            "name": "💦 11 - Trojan - Clean IP : 443",
+            "type": "trojan",
+            "server": "saas.sin.fan",
+            "port": 443,
+            "ip-version": "ipv4-prefer",
+            "tfo": false,
+            "udp": false,
+            "password": "li19882008",
+            "tls": true,
+            "sni": "BPB.lAnCElOt.dPDNs.ORg",
+            "client-fingerprint": "chrome",
+            "skip-cert-verify": false,
+            "alpn": [
+                "http/1.1"
+            ],
+            "network": "ws",
+            "ws-opts": {
+                "path": "/eyJqdW5rIjoieTk4ek1CblFGOUVGIiwicHJvdG9jb2wiOiJ0ciIsIm1vZGUiOiJwcm94eWlwIiwicGFuZWxJUHMiOlsiYnBiLnlvdXNlZi5pc2VnYXJvLmNvbSJdfQ==",
+                "max-early-data": 2560,
+                "early-data-header-name": "Sec-WebSocket-Protocol",
+                "headers": {
+                    "Host": "bpb.lancelot.dpdns.org"
+                }
+            }
+        },
+        {
+            "name": "💦 12 - Trojan - Domain : 8443",
+            "type": "trojan",
+            "server": "bpb.lancelot.dpdns.org",
+            "port": 8443,
+            "ip-version": "ipv4-prefer",
+            "tfo": false,
+            "udp": false,
+            "password": "li19882008",
+            "tls": true,
+            "sni": "BPb.LAnceLoT.DpdnS.OrG",
+            "client-fingerprint": "chrome",
+            "skip-cert-verify": false,
+            "alpn": [
+                "http/1.1"
+            ],
+            "network": "ws",
+            "ws-opts": {
+                "path": "/eyJqdW5rIjoiZnJYdGZHODNTNm0iLCJwcm90b2NvbCI6InRyIiwibW9kZSI6InByb3h5aXAiLCJwYW5lbElQcyI6WyJicGIueW91c2VmLmlzZWdhcm8uY29tIl19",
+                "max-early-data": 2560,
+                "early-data-header-name": "Sec-WebSocket-Protocol",
+                "headers": {
+                    "Host": "bpb.lancelot.dpdns.org"
+                }
+            }
+        },
+        {
+            "name": "💦 13 - Trojan - Domain : 8443",
+            "type": "trojan",
+            "server": "www.speedtest.net",
+            "port": 8443,
+            "ip-version": "ipv4-prefer",
+            "tfo": false,
+            "udp": false,
+            "password": "li19882008",
+            "tls": true,
+            "sni": "BPb.LAncELOt.DpdNs.org",
+            "client-fingerprint": "chrome",
+            "skip-cert-verify": false,
+            "alpn": [
+                "http/1.1"
+            ],
+            "network": "ws",
+            "ws-opts": {
+                "path": "/eyJqdW5rIjoiR0lvOG9CamNCbWFnVzVRQSIsInByb3RvY29sIjoidHIiLCJtb2RlIjoicHJveHlpcCIsInBhbmVsSVBzIjpbImJwYi55b3VzZWYuaXNlZ2Fyby5jb20iXX0=",
+                "max-early-data": 2560,
+                "early-data-header-name": "Sec-WebSocket-Protocol",
+                "headers": {
+                    "Host": "bpb.lancelot.dpdns.org"
+                }
+            }
+        },
+        {
+            "name": "💦 14 - Trojan - IPv4 : 8443",
+            "type": "trojan",
+            "server": "104.21.46.3",
+            "port": 8443,
+            "ip-version": "ipv4-prefer",
+            "tfo": false,
+            "udp": false,
+            "password": "li19882008",
+            "tls": true,
+            "sni": "Bpb.LANCelOT.dPdns.oRG",
+            "client-fingerprint": "chrome",
+            "skip-cert-verify": false,
+            "alpn": [
+                "http/1.1"
+            ],
+            "network": "ws",
+            "ws-opts": {
+                "path": "/eyJqdW5rIjoiS01malM4Sm14VHkiLCJwcm90b2NvbCI6InRyIiwibW9kZSI6InByb3h5aXAiLCJwYW5lbElQcyI6WyJicGIueW91c2VmLmlzZWdhcm8uY29tIl19",
+                "max-early-data": 2560,
+                "early-data-header-name": "Sec-WebSocket-Protocol",
+                "headers": {
+                    "Host": "bpb.lancelot.dpdns.org"
+                }
+            }
+        },
+        {
+            "name": "💦 15 - Trojan - IPv4 : 8443",
+            "type": "trojan",
+            "server": "172.67.221.242",
+            "port": 8443,
+            "ip-version": "ipv4-prefer",
+            "tfo": false,
+            "udp": false,
+            "password": "li19882008",
+            "tls": true,
+            "sni": "Bpb.lanCELot.DPdNS.ORG",
+            "client-fingerprint": "chrome",
+            "skip-cert-verify": false,
+            "alpn": [
+                "http/1.1"
+            ],
+            "network": "ws",
+            "ws-opts": {
+                "path": "/eyJqdW5rIjoibVRlU0ZBMkh6YSIsInByb3RvY29sIjoidHIiLCJtb2RlIjoicHJveHlpcCIsInBhbmVsSVBzIjpbImJwYi55b3VzZWYuaXNlZ2Fyby5jb20iXX0=",
+                "max-early-data": 2560,
+                "early-data-header-name": "Sec-WebSocket-Protocol",
+                "headers": {
+                    "Host": "bpb.lancelot.dpdns.org"
+                }
+            }
+        },
+        {
+            "name": "💦 16 - Trojan - IPv6 : 8443",
+            "type": "trojan",
+            "server": "2606:4700:3036::ac43:ddf2",
+            "port": 8443,
+            "ip-version": "ipv4-prefer",
+            "tfo": false,
+            "udp": false,
+            "password": "li19882008",
+            "tls": true,
+            "sni": "bpb.LaNceLoT.dPDNS.ORG",
+            "client-fingerprint": "chrome",
+            "skip-cert-verify": false,
+            "alpn": [
+                "http/1.1"
+            ],
+            "network": "ws",
+            "ws-opts": {
+                "path": "/eyJqdW5rIjoiNmVXaXdMcFZ6NmE3bjAiLCJwcm90b2NvbCI6InRyIiwibW9kZSI6InByb3h5aXAiLCJwYW5lbElQcyI6WyJicGIueW91c2VmLmlzZWdhcm8uY29tIl19",
+                "max-early-data": 2560,
+                "early-data-header-name": "Sec-WebSocket-Protocol",
+                "headers": {
+                    "Host": "bpb.lancelot.dpdns.org"
+                }
+            }
+        },
+        {
+            "name": "💦 17 - Trojan - IPv6 : 8443",
+            "type": "trojan",
+            "server": "2606:4700:3030::6815:2e03",
+            "port": 8443,
+            "ip-version": "ipv4-prefer",
+            "tfo": false,
+            "udp": false,
+            "password": "li19882008",
+            "tls": true,
+            "sni": "BPb.LaNCElot.dpDnS.org",
+            "client-fingerprint": "chrome",
+            "skip-cert-verify": false,
+            "alpn": [
+                "http/1.1"
+            ],
+            "network": "ws",
+            "ws-opts": {
+                "path": "/eyJqdW5rIjoiZkZNTUNTV1JiIiwicHJvdG9jb2wiOiJ0ciIsIm1vZGUiOiJwcm94eWlwIiwicGFuZWxJUHMiOlsiYnBiLnlvdXNlZi5pc2VnYXJvLmNvbSJdfQ==",
+                "max-early-data": 2560,
+                "early-data-header-name": "Sec-WebSocket-Protocol",
+                "headers": {
+                    "Host": "bpb.lancelot.dpdns.org"
+                }
+            }
+        },
+        {
+            "name": "💦 18 - Trojan - Clean IP : 8443",
+            "type": "trojan",
+            "server": "youxuan.cf.090227.xyz",
+            "port": 8443,
+            "ip-version": "ipv4-prefer",
+            "tfo": false,
+            "udp": false,
+            "password": "li19882008",
+            "tls": true,
+            "sni": "bpb.lanceloT.dpDns.OrG",
+            "client-fingerprint": "chrome",
+            "skip-cert-verify": false,
+            "alpn": [
+                "http/1.1"
+            ],
+            "network": "ws",
+            "ws-opts": {
+                "path": "/eyJqdW5rIjoiSnJ5U3c2NzZlQ3ZNWiIsInByb3RvY29sIjoidHIiLCJtb2RlIjoicHJveHlpcCIsInBhbmVsSVBzIjpbImJwYi55b3VzZWYuaXNlZ2Fyby5jb20iXX0=",
+                "max-early-data": 2560,
+                "early-data-header-name": "Sec-WebSocket-Protocol",
+                "headers": {
+                    "Host": "bpb.lancelot.dpdns.org"
+                }
+            }
+        },
+        {
+            "name": "💦 19 - Trojan - Clean IP : 8443",
+            "type": "trojan",
+            "server": "www.visa.cn",
+            "port": 8443,
+            "ip-version": "ipv4-prefer",
+            "tfo": false,
+            "udp": false,
+            "password": "li19882008",
+            "tls": true,
+            "sni": "bPb.LANCeLoT.dPdnS.oRG",
+            "client-fingerprint": "chrome",
+            "skip-cert-verify": false,
+            "alpn": [
+                "http/1.1"
+            ],
+            "network": "ws",
+            "ws-opts": {
+                "path": "/eyJqdW5rIjoiY2cwMkdnVTkiLCJwcm90b2NvbCI6InRyIiwibW9kZSI6InByb3h5aXAiLCJwYW5lbElQcyI6WyJicGIueW91c2VmLmlzZWdhcm8uY29tIl19",
+                "max-early-data": 2560,
+                "early-data-header-name": "Sec-WebSocket-Protocol",
+                "headers": {
+                    "Host": "bpb.lancelot.dpdns.org"
+                }
+            }
+        },
+        {
+            "name": "💦 20 - Trojan - Clean IP : 8443",
+            "type": "trojan",
+            "server": "mfa.gov.ua",
+            "port": 8443,
+            "ip-version": "ipv4-prefer",
+            "tfo": false,
+            "udp": false,
+            "password": "li19882008",
+            "tls": true,
+            "sni": "bpB.laNcELOT.DPDNs.oRG",
+            "client-fingerprint": "chrome",
+            "skip-cert-verify": false,
+            "alpn": [
+                "http/1.1"
+            ],
+            "network": "ws",
+            "ws-opts": {
+                "path": "/eyJqdW5rIjoiMW1ERG5PdkJkIiwicHJvdG9jb2wiOiJ0ciIsIm1vZGUiOiJwcm94eWlwIiwicGFuZWxJUHMiOlsiYnBiLnlvdXNlZi5pc2VnYXJvLmNvbSJdfQ==",
+                "max-early-data": 2560,
+                "early-data-header-name": "Sec-WebSocket-Protocol",
+                "headers": {
+                    "Host": "bpb.lancelot.dpdns.org"
+                }
+            }
+        },
+        {
+            "name": "💦 21 - Trojan - Clean IP : 8443",
+            "type": "trojan",
+            "server": "www.shopify.com",
+            "port": 8443,
+            "ip-version": "ipv4-prefer",
+            "tfo": false,
+            "udp": false,
+            "password": "li19882008",
+            "tls": true,
+            "sni": "BpB.LANCeLOT.DPDnS.ORG",
+            "client-fingerprint": "chrome",
+            "skip-cert-verify": false,
+            "alpn": [
+                "http/1.1"
+            ],
+            "network": "ws",
+            "ws-opts": {
+                "path": "/eyJqdW5rIjoiWGNqSjNHSTg0V3QiLCJwcm90b2NvbCI6InRyIiwibW9kZSI6InByb3h5aXAiLCJwYW5lbElQcyI6WyJicGIueW91c2VmLmlzZWdhcm8uY29tIl19",
+                "max-early-data": 2560,
+                "early-data-header-name": "Sec-WebSocket-Protocol",
+                "headers": {
+                    "Host": "bpb.lancelot.dpdns.org"
+                }
+            }
+        },
+        {
+            "name": "💦 22 - Trojan - Clean IP : 8443",
+            "type": "trojan",
+            "server": "saas.sin.fan",
+            "port": 8443,
+            "ip-version": "ipv4-prefer",
+            "tfo": false,
+            "udp": false,
+            "password": "li19882008",
+            "tls": true,
+            "sni": "BPb.laNcELOT.Dpdns.OrG",
+            "client-fingerprint": "chrome",
+            "skip-cert-verify": false,
+            "alpn": [
+                "http/1.1"
+            ],
+            "network": "ws",
+            "ws-opts": {
+                "path": "/eyJqdW5rIjoiSldyTzRlbUxEIiwicHJvdG9jb2wiOiJ0ciIsIm1vZGUiOiJwcm94eWlwIiwicGFuZWxJUHMiOlsiYnBiLnlvdXNlZi5pc2VnYXJvLmNvbSJdfQ==",
+                "max-early-data": 2560,
+                "early-data-header-name": "Sec-WebSocket-Protocol",
+                "headers": {
+                    "Host": "bpb.lancelot.dpdns.org"
+                }
+            }
+        },
+        {
+            "name": "💦 23 - Trojan - Domain : 2053",
+            "type": "trojan",
+            "server": "bpb.lancelot.dpdns.org",
+            "port": 2053,
+            "ip-version": "ipv4-prefer",
+            "tfo": false,
+            "udp": false,
+            "password": "li19882008",
+            "tls": true,
+            "sni": "BPb.LAncELoT.dpDnS.OrG",
+            "client-fingerprint": "chrome",
+            "skip-cert-verify": false,
+            "alpn": [
+                "http/1.1"
+            ],
+            "network": "ws",
+            "ws-opts": {
+                "path": "/eyJqdW5rIjoiNVFxaHhFeHJmYjMiLCJwcm90b2NvbCI6InRyIiwibW9kZSI6InByb3h5aXAiLCJwYW5lbElQcyI6WyJicGIueW91c2VmLmlzZWdhcm8uY29tIl19",
+                "max-early-data": 2560,
+                "early-data-header-name": "Sec-WebSocket-Protocol",
+                "headers": {
+                    "Host": "bpb.lancelot.dpdns.org"
+                }
+            }
+        },
+        {
+            "name": "💦 24 - Trojan - Domain : 2053",
+            "type": "trojan",
+            "server": "www.speedtest.net",
+            "port": 2053,
+            "ip-version": "ipv4-prefer",
+            "tfo": false,
+            "udp": false,
+            "password": "li19882008",
+            "tls": true,
+            "sni": "Bpb.lANCElot.DpdnS.ORg",
+            "client-fingerprint": "chrome",
+            "skip-cert-verify": false,
+            "alpn": [
+                "http/1.1"
+            ],
+            "network": "ws",
+            "ws-opts": {
+                "path": "/eyJqdW5rIjoiUFlHQkJ6UjlUIiwicHJvdG9jb2wiOiJ0ciIsIm1vZGUiOiJwcm94eWlwIiwicGFuZWxJUHMiOlsiYnBiLnlvdXNlZi5pc2VnYXJvLmNvbSJdfQ==",
+                "max-early-data": 2560,
+                "early-data-header-name": "Sec-WebSocket-Protocol",
+                "headers": {
+                    "Host": "bpb.lancelot.dpdns.org"
+                }
+            }
+        },
+        {
+            "name": "💦 25 - Trojan - IPv4 : 2053",
+            "type": "trojan",
+            "server": "104.21.46.3",
+            "port": 2053,
+            "ip-version": "ipv4-prefer",
+            "tfo": false,
+            "udp": false,
+            "password": "li19882008",
+            "tls": true,
+            "sni": "Bpb.lanCELot.dPDNS.oRg",
+            "client-fingerprint": "chrome",
+            "skip-cert-verify": false,
+            "alpn": [
+                "http/1.1"
+            ],
+            "network": "ws",
+            "ws-opts": {
+                "path": "/eyJqdW5rIjoiblV3Vk9qMTFiWkdWN1IiLCJwcm90b2NvbCI6InRyIiwibW9kZSI6InByb3h5aXAiLCJwYW5lbElQcyI6WyJicGIueW91c2VmLmlzZWdhcm8uY29tIl19",
+                "max-early-data": 2560,
+                "early-data-header-name": "Sec-WebSocket-Protocol",
+                "headers": {
+                    "Host": "bpb.lancelot.dpdns.org"
+                }
+            }
+        },
+        {
+            "name": "💦 26 - Trojan - IPv4 : 2053",
+            "type": "trojan",
+            "server": "172.67.221.242",
+            "port": 2053,
+            "ip-version": "ipv4-prefer",
+            "tfo": false,
+            "udp": false,
+            "password": "li19882008",
+            "tls": true,
+            "sni": "Bpb.laNceLOT.DpDns.orG",
+            "client-fingerprint": "chrome",
+            "skip-cert-verify": false,
+            "alpn": [
+                "http/1.1"
+            ],
+            "network": "ws",
+            "ws-opts": {
+                "path": "/eyJqdW5rIjoiMFpUamJ5eDVEIiwicHJvdG9jb2wiOiJ0ciIsIm1vZGUiOiJwcm94eWlwIiwicGFuZWxJUHMiOlsiYnBiLnlvdXNlZi5pc2VnYXJvLmNvbSJdfQ==",
+                "max-early-data": 2560,
+                "early-data-header-name": "Sec-WebSocket-Protocol",
+                "headers": {
+                    "Host": "bpb.lancelot.dpdns.org"
+                }
+            }
+        },
+        {
+            "name": "💦 27 - Trojan - IPv6 : 2053",
+            "type": "trojan",
+            "server": "2606:4700:3036::ac43:ddf2",
+            "port": 2053,
+            "ip-version": "ipv4-prefer",
+            "tfo": false,
+            "udp": false,
+            "password": "li19882008",
+            "tls": true,
+            "sni": "bpb.LANcElOt.DPdNs.ORg",
+            "client-fingerprint": "chrome",
+            "skip-cert-verify": false,
+            "alpn": [
+                "http/1.1"
+            ],
+            "network": "ws",
+            "ws-opts": {
+                "path": "/eyJqdW5rIjoiMUdwWVd0Slc3VnZXSHoiLCJwcm90b2NvbCI6InRyIiwibW9kZSI6InByb3h5aXAiLCJwYW5lbElQcyI6WyJicGIueW91c2VmLmlzZWdhcm8uY29tIl19",
+                "max-early-data": 2560,
+                "early-data-header-name": "Sec-WebSocket-Protocol",
+                "headers": {
+                    "Host": "bpb.lancelot.dpdns.org"
+                }
+            }
+        },
+        {
+            "name": "💦 28 - Trojan - IPv6 : 2053",
+            "type": "trojan",
+            "server": "2606:4700:3030::6815:2e03",
+            "port": 2053,
+            "ip-version": "ipv4-prefer",
+            "tfo": false,
+            "udp": false,
+            "password": "li19882008",
+            "tls": true,
+            "sni": "Bpb.lAncElot.DpdNs.Org",
+            "client-fingerprint": "chrome",
+            "skip-cert-verify": false,
+            "alpn": [
+                "http/1.1"
+            ],
+            "network": "ws",
+            "ws-opts": {
+                "path": "/eyJqdW5rIjoiTlN0QUJ1cTFIQVoiLCJwcm90b2NvbCI6InRyIiwibW9kZSI6InByb3h5aXAiLCJwYW5lbElQcyI6WyJicGIueW91c2VmLmlzZWdhcm8uY29tIl19",
+                "max-early-data": 2560,
+                "early-data-header-name": "Sec-WebSocket-Protocol",
+                "headers": {
+                    "Host": "bpb.lancelot.dpdns.org"
+                }
+            }
+        },
+        {
+            "name": "💦 29 - Trojan - Clean IP : 2053",
+            "type": "trojan",
+            "server": "youxuan.cf.090227.xyz",
+            "port": 2053,
+            "ip-version": "ipv4-prefer",
+            "tfo": false,
+            "udp": false,
+            "password": "li19882008",
+            "tls": true,
+            "sni": "BpB.LaNCeLoT.DPdNS.Org",
+            "client-fingerprint": "chrome",
+            "skip-cert-verify": false,
+            "alpn": [
+                "http/1.1"
+            ],
+            "network": "ws",
+            "ws-opts": {
+                "path": "/eyJqdW5rIjoianZvZndtVkY5VEgiLCJwcm90b2NvbCI6InRyIiwibW9kZSI6InByb3h5aXAiLCJwYW5lbElQcyI6WyJicGIueW91c2VmLmlzZWdhcm8uY29tIl19",
+                "max-early-data": 2560,
+                "early-data-header-name": "Sec-WebSocket-Protocol",
+                "headers": {
+                    "Host": "bpb.lancelot.dpdns.org"
+                }
+            }
+        },
+        {
+            "name": "💦 30 - Trojan - Clean IP : 2053",
+            "type": "trojan",
+            "server": "www.visa.cn",
+            "port": 2053,
+            "ip-version": "ipv4-prefer",
+            "tfo": false,
+            "udp": false,
+            "password": "li19882008",
+            "tls": true,
+            "sni": "bPB.LAnCElOt.DPDNs.Org",
+            "client-fingerprint": "chrome",
+            "skip-cert-verify": false,
+            "alpn": [
+                "http/1.1"
+            ],
+            "network": "ws",
+            "ws-opts": {
+                "path": "/eyJqdW5rIjoiRmJaY0FqaDh1eSIsInByb3RvY29sIjoidHIiLCJtb2RlIjoicHJveHlpcCIsInBhbmVsSVBzIjpbImJwYi55b3VzZWYuaXNlZ2Fyby5jb20iXX0=",
+                "max-early-data": 2560,
+                "early-data-header-name": "Sec-WebSocket-Protocol",
+                "headers": {
+                    "Host": "bpb.lancelot.dpdns.org"
+                }
+            }
+        },
+        {
+            "name": "💦 31 - Trojan - Clean IP : 2053",
+            "type": "trojan",
+            "server": "mfa.gov.ua",
+            "port": 2053,
+            "ip-version": "ipv4-prefer",
+            "tfo": false,
+            "udp": false,
+            "password": "li19882008",
+            "tls": true,
+            "sni": "BPB.lANCElOT.dpdnS.org",
+            "client-fingerprint": "chrome",
+            "skip-cert-verify": false,
+            "alpn": [
+                "http/1.1"
+            ],
+            "network": "ws",
+            "ws-opts": {
+                "path": "/eyJqdW5rIjoiRENaMFpVSDhDV3pvUnNGaSIsInByb3RvY29sIjoidHIiLCJtb2RlIjoicHJveHlpcCIsInBhbmVsSVBzIjpbImJwYi55b3VzZWYuaXNlZ2Fyby5jb20iXX0=",
+                "max-early-data": 2560,
+                "early-data-header-name": "Sec-WebSocket-Protocol",
+                "headers": {
+                    "Host": "bpb.lancelot.dpdns.org"
+                }
+            }
+        },
+        {
+            "name": "💦 32 - Trojan - Clean IP : 2053",
+            "type": "trojan",
+            "server": "www.shopify.com",
+            "port": 2053,
+            "ip-version": "ipv4-prefer",
+            "tfo": false,
+            "udp": false,
+            "password": "li19882008",
+            "tls": true,
+            "sni": "bpb.LAnceloT.dpDNS.ORG",
+            "client-fingerprint": "chrome",
+            "skip-cert-verify": false,
+            "alpn": [
+                "http/1.1"
+            ],
+            "network": "ws",
+            "ws-opts": {
+                "path": "/eyJqdW5rIjoiUERMTXI3N2hKTUdkeiIsInByb3RvY29sIjoidHIiLCJtb2RlIjoicHJveHlpcCIsInBhbmVsSVBzIjpbImJwYi55b3VzZWYuaXNlZ2Fyby5jb20iXX0=",
+                "max-early-data": 2560,
+                "early-data-header-name": "Sec-WebSocket-Protocol",
+                "headers": {
+                    "Host": "bpb.lancelot.dpdns.org"
+                }
+            }
+        },
+        {
+            "name": "💦 33 - Trojan - Clean IP : 2053",
+            "type": "trojan",
+            "server": "saas.sin.fan",
+            "port": 2053,
+            "ip-version": "ipv4-prefer",
+            "tfo": false,
+            "udp": false,
+            "password": "li19882008",
+            "tls": true,
+            "sni": "bPB.lANCelot.DPdns.orG",
+            "client-fingerprint": "chrome",
+            "skip-cert-verify": false,
+            "alpn": [
+                "http/1.1"
+            ],
+            "network": "ws",
+            "ws-opts": {
+                "path": "/eyJqdW5rIjoiRXpYWHB3Vmc4eGhxVTM5TiIsInByb3RvY29sIjoidHIiLCJtb2RlIjoicHJveHlpcCIsInBhbmVsSVBzIjpbImJwYi55b3VzZWYuaXNlZ2Fyby5jb20iXX0=",
+                "max-early-data": 2560,
+                "early-data-header-name": "Sec-WebSocket-Protocol",
+                "headers": {
+                    "Host": "bpb.lancelot.dpdns.org"
+                }
+            }
+        },
+        {
+            "name": "💦 34 - Trojan - Domain : 2083",
+            "type": "trojan",
+            "server": "bpb.lancelot.dpdns.org",
+            "port": 2083,
+            "ip-version": "ipv4-prefer",
+            "tfo": false,
+            "udp": false,
+            "password": "li19882008",
+            "tls": true,
+            "sni": "BpB.lAncEloT.DPDns.org",
+            "client-fingerprint": "chrome",
+            "skip-cert-verify": false,
+            "alpn": [
+                "http/1.1"
+            ],
+            "network": "ws",
+            "ws-opts": {
+                "path": "/eyJqdW5rIjoicWVxbElpbWRCZVpPIiwicHJvdG9jb2wiOiJ0ciIsIm1vZGUiOiJwcm94eWlwIiwicGFuZWxJUHMiOlsiYnBiLnlvdXNlZi5pc2VnYXJvLmNvbSJdfQ==",
+                "max-early-data": 2560,
+                "early-data-header-name": "Sec-WebSocket-Protocol",
+                "headers": {
+                    "Host": "bpb.lancelot.dpdns.org"
+                }
+            }
+        },
+        {
+            "name": "💦 35 - Trojan - Domain : 2083",
+            "type": "trojan",
+            "server": "www.speedtest.net",
+            "port": 2083,
+            "ip-version": "ipv4-prefer",
+            "tfo": false,
+            "udp": false,
+            "password": "li19882008",
+            "tls": true,
+            "sni": "bPB.LaNcELoT.dPdNS.oRG",
+            "client-fingerprint": "chrome",
+            "skip-cert-verify": false,
+            "alpn": [
+                "http/1.1"
+            ],
+            "network": "ws",
+            "ws-opts": {
+                "path": "/eyJqdW5rIjoiMVNHbzFLRUsxWSIsInByb3RvY29sIjoidHIiLCJtb2RlIjoicHJveHlpcCIsInBhbmVsSVBzIjpbImJwYi55b3VzZWYuaXNlZ2Fyby5jb20iXX0=",
+                "max-early-data": 2560,
+                "early-data-header-name": "Sec-WebSocket-Protocol",
+                "headers": {
+                    "Host": "bpb.lancelot.dpdns.org"
+                }
+            }
+        },
+        {
+            "name": "💦 36 - Trojan - IPv4 : 2083",
+            "type": "trojan",
+            "server": "104.21.46.3",
+            "port": 2083,
+            "ip-version": "ipv4-prefer",
+            "tfo": false,
+            "udp": false,
+            "password": "li19882008",
+            "tls": true,
+            "sni": "BPB.LaNCELOT.DPDnS.ORG",
+            "client-fingerprint": "chrome",
+            "skip-cert-verify": false,
+            "alpn": [
+                "http/1.1"
+            ],
+            "network": "ws",
+            "ws-opts": {
+                "path": "/eyJqdW5rIjoiWE1VaUNGcUhMOXRZIiwicHJvdG9jb2wiOiJ0ciIsIm1vZGUiOiJwcm94eWlwIiwicGFuZWxJUHMiOlsiYnBiLnlvdXNlZi5pc2VnYXJvLmNvbSJdfQ==",
+                "max-early-data": 2560,
+                "early-data-header-name": "Sec-WebSocket-Protocol",
+                "headers": {
+                    "Host": "bpb.lancelot.dpdns.org"
+                }
+            }
+        },
+        {
+            "name": "💦 37 - Trojan - IPv4 : 2083",
+            "type": "trojan",
+            "server": "172.67.221.242",
+            "port": 2083,
+            "ip-version": "ipv4-prefer",
+            "tfo": false,
+            "udp": false,
+            "password": "li19882008",
+            "tls": true,
+            "sni": "Bpb.LANceloT.dpdnS.ORg",
+            "client-fingerprint": "chrome",
+            "skip-cert-verify": false,
+            "alpn": [
+                "http/1.1"
+            ],
+            "network": "ws",
+            "ws-opts": {
+                "path": "/eyJqdW5rIjoiWlVOWTNMcHYiLCJwcm90b2NvbCI6InRyIiwibW9kZSI6InByb3h5aXAiLCJwYW5lbElQcyI6WyJicGIueW91c2VmLmlzZWdhcm8uY29tIl19",
+                "max-early-data": 2560,
+                "early-data-header-name": "Sec-WebSocket-Protocol",
+                "headers": {
+                    "Host": "bpb.lancelot.dpdns.org"
+                }
+            }
+        },
+        {
+            "name": "💦 38 - Trojan - IPv6 : 2083",
+            "type": "trojan",
+            "server": "2606:4700:3036::ac43:ddf2",
+            "port": 2083,
+            "ip-version": "ipv4-prefer",
+            "tfo": false,
+            "udp": false,
+            "password": "li19882008",
+            "tls": true,
+            "sni": "bPB.LaNcELot.dPdns.org",
+            "client-fingerprint": "chrome",
+            "skip-cert-verify": false,
+            "alpn": [
+                "http/1.1"
+            ],
+            "network": "ws",
+            "ws-opts": {
+                "path": "/eyJqdW5rIjoia2o0RDBMbTJmIiwicHJvdG9jb2wiOiJ0ciIsIm1vZGUiOiJwcm94eWlwIiwicGFuZWxJUHMiOlsiYnBiLnlvdXNlZi5pc2VnYXJvLmNvbSJdfQ==",
+                "max-early-data": 2560,
+                "early-data-header-name": "Sec-WebSocket-Protocol",
+                "headers": {
+                    "Host": "bpb.lancelot.dpdns.org"
+                }
+            }
+        },
+        {
+            "name": "💦 39 - Trojan - IPv6 : 2083",
+            "type": "trojan",
+            "server": "2606:4700:3030::6815:2e03",
+            "port": 2083,
+            "ip-version": "ipv4-prefer",
+            "tfo": false,
+            "udp": false,
+            "password": "li19882008",
+            "tls": true,
+            "sni": "bpB.LanCEloT.dpDNs.org",
+            "client-fingerprint": "chrome",
+            "skip-cert-verify": false,
+            "alpn": [
+                "http/1.1"
+            ],
+            "network": "ws",
+            "ws-opts": {
+                "path": "/eyJqdW5rIjoiY09tTVQyREZDIiwicHJvdG9jb2wiOiJ0ciIsIm1vZGUiOiJwcm94eWlwIiwicGFuZWxJUHMiOlsiYnBiLnlvdXNlZi5pc2VnYXJvLmNvbSJdfQ==",
+                "max-early-data": 2560,
+                "early-data-header-name": "Sec-WebSocket-Protocol",
+                "headers": {
+                    "Host": "bpb.lancelot.dpdns.org"
+                }
+            }
+        },
+        {
+            "name": "💦 40 - Trojan - Clean IP : 2083",
+            "type": "trojan",
+            "server": "youxuan.cf.090227.xyz",
+            "port": 2083,
+            "ip-version": "ipv4-prefer",
+            "tfo": false,
+            "udp": false,
+            "password": "li19882008",
+            "tls": true,
+            "sni": "bPb.LANcEloT.DPDNs.org",
+            "client-fingerprint": "chrome",
+            "skip-cert-verify": false,
+            "alpn": [
+                "http/1.1"
+            ],
+            "network": "ws",
+            "ws-opts": {
+                "path": "/eyJqdW5rIjoia0VaTUVPUkQxIiwicHJvdG9jb2wiOiJ0ciIsIm1vZGUiOiJwcm94eWlwIiwicGFuZWxJUHMiOlsiYnBiLnlvdXNlZi5pc2VnYXJvLmNvbSJdfQ==",
+                "max-early-data": 2560,
+                "early-data-header-name": "Sec-WebSocket-Protocol",
+                "headers": {
+                    "Host": "bpb.lancelot.dpdns.org"
+                }
+            }
+        },
+        {
+            "name": "💦 41 - Trojan - Clean IP : 2083",
+            "type": "trojan",
+            "server": "www.visa.cn",
+            "port": 2083,
+            "ip-version": "ipv4-prefer",
+            "tfo": false,
+            "udp": false,
+            "password": "li19882008",
+            "tls": true,
+            "sni": "Bpb.laNceLOT.DPDNs.org",
+            "client-fingerprint": "chrome",
+            "skip-cert-verify": false,
+            "alpn": [
+                "http/1.1"
+            ],
+            "network": "ws",
+            "ws-opts": {
+                "path": "/eyJqdW5rIjoiOVVnRUtvN3laZzYiLCJwcm90b2NvbCI6InRyIiwibW9kZSI6InByb3h5aXAiLCJwYW5lbElQcyI6WyJicGIueW91c2VmLmlzZWdhcm8uY29tIl19",
+                "max-early-data": 2560,
+                "early-data-header-name": "Sec-WebSocket-Protocol",
+                "headers": {
+                    "Host": "bpb.lancelot.dpdns.org"
+                }
+            }
+        },
+        {
+            "name": "💦 42 - Trojan - Clean IP : 2083",
+            "type": "trojan",
+            "server": "mfa.gov.ua",
+            "port": 2083,
+            "ip-version": "ipv4-prefer",
+            "tfo": false,
+            "udp": false,
+            "password": "li19882008",
+            "tls": true,
+            "sni": "Bpb.LanCEloT.dPDnS.ORg",
+            "client-fingerprint": "chrome",
+            "skip-cert-verify": false,
+            "alpn": [
+                "http/1.1"
+            ],
+            "network": "ws",
+            "ws-opts": {
+                "path": "/eyJqdW5rIjoidmM2TWhReWRPekJOd0NKIiwicHJvdG9jb2wiOiJ0ciIsIm1vZGUiOiJwcm94eWlwIiwicGFuZWxJUHMiOlsiYnBiLnlvdXNlZi5pc2VnYXJvLmNvbSJdfQ==",
+                "max-early-data": 2560,
+                "early-data-header-name": "Sec-WebSocket-Protocol",
+                "headers": {
+                    "Host": "bpb.lancelot.dpdns.org"
+                }
+            }
+        },
+        {
+            "name": "💦 43 - Trojan - Clean IP : 2083",
+            "type": "trojan",
+            "server": "www.shopify.com",
+            "port": 2083,
+            "ip-version": "ipv4-prefer",
+            "tfo": false,
+            "udp": false,
+            "password": "li19882008",
+            "tls": true,
+            "sni": "bpB.LAnCeloT.DPDNS.OrG",
+            "client-fingerprint": "chrome",
+            "skip-cert-verify": false,
+            "alpn": [
+                "http/1.1"
+            ],
+            "network": "ws",
+            "ws-opts": {
+                "path": "/eyJqdW5rIjoiaVFIQ1RQNmdQWTBOYmgyZCIsInByb3RvY29sIjoidHIiLCJtb2RlIjoicHJveHlpcCIsInBhbmVsSVBzIjpbImJwYi55b3VzZWYuaXNlZ2Fyby5jb20iXX0=",
+                "max-early-data": 2560,
+                "early-data-header-name": "Sec-WebSocket-Protocol",
+                "headers": {
+                    "Host": "bpb.lancelot.dpdns.org"
+                }
+            }
+        },
+        {
+            "name": "💦 44 - Trojan - Clean IP : 2083",
+            "type": "trojan",
+            "server": "saas.sin.fan",
+            "port": 2083,
+            "ip-version": "ipv4-prefer",
+            "tfo": false,
+            "udp": false,
+            "password": "li19882008",
+            "tls": true,
+            "sni": "Bpb.LaNcEloT.dPdNS.Org",
+            "client-fingerprint": "chrome",
+            "skip-cert-verify": false,
+            "alpn": [
+                "http/1.1"
+            ],
+            "network": "ws",
+            "ws-opts": {
+                "path": "/eyJqdW5rIjoic3M4bVd2eVpieWhYIiwicHJvdG9jb2wiOiJ0ciIsIm1vZGUiOiJwcm94eWlwIiwicGFuZWxJUHMiOlsiYnBiLnlvdXNlZi5pc2VnYXJvLmNvbSJdfQ==",
+                "max-early-data": 2560,
+                "early-data-header-name": "Sec-WebSocket-Protocol",
+                "headers": {
+                    "Host": "bpb.lancelot.dpdns.org"
+                }
+            }
+        },
+        {
+            "name": "💦 45 - Trojan - Domain : 2087",
+            "type": "trojan",
+            "server": "bpb.lancelot.dpdns.org",
+            "port": 2087,
+            "ip-version": "ipv4-prefer",
+            "tfo": false,
+            "udp": false,
+            "password": "li19882008",
+            "tls": true,
+            "sni": "bPb.laNCeloT.DpdNs.ORG",
+            "client-fingerprint": "chrome",
+            "skip-cert-verify": false,
+            "alpn": [
+                "http/1.1"
+            ],
+            "network": "ws",
+            "ws-opts": {
+                "path": "/eyJqdW5rIjoiVDRRTlZSelIiLCJwcm90b2NvbCI6InRyIiwibW9kZSI6InByb3h5aXAiLCJwYW5lbElQcyI6WyJicGIueW91c2VmLmlzZWdhcm8uY29tIl19",
+                "max-early-data": 2560,
+                "early-data-header-name": "Sec-WebSocket-Protocol",
+                "headers": {
+                    "Host": "bpb.lancelot.dpdns.org"
+                }
+            }
+        },
+        {
+            "name": "💦 46 - Trojan - Domain : 2087",
+            "type": "trojan",
+            "server": "www.speedtest.net",
+            "port": 2087,
+            "ip-version": "ipv4-prefer",
+            "tfo": false,
+            "udp": false,
+            "password": "li19882008",
+            "tls": true,
+            "sni": "Bpb.LaNcelot.dpDNS.oRG",
+            "client-fingerprint": "chrome",
+            "skip-cert-verify": false,
+            "alpn": [
+                "http/1.1"
+            ],
+            "network": "ws",
+            "ws-opts": {
+                "path": "/eyJqdW5rIjoic1FISU1JeGhjIiwicHJvdG9jb2wiOiJ0ciIsIm1vZGUiOiJwcm94eWlwIiwicGFuZWxJUHMiOlsiYnBiLnlvdXNlZi5pc2VnYXJvLmNvbSJdfQ==",
+                "max-early-data": 2560,
+                "early-data-header-name": "Sec-WebSocket-Protocol",
+                "headers": {
+                    "Host": "bpb.lancelot.dpdns.org"
+                }
+            }
+        },
+        {
+            "name": "💦 47 - Trojan - IPv4 : 2087",
+            "type": "trojan",
+            "server": "104.21.46.3",
+            "port": 2087,
+            "ip-version": "ipv4-prefer",
+            "tfo": false,
+            "udp": false,
+            "password": "li19882008",
+            "tls": true,
+            "sni": "bPB.lanceLot.dpDNs.oRG",
+            "client-fingerprint": "chrome",
+            "skip-cert-verify": false,
+            "alpn": [
+                "http/1.1"
+            ],
+            "network": "ws",
+            "ws-opts": {
+                "path": "/eyJqdW5rIjoiM2lsWGx1UHdUMm0iLCJwcm90b2NvbCI6InRyIiwibW9kZSI6InByb3h5aXAiLCJwYW5lbElQcyI6WyJicGIueW91c2VmLmlzZWdhcm8uY29tIl19",
+                "max-early-data": 2560,
+                "early-data-header-name": "Sec-WebSocket-Protocol",
+                "headers": {
+                    "Host": "bpb.lancelot.dpdns.org"
+                }
+            }
+        },
+        {
+            "name": "💦 48 - Trojan - IPv4 : 2087",
+            "type": "trojan",
+            "server": "172.67.221.242",
+            "port": 2087,
+            "ip-version": "ipv4-prefer",
+            "tfo": false,
+            "udp": false,
+            "password": "li19882008",
+            "tls": true,
+            "sni": "bpB.LancelOt.dPDNS.org",
+            "client-fingerprint": "chrome",
+            "skip-cert-verify": false,
+            "alpn": [
+                "http/1.1"
+            ],
+            "network": "ws",
+            "ws-opts": {
+                "path": "/eyJqdW5rIjoiZjN5eXRiY3ljTUtpTk9UIiwicHJvdG9jb2wiOiJ0ciIsIm1vZGUiOiJwcm94eWlwIiwicGFuZWxJUHMiOlsiYnBiLnlvdXNlZi5pc2VnYXJvLmNvbSJdfQ==",
+                "max-early-data": 2560,
+                "early-data-header-name": "Sec-WebSocket-Protocol",
+                "headers": {
+                    "Host": "bpb.lancelot.dpdns.org"
+                }
+            }
+        },
+        {
+            "name": "💦 49 - Trojan - IPv6 : 2087",
+            "type": "trojan",
+            "server": "2606:4700:3036::ac43:ddf2",
+            "port": 2087,
+            "ip-version": "ipv4-prefer",
+            "tfo": false,
+            "udp": false,
+            "password": "li19882008",
+            "tls": true,
+            "sni": "bpB.LanCelOt.DpdNS.org",
+            "client-fingerprint": "chrome",
+            "skip-cert-verify": false,
+            "alpn": [
+                "http/1.1"
+            ],
+            "network": "ws",
+            "ws-opts": {
+                "path": "/eyJqdW5rIjoiaXNpdTh4azdLOSIsInByb3RvY29sIjoidHIiLCJtb2RlIjoicHJveHlpcCIsInBhbmVsSVBzIjpbImJwYi55b3VzZWYuaXNlZ2Fyby5jb20iXX0=",
+                "max-early-data": 2560,
+                "early-data-header-name": "Sec-WebSocket-Protocol",
+                "headers": {
+                    "Host": "bpb.lancelot.dpdns.org"
+                }
+            }
+        },
+        {
+            "name": "💦 50 - Trojan - IPv6 : 2087",
+            "type": "trojan",
+            "server": "2606:4700:3030::6815:2e03",
+            "port": 2087,
+            "ip-version": "ipv4-prefer",
+            "tfo": false,
+            "udp": false,
+            "password": "li19882008",
+            "tls": true,
+            "sni": "Bpb.LANcElot.Dpdns.org",
+            "client-fingerprint": "chrome",
+            "skip-cert-verify": false,
+            "alpn": [
+                "http/1.1"
+            ],
+            "network": "ws",
+            "ws-opts": {
+                "path": "/eyJqdW5rIjoiRXdHUzhtZ2g2S1AiLCJwcm90b2NvbCI6InRyIiwibW9kZSI6InByb3h5aXAiLCJwYW5lbElQcyI6WyJicGIueW91c2VmLmlzZWdhcm8uY29tIl19",
+                "max-early-data": 2560,
+                "early-data-header-name": "Sec-WebSocket-Protocol",
+                "headers": {
+                    "Host": "bpb.lancelot.dpdns.org"
+                }
+            }
+        },
+        {
+            "name": "💦 51 - Trojan - Clean IP : 2087",
+            "type": "trojan",
+            "server": "youxuan.cf.090227.xyz",
+            "port": 2087,
+            "ip-version": "ipv4-prefer",
+            "tfo": false,
+            "udp": false,
+            "password": "li19882008",
+            "tls": true,
+            "sni": "bPb.lANCeLot.DpDNs.orG",
+            "client-fingerprint": "chrome",
+            "skip-cert-verify": false,
+            "alpn": [
+                "http/1.1"
+            ],
+            "network": "ws",
+            "ws-opts": {
+                "path": "/eyJqdW5rIjoiY2tVYlJrZnAiLCJwcm90b2NvbCI6InRyIiwibW9kZSI6InByb3h5aXAiLCJwYW5lbElQcyI6WyJicGIueW91c2VmLmlzZWdhcm8uY29tIl19",
+                "max-early-data": 2560,
+                "early-data-header-name": "Sec-WebSocket-Protocol",
+                "headers": {
+                    "Host": "bpb.lancelot.dpdns.org"
+                }
+            }
+        },
+        {
+            "name": "💦 52 - Trojan - Clean IP : 2087",
+            "type": "trojan",
+            "server": "www.visa.cn",
+            "port": 2087,
+            "ip-version": "ipv4-prefer",
+            "tfo": false,
+            "udp": false,
+            "password": "li19882008",
+            "tls": true,
+            "sni": "BPb.lANcelOT.DPDNs.Org",
+            "client-fingerprint": "chrome",
+            "skip-cert-verify": false,
+            "alpn": [
+                "http/1.1"
+            ],
+            "network": "ws",
+            "ws-opts": {
+                "path": "/eyJqdW5rIjoiRDBTUnFTcW8zQlUiLCJwcm90b2NvbCI6InRyIiwibW9kZSI6InByb3h5aXAiLCJwYW5lbElQcyI6WyJicGIueW91c2VmLmlzZWdhcm8uY29tIl19",
+                "max-early-data": 2560,
+                "early-data-header-name": "Sec-WebSocket-Protocol",
+                "headers": {
+                    "Host": "bpb.lancelot.dpdns.org"
+                }
+            }
+        },
+        {
+            "name": "💦 53 - Trojan - Clean IP : 2087",
+            "type": "trojan",
+            "server": "mfa.gov.ua",
+            "port": 2087,
+            "ip-version": "ipv4-prefer",
+            "tfo": false,
+            "udp": false,
+            "password": "li19882008",
+            "tls": true,
+            "sni": "BPB.lanCEloT.dPDnS.orG",
+            "client-fingerprint": "chrome",
+            "skip-cert-verify": false,
+            "alpn": [
+                "http/1.1"
+            ],
+            "network": "ws",
+            "ws-opts": {
+                "path": "/eyJqdW5rIjoiWlFJYXprV3RPIiwicHJvdG9jb2wiOiJ0ciIsIm1vZGUiOiJwcm94eWlwIiwicGFuZWxJUHMiOlsiYnBiLnlvdXNlZi5pc2VnYXJvLmNvbSJdfQ==",
+                "max-early-data": 2560,
+                "early-data-header-name": "Sec-WebSocket-Protocol",
+                "headers": {
+                    "Host": "bpb.lancelot.dpdns.org"
+                }
+            }
+        },
+        {
+            "name": "💦 54 - Trojan - Clean IP : 2087",
+            "type": "trojan",
+            "server": "www.shopify.com",
+            "port": 2087,
+            "ip-version": "ipv4-prefer",
+            "tfo": false,
+            "udp": false,
+            "password": "li19882008",
+            "tls": true,
+            "sni": "BpB.lAnCELot.dpdNS.oRg",
+            "client-fingerprint": "chrome",
+            "skip-cert-verify": false,
+            "alpn": [
+                "http/1.1"
+            ],
+            "network": "ws",
+            "ws-opts": {
+                "path": "/eyJqdW5rIjoiTllCTzVOcnpCSTdBQmZCWCIsInByb3RvY29sIjoidHIiLCJtb2RlIjoicHJveHlpcCIsInBhbmVsSVBzIjpbImJwYi55b3VzZWYuaXNlZ2Fyby5jb20iXX0=",
+                "max-early-data": 2560,
+                "early-data-header-name": "Sec-WebSocket-Protocol",
+                "headers": {
+                    "Host": "bpb.lancelot.dpdns.org"
+                }
+            }
+        },
+        {
+            "name": "💦 55 - Trojan - Clean IP : 2087",
+            "type": "trojan",
+            "server": "saas.sin.fan",
+            "port": 2087,
+            "ip-version": "ipv4-prefer",
+            "tfo": false,
+            "udp": false,
+            "password": "li19882008",
+            "tls": true,
+            "sni": "BpB.LanceloT.dpdns.oRg",
+            "client-fingerprint": "chrome",
+            "skip-cert-verify": false,
+            "alpn": [
+                "http/1.1"
+            ],
+            "network": "ws",
+            "ws-opts": {
+                "path": "/eyJqdW5rIjoiTldqM2VJRXFKcWFnIiwicHJvdG9jb2wiOiJ0ciIsIm1vZGUiOiJwcm94eWlwIiwicGFuZWxJUHMiOlsiYnBiLnlvdXNlZi5pc2VnYXJvLmNvbSJdfQ==",
+                "max-early-data": 2560,
+                "early-data-header-name": "Sec-WebSocket-Protocol",
+                "headers": {
+                    "Host": "bpb.lancelot.dpdns.org"
+                }
+            }
+        },
+        {
+            "name": "💦 56 - Trojan - Domain : 2096",
+            "type": "trojan",
+            "server": "bpb.lancelot.dpdns.org",
+            "port": 2096,
+            "ip-version": "ipv4-prefer",
+            "tfo": false,
+            "udp": false,
+            "password": "li19882008",
+            "tls": true,
+            "sni": "bpb.LAnCElOt.dpdns.ORG",
+            "client-fingerprint": "chrome",
+            "skip-cert-verify": false,
+            "alpn": [
+                "http/1.1"
+            ],
+            "network": "ws",
+            "ws-opts": {
+                "path": "/eyJqdW5rIjoiNUZEV1BUOTVLUSIsInByb3RvY29sIjoidHIiLCJtb2RlIjoicHJveHlpcCIsInBhbmVsSVBzIjpbImJwYi55b3VzZWYuaXNlZ2Fyby5jb20iXX0=",
+                "max-early-data": 2560,
+                "early-data-header-name": "Sec-WebSocket-Protocol",
+                "headers": {
+                    "Host": "bpb.lancelot.dpdns.org"
+                }
+            }
+        },
+        {
+            "name": "💦 57 - Trojan - Domain : 2096",
+            "type": "trojan",
+            "server": "www.speedtest.net",
+            "port": 2096,
+            "ip-version": "ipv4-prefer",
+            "tfo": false,
+            "udp": false,
+            "password": "li19882008",
+            "tls": true,
+            "sni": "BPb.lAnCELoT.dPDns.oRG",
+            "client-fingerprint": "chrome",
+            "skip-cert-verify": false,
+            "alpn": [
+                "http/1.1"
+            ],
+            "network": "ws",
+            "ws-opts": {
+                "path": "/eyJqdW5rIjoicnNSakJzNHlNOUhFUmZEIiwicHJvdG9jb2wiOiJ0ciIsIm1vZGUiOiJwcm94eWlwIiwicGFuZWxJUHMiOlsiYnBiLnlvdXNlZi5pc2VnYXJvLmNvbSJdfQ==",
+                "max-early-data": 2560,
+                "early-data-header-name": "Sec-WebSocket-Protocol",
+                "headers": {
+                    "Host": "bpb.lancelot.dpdns.org"
+                }
+            }
+        },
+        {
+            "name": "💦 58 - Trojan - IPv4 : 2096",
+            "type": "trojan",
+            "server": "104.21.46.3",
+            "port": 2096,
+            "ip-version": "ipv4-prefer",
+            "tfo": false,
+            "udp": false,
+            "password": "li19882008",
+            "tls": true,
+            "sni": "BpB.laNCelot.DPDNs.ORG",
+            "client-fingerprint": "chrome",
+            "skip-cert-verify": false,
+            "alpn": [
+                "http/1.1"
+            ],
+            "network": "ws",
+            "ws-opts": {
+                "path": "/eyJqdW5rIjoiQ1RSRXlLYTF0IiwicHJvdG9jb2wiOiJ0ciIsIm1vZGUiOiJwcm94eWlwIiwicGFuZWxJUHMiOlsiYnBiLnlvdXNlZi5pc2VnYXJvLmNvbSJdfQ==",
+                "max-early-data": 2560,
+                "early-data-header-name": "Sec-WebSocket-Protocol",
+                "headers": {
+                    "Host": "bpb.lancelot.dpdns.org"
+                }
+            }
+        },
+        {
+            "name": "💦 59 - Trojan - IPv4 : 2096",
+            "type": "trojan",
+            "server": "172.67.221.242",
+            "port": 2096,
+            "ip-version": "ipv4-prefer",
+            "tfo": false,
+            "udp": false,
+            "password": "li19882008",
+            "tls": true,
+            "sni": "BPB.LAnCeLOt.dPdNS.ORG",
+            "client-fingerprint": "chrome",
+            "skip-cert-verify": false,
+            "alpn": [
+                "http/1.1"
+            ],
+            "network": "ws",
+            "ws-opts": {
+                "path": "/eyJqdW5rIjoibFg4RlZ2cE1ZcUhCcklaSCIsInByb3RvY29sIjoidHIiLCJtb2RlIjoicHJveHlpcCIsInBhbmVsSVBzIjpbImJwYi55b3VzZWYuaXNlZ2Fyby5jb20iXX0=",
+                "max-early-data": 2560,
+                "early-data-header-name": "Sec-WebSocket-Protocol",
+                "headers": {
+                    "Host": "bpb.lancelot.dpdns.org"
+                }
+            }
+        },
+        {
+            "name": "💦 60 - Trojan - IPv6 : 2096",
+            "type": "trojan",
+            "server": "2606:4700:3036::ac43:ddf2",
+            "port": 2096,
+            "ip-version": "ipv4-prefer",
+            "tfo": false,
+            "udp": false,
+            "password": "li19882008",
+            "tls": true,
+            "sni": "bPb.lanceLot.DPDns.oRG",
+            "client-fingerprint": "chrome",
+            "skip-cert-verify": false,
+            "alpn": [
+                "http/1.1"
+            ],
+            "network": "ws",
+            "ws-opts": {
+                "path": "/eyJqdW5rIjoiOEJBaThxdHoyaVRxc3FHayIsInByb3RvY29sIjoidHIiLCJtb2RlIjoicHJveHlpcCIsInBhbmVsSVBzIjpbImJwYi55b3VzZWYuaXNlZ2Fyby5jb20iXX0=",
+                "max-early-data": 2560,
+                "early-data-header-name": "Sec-WebSocket-Protocol",
+                "headers": {
+                    "Host": "bpb.lancelot.dpdns.org"
+                }
+            }
+        },
+        {
+            "name": "💦 61 - Trojan - IPv6 : 2096",
+            "type": "trojan",
+            "server": "2606:4700:3030::6815:2e03",
+            "port": 2096,
+            "ip-version": "ipv4-prefer",
+            "tfo": false,
+            "udp": false,
+            "password": "li19882008",
+            "tls": true,
+            "sni": "BPb.LanCelOT.dpDnS.orG",
+            "client-fingerprint": "chrome",
+            "skip-cert-verify": false,
+            "alpn": [
+                "http/1.1"
+            ],
+            "network": "ws",
+            "ws-opts": {
+                "path": "/eyJqdW5rIjoiR2V0bjBhdnZSeiIsInByb3RvY29sIjoidHIiLCJtb2RlIjoicHJveHlpcCIsInBhbmVsSVBzIjpbImJwYi55b3VzZWYuaXNlZ2Fyby5jb20iXX0=",
+                "max-early-data": 2560,
+                "early-data-header-name": "Sec-WebSocket-Protocol",
+                "headers": {
+                    "Host": "bpb.lancelot.dpdns.org"
+                }
+            }
+        },
+        {
+            "name": "💦 62 - Trojan - Clean IP : 2096",
+            "type": "trojan",
+            "server": "youxuan.cf.090227.xyz",
+            "port": 2096,
+            "ip-version": "ipv4-prefer",
+            "tfo": false,
+            "udp": false,
+            "password": "li19882008",
+            "tls": true,
+            "sni": "bpb.LanCELOt.DPdns.oRg",
+            "client-fingerprint": "chrome",
+            "skip-cert-verify": false,
+            "alpn": [
+                "http/1.1"
+            ],
+            "network": "ws",
+            "ws-opts": {
+                "path": "/eyJqdW5rIjoiOEU4cURwWUpaenYiLCJwcm90b2NvbCI6InRyIiwibW9kZSI6InByb3h5aXAiLCJwYW5lbElQcyI6WyJicGIueW91c2VmLmlzZWdhcm8uY29tIl19",
+                "max-early-data": 2560,
+                "early-data-header-name": "Sec-WebSocket-Protocol",
+                "headers": {
+                    "Host": "bpb.lancelot.dpdns.org"
+                }
+            }
+        },
+        {
+            "name": "💦 63 - Trojan - Clean IP : 2096",
+            "type": "trojan",
+            "server": "www.visa.cn",
+            "port": 2096,
+            "ip-version": "ipv4-prefer",
+            "tfo": false,
+            "udp": false,
+            "password": "li19882008",
+            "tls": true,
+            "sni": "bpb.lanceloT.dPDNS.ORg",
+            "client-fingerprint": "chrome",
+            "skip-cert-verify": false,
+            "alpn": [
+                "http/1.1"
+            ],
+            "network": "ws",
+            "ws-opts": {
+                "path": "/eyJqdW5rIjoiWEVLaUtjenJZIiwicHJvdG9jb2wiOiJ0ciIsIm1vZGUiOiJwcm94eWlwIiwicGFuZWxJUHMiOlsiYnBiLnlvdXNlZi5pc2VnYXJvLmNvbSJdfQ==",
+                "max-early-data": 2560,
+                "early-data-header-name": "Sec-WebSocket-Protocol",
+                "headers": {
+                    "Host": "bpb.lancelot.dpdns.org"
+                }
+            }
+        },
+        {
+            "name": "💦 64 - Trojan - Clean IP : 2096",
+            "type": "trojan",
+            "server": "mfa.gov.ua",
+            "port": 2096,
+            "ip-version": "ipv4-prefer",
+            "tfo": false,
+            "udp": false,
+            "password": "li19882008",
+            "tls": true,
+            "sni": "bPb.laNceLOt.DpDNs.orG",
+            "client-fingerprint": "chrome",
+            "skip-cert-verify": false,
+            "alpn": [
+                "http/1.1"
+            ],
+            "network": "ws",
+            "ws-opts": {
+                "path": "/eyJqdW5rIjoiMzVsdjNtdldURzBBUCIsInByb3RvY29sIjoidHIiLCJtb2RlIjoicHJveHlpcCIsInBhbmVsSVBzIjpbImJwYi55b3VzZWYuaXNlZ2Fyby5jb20iXX0=",
+                "max-early-data": 2560,
+                "early-data-header-name": "Sec-WebSocket-Protocol",
+                "headers": {
+                    "Host": "bpb.lancelot.dpdns.org"
+                }
+            }
+        },
+        {
+            "name": "💦 65 - Trojan - Clean IP : 2096",
+            "type": "trojan",
+            "server": "www.shopify.com",
+            "port": 2096,
+            "ip-version": "ipv4-prefer",
+            "tfo": false,
+            "udp": false,
+            "password": "li19882008",
+            "tls": true,
+            "sni": "BpB.LAncelOT.DpdNs.oRg",
+            "client-fingerprint": "chrome",
+            "skip-cert-verify": false,
+            "alpn": [
+                "http/1.1"
+            ],
+            "network": "ws",
+            "ws-opts": {
+                "path": "/eyJqdW5rIjoiNGlHcldYS0dqVkNkTiIsInByb3RvY29sIjoidHIiLCJtb2RlIjoicHJveHlpcCIsInBhbmVsSVBzIjpbImJwYi55b3VzZWYuaXNlZ2Fyby5jb20iXX0=",
+                "max-early-data": 2560,
+                "early-data-header-name": "Sec-WebSocket-Protocol",
+                "headers": {
+                    "Host": "bpb.lancelot.dpdns.org"
+                }
+            }
+        },
+        {
+            "name": "💦 66 - Trojan - Clean IP : 2096",
+            "type": "trojan",
+            "server": "saas.sin.fan",
+            "port": 2096,
+            "ip-version": "ipv4-prefer",
+            "tfo": false,
+            "udp": false,
+            "password": "li19882008",
+            "tls": true,
+            "sni": "BpB.lANcElOt.DPdns.OrG",
+            "client-fingerprint": "chrome",
+            "skip-cert-verify": false,
+            "alpn": [
+                "http/1.1"
+            ],
+            "network": "ws",
+            "ws-opts": {
+                "path": "/eyJqdW5rIjoiVHVSMzJ6SnFOIiwicHJvdG9jb2wiOiJ0ciIsIm1vZGUiOiJwcm94eWlwIiwicGFuZWxJUHMiOlsiYnBiLnlvdXNlZi5pc2VnYXJvLmNvbSJdfQ==",
+                "max-early-data": 2560,
+                "early-data-header-name": "Sec-WebSocket-Protocol",
+                "headers": {
+                    "Host": "bpb.lancelot.dpdns.org"
+                }
+            }
+        }
+    ],
+    "proxy-groups": [
+        {
+            "name": "✅ Selector",
+            "type": "select",
+            "proxies": [
+                "💦 Best Ping 🚀",
+                "💦 1 - VLESS - Domain : 443",
+                "💦 2 - VLESS - Domain : 443",
+                "💦 3 - VLESS - IPv4 : 443",
+                "💦 4 - VLESS - IPv4 : 443",
+                "💦 5 - VLESS - IPv6 : 443",
+                "💦 6 - VLESS - IPv6 : 443",
+                "💦 7 - VLESS - Clean IP : 443",
+                "💦 8 - VLESS - Clean IP : 443",
+                "💦 9 - VLESS - Clean IP : 443",
+                "💦 10 - VLESS - Clean IP : 443",
+                "💦 11 - VLESS - Clean IP : 443",
+                "💦 12 - VLESS - Domain : 8443",
+                "💦 13 - VLESS - Domain : 8443",
+                "💦 14 - VLESS - IPv4 : 8443",
+                "💦 15 - VLESS - IPv4 : 8443",
+                "💦 16 - VLESS - IPv6 : 8443",
+                "💦 17 - VLESS - IPv6 : 8443",
+                "💦 18 - VLESS - Clean IP : 8443",
+                "💦 19 - VLESS - Clean IP : 8443",
+                "💦 20 - VLESS - Clean IP : 8443",
+                "💦 21 - VLESS - Clean IP : 8443",
+                "💦 22 - VLESS - Clean IP : 8443",
+                "💦 23 - VLESS - Domain : 2053",
+                "💦 24 - VLESS - Domain : 2053",
+                "💦 25 - VLESS - IPv4 : 2053",
+                "💦 26 - VLESS - IPv4 : 2053",
+                "💦 27 - VLESS - IPv6 : 2053",
+                "💦 28 - VLESS - IPv6 : 2053",
+                "💦 29 - VLESS - Clean IP : 2053",
+                "💦 30 - VLESS - Clean IP : 2053",
+                "💦 31 - VLESS - Clean IP : 2053",
+                "💦 32 - VLESS - Clean IP : 2053",
+                "💦 33 - VLESS - Clean IP : 2053",
+                "💦 34 - VLESS - Domain : 2083",
+                "💦 35 - VLESS - Domain : 2083",
+                "💦 36 - VLESS - IPv4 : 2083",
+                "💦 37 - VLESS - IPv4 : 2083",
+                "💦 38 - VLESS - IPv6 : 2083",
+                "💦 39 - VLESS - IPv6 : 2083",
+                "💦 40 - VLESS - Clean IP : 2083",
+                "💦 41 - VLESS - Clean IP : 2083",
+                "💦 42 - VLESS - Clean IP : 2083",
+                "💦 43 - VLESS - Clean IP : 2083",
+                "💦 44 - VLESS - Clean IP : 2083",
+                "💦 45 - VLESS - Domain : 2087",
+                "💦 46 - VLESS - Domain : 2087",
+                "💦 47 - VLESS - IPv4 : 2087",
+                "💦 48 - VLESS - IPv4 : 2087",
+                "💦 49 - VLESS - IPv6 : 2087",
+                "💦 50 - VLESS - IPv6 : 2087",
+                "💦 51 - VLESS - Clean IP : 2087",
+                "💦 52 - VLESS - Clean IP : 2087",
+                "💦 53 - VLESS - Clean IP : 2087",
+                "💦 54 - VLESS - Clean IP : 2087",
+                "💦 55 - VLESS - Clean IP : 2087",
+                "💦 56 - VLESS - Domain : 2096",
+                "💦 57 - VLESS - Domain : 2096",
+                "💦 58 - VLESS - IPv4 : 2096",
+                "💦 59 - VLESS - IPv4 : 2096",
+                "💦 60 - VLESS - IPv6 : 2096",
+                "💦 61 - VLESS - IPv6 : 2096",
+                "💦 62 - VLESS - Clean IP : 2096",
+                "💦 63 - VLESS - Clean IP : 2096",
+                "💦 64 - VLESS - Clean IP : 2096",
+                "💦 65 - VLESS - Clean IP : 2096",
+                "💦 66 - VLESS - Clean IP : 2096",
+                "💦 1 - Trojan - Domain : 443",
+                "💦 2 - Trojan - Domain : 443",
+                "💦 3 - Trojan - IPv4 : 443",
+                "💦 4 - Trojan - IPv4 : 443",
+                "💦 5 - Trojan - IPv6 : 443",
+                "💦 6 - Trojan - IPv6 : 443",
+                "💦 7 - Trojan - Clean IP : 443",
+                "💦 8 - Trojan - Clean IP : 443",
+                "💦 9 - Trojan - Clean IP : 443",
+                "💦 10 - Trojan - Clean IP : 443",
+                "💦 11 - Trojan - Clean IP : 443",
+                "💦 12 - Trojan - Domain : 8443",
+                "💦 13 - Trojan - Domain : 8443",
+                "💦 14 - Trojan - IPv4 : 8443",
+                "💦 15 - Trojan - IPv4 : 8443",
+                "💦 16 - Trojan - IPv6 : 8443",
+                "💦 17 - Trojan - IPv6 : 8443",
+                "💦 18 - Trojan - Clean IP : 8443",
+                "💦 19 - Trojan - Clean IP : 8443",
+                "💦 20 - Trojan - Clean IP : 8443",
+                "💦 21 - Trojan - Clean IP : 8443",
+                "💦 22 - Trojan - Clean IP : 8443",
+                "💦 23 - Trojan - Domain : 2053",
+                "💦 24 - Trojan - Domain : 2053",
+                "💦 25 - Trojan - IPv4 : 2053",
+                "💦 26 - Trojan - IPv4 : 2053",
+                "💦 27 - Trojan - IPv6 : 2053",
+                "💦 28 - Trojan - IPv6 : 2053",
+                "💦 29 - Trojan - Clean IP : 2053",
+                "💦 30 - Trojan - Clean IP : 2053",
+                "💦 31 - Trojan - Clean IP : 2053",
+                "💦 32 - Trojan - Clean IP : 2053",
+                "💦 33 - Trojan - Clean IP : 2053",
+                "💦 34 - Trojan - Domain : 2083",
+                "💦 35 - Trojan - Domain : 2083",
+                "💦 36 - Trojan - IPv4 : 2083",
+                "💦 37 - Trojan - IPv4 : 2083",
+                "💦 38 - Trojan - IPv6 : 2083",
+                "💦 39 - Trojan - IPv6 : 2083",
+                "💦 40 - Trojan - Clean IP : 2083",
+                "💦 41 - Trojan - Clean IP : 2083",
+                "💦 42 - Trojan - Clean IP : 2083",
+                "💦 43 - Trojan - Clean IP : 2083",
+                "💦 44 - Trojan - Clean IP : 2083",
+                "💦 45 - Trojan - Domain : 2087",
+                "💦 46 - Trojan - Domain : 2087",
+                "💦 47 - Trojan - IPv4 : 2087",
+                "💦 48 - Trojan - IPv4 : 2087",
+                "💦 49 - Trojan - IPv6 : 2087",
+                "💦 50 - Trojan - IPv6 : 2087",
+                "💦 51 - Trojan - Clean IP : 2087",
+                "💦 52 - Trojan - Clean IP : 2087",
+                "💦 53 - Trojan - Clean IP : 2087",
+                "💦 54 - Trojan - Clean IP : 2087",
+                "💦 55 - Trojan - Clean IP : 2087",
+                "💦 56 - Trojan - Domain : 2096",
+                "💦 57 - Trojan - Domain : 2096",
+                "💦 58 - Trojan - IPv4 : 2096",
+                "💦 59 - Trojan - IPv4 : 2096",
+                "💦 60 - Trojan - IPv6 : 2096",
+                "💦 61 - Trojan - IPv6 : 2096",
+                "💦 62 - Trojan - Clean IP : 2096",
+                "💦 63 - Trojan - Clean IP : 2096",
+                "💦 64 - Trojan - Clean IP : 2096",
+                "💦 65 - Trojan - Clean IP : 2096",
+                "💦 66 - Trojan - Clean IP : 2096"
+            ]
+        },
+        {
+            "name": "💦 Best Ping 🚀",
+            "type": "url-test",
+            "proxies": [
+                "💦 1 - VLESS - Domain : 443",
+                "💦 2 - VLESS - Domain : 443",
+                "💦 3 - VLESS - IPv4 : 443",
+                "💦 4 - VLESS - IPv4 : 443",
+                "💦 5 - VLESS - IPv6 : 443",
+                "💦 6 - VLESS - IPv6 : 443",
+                "💦 7 - VLESS - Clean IP : 443",
+                "💦 8 - VLESS - Clean IP : 443",
+                "💦 9 - VLESS - Clean IP : 443",
+                "💦 10 - VLESS - Clean IP : 443",
+                "💦 11 - VLESS - Clean IP : 443",
+                "💦 12 - VLESS - Domain : 8443",
+                "💦 13 - VLESS - Domain : 8443",
+                "💦 14 - VLESS - IPv4 : 8443",
+                "💦 15 - VLESS - IPv4 : 8443",
+                "💦 16 - VLESS - IPv6 : 8443",
+                "💦 17 - VLESS - IPv6 : 8443",
+                "💦 18 - VLESS - Clean IP : 8443",
+                "💦 19 - VLESS - Clean IP : 8443",
+                "💦 20 - VLESS - Clean IP : 8443",
+                "💦 21 - VLESS - Clean IP : 8443",
+                "💦 22 - VLESS - Clean IP : 8443",
+                "💦 23 - VLESS - Domain : 2053",
+                "💦 24 - VLESS - Domain : 2053",
+                "💦 25 - VLESS - IPv4 : 2053",
+                "💦 26 - VLESS - IPv4 : 2053",
+                "💦 27 - VLESS - IPv6 : 2053",
+                "💦 28 - VLESS - IPv6 : 2053",
+                "💦 29 - VLESS - Clean IP : 2053",
+                "💦 30 - VLESS - Clean IP : 2053",
+                "💦 31 - VLESS - Clean IP : 2053",
+                "💦 32 - VLESS - Clean IP : 2053",
+                "💦 33 - VLESS - Clean IP : 2053",
+                "💦 34 - VLESS - Domain : 2083",
+                "💦 35 - VLESS - Domain : 2083",
+                "💦 36 - VLESS - IPv4 : 2083",
+                "💦 37 - VLESS - IPv4 : 2083",
+                "💦 38 - VLESS - IPv6 : 2083",
+                "💦 39 - VLESS - IPv6 : 2083",
+                "💦 40 - VLESS - Clean IP : 2083",
+                "💦 41 - VLESS - Clean IP : 2083",
+                "💦 42 - VLESS - Clean IP : 2083",
+                "💦 43 - VLESS - Clean IP : 2083",
+                "💦 44 - VLESS - Clean IP : 2083",
+                "💦 45 - VLESS - Domain : 2087",
+                "💦 46 - VLESS - Domain : 2087",
+                "💦 47 - VLESS - IPv4 : 2087",
+                "💦 48 - VLESS - IPv4 : 2087",
+                "💦 49 - VLESS - IPv6 : 2087",
+                "💦 50 - VLESS - IPv6 : 2087",
+                "💦 51 - VLESS - Clean IP : 2087",
+                "💦 52 - VLESS - Clean IP : 2087",
+                "💦 53 - VLESS - Clean IP : 2087",
+                "💦 54 - VLESS - Clean IP : 2087",
+                "💦 55 - VLESS - Clean IP : 2087",
+                "💦 56 - VLESS - Domain : 2096",
+                "💦 57 - VLESS - Domain : 2096",
+                "💦 58 - VLESS - IPv4 : 2096",
+                "💦 59 - VLESS - IPv4 : 2096",
+                "💦 60 - VLESS - IPv6 : 2096",
+                "💦 61 - VLESS - IPv6 : 2096",
+                "💦 62 - VLESS - Clean IP : 2096",
+                "💦 63 - VLESS - Clean IP : 2096",
+                "💦 64 - VLESS - Clean IP : 2096",
+                "💦 65 - VLESS - Clean IP : 2096",
+                "💦 66 - VLESS - Clean IP : 2096",
+                "💦 1 - Trojan - Domain : 443",
+                "💦 2 - Trojan - Domain : 443",
+                "💦 3 - Trojan - IPv4 : 443",
+                "💦 4 - Trojan - IPv4 : 443",
+                "💦 5 - Trojan - IPv6 : 443",
+                "💦 6 - Trojan - IPv6 : 443",
+                "💦 7 - Trojan - Clean IP : 443",
+                "💦 8 - Trojan - Clean IP : 443",
+                "💦 9 - Trojan - Clean IP : 443",
+                "💦 10 - Trojan - Clean IP : 443",
+                "💦 11 - Trojan - Clean IP : 443",
+                "💦 12 - Trojan - Domain : 8443",
+                "💦 13 - Trojan - Domain : 8443",
+                "💦 14 - Trojan - IPv4 : 8443",
+                "💦 15 - Trojan - IPv4 : 8443",
+                "💦 16 - Trojan - IPv6 : 8443",
+                "💦 17 - Trojan - IPv6 : 8443",
+                "💦 18 - Trojan - Clean IP : 8443",
+                "💦 19 - Trojan - Clean IP : 8443",
+                "💦 20 - Trojan - Clean IP : 8443",
+                "💦 21 - Trojan - Clean IP : 8443",
+                "💦 22 - Trojan - Clean IP : 8443",
+                "💦 23 - Trojan - Domain : 2053",
+                "💦 24 - Trojan - Domain : 2053",
+                "💦 25 - Trojan - IPv4 : 2053",
+                "💦 26 - Trojan - IPv4 : 2053",
+                "💦 27 - Trojan - IPv6 : 2053",
+                "💦 28 - Trojan - IPv6 : 2053",
+                "💦 29 - Trojan - Clean IP : 2053",
+                "💦 30 - Trojan - Clean IP : 2053",
+                "💦 31 - Trojan - Clean IP : 2053",
+                "💦 32 - Trojan - Clean IP : 2053",
+                "💦 33 - Trojan - Clean IP : 2053",
+                "💦 34 - Trojan - Domain : 2083",
+                "💦 35 - Trojan - Domain : 2083",
+                "💦 36 - Trojan - IPv4 : 2083",
+                "💦 37 - Trojan - IPv4 : 2083",
+                "💦 38 - Trojan - IPv6 : 2083",
+                "💦 39 - Trojan - IPv6 : 2083",
+                "💦 40 - Trojan - Clean IP : 2083",
+                "💦 41 - Trojan - Clean IP : 2083",
+                "💦 42 - Trojan - Clean IP : 2083",
+                "💦 43 - Trojan - Clean IP : 2083",
+                "💦 44 - Trojan - Clean IP : 2083",
+                "💦 45 - Trojan - Domain : 2087",
+                "💦 46 - Trojan - Domain : 2087",
+                "💦 47 - Trojan - IPv4 : 2087",
+                "💦 48 - Trojan - IPv4 : 2087",
+                "💦 49 - Trojan - IPv6 : 2087",
+                "💦 50 - Trojan - IPv6 : 2087",
+                "💦 51 - Trojan - Clean IP : 2087",
+                "💦 52 - Trojan - Clean IP : 2087",
+                "💦 53 - Trojan - Clean IP : 2087",
+                "💦 54 - Trojan - Clean IP : 2087",
+                "💦 55 - Trojan - Clean IP : 2087",
+                "💦 56 - Trojan - Domain : 2096",
+                "💦 57 - Trojan - Domain : 2096",
+                "💦 58 - Trojan - IPv4 : 2096",
+                "💦 59 - Trojan - IPv4 : 2096",
+                "💦 60 - Trojan - IPv6 : 2096",
+                "💦 61 - Trojan - IPv6 : 2096",
+                "💦 62 - Trojan - Clean IP : 2096",
+                "💦 63 - Trojan - Clean IP : 2096",
+                "💦 64 - Trojan - Clean IP : 2096",
+                "💦 65 - Trojan - Clean IP : 2096",
+                "💦 66 - Trojan - Clean IP : 2096"
+            ],
+            "url": "https://www.gstatic.com/generate_204",
+            "interval": 30,
+            "tolerance": 50
+        }
+    ],
+    "rule-providers": {
+        "cn": {
+            "type": "http",
+            "format": "yaml",
+            "behavior": "domain",
+            "path": "./ruleset/cn.yaml",
+            "interval": 86400,
+            "url": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/cn.yaml"
+        },
+        "cn-cidr": {
+            "type": "http",
+            "format": "yaml",
+            "behavior": "ipcidr",
+            "path": "./ruleset/cn-cidr.yaml",
+            "interval": 86400,
+            "url": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geoip/cn.yaml"
+        }
+    },
+    "rules": [
+        "GEOIP,lan,DIRECT,no-resolve",
+        "NETWORK,udp,REJECT",
+        "RULE-SET,cn,DIRECT",
+        "RULE-SET,cn-cidr,DIRECT",
+        "MATCH,✅ Selector"
+    ],
+    "ntp": {
+        "enable": true,
+        "server": "time.cloudflare.com",
+        "port": 123,
+        "interval": 30
+    }
+}
