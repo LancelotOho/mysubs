@@ -1,2 +1,2 @@
 #!/bin/bash
-./hello_world/suboverrider.sh -c hello_world/config.yaml -v  
+./hello_world/suboverrider.sh -c hello_world/config.yaml
