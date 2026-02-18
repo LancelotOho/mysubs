@@ -166,102 +166,75 @@ rules:
   - MATCH,🐟 漏网之鱼
 
 proxies:
-  - udp: false
-    skip-cert-verify: true
-    name: 裤佬交流群https://t.me/+j664EmVv8m0wZGVk
+  - name: 自适应
+    server: cf.090227.xyz
+    port: 2083
     type: trojan
-    server: 114.33.57.170
+    password: 22367c45-f6c4-4ca8-1d52-d9787d7bbe91
+    sni: 666.cmliuliuliu.ggff.net
+    skip-cert-verify: false
+    network: ws
+    ws-opts:
+      path: /proxyip=114.34.28.110:443?ed=2560
+      headers:
+        Host: 666.cmliuliuliu.ggff.net
+  - name: 自适应2
+    server: cf.877774.xyz
+    port: 2087
+    type: trojan
+    password: 22367c45-f6c4-4ca8-1d52-d9787d7bbe91
+    sni: 666.cmliuliuliu.ggff.net
+    skip-cert-verify: false
+    network: ws
+    ws-opts:
+      path: /proxyip=114.34.28.110:443?ed=2560
+      headers:
+        Host: 666.cmliuliuliu.ggff.net
+  - name: 移动1
+    server: cmcc.090227.xyz
     port: 443
-    password: 5a2c16f9
-    tls: true
-    client-fingerprint: chrome
-    sni: 5c.hhhhh.eu.org
+    type: trojan
+    password: 22367c45-f6c4-4ca8-1d52-d9787d7bbe91
+    sni: 666.cmliuliuliu.ggff.net
+    skip-cert-verify: false
     network: ws
     ws-opts:
-      path: /114.33.57.170:443
+      path: /proxyip=114.34.28.110:443?ed=2560
       headers:
-        host: 5c.hhhhh.eu.org
-    tfo: false
-    servername: 5c.hhhhh.eu.org
-  - udp: false
-    skip-cert-verify: true
-    name: https://t.me/+j664EmVv8m0wZGVk
-    type: trojan
-    server: 125.228.236.138
-    port: 443
-    password: 5a2c16f9
-    tls: true
-    client-fingerprint: chrome
-    sni: 5c.hhhhh.eu.org
-    network: ws
-    ws-opts:
-      path: /125.228.236.138:443
-      headers:
-        host: 5c.hhhhh.eu.org
-    tfo: false
-    servername: 5c.hhhhh.eu.org
-  - udp: false
-    skip-cert-verify: true
-    name: 裤佬TG频道@stymei
-    type: trojan
-    server: 220.128.110.108
-    port: 43
-    password: 5a2c16f9
-    tls: true
-    client-fingerprint: chrome
-    sni: 5c.hhhhh.eu.org
-    network: ws
-    ws-opts:
-      path: /220.128.110.108:43
-      headers:
-        host: 5c.hhhhh.eu.org
-    tfo: false
-    servername: 5c.hhhhh.eu.org
-  - udp: false
-    skip-cert-verify: true
-    name: 4-台湾-173ms
-    type: trojan
-    server: 125.228.141.233
-    port: 443
-    password: 5a2c16f9
-    tls: true
-    client-fingerprint: chrome
-    sni: 5c.hhhhh.eu.org
-    network: ws
-    ws-opts:
-      path: /125.228.141.233:443
-      headers:
-        host: 5c.hhhhh.eu.org
-    tfo: false
-  - udp: false
-    skip-cert-verify: true
-    name: 5-台湾-65ms
-    type: trojan
-    server: 103.137.63.227
+        Host: 666.cmliuliuliu.ggff.net
+  - name: 移动2
+    server: time.is
     port: 8443
-    password: 5a2c16f9
-    tls: true
-    client-fingerprint: chrome
-    sni: 5c.hhhhh.eu.org
-    network: ws
-    ws-opts:
-      path: /103.137.63.227:8443
-      headers:
-        host: 5c.hhhhh.eu.org
-    tfo: false
-  - udp: false
-    skip-cert-verify: true
-    name: 6-台湾-212ms
     type: trojan
-    server: 223.165.4.57
-    port: 443
-    password: 5a2c16f9
-    tls: true
-    client-fingerprint: chrome
-    sni: 5c.hhhhh.eu.org
+    password: 22367c45-f6c4-4ca8-1d52-d9787d7bbe91
+    sni: 666.cmliuliuliu.ggff.net
+    skip-cert-verify: false
     network: ws
     ws-opts:
-      path: /223.165.4.57:443
+      path: /proxyip=114.34.28.110:443?ed=2560
       headers:
-        host: 5c.hhhhh.eu.org
-    tfo: false
+        Host: 666.cmliuliuliu.ggff.net
+  - name: 电信1
+    server: mfa.gov.ua
+    port: 2096
+    type: trojan
+    password: 22367c45-f6c4-4ca8-1d52-d9787d7bbe91
+    sni: 666.cmliuliuliu.ggff.net
+    skip-cert-verify: false
+    network: ws
+    ws-opts:
+      path: /proxyip=114.34.28.110:443?ed=2560
+      headers:
+        Host: 666.cmliuliuliu.ggff.net
+  - name: 电信2
+    server: www.shopify.com
+    port: 2053
+    type: trojan
+    password: 22367c45-f6c4-4ca8-1d52-d9787d7bbe91
+    sni: 666.cmliuliuliu.ggff.net
+    skip-cert-verify: false
+    network: ws
+    ws-opts:
+      path: /proxyip=114.34.28.110:443?ed=2560
+      headers:
+        Host: 666.cmliuliuliu.ggff.net
