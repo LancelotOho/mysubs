@@ -167,3 +167,4 @@ rules:
 
 proxies:
   - {name: 原生地址-443-WS-TLS, server: j1o2e4y3w7o4r3k2s.lancelot.dpdns.org, port: 443, type: vless, uuid: ee0b7e91-87df-475d-af74-b181e4b23727, tls: true, alpn: [h3%2Ch2%2Chttp%2F1.1], tfo: false, skip-cert-verify: false, servername: j1o2e4y3w7o4r3k2s.lancelot.dpdns.org, client-fingerprint: chrome, network: ws, ws-opts: {path: "/?ed=2048", headers: {Host: j1o2e4y3w7o4r3k2s.lancelot.dpdns.org}}, ech-opts: {enable: true, query-server-name: www.britannica.com}}
+  - {name: 原生地址-443-Trojan-WS-TLS, server: j1o2e4y3w7o4r3k2s.lancelot.dpdns.org, port: 443, type: trojan, password: ee0b7e91-87df-475d-af74-b181e4b23727, sni: j1o2e4y3w7o4r3k2s.lancelot.dpdns.org, alpn: [h3%2Ch2%2Chttp%2F1.1], skip-cert-verify: false, network: ws, ws-opts: {path: "/?ed=2048", headers: {Host: j1o2e4y3w7o4r3k2s.lancelot.dpdns.org}}, ech-opts: {enable: true, query-server-name: www.britannica.com}}
