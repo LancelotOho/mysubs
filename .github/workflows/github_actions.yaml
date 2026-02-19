@@ -25,15 +25,15 @@ jobs:
       TZ: Asia/Shanghai
     steps:
       - name: checkout
-        uses: actions/checkout@v6
+        uses: actions/checkout@v4
         with:
           ref: devdev
           persist-credentials: true
 
       - name: run script
         run: |
-          chmod +x ./hello_world/run_it.sh
-          chmod +x ./hello_world/suboverrider.sh
+          chmod +x hello_world/run_it.sh
+          chmod +x hello_world/suboverrider.sh
           ./hello_world/run_it.sh
 
       - name: push to repository
