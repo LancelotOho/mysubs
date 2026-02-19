@@ -36,15 +36,15 @@ jobs:
           chmod +x ./hello_world/suboverrider.sh
           ./hello_world/run_it.sh
 
-      - name: pust to reporsitory
+      - name: push to repository
         run: |
           git config --local user.email "hello_world@163.com"
           git config --local user.name "hello_world"
           git add whoisyourdaddy/subs
+          
           if git diff --staged --quiet; then
             echo "No updates,skip to push."
           else
-            git commit -m "updated:($(date +'%Y-%m-%d %H:%M:%S'))"
-            git push origin devdev
+            git commit -m "updated:$(date +'%Y-%m-%d %H:%M:%S')"
+            git push origin devdev || { echo "Push failed!"; exit 1; }
           fi
-          
