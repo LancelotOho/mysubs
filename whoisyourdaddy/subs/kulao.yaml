@@ -166,102 +166,109 @@ rules:
   - MATCH,🐟 漏网之鱼
 
 proxies:
-  - udp: false
+  - name: 官网地址https://kelayun.notepin.co
+    server: 208.87.242.77
+    port: 35000
+    ports: 35000-39000
+    mport: 35000-39000
+    udp: true
     skip-cert-verify: true
-    name: 裤佬交流群https://t.me/+j664EmVv8m0wZGVk
-    type: trojan
-    server: 114.33.57.170
+    sni: www.apple.com
+    type: hysteria2
+    password: 0e44ea97-cd2c-4aa6-9159-b1224d3b38ce
+    auth: ""
+    fast-open: false
+    servername: www.apple.com
+  - name: 新年6折优惠码：克拉云
+    type: vless
+    server: 104.19.58.118
     port: 443
-    password: 5a2c16f9
+    uuid: 0e44ea97-cd2c-4aa6-9159-b1224d3b38ce
+    udp: true
     tls: true
+    skip-cert-verify: null
+    flow: ''
     client-fingerprint: chrome
-    sni: 5c.hhhhh.eu.org
+    servername: us1-us1.aiopen.sbs
     network: ws
     ws-opts:
-      path: /114.33.57.170:443
+      path: /kbjc/us1
       headers:
-        host: 5c.hhhhh.eu.org
-    tfo: false
-    servername: 5c.hhhhh.eu.org
-  - udp: false
-    skip-cert-verify: true
-    name: https://t.me/+j664EmVv8m0wZGVk
-    type: trojan
-    server: 125.228.236.138
+        Host: us1-us1.aiopen.sbs
+    alterId: 0
+    cipher: ""
+    sni: us1-us1.aiopen.sbs
+  - name: 最低月付2块钱1000G
+    type: vless
+    server: 104.19.58.118
     port: 443
-    password: 5a2c16f9
+    uuid: 0e44ea97-cd2c-4aa6-9159-b1224d3b38ce
+    udp: true
     tls: true
+    skip-cert-verify: null
+    flow: ''
     client-fingerprint: chrome
-    sni: 5c.hhhhh.eu.org
+    servername: us1-us1.aiopen.sbs
     network: ws
     ws-opts:
-      path: /125.228.236.138:443
+      path: /kbjc/us1
       headers:
-        host: 5c.hhhhh.eu.org
-    tfo: false
-    servername: 5c.hhhhh.eu.org
-  - udp: false
-    skip-cert-verify: true
-    name: 裤佬TG频道@stymei
-    type: trojan
-    server: 220.128.110.108
-    port: 43
-    password: 5a2c16f9
-    tls: true
-    client-fingerprint: chrome
-    sni: 5c.hhhhh.eu.org
-    network: ws
-    ws-opts:
-      path: /220.128.110.108:43
-      headers:
-        host: 5c.hhhhh.eu.org
-    tfo: false
-    servername: 5c.hhhhh.eu.org
-  - udp: false
-    skip-cert-verify: true
-    name: 4-台湾-173ms
-    type: trojan
-    server: 125.228.141.233
+        Host: us1-us1.aiopen.sbs
+    alterId: 0
+    cipher: ""
+    sni: us1-us1.aiopen.sbs
+  - name: 最高200元终身无限流量
+    type: vless
+    server: 69.84.182.13
     port: 443
-    password: 5a2c16f9
+    uuid: 0e44ea97-cd2c-4aa6-9159-b1224d3b38ce
+    udp: true
     tls: true
+    skip-cert-verify: null
+    flow: ''
     client-fingerprint: chrome
-    sni: 5c.hhhhh.eu.org
+    servername: jp1-jp1.aiopen.sbs
     network: ws
     ws-opts:
-      path: /125.228.141.233:443
+      path: /kbjc/jp1
       headers:
-        host: 5c.hhhhh.eu.org
-    tfo: false
-  - udp: false
-    skip-cert-verify: true
-    name: 5-台湾-65ms
-    type: trojan
-    server: 103.137.63.227
-    port: 8443
-    password: 5a2c16f9
-    tls: true
-    client-fingerprint: chrome
-    sni: 5c.hhhhh.eu.org
-    network: ws
-    ws-opts:
-      path: /103.137.63.227:8443
-      headers:
-        host: 5c.hhhhh.eu.org
-    tfo: false
-  - udp: false
-    skip-cert-verify: true
-    name: 6-台湾-212ms
-    type: trojan
-    server: 223.165.4.57
+        Host: jp1-jp1.aiopen.sbs
+    alterId: 0
+    cipher: ""
+    sni: jp1-jp1.aiopen.sbs
+  - name: 不限速不限设备
+    type: vless
+    server: 69.84.182.13
     port: 443
-    password: 5a2c16f9
+    uuid: 0e44ea97-cd2c-4aa6-9159-b1224d3b38ce
+    udp: true
     tls: true
+    skip-cert-verify: null
+    flow: ''
     client-fingerprint: chrome
-    sni: 5c.hhhhh.eu.org
+    servername: jp1-jp1.aiopen.sbs
     network: ws
     ws-opts:
-      path: /223.165.4.57:443
+      path: /kbjc/jp1
       headers:
-        host: 5c.hhhhh.eu.org
-    tfo: false
+        Host: jp1-jp1.aiopen.sbs
+    alterId: 0
+    cipher: ""
+    sni: jp1-jp1.aiopen.sbs
+  - name: 新疆西藏福建可用
+    type: vless
+    server: 69.84.182.13
+    port: 443
+    uuid: 0e44ea97-cd2c-4aa6-9159-b1224d3b38ce
+    udp: true
+    tls: true
+    skip-cert-verify: null
+    flow: ''
+    client-fingerprint: chrome
+    network: ws
+    ws-opts:
+      path: /kbjc/fr1
+      headers:
+        Host: fr-1-fr-1.aiopen.sbs
+    alterId: 0
+    cipher: ""
