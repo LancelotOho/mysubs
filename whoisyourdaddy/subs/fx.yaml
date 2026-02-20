@@ -91,10 +91,10 @@ geox-url:
 profile:
   store-selected: true
   store-fake-ip: true
-BaseUT: &BaseUT { type: url-test, interval: 1800, lazy: true, url: 'https://cp.cloudflare.com/generate_204', hidden: false, include-all-proxies: true }
-BaseSE: &BaseSE { type: select, interval: 1800, lazy: true, url: 'https://cp.cloudflare.com/generate_204', hidden: false, include-all-proxies: true }
-BaseFB: &BaseFB { type: fallback, interval: 600, lazy: true, url: 'https://cp.cloudflare.com/generate_204', hidden: true, include-all-proxies: true }
-BaseCR: &BaseCR { type: load-balance, interval: 600, lazy: true, url: 'https://cp.cloudflare.com/generate_204', hidden: true, strategy: round-robin, include-all-proxies: true }
+BaseUT: &BaseUT { type: url-test, interval: 1800, lazy: true, url: 'https://cp.cloudflare.com/generate_204', hidden: false, include-all: true }
+BaseSE: &BaseSE { type: select, interval: 1800, lazy: true, url: 'https://cp.cloudflare.com/generate_204', hidden: false, include-all: true }
+BaseFB: &BaseFB { type: fallback, interval: 600, lazy: true, url: 'https://cp.cloudflare.com/generate_204', hidden: true, include-all: true }
+BaseCR: &BaseCR { type: load-balance, interval: 600, lazy: true, url: 'https://cp.cloudflare.com/generate_204', hidden: true, strategy: round-robin, include-all: true }
 SelectA: &SelectA { type: select, proxies: [ ✅ 自动选择, ⚖️ 负载均衡, 🫱 手动选择, ⭕ 故障切换, 🎯 全球直连 ] }
 SelectB: &SelectB { type: select, proxies: [ 🎯 全球直连, ✅ 自动选择, ⚖️ 负载均衡, 🫱 手动选择, ⭕ 故障切换 ] }
 SelectC: &SelectC { type: select, proxies: [DIRECT] }
@@ -167,6 +167,6 @@ rules:
   - MATCH,🐟 漏网之鱼
 
 proxies:
-  - {name: "[Vless] rs1 [ksvft] 1", server: cf.9999669.xyz, port: 2087, type: vless, uuid: 77777777-6663-4ef2-b26b-ed2d70642678, tls: true, tfo: true, skip-cert-verify: true, servername: ksvft3xjv0efs1.fx02.ccwu.cc, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: ksvft3xjv0efs1.fx02.ccwu.cc}}, udp: true, ech-opts: {enable: false, query-server-name: 'cloudflare-ech.com+https://dns.alidns.com/dns-query'}}
-  - {name: "[Vless] rs1 [qz0of] 2", server: mfa.gov.ua, port: 2087, type: vless, uuid: 77777777-6663-4ef2-b26b-ed2d70642678, tls: true, tfo: true, skip-cert-verify: true, servername: qz0of3x0vgrv1ml.fx02.ccwu.cc, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: qz0of3x0vgrv1ml.fx02.ccwu.cc}}, udp: true, ech-opts: {enable: false, query-server-name: 'cloudflare-ech.com+https://dns.alidns.com/dns-query'}}
-  - {name: "[Vless] rs1 [hf69x] 3", server: www.shopify.com, port: 2087, type: vless, uuid: 77777777-6663-4ef2-b26b-ed2d70642678, tls: true, tfo: true, skip-cert-verify: true, servername: hf69xv21kzv.fx02.ccwu.cc, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: hf69xv21kzv.fx02.ccwu.cc}}, udp: true, ech-opts: {enable: false, query-server-name: 'cloudflare-ech.com+https://dns.alidns.com/dns-query'}}
+  - {name: "[Vless] rs1 [m82vf] 1", server: cf.9999669.xyz, port: 2087, type: vless, uuid: 77777777-6663-4ef2-b26b-ed2d70642678, tls: true, tfo: true, skip-cert-verify: true, servername: m82vfxq2vau1md.fx02.ccwu.cc, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: m82vfxq2vau1md.fx02.ccwu.cc}}, udp: true, ech-opts: {enable: false, query-server-name: 'cloudflare-ech.com+https://dns.alidns.com/dns-query'}}
+  - {name: "[Vless] rs1 [v77ff] 2", server: mfa.gov.ua, port: 2087, type: vless, uuid: 77777777-6663-4ef2-b26b-ed2d70642678, tls: true, tfo: true, skip-cert-verify: true, servername: v77ffvsxvn1.fx02.ccwu.cc, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: v77ffvsxvn1.fx02.ccwu.cc}}, udp: true, ech-opts: {enable: false, query-server-name: 'cloudflare-ech.com+https://dns.alidns.com/dns-query'}}
+  - {name: "[Vless] rs1 [l8fsx] 3", server: www.shopify.com, port: 2087, type: vless, uuid: 77777777-6663-4ef2-b26b-ed2d70642678, tls: true, tfo: true, skip-cert-verify: true, servername: l8fsxv1c.fx02.ccwu.cc, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: l8fsxv1c.fx02.ccwu.cc}}, udp: true, ech-opts: {enable: false, query-server-name: 'cloudflare-ech.com+https://dns.alidns.com/dns-query'}}
