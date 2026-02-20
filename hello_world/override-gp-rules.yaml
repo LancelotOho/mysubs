@@ -1,7 +1,7 @@
-BaseUT: &BaseUT { type: url-test, interval: 1800, lazy: true, url: 'https://cp.cloudflare.com/generate_204', hidden: false, include-all-proxies: true }
-BaseSE: &BaseSE { type: select, interval: 1800, lazy: true, url: 'https://cp.cloudflare.com/generate_204', hidden: false, include-all-proxies: true }
-BaseFB: &BaseFB { type: fallback, interval: 600, lazy: true, url: 'https://cp.cloudflare.com/generate_204', hidden: true, include-all-proxies: true }
-BaseCR: &BaseCR { type: load-balance, interval: 600, lazy: true, url: 'https://cp.cloudflare.com/generate_204', hidden: true, strategy: round-robin, include-all-proxies: true }
+BaseUT: &BaseUT { type: url-test, interval: 1800, lazy: true, url: 'https://cp.cloudflare.com/generate_204', hidden: false, include-all: true }
+BaseSE: &BaseSE { type: select, interval: 1800, lazy: true, url: 'https://cp.cloudflare.com/generate_204', hidden: false, include-all: true }
+BaseFB: &BaseFB { type: fallback, interval: 600, lazy: true, url: 'https://cp.cloudflare.com/generate_204', hidden: true, include-all: true }
+BaseCR: &BaseCR { type: load-balance, interval: 600, lazy: true, url: 'https://cp.cloudflare.com/generate_204', hidden: true, strategy: round-robin, include-all: true }
 SelectA: &SelectA { type: select, proxies: [ ✅ 自动选择, ⚖️ 负载均衡, 🫱 手动选择, ⭕ 故障切换, 🎯 全球直连 ] }
 SelectB: &SelectB { type: select, proxies: [ 🎯 全球直连, ✅ 自动选择, ⚖️ 负载均衡, 🫱 手动选择, ⭕ 故障切换 ] }
 SelectC: &SelectC { type: select, proxies: [DIRECT] }
