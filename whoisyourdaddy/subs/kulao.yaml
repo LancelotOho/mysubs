@@ -70,8 +70,9 @@ dns:
     - https://dns.alidns.com/dns-query
     - https://doh.pub/dns-query
   proxy-server-nameserver:
+    - https://dns.google/dns-query
+    - https://cloudflare-dns.com/dns-query
     - https://dns.alidns.com/dns-query
-    - https://doh.pub/dns-query
   direct-nameserver:
     - https://dns.alidns.com/dns-query
     - https://doh.pub/dns-query
