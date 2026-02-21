@@ -262,4 +262,3 @@ rules:
   - RULE-SET,LanIP,DIRECT
   - RULE-SET,ChinaIP,DIRECT
   - MATCH,🐟 漏网之鱼
-  
