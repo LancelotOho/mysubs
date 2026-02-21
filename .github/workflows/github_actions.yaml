@@ -33,7 +33,7 @@ jobs:
       - name: run script
         run: |
           chmod +x hello_world/run_it.sh
-          chmod +x hello_world/suboverrider.sh
+          chmod +x hello_world/suboverrider_v11.sh
           ./hello_world/run_it.sh
 
       - name: push to repository
