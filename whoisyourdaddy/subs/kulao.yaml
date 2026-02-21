@@ -176,15 +176,34 @@ proxies:
     skip-cert-verify: true
     sni: www.apple.com
     type: hysteria2
-    password: 0e44ea97-cd2c-4aa6-9159-b1224d3b38ce
+    password: da8a47cb-3cc6-425b-a4da-24abe9b2c332
     auth: ""
     fast-open: false
     servername: www.apple.com
+  - name: 最低月付2块钱1000G流量
+    type: vless
+    server: 104.19.58.118
+    port: 443
+    uuid: da8a47cb-3cc6-425b-a4da-24abe9b2c332
+    udp: true
+    tls: true
+    skip-cert-verify: null
+    flow: ''
+    client-fingerprint: chrome
+    servername: us1-us1.aiopen.sbs
+    network: ws
+    ws-opts:
+      path: /kbjc/us1
+      headers:
+        Host: us1-us1.aiopen.sbs
+    alterId: 0
+    cipher: ""
+    sni: us1-us1.aiopen.sbs
   - name: 新年6折优惠码：克拉云
     type: vless
     server: 104.19.58.118
     port: 443
-    uuid: 0e44ea97-cd2c-4aa6-9159-b1224d3b38ce
+    uuid: da8a47cb-3cc6-425b-a4da-24abe9b2c332
     udp: true
     tls: true
     skip-cert-verify: null
@@ -199,49 +218,11 @@ proxies:
     alterId: 0
     cipher: ""
     sni: us1-us1.aiopen.sbs
-  - name: 最低月付2块钱1000G
-    type: vless
-    server: 104.19.58.118
-    port: 443
-    uuid: 0e44ea97-cd2c-4aa6-9159-b1224d3b38ce
-    udp: true
-    tls: true
-    skip-cert-verify: null
-    flow: ''
-    client-fingerprint: chrome
-    servername: us1-us1.aiopen.sbs
-    network: ws
-    ws-opts:
-      path: /kbjc/us1
-      headers:
-        Host: us1-us1.aiopen.sbs
-    alterId: 0
-    cipher: ""
-    sni: us1-us1.aiopen.sbs
-  - name: 最高200元终身无限流量
-    type: vless
-    server: 69.84.182.13
-    port: 443
-    uuid: 0e44ea97-cd2c-4aa6-9159-b1224d3b38ce
-    udp: true
-    tls: true
-    skip-cert-verify: null
-    flow: ''
-    client-fingerprint: chrome
-    servername: jp1-jp1.aiopen.sbs
-    network: ws
-    ws-opts:
-      path: /kbjc/jp1
-      headers:
-        Host: jp1-jp1.aiopen.sbs
-    alterId: 0
-    cipher: ""
-    sni: jp1-jp1.aiopen.sbs
   - name: 不限速不限设备
     type: vless
     server: 69.84.182.13
     port: 443
-    uuid: 0e44ea97-cd2c-4aa6-9159-b1224d3b38ce
+    uuid: da8a47cb-3cc6-425b-a4da-24abe9b2c332
     udp: true
     tls: true
     skip-cert-verify: null
@@ -260,7 +241,26 @@ proxies:
     type: vless
     server: 69.84.182.13
     port: 443
-    uuid: 0e44ea97-cd2c-4aa6-9159-b1224d3b38ce
+    uuid: da8a47cb-3cc6-425b-a4da-24abe9b2c332
+    udp: true
+    tls: true
+    skip-cert-verify: null
+    flow: ''
+    client-fingerprint: chrome
+    servername: jp1-jp1.aiopen.sbs
+    network: ws
+    ws-opts:
+      path: /kbjc/jp1
+      headers:
+        Host: jp1-jp1.aiopen.sbs
+    alterId: 0
+    cipher: ""
+    sni: jp1-jp1.aiopen.sbs
+  - name: 解锁Gemini和ChatGPT
+    type: vless
+    server: 69.84.182.13
+    port: 443
+    uuid: da8a47cb-3cc6-425b-a4da-24abe9b2c332
     udp: true
     tls: true
     skip-cert-verify: null
