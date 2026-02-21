@@ -3,7 +3,7 @@ name: suboverrider
 on:
   workflow_dispatch:
   schedule:
-    - cron: '50 */3 * * *'  
+    - cron: '5 */3 * * *'  
   push:
     branches:
       - devdev
