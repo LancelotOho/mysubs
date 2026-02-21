@@ -1,3 +1,4 @@
+# updated 2026-02-22 02:34:28
 mixed-port: 7890
 port: 7891
 socks-port: 7892
@@ -91,6 +92,7 @@ geox-url:
 profile:
   store-selected: true
   store-fake-ip: true
+
 proxy-groups:
   - name: 🥳 打包代理
     type: select
@@ -1183,6 +1185,32 @@ proxies:
     server: 91.132.51.160
     tls: false
     type: hysteria2
+  - name: "\U0001F4E444@oneclickvpnkeys"
+    password: 545fb4e9-5794-4e20-be0c-e6d8689f91ac
+    port: 35000
+    server: 129.151.251.122
+    skip-cert-verify: true
+    sni: www.lamer.com.hk
+    tls: false
+    type: hysteria2
+  - name: "\U0001F4E457@oneclickvpnkeys"
+    password: 545fb4e9-5794-4e20-be0c-e6d8689f91ac
+    port: 35000
+    server: 143.47.32.143
+    skip-cert-verify: true
+    sni: www.lamer.com.hk
+    tls: false
+    type: hysteria2
+  - name: "\U0001F300Telegram= @vpn_openet \U0001F300"
+    obfs: salamander
+    obfs-password: '@JavidnamanIran-Javid-SHAH-King-Reza-Pahlavi'
+    password: 75193bef8d8fe82341e02dd083dc1399
+    port: 989
+    server: dd.openaccessnode.com
+    skip-cert-verify: false
+    sni: dd.ircybersec.org
+    tls: false
+    type: hysteria2
   - name: 美国2
     password: 78c2bad7-f5f3-41f2-88cc-81de9d05040b
     port: 2056
@@ -1206,7 +1234,7 @@ proxies:
     skip-cert-verify: true
     tls: false
     type: hysteria2
-  - name: "\U0001F40A35@oneclickvpnkeys"
+  - name: '@Trick_mobil #5'
     obfs: salamander
     obfs-password: Telegram-->@Ln2Ray
     password: Telegram-->@Ln2Ray
@@ -1236,16 +1264,6 @@ proxies:
     sni: YAPC-1.afshin.ir
     tls: false
     type: hysteria2
-  - name: "\U0001F40A65@oneclickvpnkeys"
-    obfs: salamander
-    obfs-password: Yet-Another-Public-Config-1
-    password: Yet-Another-Public-Config-1
-    port: 443
-    server: 2a14:3f87:f001:13::a
-    skip-cert-verify: true
-    sni: YAPC-1.afshin.ir
-    tls: false
-    type: hysteria2
   - name: DE
     password: a084933d-0b41-4571-ae0c-7163b8c71ed1
     port: 2056
@@ -1267,7 +1285,6 @@ proxies:
     password: b4bd0613-ff7c-4f2f-954d-185915e6ddad
     port: 35000
     server: 206.71.158.40
-    skip-cert-verify: true
     sni: api.kermanshahi.org
     tls: false
     type: hysteria2
@@ -1279,22 +1296,6 @@ proxies:
     server: 206.71.158.41
     skip-cert-verify: true
     sni: api.kermanshahi.org
-    tls: false
-    type: hysteria2
-  - name: "\U0001F40A34@oneclickvpnkeys"
-    password: dongtaiwang.com
-    port: 443
-    server: 2001:bc8:32d7:302::11
-    skip-cert-verify: true
-    sni: apple.com
-    tls: false
-    type: hysteria2
-  - name: "\U0001F40A31@oneclickvpnkeys"
-    password: dongtaiwang.com
-    port: 443
-    server: 2001:bc8:32d7:302::17
-    skip-cert-verify: true
-    sni: apple.com
     tls: false
     type: hysteria2
   - name: SG
@@ -1311,6 +1312,14 @@ proxies:
     server: tw.oomz.ru
     skip-cert-verify: true
     sni: bing.com
+    tls: false
+    type: hysteria2
+  - name: "\U0001F4E435@oneclickvpnkeys"
+    password: f40ca239-4a76-4808-b56c-84d4e9969939
+    port: 50000
+    server: 129.151.193.163
+    skip-cert-verify: true
+    sni: www.microsoft.com
     tls: false
     type: hysteria2
   - name: "\U0001F4E427@oneclickvpnkeys"
@@ -1334,16 +1343,6 @@ proxies:
     port: 443
     server: '2a12:bec0:165:1e8::'
     skip-cert-verify: true
-    tls: false
-    type: hysteria2
-  - name: "\U0001F300Telegram= @vpn_openet \U0001F300"
-    obfs: salamander
-    obfs-password: '@JavidnamanIran-Javid-SHAH-King-Reza-Pahlavi'
-    password: 75193bef8d8fe82341e02dd083dc1399
-    port: 989
-    server: dd.openaccessnode.com
-    skip-cert-verify: false
-    sni: dd.ircybersec.org
     tls: false
     type: hysteria2
   - name: '@en_vpn/کانفیگ های بیشتر'
@@ -1384,7 +1383,15 @@ proxies:
     sni: YAPC-1.afshin.ir
     tls: false
     type: hysteria2
-  - name: "\U0001F518 T.me/V2HUBIR | Join Now ✅️ #1"
+  - name: '@Spartan_YT'
+    password: b4bd0613-ff7c-4f2f-954d-185915e6ddad
+    port: 35000
+    server: 206.71.158.41
+    skip-cert-verify: true
+    sni: api.kermanshahi.org
+    tls: false
+    type: hysteria2
+  - name: "\U0001F525 Telegram: @wiki_tajrobe"
     obfs: salamander
     obfs-password: '@JavidnamanIran-Javid-SHAH-KingRezaPahlavi'
     password: b4bd0613-ff7c-4f2f-954d-185915e6ddad
@@ -1394,7 +1401,7 @@ proxies:
     sni: jnir.pichondan.com
     tls: false
     type: hysteria2
-  - name: configraygan_1
+  - name: کانفیگ رایگان = t.me/arisping
     obfs: salamander
     obfs-password: '@JavidnamanIran-Javid-SHAH-KingRezaPahlavi'
     password: b4bd0613-ff7c-4f2f-954d-185915e6ddad
