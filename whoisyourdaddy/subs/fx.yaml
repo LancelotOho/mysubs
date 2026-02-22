@@ -1,4 +1,4 @@
-# updated 2026-02-22 14:59:51
+# updated 2026-02-22 15:42:16
 mixed-port: 7890
 port: 7891
 socks-port: 7892
@@ -359,7 +359,7 @@ rules:
   - MATCH,🐟 漏网之鱼
 
 proxies:
-  - {name: "[Vless] rs1 [flw5j] 1", server: cf.9999669.xyz, port: 2087, type: vless, uuid: 77777777-6663-4ef2-b26b-ed2d70642678, tls: true, tfo: true, skip-cert-verify: true, servername: flw5jx5vrw13v.fx03.ccwu.cc, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: flw5jx5vrw13v.fx03.ccwu.cc}}, udp: true, ech-opts: {enable: false, query-server-name: 'cloudflare-ech.com+https://dns.alidns.com/dns-query'}}
-  - {name: "[Vless] rs1 [rfqxv] 2", server: mfa.gov.ua, port: 2087, type: vless, uuid: 77777777-6663-4ef2-b26b-ed2d70642678, tls: true, tfo: true, skip-cert-verify: true, servername: rfqxv41h15o4.fx03.ccwu.cc, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: rfqxv41h15o4.fx03.ccwu.cc}}, udp: true, ech-opts: {enable: false, query-server-name: 'cloudflare-ech.com+https://dns.alidns.com/dns-query'}}
-  - {name: "[Vless] rs1 [agrzf] 3", server: www.shopify.com, port: 2087, type: vless, uuid: 77777777-6663-4ef2-b26b-ed2d70642678, tls: true, tfo: true, skip-cert-verify: true, servername: agrzfk2dx7fvk16.fx03.ccwu.cc, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: agrzfk2dx7fvk16.fx03.ccwu.cc}}, udp: true, ech-opts: {enable: false, query-server-name: 'cloudflare-ech.com+https://dns.alidns.com/dns-query'}}
+  - {name: "[Vless] rs1 [sfxvr] 1", server: cf.9999669.xyz, port: 2087, type: vless, uuid: 77777777-6663-4ef2-b26b-ed2d70642678, tls: true, tfo: true, skip-cert-verify: true, servername: sfxvro1wlik.fx02.ccwu.cc, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: sfxvro1wlik.fx02.ccwu.cc}}, udp: true, ech-opts: {enable: false, query-server-name: 'cloudflare-ech.com+https://dns.alidns.com/dns-query'}}
+  - {name: "[Vless] rs1 [i4jf2] 2", server: mfa.gov.ua, port: 2087, type: vless, uuid: 77777777-6663-4ef2-b26b-ed2d70642678, tls: true, tfo: true, skip-cert-verify: true, servername: i4jf2xerevkmf1.fx02.ccwu.cc, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: i4jf2xerevkmf1.fx02.ccwu.cc}}, udp: true, ech-opts: {enable: false, query-server-name: 'cloudflare-ech.com+https://dns.alidns.com/dns-query'}}
+  - {name: "[Vless] rs1 [n1fbj] 3", server: www.shopify.com, port: 2087, type: vless, uuid: 77777777-6663-4ef2-b26b-ed2d70642678, tls: true, tfo: true, skip-cert-verify: true, servername: n1fbj8x8v9q1c.fx02.ccwu.cc, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: n1fbj8x8v9q1c.fx02.ccwu.cc}}, udp: true, ech-opts: {enable: false, query-server-name: 'cloudflare-ech.com+https://dns.alidns.com/dns-query'}}
 
