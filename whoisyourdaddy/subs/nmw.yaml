@@ -1,4 +1,4 @@
-# updated 2026-02-22 17:57:07
+# updated 2026-02-22 20:42:17
 mixed-port: 7890
 port: 7891
 socks-port: 7892
@@ -1252,7 +1252,7 @@ proxies:
     sni: gavazn.55994421.xyz
     tls: false
     type: hysteria2
-  - name: '@WedBaZTel #1'
+  - name: '@WedBaZTel #2'
     obfs: salamander
     obfs-password: Yet-Another-Public-Config-1
     password: Yet-Another-Public-Config-1
@@ -1356,7 +1356,7 @@ proxies:
     sni: YAPC-1.afshin.ir
     tls: false
     type: hysteria2
-  - name: '@WedBaZTel'
+  - name: '@WedBaZTel #1'
     obfs: salamander
     obfs-password: Yet-Another-Public-Config-1
     password: Yet-Another-Public-Config-1
@@ -1376,7 +1376,7 @@ proxies:
     sni: YAPC-1.afshin.ir@freenettir
     tls: false
     type: hysteria2
-  - name: '@V2rayBaaz #1'
+  - name: '@WedBaZTel #3'
     obfs: salamander
     obfs-password: Yet-Another-Public-Config-1
     password: Yet-Another-Public-Config-1
