@@ -1,4 +1,4 @@
-# updated 2026-02-23 10:55:14
+# updated 2026-02-23 13:06:36
 mixed-port: 7890
 port: 7891
 socks-port: 7892
@@ -1179,6 +1179,14 @@ proxies:
     sni: "\U0001F512"
     tls: false
     type: hysteria2
+  - name: "\U0001FAA298@oneclickvpnkeys"
+    password: 1y4HweESOT
+    port: 27995
+    server: sss.ikun6.dpdns.org
+    skip-cert-verify: true
+    sni: azure.microsoft.com
+    tls: false
+    type: hysteria2
   - name: '@Trick_mobil #1'
     password: 5046SHWqk6
     port: 844
@@ -1193,7 +1201,7 @@ proxies:
     sni: www.lamer.com.hk
     tls: false
     type: hysteria2
-  - name: "\U0001F4E488@oneclickvpnkeys"
+  - name: '@Trick_mobil #3'
     password: 545fb4e9-5794-4e20-be0c-e6d8689f91ac
     port: 35000
     server: 129.153.25.59
@@ -1282,6 +1290,15 @@ proxies:
     server: tw.oomz.ru
     skip-cert-verify: true
     sni: bing.com
+    tls: false
+    type: hysteria2
+  - name: '@V2rayBaaz #1'
+    obfs: salamander
+    obfs-password: '@JavidnamanIran-Javid-SHAH-King-Reza-Pahlavi'
+    password: 75193bef8d8fe82341e02dd083dc1399
+    port: 989
+    server: dd.openaccessnode.com
+    sni: dd.ircybersec.org
     tls: false
     type: hysteria2
   - name: none
