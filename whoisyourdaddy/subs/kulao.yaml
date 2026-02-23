@@ -1,4 +1,4 @@
-# updated 2026-02-23 23:56:17
+# updated 2026-02-24 03:18:00
 mixed-port: 7890
 port: 7891
 socks-port: 7892
@@ -368,15 +368,15 @@ proxies:
     skip-cert-verify: true
     sni: www.apple.com
     type: hysteria2
-    password: da8a47cb-3cc6-425b-a4da-24abe9b2c332
+    password: 4ae73062-88d4-4a06-ac26-dfac0f5338d9
     auth: ""
     fast-open: false
     servername: www.apple.com
-  - name: 最低月付2块钱1000G流量
+  - name: 最低2块钱1000G流量
     type: vless
     server: 104.19.58.118
     port: 443
-    uuid: da8a47cb-3cc6-425b-a4da-24abe9b2c332
+    uuid: 4ae73062-88d4-4a06-ac26-dfac0f5338d9
     udp: true
     tls: true
     skip-cert-verify: null
@@ -395,7 +395,7 @@ proxies:
     type: vless
     server: 104.19.58.118
     port: 443
-    uuid: da8a47cb-3cc6-425b-a4da-24abe9b2c332
+    uuid: 4ae73062-88d4-4a06-ac26-dfac0f5338d9
     udp: true
     tls: true
     skip-cert-verify: null
@@ -414,7 +414,7 @@ proxies:
     type: vless
     server: 69.84.182.13
     port: 443
-    uuid: da8a47cb-3cc6-425b-a4da-24abe9b2c332
+    uuid: 4ae73062-88d4-4a06-ac26-dfac0f5338d9
     udp: true
     tls: true
     skip-cert-verify: null
@@ -429,11 +429,11 @@ proxies:
     alterId: 0
     cipher: ""
     sni: jp1-jp1.aiopen.sbs
-  - name: 新疆西藏福建可用
+  - name: 新疆西藏福建都能用
     type: vless
     server: 69.84.182.13
     port: 443
-    uuid: da8a47cb-3cc6-425b-a4da-24abe9b2c332
+    uuid: 4ae73062-88d4-4a06-ac26-dfac0f5338d9
     udp: true
     tls: true
     skip-cert-verify: null
@@ -452,7 +452,7 @@ proxies:
     type: vless
     server: 69.84.182.13
     port: 443
-    uuid: da8a47cb-3cc6-425b-a4da-24abe9b2c332
+    uuid: 4ae73062-88d4-4a06-ac26-dfac0f5338d9
     udp: true
     tls: true
     skip-cert-verify: null
