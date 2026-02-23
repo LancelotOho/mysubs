@@ -58,16 +58,6 @@ mysubs:
     override_file: [override-set.yaml, override-gp-rules.yaml]
     f_config_path: "whoisyourdaddy/subs"
     f_config_name: "fx.yaml"
-
-  agg:
-    url: "https://cdn.gh-proxy.org/https://raw.githubusercontent.com/mahdibland/ShadowsocksAggregator/master/Eternity.yml"
-    download_path: "whoisyourdaddy/downloads/agg"
-    ori_config_name: "ori_proxy.yaml"
-    tar_topkey: proxies
-    only_proxy_file: "only_proxy.yaml"    
-    override_file: [override-set.yaml, override-gp-rules.yaml]
-    f_config_path: "whoisyourdaddy/subs"
-    f_config_name: "agg.yaml"
   
   joey:
     url: "https://j1o2e4y3w7o4r3k2s.lancelot.dpdns.org/admin/sub?target=clash"
