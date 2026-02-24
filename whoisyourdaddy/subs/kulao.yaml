@@ -1,4 +1,4 @@
-# updated 2026-02-24 15:12:12
+# updated 2026-02-24 18:00:56
 mixed-port: 7890
 port: 7891
 socks-port: 7892
@@ -362,180 +362,289 @@ proxies:
   - udp: false
     skip-cert-verify: true
     name: 官网地址https://kelayun.notepin.co
-    type: trojan
-    server: 61.245.11.227
-    port: 2053
-    password: 3e974f9e
+    type: vless
+    server: 114.34.106.124
+    port: 10443
+    uuid: 3e974f9e-f568-4c2a-a4db-e9b666b4ea9e
     tls: true
     client-fingerprint: chrome
-    sni: 63.hhhhh.eu.org
+    servername: 63.hhhhh.eu.org
     network: ws
     ws-opts:
-      path: /61.245.11.227:2053
+      path: /114.34.106.124:10443
       headers:
         host: 63.hhhhh.eu.org
     tfo: false
-    servername: 63.hhhhh.eu.org
+    alterId: 0
+    cipher: ""
+    flow: ""
+    sni: 63.hhhhh.eu.org
   - udp: false
     skip-cert-verify: true
     name: 下单地址https://kelayun.notepin.co
-    type: trojan
-    server: 8.220.134.136
-    port: 443
-    password: 3e974f9e
+    type: vless
+    server: 125.228.236.138
+    port: 2443
+    uuid: 3e974f9e-f568-4c2a-a4db-e9b666b4ea9e
     tls: true
     client-fingerprint: chrome
-    sni: 63.hhhhh.eu.org
+    servername: 63.hhhhh.eu.org
     network: ws
     ws-opts:
-      path: /8.220.134.136:443
+      path: /125.228.236.138:2443
       headers:
         host: 63.hhhhh.eu.org
     tfo: false
-    servername: 63.hhhhh.eu.org
+    alterId: 0
+    cipher: ""
+    flow: ""
+    sni: 63.hhhhh.eu.org
   - udp: false
     skip-cert-verify: true
     name: 购买地址https://kelayun.notepin.co
-    type: trojan
-    server: 61.245.10.200
-    port: 8443
-    password: 3e974f9e
+    type: vless
+    server: 60.251.232.240
+    port: 995
+    uuid: 3e974f9e-f568-4c2a-a4db-e9b666b4ea9e
     tls: true
     client-fingerprint: chrome
-    sni: 63.hhhhh.eu.org
+    servername: 63.hhhhh.eu.org
     network: ws
     ws-opts:
-      path: /61.245.10.200:8443
+      path: /60.251.232.240:995
       headers:
         host: 63.hhhhh.eu.org
     tfo: false
-    servername: 63.hhhhh.eu.org
+    alterId: 0
+    cipher: ""
+    flow: ""
+    sni: 63.hhhhh.eu.org
   - udp: false
     skip-cert-verify: true
-    name: ✅付费机场VPN梯子加速器推荐
-    type: trojan
-    server: 38.54.81.111
-    port: 443
-    password: 3e974f9e
+    name: 付费机场VPN梯子加速器推荐
+    type: vless
+    server: 1.170.213.71
+    port: 8443
+    uuid: 3e974f9e-f568-4c2a-a4db-e9b666b4ea9e
     tls: true
     client-fingerprint: chrome
-    sni: 63.hhhhh.eu.org
+    servername: 63.hhhhh.eu.org
     network: ws
     ws-opts:
-      path: /38.54.81.111:443
+      path: /1.170.213.71:8443
       headers:
         host: 63.hhhhh.eu.org
     tfo: false
+    alterId: 0
+    cipher: ""
+    flow: ""
+    sni: 63.hhhhh.eu.org
+  - udp: false
+    skip-cert-verify: true
+    name: 最低月付2块钱1000G流量
+    type: vless
+    server: 220.128.110.108
+    port: 43
+    uuid: 3e974f9e-f568-4c2a-a4db-e9b666b4ea9e
+    tls: true
+    client-fingerprint: chrome
     servername: 63.hhhhh.eu.org
-  - name: 最低月付2块钱1000G流量
-    type: vless
-    server: 38.244.62.175
-    port: 41465
-    uuid: 26524cce-d514-4014-a426-365fb266a14d
-    encryption: none
-    udp: true
-    skip-cert-verify: null
-    tfo: false
-    tls: true
-    sni: snippet.fgfw.loc.cc
-    servername: snippet.fgfw.loc.cc
-    client-fingerprint: random
-    alpn:
-      - http/1.1
     network: ws
     ws-opts:
-      path: /danfeng?ed=2560
+      path: /220.128.110.108:43
       headers:
-        Host: snippet.fgfw.loc.cc
+        host: 63.hhhhh.eu.org
+    tfo: false
     alterId: 0
     cipher: ""
     flow: ""
-  - name: "\U0001F9E8新年6折优惠码：克拉云"
+    sni: 63.hhhhh.eu.org
+  - udp: false
+    skip-cert-verify: true
+    name: 不限速不限设备
     type: vless
-    server: 156.231.140.89
-    port: 20312
-    uuid: 26524cce-d514-4014-a426-365fb266a14d
-    encryption: none
-    udp: true
-    skip-cert-verify: null
-    tfo: false
+    server: 1.162.85.158
+    port: 8443
+    uuid: 3e974f9e-f568-4c2a-a4db-e9b666b4ea9e
     tls: true
-    sni: snippet.fgfw.loc.cc
-    servername: snippet.fgfw.loc.cc
-    client-fingerprint: random
-    alpn:
-      - http/1.1
-    network: ws
-    ws-opts:
-      path: /danfeng?ed=2560
-      headers:
-        Host: snippet.fgfw.loc.cc
-    alterId: 0
-    cipher: ""
-    flow: ""
-  - name: 不限速不限设备
-    type: vless
-    server: 38.181.79.171
-    port: 58473
-    uuid: 26524cce-d514-4014-a426-365fb266a14d
-    encryption: none
-    udp: true
-    skip-cert-verify: null
-    tfo: false
-    tls: true
-    sni: snippet.fgfw.loc.cc
-    servername: snippet.fgfw.loc.cc
-    client-fingerprint: random
-    alpn:
-      - http/1.1
-    network: ws
-    ws-opts:
-      path: /danfeng?ed=2560
-      headers:
-        Host: snippet.fgfw.loc.cc
-    alterId: 0
-    cipher: ""
-    flow: ""
-  - name: 新疆西藏福建都能用
-    type: vless
-    server: www.visa.cn
-    port: 443
-    uuid: 00000000-0000-4000-8000-000000000000
-    encryption: none
-    udp: true
-    skip-cert-verify: null
-    tfo: false
-    tls: true
-    sni: dzsgccvheprdb3tb7fztj4rlpowg.worker.ddns-ip.net
-    servername: dzsgccvheprdb3tb7fztj4rlpowg.worker.ddns-ip.net
     client-fingerprint: chrome
+    servername: 63.hhhhh.eu.org
     network: ws
     ws-opts:
-      path: /@Marisa_kristi?ip=183.104.97.23:30000
+      path: /1.162.85.158:8443
       headers:
-        Host: dzsgccvheprdb3tb7fztj4rlpowg.worker.ddns-ip.net
-    alterId: 0
-    cipher: ""
-    flow: ""
-  - name: 解锁Gemini和ChatGPT
-    type: vless
-    server: cf.090227.xyz
-    port: 443
-    uuid: 53bbb8cf-e2c2-4239-b48a-4c79a9f98164
-    encryption: none
-    udp: true
-    skip-cert-verify: null
+        host: 63.hhhhh.eu.org
     tfo: false
-    tls: true
-    sni: cserver.trevely.us.kg
-    servername: cserver.trevely.us.kg
-    client-fingerprint: chrome
-    network: ws
-    ws-opts:
-      path: /vless-argo?ed=2560
-      headers:
-        Host: cserver.trevely.us.kg
     alterId: 0
     cipher: ""
     flow: ""
+    sni: 63.hhhhh.eu.org
+  - udp: false
+    skip-cert-verify: true
+    name: 新疆西藏福建都能用
+    type: vless
+    server: 60.248.139.106
+    port: 12755
+    uuid: 3e974f9e-f568-4c2a-a4db-e9b666b4ea9e
+    tls: true
+    client-fingerprint: chrome
+    servername: 63.hhhhh.eu.org
+    network: ws
+    ws-opts:
+      path: /60.248.139.106:12755
+      headers:
+        host: 63.hhhhh.eu.org
+    tfo: false
+    alterId: 0
+    cipher: ""
+    flow: ""
+    sni: 63.hhhhh.eu.org
+  - udp: false
+    skip-cert-verify: true
+    name: 解锁Gemini和ChatGPT
+    type: vless
+    server: 60.248.139.106
+    port: 18081
+    uuid: 3e974f9e-f568-4c2a-a4db-e9b666b4ea9e
+    tls: true
+    client-fingerprint: chrome
+    servername: 63.hhhhh.eu.org
+    network: ws
+    ws-opts:
+      path: /60.248.139.106:18081
+      headers:
+        host: 63.hhhhh.eu.org
+    tfo: false
+    alterId: 0
+    cipher: ""
+    flow: ""
+    sni: 63.hhhhh.eu.org
+  - udp: false
+    skip-cert-verify: true
+    name: 9-台湾-63ms
+    type: vless
+    server: 60.248.139.106
+    port: 10016
+    uuid: 3e974f9e-f568-4c2a-a4db-e9b666b4ea9e
+    tls: true
+    client-fingerprint: chrome
+    servername: 63.hhhhh.eu.org
+    network: ws
+    ws-opts:
+      path: /60.248.139.106:10016
+      headers:
+        host: 63.hhhhh.eu.org
+    tfo: false
+  - udp: false
+    skip-cert-verify: true
+    name: 10-台湾-66ms
+    type: vless
+    server: 60.248.139.106
+    port: 12128
+    uuid: 3e974f9e-f568-4c2a-a4db-e9b666b4ea9e
+    tls: true
+    client-fingerprint: chrome
+    servername: 63.hhhhh.eu.org
+    network: ws
+    ws-opts:
+      path: /60.248.139.106:12128
+      headers:
+        host: 63.hhhhh.eu.org
+    tfo: false
+  - udp: false
+    skip-cert-verify: true
+    name: 11-台湾-68ms
+    type: vless
+    server: 114.33.57.170
+    port: 443
+    uuid: 3e974f9e-f568-4c2a-a4db-e9b666b4ea9e
+    tls: true
+    client-fingerprint: chrome
+    servername: 63.hhhhh.eu.org
+    network: ws
+    ws-opts:
+      path: /114.33.57.170:443
+      headers:
+        host: 63.hhhhh.eu.org
+    tfo: false
+  - udp: false
+    skip-cert-verify: true
+    name: 12-台湾-68ms
+    type: vless
+    server: 60.248.139.106
+    port: 11017
+    uuid: 3e974f9e-f568-4c2a-a4db-e9b666b4ea9e
+    tls: true
+    client-fingerprint: chrome
+    servername: 63.hhhhh.eu.org
+    network: ws
+    ws-opts:
+      path: /60.248.139.106:11017
+      headers:
+        host: 63.hhhhh.eu.org
+    tfo: false
+  - udp: false
+    skip-cert-verify: true
+    name: 13-台湾-351ms
+    type: vless
+    server: 114.32.9.249
+    port: 51443
+    uuid: 3e974f9e-f568-4c2a-a4db-e9b666b4ea9e
+    tls: true
+    client-fingerprint: chrome
+    servername: 63.hhhhh.eu.org
+    network: ws
+    ws-opts:
+      path: /114.32.9.249:51443
+      headers:
+        host: 63.hhhhh.eu.org
+    tfo: false
+  - udp: false
+    skip-cert-verify: true
+    name: 14-台湾-536ms
+    type: vless
+    server: 114.32.9.249
+    port: 16443
+    uuid: 3e974f9e-f568-4c2a-a4db-e9b666b4ea9e
+    tls: true
+    client-fingerprint: chrome
+    servername: 63.hhhhh.eu.org
+    network: ws
+    ws-opts:
+      path: /114.32.9.249:16443
+      headers:
+        host: 63.hhhhh.eu.org
+    tfo: false
+  - udp: false
+    skip-cert-verify: true
+    name: 15-台湾-87ms
+    type: vless
+    server: 220.135.92.105
+    port: 2087
+    uuid: 3e974f9e-f568-4c2a-a4db-e9b666b4ea9e
+    tls: true
+    client-fingerprint: chrome
+    servername: 63.hhhhh.eu.org
+    network: ws
+    ws-opts:
+      path: /220.135.92.105:2087
+      headers:
+        host: 63.hhhhh.eu.org
+    tfo: false
+  - udp: false
+    skip-cert-verify: true
+    name: 16-台湾-124ms
+    type: vless
+    server: 122.116.105.15
+    port: 995
+    uuid: 3e974f9e-f568-4c2a-a4db-e9b666b4ea9e
+    tls: true
+    client-fingerprint: chrome
+    servername: 63.hhhhh.eu.org
+    network: ws
+    ws-opts:
+      path: /122.116.105.15:995
+      headers:
+        host: 63.hhhhh.eu.org
+    tfo: false
 
