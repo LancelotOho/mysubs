@@ -1,4 +1,4 @@
-# updated 2026-02-24 05:55:27
+# updated 2026-02-24 10:52:27
 mixed-port: 7890
 port: 7891
 socks-port: 7892
@@ -359,110 +359,183 @@ rules:
   - MATCH,🐟 漏网之鱼
 
 proxies:
-  - name: 官网地址https://kelayun.notepin.co
-    server: 208.87.242.77
-    port: 35000
-    ports: 35000-39000
-    mport: 35000-39000
-    udp: true
+  - udp: false
     skip-cert-verify: true
-    sni: www.apple.com
-    type: hysteria2
-    password: 4ae73062-88d4-4a06-ac26-dfac0f5338d9
-    auth: ""
-    fast-open: false
-    servername: www.apple.com
-  - name: 最低2块钱1000G流量
-    type: vless
-    server: 104.19.58.118
-    port: 443
-    uuid: 4ae73062-88d4-4a06-ac26-dfac0f5338d9
-    udp: true
+    name: 官网地址https://kelayun.notepin.co
+    type: trojan
+    server: 61.245.11.227
+    port: 2053
+    password: 3e974f9e
     tls: true
-    skip-cert-verify: null
-    flow: ''
     client-fingerprint: chrome
-    servername: us1-us1.aiopen.sbs
+    sni: 63.hhhhh.eu.org
     network: ws
     ws-opts:
-      path: /kbjc/us1
+      path: /61.245.11.227:2053
       headers:
-        Host: us1-us1.aiopen.sbs
-    alterId: 0
-    cipher: ""
-    sni: us1-us1.aiopen.sbs
-  - name: 新年6折优惠码：克拉云
-    type: vless
-    server: 104.19.58.118
+        host: 63.hhhhh.eu.org
+    tfo: false
+    servername: 63.hhhhh.eu.org
+  - udp: false
+    skip-cert-verify: true
+    name: 下单地址https://kelayun.notepin.co
+    type: trojan
+    server: 8.220.134.136
     port: 443
-    uuid: 4ae73062-88d4-4a06-ac26-dfac0f5338d9
-    udp: true
+    password: 3e974f9e
     tls: true
-    skip-cert-verify: null
-    flow: ''
     client-fingerprint: chrome
-    servername: us1-us1.aiopen.sbs
+    sni: 63.hhhhh.eu.org
     network: ws
     ws-opts:
-      path: /kbjc/us1
+      path: /8.220.134.136:443
       headers:
-        Host: us1-us1.aiopen.sbs
+        host: 63.hhhhh.eu.org
+    tfo: false
+    servername: 63.hhhhh.eu.org
+  - udp: false
+    skip-cert-verify: true
+    name: 购买地址https://kelayun.notepin.co
+    type: trojan
+    server: 61.245.10.200
+    port: 8443
+    password: 3e974f9e
+    tls: true
+    client-fingerprint: chrome
+    sni: 63.hhhhh.eu.org
+    network: ws
+    ws-opts:
+      path: /61.245.10.200:8443
+      headers:
+        host: 63.hhhhh.eu.org
+    tfo: false
+    servername: 63.hhhhh.eu.org
+  - udp: false
+    skip-cert-verify: true
+    name: ✅付费机场VPN梯子加速器推荐
+    type: trojan
+    server: 38.54.81.111
+    port: 443
+    password: 3e974f9e
+    tls: true
+    client-fingerprint: chrome
+    sni: 63.hhhhh.eu.org
+    network: ws
+    ws-opts:
+      path: /38.54.81.111:443
+      headers:
+        host: 63.hhhhh.eu.org
+    tfo: false
+    servername: 63.hhhhh.eu.org
+  - name: 最低月付2块钱1000G流量
+    type: vless
+    server: 38.244.62.175
+    port: 41465
+    uuid: 26524cce-d514-4014-a426-365fb266a14d
+    encryption: none
+    udp: true
+    skip-cert-verify: null
+    tfo: false
+    tls: true
+    sni: snippet.fgfw.loc.cc
+    servername: snippet.fgfw.loc.cc
+    client-fingerprint: random
+    alpn:
+      - http/1.1
+    network: ws
+    ws-opts:
+      path: /danfeng?ed=2560
+      headers:
+        Host: snippet.fgfw.loc.cc
     alterId: 0
     cipher: ""
-    sni: us1-us1.aiopen.sbs
+    flow: ""
+  - name: "\U0001F9E8新年6折优惠码：克拉云"
+    type: vless
+    server: 156.231.140.89
+    port: 20312
+    uuid: 26524cce-d514-4014-a426-365fb266a14d
+    encryption: none
+    udp: true
+    skip-cert-verify: null
+    tfo: false
+    tls: true
+    sni: snippet.fgfw.loc.cc
+    servername: snippet.fgfw.loc.cc
+    client-fingerprint: random
+    alpn:
+      - http/1.1
+    network: ws
+    ws-opts:
+      path: /danfeng?ed=2560
+      headers:
+        Host: snippet.fgfw.loc.cc
+    alterId: 0
+    cipher: ""
+    flow: ""
   - name: 不限速不限设备
     type: vless
-    server: 69.84.182.13
-    port: 443
-    uuid: 4ae73062-88d4-4a06-ac26-dfac0f5338d9
+    server: 38.181.79.171
+    port: 58473
+    uuid: 26524cce-d514-4014-a426-365fb266a14d
+    encryption: none
     udp: true
-    tls: true
     skip-cert-verify: null
-    flow: ''
-    client-fingerprint: chrome
-    servername: jp1-jp1.aiopen.sbs
+    tfo: false
+    tls: true
+    sni: snippet.fgfw.loc.cc
+    servername: snippet.fgfw.loc.cc
+    client-fingerprint: random
+    alpn:
+      - http/1.1
     network: ws
     ws-opts:
-      path: /kbjc/jp1
+      path: /danfeng?ed=2560
       headers:
-        Host: jp1-jp1.aiopen.sbs
+        Host: snippet.fgfw.loc.cc
     alterId: 0
     cipher: ""
-    sni: jp1-jp1.aiopen.sbs
+    flow: ""
   - name: 新疆西藏福建都能用
     type: vless
-    server: 69.84.182.13
+    server: www.visa.cn
     port: 443
-    uuid: 4ae73062-88d4-4a06-ac26-dfac0f5338d9
+    uuid: 00000000-0000-4000-8000-000000000000
+    encryption: none
     udp: true
-    tls: true
     skip-cert-verify: null
-    flow: ''
+    tfo: false
+    tls: true
+    sni: dzsgccvheprdb3tb7fztj4rlpowg.worker.ddns-ip.net
+    servername: dzsgccvheprdb3tb7fztj4rlpowg.worker.ddns-ip.net
     client-fingerprint: chrome
-    servername: jp1-jp1.aiopen.sbs
     network: ws
     ws-opts:
-      path: /kbjc/jp1
+      path: /@Marisa_kristi?ip=183.104.97.23:30000
       headers:
-        Host: jp1-jp1.aiopen.sbs
+        Host: dzsgccvheprdb3tb7fztj4rlpowg.worker.ddns-ip.net
     alterId: 0
     cipher: ""
-    sni: jp1-jp1.aiopen.sbs
+    flow: ""
   - name: 解锁Gemini和ChatGPT
     type: vless
-    server: 69.84.182.13
+    server: cf.090227.xyz
     port: 443
-    uuid: 4ae73062-88d4-4a06-ac26-dfac0f5338d9
+    uuid: 53bbb8cf-e2c2-4239-b48a-4c79a9f98164
+    encryption: none
     udp: true
-    tls: true
     skip-cert-verify: null
-    flow: ''
+    tfo: false
+    tls: true
+    sni: cserver.trevely.us.kg
+    servername: cserver.trevely.us.kg
     client-fingerprint: chrome
     network: ws
     ws-opts:
-      path: /kbjc/fr1
+      path: /vless-argo?ed=2560
       headers:
-        Host: fr-1-fr-1.aiopen.sbs
+        Host: cserver.trevely.us.kg
     alterId: 0
     cipher: ""
+    flow: ""
 
