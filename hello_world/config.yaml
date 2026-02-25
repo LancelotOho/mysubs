@@ -1,6 +1,6 @@
 mysubs: 
   nmw:
-    url: "https://cdn.gh-proxy.org/https://raw.githubusercontent.com/peasoft/NoMoreWalls/master/list.meta.yml"
+    url: "https://gh-proxy.org/https://raw.githubusercontent.com/peasoft/NoMoreWalls/master/list.meta.yml"
     download_path: "whoisyourdaddy/downloads/nmw"
     ori_config_name: "ori_proxy.yaml"
     tar_topkey: proxies
@@ -20,7 +20,7 @@ mysubs:
     f_config_name: "cm.yaml"
 
   kulao:
-    url: "https://cdn.gh-proxy.org/https://raw.githubusercontent.com/Jsnzkpg/Jsnzkpg/Jsnzkpg/Jsnzkpg"
+    url: "https://gh-proxy.org/https://raw.githubusercontent.com/Jsnzkpg/Jsnzkpg/Jsnzkpg/Jsnzkpg"
     download_path: "whoisyourdaddy/downloads/kulao"
     ori_config_name: "ori_proxy.yaml"
     tar_topkey: proxies
