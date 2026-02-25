@@ -20,7 +20,7 @@ mysubs:
     f_config_name: "nmw.yaml"
 
   cm:
-    url: "https://c1m2p9a3g2e8s.lancelot.dpdns.org/sub?token=985c3612137ea5b21ac75661f044d11a&clash"
+    url: "https://c1m3p2a8g2e6s.lancelot.dpdns.org/sub?token=c241a812d6b3518cb12992c67d9efafd&clash"
     download_path: "whoisyourdaddy/downloads/cm"
     ori_config_name: "ori_proxy.yaml"
     tar_topkey: proxies
