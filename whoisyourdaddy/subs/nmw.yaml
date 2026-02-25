@@ -1,4 +1,4 @@
-# updated 2026-02-25 15:13:03
+# updated 2026-02-25 18:02:35
 mixed-port: 7890
 port: 7891
 socks-port: 7892
@@ -1152,16 +1152,17 @@ proxies:
     sni: ffc60249-t53wg0-t92wi1-1qkeg.hk2.hyhuawei.com
     tls: false
     type: hysteria2
-  - name: HP71 (5)
+  - name: 'کانال تلگرام : Free_VPN_CH@'
     obfs: salamander
     obfs-password: '@JavidnamanIran-Javid-SHAH-KingRezaPahlavi'
     password: b4bd0613-ff7c-4f2f-954d-185915e6ddad
     port: 35000
     server: 206.71.158.40
+    skip-cert-verify: false
     sni: api.kermanshahi.org
     tls: false
     type: hysteria2
-  - name: '@V2rayNG3 #1'
+  - name: "\U0001F525 Telegram: @wiki_tajrobe #1"
     obfs: salamander
     obfs-password: '@JavidnamanIran-Javid-SHAH-KingRezaPahlavi'
     password: b4bd0613-ff7c-4f2f-954d-185915e6ddad
@@ -1205,6 +1206,16 @@ proxies:
     sni: YAPC-1.afshin.ir
     tls: false
     type: hysteria2
+  - name: Kia_Net
+    obfs: salamander
+    obfs-password: Yet-Another-Public-Config-1
+    password: Yet-Another-Public-Config-1
+    port: 35200
+    server: 206.71.158.37
+    skip-cert-verify: true
+    sni: YAPC-1.afshin.ir
+    tls: false
+    type: hysteria2
   - name: '@Hddify'
     obfs: salamander
     obfs-password: Yet-Another-Public-Config-1
@@ -1225,7 +1236,7 @@ proxies:
     sni: YAPC-1.afshin.ir
     tls: false
     type: hysteria2
-  - name: '@WedBaZTel #1'
+  - name: 'Kia_Net #2'
     obfs: salamander
     obfs-password: Yet-Another-Public-Config-1
     password: Yet-Another-Public-Config-1
@@ -1253,7 +1264,7 @@ proxies:
     sni: jnir.pichondan.com
     tls: false
     type: hysteria2
-  - name: کانفیگ رایگان = t.me/arisping
+  - name: 'کانال تلگرام : Free_VPN_CH@ #1'
     obfs: salamander
     obfs-password: '@JavidnamanIran-Javid-SHAH-KingRezaPahlavi'
     password: b4bd0613-ff7c-4f2f-954d-185915e6ddad
@@ -1263,7 +1274,7 @@ proxies:
     sni: api.kermanshahi.org
     tls: false
     type: hysteria2
-  - name: "\U0001F7E2Ṭelegram\"@Filtering2020\""
+  - name: 'کانال تلگرام : Free_VPN_CH@ #2'
     obfs: salamander
     obfs-password: '@JavidnamanIran-Javid-SHAH-KingRezaPahlavi'
     password: b4bd0613-ff7c-4f2f-954d-185915e6ddad
