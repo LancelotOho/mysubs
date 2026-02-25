@@ -1,4 +1,4 @@
-# updated 2026-02-26 00:35:15
+# updated 2026-02-26 02:13:14
 mixed-port: 7890
 port: 7891
 socks-port: 7892
@@ -363,78 +363,78 @@ proxies:
     type: vless
     server: yg8.ygkkk.dpdns.org
     port: 443
-    uuid: 6a36a3cb-b683-43db-990c-e5c6d3e7170c
+    uuid: 0148c0dc-8d10-4655-9242-e888f0a373af
     udp: false
     tls: true
     network: ws
-    servername: y1g6y4g8.lancelot.dpdns.org
+    servername: y3g2k1k5k.lancelot.dpdns.org
     ws-opts:
       path: "/?ed=2560"
       headers:
-        Host: y1g6y4g8.lancelot.dpdns.org
+        Host: y3g2k1k5k.lancelot.dpdns.org
   - name: CF_V9_yg9.ygkkk.dpdns.org_8443
     type: vless
     server: yg9.ygkkk.dpdns.org
     port: 8443
-    uuid: 6a36a3cb-b683-43db-990c-e5c6d3e7170c
+    uuid: 0148c0dc-8d10-4655-9242-e888f0a373af
     udp: false
     tls: true
     network: ws
-    servername: y1g6y4g8.lancelot.dpdns.org
+    servername: y3g2k1k5k.lancelot.dpdns.org
     ws-opts:
       path: "/?ed=2560"
       headers:
-        Host: y1g6y4g8.lancelot.dpdns.org
+        Host: y3g2k1k5k.lancelot.dpdns.org
   - name: CF_V10_yg10.ygkkk.dpdns.org_2053
     type: vless
     server: yg10.ygkkk.dpdns.org
     port: 2053
-    uuid: 6a36a3cb-b683-43db-990c-e5c6d3e7170c
+    uuid: 0148c0dc-8d10-4655-9242-e888f0a373af
     udp: false
     tls: true
     network: ws
-    servername: y1g6y4g8.lancelot.dpdns.org
+    servername: y3g2k1k5k.lancelot.dpdns.org
     ws-opts:
       path: "/?ed=2560"
       headers:
-        Host: y1g6y4g8.lancelot.dpdns.org
+        Host: y3g2k1k5k.lancelot.dpdns.org
   - name: CF_V11_yg11.ygkkk.dpdns.org_2083
     type: vless
     server: yg11.ygkkk.dpdns.org
     port: 2083
-    uuid: 6a36a3cb-b683-43db-990c-e5c6d3e7170c
+    uuid: 0148c0dc-8d10-4655-9242-e888f0a373af
     udp: false
     tls: true
     network: ws
-    servername: y1g6y4g8.lancelot.dpdns.org
+    servername: y3g2k1k5k.lancelot.dpdns.org
     ws-opts:
       path: "/?ed=2560"
       headers:
-        Host: y1g6y4g8.lancelot.dpdns.org
+        Host: y3g2k1k5k.lancelot.dpdns.org
   - name: CF_V12_yg12.ygkkk.dpdns.org_2087
     type: vless
     server: yg12.ygkkk.dpdns.org
     port: 2087
-    uuid: 6a36a3cb-b683-43db-990c-e5c6d3e7170c
+    uuid: 0148c0dc-8d10-4655-9242-e888f0a373af
     udp: false
     tls: true
     network: ws
-    servername: y1g6y4g8.lancelot.dpdns.org
+    servername: y3g2k1k5k.lancelot.dpdns.org
     ws-opts:
       path: "/?ed=2560"
       headers:
-        Host: y1g6y4g8.lancelot.dpdns.org
+        Host: y3g2k1k5k.lancelot.dpdns.org
   - name: CF_V13_yg13.ygkkk.dpdns.org_2096
     type: vless
     server: yg13.ygkkk.dpdns.org
     port: 2096
-    uuid: 6a36a3cb-b683-43db-990c-e5c6d3e7170c
+    uuid: 0148c0dc-8d10-4655-9242-e888f0a373af
     udp: false
     tls: true
     network: ws
-    servername: y1g6y4g8.lancelot.dpdns.org
+    servername: y3g2k1k5k.lancelot.dpdns.org
     ws-opts:
       path: "/?ed=2560"
       headers:
-        Host: y1g6y4g8.lancelot.dpdns.org
+        Host: y3g2k1k5k.lancelot.dpdns.org
 
