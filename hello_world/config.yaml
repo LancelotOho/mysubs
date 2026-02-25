@@ -1,14 +1,3 @@
-mysubs:
-  bpb:
-    url: "https://bpb.lancelot.dpdns.org/sub/normal/0%3A5nx.X*%3BF3pv%40lq?app=clash#%F0%9F%92%A6%20BPB%20Normal"
-    download_path: "whoisyourdaddy/downloads/bpb"
-    ori_config_name: "ori_proxy.yaml"
-    tar_topkey: proxies
-    only_proxy_file: "only_proxy.yaml"    
-    override_file: [override-set.yaml, override-gp-rules.yaml]
-    f_config_path: "whoisyourdaddy/subs"
-    f_config_name: "bpb.yaml"
-
   nmw:
     url: "https://cdn.gh-proxy.org/https://raw.githubusercontent.com/peasoft/NoMoreWalls/master/list.meta.yml"
     download_path: "whoisyourdaddy/downloads/nmw"
@@ -40,7 +29,7 @@ mysubs:
     f_config_name: "kulao.yaml"
 
   ygkkk:
-    url: "https://y1g6y4g8.lancelot.dpdns.org/6a36a3cb-b683-43db-990c-e5c6d3e7170c/pcl"
+    url: "https://y3g2k1k5k.lancelot.dpdns.org/0148c0dc-8d10-4655-9242-e888f0a373af/pcl"
     download_path: "whoisyourdaddy/downloads/ygkkk"
     ori_config_name: "ori_proxy.yaml"
     tar_topkey: proxies
@@ -60,7 +49,7 @@ mysubs:
     f_config_name: "fx.yaml"
   
   joey:
-    url: "https://j1o2e4y3w7o4r3k2s.lancelot.dpdns.org/admin/sub?target=clash"
+    url: "https://c4f2n5e3w7p5a6g7e5s.lancelot.dpdns.org/admin/sub?target=clash"
     download_path: "whoisyourdaddy/downloads/joey"
     ori_config_name: "ori_proxy.yaml"
     tar_topkey: proxies
