@@ -1,4 +1,4 @@
-# updated 2026-02-25 10:53:29
+# updated 2026-02-25 13:01:00
 mixed-port: 7890
 port: 7891
 socks-port: 7892
@@ -1062,7 +1062,7 @@ proxies:
     sni: en.snu.ac.kr
     tls: false
     type: hysteria2
-  - name: '@Trick_mobil'
+  - name: '@Trick_mobil #1'
     password: 17cdeb6c-f046-11ee-bdac-f23c93141fad
     port: 1743
     server: c37b0be5n-t3kyo0-t3lvgh-2gok.la.shifen.uk
@@ -1070,7 +1070,7 @@ proxies:
     sni: "\U0001F512"
     tls: false
     type: hysteria2
-  - name: '@Trick_mobil #1'
+  - name: '@Trick_mobil #2'
     password: 1y4HweESOT
     port: 27995
     server: sss.ikun6.dpdns.org
@@ -1135,16 +1135,6 @@ proxies:
     port: 13778
     server: jp7.dexlos.com
     skip-cert-verify: true
-    tls: false
-    type: hysteria2
-  - name: '@Hddify #1'
-    obfs: salamander
-    obfs-password: Yet-Another-Public-Config-1
-    password: Yet-Another-Public-Config-1
-    port: 36400
-    server: 206.71.158.37
-    skip-cert-verify: true
-    sni: YAPC-1.afshin.ir
     tls: false
     type: hysteria2
   - name: DE
@@ -1222,6 +1212,16 @@ proxies:
     port: 36300
     server: 206.71.158.37
     skip-cert-verify: false
+    sni: YAPC-1.afshin.ir
+    tls: false
+    type: hysteria2
+  - name: '@Hddify #1'
+    obfs: salamander
+    obfs-password: Yet-Another-Public-Config-1
+    password: Yet-Another-Public-Config-1
+    port: 36400
+    server: 206.71.158.37
+    skip-cert-verify: true
     sni: YAPC-1.afshin.ir
     tls: false
     type: hysteria2
