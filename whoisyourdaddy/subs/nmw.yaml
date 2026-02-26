@@ -1,4 +1,4 @@
-# updated 2026-02-26 10:48:30
+# updated 2026-02-26 12:58:34
 mixed-port: 7890
 port: 7891
 socks-port: 7892
@@ -1554,7 +1554,7 @@ proxies:
     sni: api.kermanshahi.org
     tls: false
     type: hysteria2
-  - name: "\U0001F525 Telegram: @wiki_tajrobe #1"
+  - name: "\U0001F525 Telegram: @wiki_tajrobe"
     obfs: salamander
     obfs-password: '@JavidnamanIran-Javid-SHAH-KingRezaPahlavi'
     password: b4bd0613-ff7c-4f2f-954d-185915e6ddad
@@ -1592,22 +1592,6 @@ proxies:
     password: zhangyang
     port: 6443
     server: 130.61.50.75
-    tls: false
-    type: hysteria2
-  - name: ⚡Telegram = @SOSkeyNET
-    password: 4d5018bf-0e8b-4087-8b8a-bfa51ae86f5c
-    port: 35789
-    server: 160.16.137.28
-    skip-cert-verify: false
-    sni: iij.mggl.wang
-    tls: false
-    type: hysteria2
-  - name: '⚡Telegram = @SOSkeyNET #1'
-    password: 5046SHWqk6
-    port: 844
-    server: 91.132.51.160
-    skip-cert-verify: true
-    sni: www.refersion.com
     tls: false
     type: hysteria2
   - name: All_7--@V2rayAlpha
@@ -1650,7 +1634,7 @@ proxies:
     sni: YAPC-1.afshin.ir
     tls: false
     type: hysteria2
-  - name: "\U0001F525 Telegram: @wiki_tajrobe"
+  - name: '@V2rayNG3 #2'
     obfs: salamander
     obfs-password: '@JavidnamanIran-Javid-SHAH-KingRezaPahlavi'
     password: b4bd0613-ff7c-4f2f-954d-185915e6ddad
@@ -1699,16 +1683,6 @@ proxies:
     server: 77.90.41.197
     skip-cert-verify: true
     sni: api.kermanshahi.org
-    tls: false
-    type: hysteria2
-  - name: 'بیا تا قطع نشی @proxy_v2ray_me... #1'
-    obfs: salamander
-    obfs-password: etXTC5FrUoTkMu2xlBradrUQrLDMgHJ
-    password: freeflyzone1
-    port: 443
-    server: 172.232.207.161
-    skip-cert-verify: true
-    sni: www.azki.com
     tls: false
     type: hysteria2
   - name: "@Golestan_VPN - \U0001F381"
