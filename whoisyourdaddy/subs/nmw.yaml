@@ -1,4 +1,4 @@
-# updated 2026-02-27 15:05:21
+# updated 2026-02-27 17:54:17
 mixed-port: 7890
 port: 7891
 socks-port: 7892
@@ -1071,26 +1071,6 @@ proxies:
     tls: false
     type: hysteria2
   - name: '@Trick_mobil #2'
-    obfs: salamander
-    obfs-password: 2g7feub2
-    password: 4E8F0CEC-DF1E-4876-8897-56B7CED64D05
-    port: 443
-    server: 160.16.143.152
-    skip-cert-verify: true
-    sni: ops-tyo.dexlos.com
-    tls: false
-    type: hysteria2
-  - name: '@Trick_mobil #3'
-    obfs: salamander
-    obfs-password: 2g7feub2
-    password: 4E8F0CEC-DF1E-4876-8897-56B7CED64D05
-    port: 443
-    server: 160.16.208.122
-    skip-cert-verify: true
-    sni: ops-tyo.dexlos.com
-    tls: false
-    type: hysteria2
-  - name: '@Trick_mobil #4'
     password: 5046SHWqk6
     port: 844
     server: 91.132.51.160
@@ -1132,6 +1112,16 @@ proxies:
     port: 443
     server: ffc60249-t53wg0-t92wi1-1qkeg.hk2.hyhuawei.com
     sni: ffc60249-t53wg0-t92wi1-1qkeg.hk2.hyhuawei.com
+    tls: false
+    type: hysteria2
+  - name: 'کانال تلگرام : Free_VPN_CH@'
+    obfs: salamander
+    obfs-password: '@JavidnamanIran-Javid-SHAH-KingRezaPahlavi'
+    password: b4bd0613-ff7c-4f2f-954d-185915e6ddad
+    port: 35000
+    server: 181.214.99.162
+    skip-cert-verify: false
+    sni: api.kermanshahi.org
     tls: false
     type: hysteria2
   - name: HP71 (5)
@@ -1177,7 +1167,7 @@ proxies:
     sni: de2.h.fastlanehosting.ru
     tls: false
     type: hysteria2
-  - name: "\U0001F4321@oneclickvpnkeys"
+  - name: "\U0001F36A4@oneclickvpnkeys"
     password: zhangyang
     port: 6443
     server: 130.61.50.75
@@ -1213,24 +1203,38 @@ proxies:
     sni: 188.166.71.213
     tls: false
     type: hysteria2
-  - alpn:
-      - h3
-    name: "『♨️ \U0001D439\U0001D45F\U0001D452\U0001D452\U0001D44A\U0001D45C\U0001D45F\U0001D459\U0001D451 ♨️』@Free_World2"
-    obfs: salamander
-    obfs-password: '@JavidnamanIran-Javid-SHAH-KingRezaPahlavi'
-    password: b4bd0613-ff7c-4f2f-954d-185915e6ddad
-    port: 35000
-    server: 181.214.99.162
-    sni: api.kermanshahi.org
+  - name: "\U0001F1EC\U0001F1E7/@en_vpn/کانفیگ های بیشتر"
+    password: ad49d6ea-c453-4a2e-b36a-2b71a3e0ed12
+    port: 65535
+    server: 132.145.28.17
+    skip-cert-verify: true
+    sni: www.microsoft.com
     tls: false
     type: hysteria2
-  - name: 'کانال تلگرام : Free_VPN_CH@'
+  - name: '@en_vpn/کانفیگ های بیشتر'
+    password: ad49d6ea-c453-4a2e-b36a-2b71a3e0ed12
+    port: 50000
+    server: 139.185.32.100
+    skip-cert-verify: true
+    sni: www.hoyoverse.com
+    tls: false
+    type: hysteria2
+  - name: "\U0001F1FA\U0001F1F8/@en_vpn/کانفیگ های بیشتر"
+    password: ad49d6ea-c453-4a2e-b36a-2b71a3e0ed12
+    port: 50000
+    server: 208.87.242.163
+    skip-cert-verify: true
+    sni: www.bing.com
+    tls: false
+    type: hysteria2
+  - alpn:
+      - h3
+    name: "\U0001F1E9\U0001F1EA - DE - @FreeOnlineVPN"
     obfs: salamander
     obfs-password: '@JavidnamanIran-Javid-SHAH-KingRezaPahlavi'
     password: b4bd0613-ff7c-4f2f-954d-185915e6ddad
     port: 35000
     server: 181.214.99.162
-    skip-cert-verify: false
     sni: api.kermanshahi.org
     tls: false
     type: hysteria2
@@ -1244,9 +1248,7 @@ proxies:
     sni: jnir.pichondan.com
     tls: false
     type: hysteria2
-  - alpn:
-      - h3
-    name: 'کانال تلگرام : Free_VPN_CH@ #1'
+  - name: 'کانال تلگرام : Free_VPN_CH@ #2'
     obfs: salamander
     obfs-password: '@JavidnamanIran-Javid-SHAH-KingRezaPahlavi'
     password: b4bd0613-ff7c-4f2f-954d-185915e6ddad
@@ -1256,7 +1258,9 @@ proxies:
     sni: api.kermanshahi.org
     tls: false
     type: hysteria2
-  - name: 'کانال تلگرام : Free_VPN_CH@ #2'
+  - alpn:
+      - h3
+    name: 'کانال تلگرام : Free_VPN_CH@ #1'
     obfs: salamander
     obfs-password: '@JavidnamanIran-Javid-SHAH-KingRezaPahlavi'
     password: b4bd0613-ff7c-4f2f-954d-185915e6ddad
@@ -1286,7 +1290,7 @@ proxies:
     sni: api.kermanshahi.org
     tls: false
     type: hysteria2
-  - name: "@i10VPN \U0001F680| با ما متصل بمون⚡"
+  - name: '@irmeliy'
     password: germany_hysteria2_fastlane_wxue2k6d6
     port: 443
     server: 150.241.79.106
