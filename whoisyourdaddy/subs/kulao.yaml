@@ -1,4 +1,4 @@
-# updated 2026-03-01 11:19:07
+# updated 2026-03-01 14:07:30
 mixed-port: 7890
 port: 7891
 socks-port: 7892
@@ -359,292 +359,110 @@ rules:
   - MATCH,🐟 漏网之鱼
 
 proxies:
-  - udp: false
+  - name: 官网地址https://kelayun.notepin.co
+    server: 208.87.242.77
+    port: 35000
+    ports: 35000-39000
+    mport: 35000-39000
+    udp: true
     skip-cert-verify: true
-    name: 官网地址https://kelayun.notepin.co
+    sni: www.apple.com
+    type: hysteria2
+    password: 2bc0d070-c77b-46ae-a990-8080eaca3ed6
+    auth: ""
+    fast-open: false
+    servername: www.apple.com
+  - name: 购买地址https://kelayun.notepin.co
     type: vless
-    server: 114.34.106.124
-    port: 10443
-    uuid: 3e974f9e-f568-4c2a-a4db-e9b666b4ea9e
-    tls: true
-    client-fingerprint: chrome
-    servername: 63.hhhhh.eu.org
-    network: ws
-    ws-opts:
-      path: /114.34.106.124:10443
-      headers:
-        host: 63.hhhhh.eu.org
-    tfo: false
-    alterId: 0
-    cipher: ""
-    flow: ""
-    sni: 63.hhhhh.eu.org
-  - udp: false
-    skip-cert-verify: true
-    name: 下单地址https://kelayun.notepin.co
-    type: vless
-    server: 125.228.236.138
-    port: 2443
-    uuid: 3e974f9e-f568-4c2a-a4db-e9b666b4ea9e
-    tls: true
-    client-fingerprint: chrome
-    servername: 63.hhhhh.eu.org
-    network: ws
-    ws-opts:
-      path: /125.228.236.138:2443
-      headers:
-        host: 63.hhhhh.eu.org
-    tfo: false
-    alterId: 0
-    cipher: ""
-    flow: ""
-    sni: 63.hhhhh.eu.org
-  - udp: false
-    skip-cert-verify: true
-    name: 购买地址https://kelayun.notepin.co
-    type: vless
-    server: 60.251.232.240
-    port: 995
-    uuid: 3e974f9e-f568-4c2a-a4db-e9b666b4ea9e
-    tls: true
-    client-fingerprint: chrome
-    servername: 63.hhhhh.eu.org
-    network: ws
-    ws-opts:
-      path: /60.251.232.240:995
-      headers:
-        host: 63.hhhhh.eu.org
-    tfo: false
-    alterId: 0
-    cipher: ""
-    flow: ""
-    sni: 63.hhhhh.eu.org
-  - udp: false
-    skip-cert-verify: true
-    name: 付费机场VPN梯子加速器推荐
-    type: vless
-    server: 1.170.213.71
-    port: 8443
-    uuid: 3e974f9e-f568-4c2a-a4db-e9b666b4ea9e
-    tls: true
-    client-fingerprint: chrome
-    servername: 63.hhhhh.eu.org
-    network: ws
-    ws-opts:
-      path: /1.170.213.71:8443
-      headers:
-        host: 63.hhhhh.eu.org
-    tfo: false
-    alterId: 0
-    cipher: ""
-    flow: ""
-    sni: 63.hhhhh.eu.org
-  - udp: false
-    skip-cert-verify: true
-    name: 最低月付2块钱1000G流量
-    type: vless
-    server: 220.128.110.108
-    port: 43
-    uuid: 3e974f9e-f568-4c2a-a4db-e9b666b4ea9e
-    tls: true
-    client-fingerprint: chrome
-    servername: 63.hhhhh.eu.org
-    network: ws
-    ws-opts:
-      path: /220.128.110.108:43
-      headers:
-        host: 63.hhhhh.eu.org
-    tfo: false
-    alterId: 0
-    cipher: ""
-    flow: ""
-    sni: 63.hhhhh.eu.org
-  - udp: false
-    skip-cert-verify: true
-    name: 不限速不限设备
-    type: vless
-    server: 1.162.85.158
-    port: 8443
-    uuid: 3e974f9e-f568-4c2a-a4db-e9b666b4ea9e
-    tls: true
-    client-fingerprint: chrome
-    servername: 63.hhhhh.eu.org
-    network: ws
-    ws-opts:
-      path: /1.162.85.158:8443
-      headers:
-        host: 63.hhhhh.eu.org
-    tfo: false
-    alterId: 0
-    cipher: ""
-    flow: ""
-    sni: 63.hhhhh.eu.org
-  - udp: false
-    skip-cert-verify: true
-    name: 新疆西藏福建都能用
-    type: vless
-    server: 60.248.139.106
-    port: 12755
-    uuid: 3e974f9e-f568-4c2a-a4db-e9b666b4ea9e
-    tls: true
-    client-fingerprint: chrome
-    servername: 63.hhhhh.eu.org
-    network: ws
-    ws-opts:
-      path: /60.248.139.106:12755
-      headers:
-        host: 63.hhhhh.eu.org
-    tfo: false
-    alterId: 0
-    cipher: ""
-    flow: ""
-    sni: 63.hhhhh.eu.org
-  - udp: false
-    skip-cert-verify: true
-    name: 解锁Gemini和ChatGPT
-    type: vless
-    server: 60.248.139.106
-    port: 18081
-    uuid: 3e974f9e-f568-4c2a-a4db-e9b666b4ea9e
-    tls: true
-    client-fingerprint: chrome
-    servername: 63.hhhhh.eu.org
-    network: ws
-    ws-opts:
-      path: /60.248.139.106:18081
-      headers:
-        host: 63.hhhhh.eu.org
-    tfo: false
-    alterId: 0
-    cipher: ""
-    flow: ""
-    sni: 63.hhhhh.eu.org
-  - udp: false
-    skip-cert-verify: true
-    name: 9-台湾-63ms
-    type: vless
-    server: 60.248.139.106
-    port: 10016
-    uuid: 3e974f9e-f568-4c2a-a4db-e9b666b4ea9e
-    tls: true
-    client-fingerprint: chrome
-    servername: 63.hhhhh.eu.org
-    network: ws
-    ws-opts:
-      path: /60.248.139.106:10016
-      headers:
-        host: 63.hhhhh.eu.org
-    tfo: false
-  - udp: false
-    skip-cert-verify: true
-    name: 10-台湾-66ms
-    type: vless
-    server: 60.248.139.106
-    port: 12128
-    uuid: 3e974f9e-f568-4c2a-a4db-e9b666b4ea9e
-    tls: true
-    client-fingerprint: chrome
-    servername: 63.hhhhh.eu.org
-    network: ws
-    ws-opts:
-      path: /60.248.139.106:12128
-      headers:
-        host: 63.hhhhh.eu.org
-    tfo: false
-  - udp: false
-    skip-cert-verify: true
-    name: 11-台湾-68ms
-    type: vless
-    server: 114.33.57.170
+    server: 104.19.58.118
     port: 443
-    uuid: 3e974f9e-f568-4c2a-a4db-e9b666b4ea9e
+    uuid: 2bc0d070-c77b-46ae-a990-8080eaca3ed6
+    udp: true
     tls: true
+    skip-cert-verify: null
+    flow: ''
     client-fingerprint: chrome
-    servername: 63.hhhhh.eu.org
+    servername: us1-us1.aiopen.sbs
     network: ws
     ws-opts:
-      path: /114.33.57.170:443
+      path: /kbjc/us1
       headers:
-        host: 63.hhhhh.eu.org
-    tfo: false
-  - udp: false
-    skip-cert-verify: true
-    name: 12-台湾-68ms
+        Host: us1-us1.aiopen.sbs
+    alterId: 0
+    cipher: ""
+    sni: us1-us1.aiopen.sbs
+  - name: 下单地址https://kelayun.notepin.co
     type: vless
-    server: 60.248.139.106
-    port: 11017
-    uuid: 3e974f9e-f568-4c2a-a4db-e9b666b4ea9e
+    server: 104.19.58.118
+    port: 443
+    uuid: 2bc0d070-c77b-46ae-a990-8080eaca3ed6
+    udp: true
     tls: true
+    skip-cert-verify: null
+    flow: ''
     client-fingerprint: chrome
-    servername: 63.hhhhh.eu.org
+    servername: us1-us1.aiopen.sbs
     network: ws
     ws-opts:
-      path: /60.248.139.106:11017
+      path: /kbjc/us1
       headers:
-        host: 63.hhhhh.eu.org
-    tfo: false
-  - udp: false
-    skip-cert-verify: true
-    name: 13-台湾-351ms
+        Host: us1-us1.aiopen.sbs
+    alterId: 0
+    cipher: ""
+    sni: us1-us1.aiopen.sbs
+  - name: 最低月付2块钱1000G流量
     type: vless
-    server: 114.32.9.249
-    port: 51443
-    uuid: 3e974f9e-f568-4c2a-a4db-e9b666b4ea9e
+    server: 69.84.182.13
+    port: 443
+    uuid: 2bc0d070-c77b-46ae-a990-8080eaca3ed6
+    udp: true
     tls: true
+    skip-cert-verify: null
+    flow: ''
     client-fingerprint: chrome
-    servername: 63.hhhhh.eu.org
+    servername: jp1-jp1.aiopen.sbs
     network: ws
     ws-opts:
-      path: /114.32.9.249:51443
+      path: /kbjc/jp1
       headers:
-        host: 63.hhhhh.eu.org
-    tfo: false
-  - udp: false
-    skip-cert-verify: true
-    name: 14-台湾-536ms
+        Host: jp1-jp1.aiopen.sbs
+    alterId: 0
+    cipher: ""
+    sni: jp1-jp1.aiopen.sbs
+  - name: 不限速不限设备
     type: vless
-    server: 114.32.9.249
-    port: 16443
-    uuid: 3e974f9e-f568-4c2a-a4db-e9b666b4ea9e
+    server: 69.84.182.13
+    port: 443
+    uuid: 2bc0d070-c77b-46ae-a990-8080eaca3ed6
+    udp: true
     tls: true
+    skip-cert-verify: null
+    flow: ''
     client-fingerprint: chrome
-    servername: 63.hhhhh.eu.org
+    servername: jp1-jp1.aiopen.sbs
     network: ws
     ws-opts:
-      path: /114.32.9.249:16443
+      path: /kbjc/jp1
       headers:
-        host: 63.hhhhh.eu.org
-    tfo: false
-  - udp: false
-    skip-cert-verify: true
-    name: 15-台湾-87ms
+        Host: jp1-jp1.aiopen.sbs
+    alterId: 0
+    cipher: ""
+    sni: jp1-jp1.aiopen.sbs
+  - name: 解锁Gemini和ChatGPT
     type: vless
-    server: 220.135.92.105
-    port: 2087
-    uuid: 3e974f9e-f568-4c2a-a4db-e9b666b4ea9e
+    server: 69.84.182.13
+    port: 443
+    uuid: 2bc0d070-c77b-46ae-a990-8080eaca3ed6
+    udp: true
     tls: true
+    skip-cert-verify: null
+    flow: ''
     client-fingerprint: chrome
-    servername: 63.hhhhh.eu.org
     network: ws
     ws-opts:
-      path: /220.135.92.105:2087
+      path: /kbjc/fr1
       headers:
-        host: 63.hhhhh.eu.org
-    tfo: false
-  - udp: false
-    skip-cert-verify: true
-    name: 16-台湾-124ms
-    type: vless
-    server: 122.116.105.15
-    port: 995
-    uuid: 3e974f9e-f568-4c2a-a4db-e9b666b4ea9e
-    tls: true
-    client-fingerprint: chrome
-    servername: 63.hhhhh.eu.org
-    network: ws
-    ws-opts:
-      path: /122.116.105.15:995
-      headers:
-        host: 63.hhhhh.eu.org
-    tfo: false
+        Host: fr-1-fr-1.aiopen.sbs
+    alterId: 0
+    cipher: ""
 
