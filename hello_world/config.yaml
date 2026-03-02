@@ -38,16 +38,6 @@ mysubs:
     override_file: [override-set.yaml, override-gp-rules.yaml]
     f_config_path: "whoisyourdaddy/subs"
     f_config_name: "ygkkk.yaml"
-
-  fx:
-    url: "https://sub.9999669.xyz/sub?id=rs1&target=clash"
-    download_path: "whoisyourdaddy/downloads/fx"
-    ori_config_name: "ori_proxy.yaml"
-    tar_topkey: proxies
-    only_proxy_file: "only_proxy.yaml"    
-    override_file: [override-set.yaml, override-gp-rules.yaml]
-    f_config_path: "whoisyourdaddy/subs"
-    f_config_name: "fx.yaml"
   
   joey:
     url: "https://c4f2n5e3w7p5a6g7e5s.lancelot.dpdns.org/admin/sub?target=clash"
