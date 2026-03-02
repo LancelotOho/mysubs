@@ -1,4 +1,4 @@
-# updated 2026-03-02 10:49:14
+# updated 2026-03-02 12:55:33
 mixed-port: 7890
 port: 7891
 socks-port: 7892
@@ -1053,14 +1053,6 @@ proxies:
     sni: bing.com
     tls: false
     type: hysteria2
-  - name: "\U0001F1FA\U0001F1F8 USA | TLS"
-    password: 2c833c5d-cbcc-4afb-89ba-d17dc39db6f0
-    port: 47974
-    server: 75.127.13.83
-    skip-cert-verify: true
-    sni: www.bing.com
-    tls: false
-    type: hysteria2
   - name: "\U0001FA75+@Azarakhsh_Proxy+\U0001FA77"
     obfs: salamander
     obfs-password: KevinZakarian
@@ -1071,16 +1063,6 @@ proxies:
     sni: 179.61.132.96
     tls: false
     type: hysteria2
-  - name: "\U0001F1F3\U0001F1F1 Netherlands | TLS • Salaman..."
-    obfs: salamander
-    obfs-password: Telegram-->@Ln2Ray
-    password: Telegram-->@Ln2Ray
-    port: 45000
-    server: 206.71.158.23
-    skip-cert-verify: true
-    sni: gavazn.55994421.xyz
-    tls: false
-    type: hysteria2
   - name: "\U0001F1F3\U0001F1F1 - NL - @FreeOnlineVPN"
     obfs: salamander
     obfs-password: Yet-Another-Public-Config-1
@@ -1089,36 +1071,6 @@ proxies:
     server: 206.71.158.37
     skip-cert-verify: true
     sni: YAPC-1.afshin.ir
-    tls: false
-    type: hysteria2
-  - name: "\U0001F1F3\U0001F1F1 @KIA_NET \U0001F680| با ما متصل بمون... #1"
-    obfs: salamander
-    obfs-password: Yet-Another-Public-Config-1
-    password: Yet-Another-Public-Config-1
-    port: 36400
-    server: 206.71.158.37
-    skip-cert-verify: true
-    sni: YAPC-1.afshin.ir
-    tls: false
-    type: hysteria2
-  - name: "\U0001F1F3\U0001F1F1 @KIA_NET \U0001F680| با ما متصل بمون... #2"
-    obfs: salamander
-    obfs-password: Yet-Another-Public-Config-1
-    password: Yet-Another-Public-Config-1
-    port: 36600
-    server: 206.71.158.37
-    skip-cert-verify: true
-    sni: YAPC-1.afshin.ir
-    tls: false
-    type: hysteria2
-  - name: '@VPNFARDAD'
-    obfs: salamander
-    obfs-password: cBmQKpbjFLXRD00Gxam3OOklIs6
-    password: a336317d-834f-4571-aca8-f9aa4a8b9d38
-    port: 41086
-    server: 188.166.71.213
-    skip-cert-verify: true
-    sni: 188.166.71.213
     tls: false
     type: hysteria2
   - name: "\U0001F1EC\U0001F1E7/@en_vpn/کانفیگ های بیشتر"
@@ -1193,36 +1145,6 @@ proxies:
     password: b4bd0613-ff7c-4f2f-954d-185915e6ddad
     port: 35000
     server: 77.90.41.197
-    skip-cert-verify: true
-    sni: api.kermanshahi.org
-    tls: false
-    type: hysteria2
-  - name: "\U0001F30F2@oneclickvpnkeys"
-    obfs: salamander
-    obfs-password: '@JavidnamanIran-Javid-SHAH-KingRezaPahlavi'
-    password: b4bd0613-ff7c-4f2f-954d-185915e6ddad
-    port: 443
-    server: 2a0c:4ac1:8::121
-    skip-cert-verify: true
-    sni: api.kermanshahi.org
-    tls: false
-    type: hysteria2
-  - name: "\U0001F30F6@oneclickvpnkeys"
-    obfs: salamander
-    obfs-password: '@JavidnamanIran-Javid-SHAH-KingRezaPahlavi'
-    password: b4bd0613-ff7c-4f2f-954d-185915e6ddad
-    port: 5707
-    server: 2a0f:5707:aaf1:c427::1
-    skip-cert-verify: true
-    sni: updates.kermanshahi.org
-    tls: false
-    type: hysteria2
-  - name: "\U0001F3316@oneclickvpnkeys"
-    obfs: salamander
-    obfs-password: '@JavidnamanIran-Javid-SHAH-KingRezaPahlavi'
-    password: b4bd0613-ff7c-4f2f-954d-185915e6ddad
-    port: 35000
-    server: api.kermanshahi.org
     skip-cert-verify: true
     sni: api.kermanshahi.org
     tls: false
