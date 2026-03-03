@@ -13,7 +13,6 @@ proxy-groups:
     interval: 1800
     lazy: true
     url: https://cp.cloudflare.com/generate_204
-    hidden: false
     include-all: true
 
   - name: 🫱 手动选择
@@ -21,7 +20,6 @@ proxy-groups:
     interval: 1800
     lazy: true
     url: https://cp.cloudflare.com/generate_204
-    hidden: false
     include-all: true
 
   - name: 🐟 漏网之鱼
@@ -74,7 +72,6 @@ proxy-groups:
     interval: 600
     lazy: true
     url: https://cp.cloudflare.com/generate_204
-    hidden: true
     strategy: round-robin
     include-all: true
 
@@ -83,20 +80,18 @@ proxy-groups:
     interval: 600
     lazy: true
     url: https://cp.cloudflare.com/generate_204
-    hidden: true
     include-all: true
 
   - name: 🎯 全球直连
     type: select
     proxies:
       - DIRECT
-    hidden: true
+      - 🥳 打包代理
 
   - name: ⚠️ 屏蔽广告
     type: select
     proxies:
       - REJECT
-    hidden: true
 
 rule-providers:
 
@@ -241,9 +236,9 @@ rules:
   # 自定义规则集
   - DOMAIN-SUFFIX,cloudflare.com,🌈 Cloudflare
   - DOMAIN-SUFFIX,gstatic.com,🥳 打包代理
-  - DOMAIN-SUFFIX,jsdelivr.net,DIRECT
-  - DOMAIN-SUFFIX,19882008.xyz,DIRECT
-  - DOMAIN-SUFFIX,lancelot.dpdns.org,DIRECT
+  - DOMAIN-SUFFIX,jsdelivr.net,🎯 全球直连
+  - DOMAIN-SUFFIX,19882008.xyz,🎯 全球直连
+  - DOMAIN-SUFFIX,lancelot.dpdns.org,🎯 全球直连
   # 域名规则集
   - RULE-SET,reject,REJECT
   - RULE-SET,Github,🥳 打包代理
@@ -254,11 +249,11 @@ rules:
   - RULE-SET,TikTok,🥳 打包代理
   - RULE-SET,Steam,💯 Steam
   - RULE-SET,GFW,🥳 打包代理
-  - RULE-SET,Lan,DIRECT
-  - RULE-SET,China,DIRECT
+  - RULE-SET,Lan,🎯 全球直连
+  - RULE-SET,China,🎯 全球直连
   # IP规则集
   - RULE-SET,GoogleIP,🥳 打包代理,no-resolve
   - RULE-SET,TelegramIP,🥳 打包代理,no-resolve
-  - RULE-SET,LanIP,DIRECT
-  - RULE-SET,ChinaIP,DIRECT
+  - RULE-SET,LanIP,🎯 全球直连
+  - RULE-SET,ChinaIP,🎯 全球直连
   - MATCH,🐟 漏网之鱼
