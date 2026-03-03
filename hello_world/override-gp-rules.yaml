@@ -86,7 +86,10 @@ proxy-groups:
     type: select
     proxies:
       - DIRECT
-      - 🥳 打包代理
+      - ✅ 自动选择
+      - ⚖️ 负载均衡
+      - 🫱 手动选择
+      - ⭕ 故障切换
 
   - name: ⚠️ 屏蔽广告
     type: select
