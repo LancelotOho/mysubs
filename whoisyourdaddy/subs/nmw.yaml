@@ -1,4 +1,4 @@
-# updated 2026-03-09 15:13:14
+# updated 2026-03-09 18:02:14
 mixed-port: 7890
 port: 7891
 socks-port: 7892
@@ -678,6 +678,14 @@ proxies:
     server: 62.210.124.146
     skip-cert-verify: true
     sni: www.microsoft.com
+    tls: false
+    type: hysteria2
+  - name: "\U0001F33C13@oneclickvpnkeys"
+    password: hysteria2_fastlane_qdx4o19um
+    port: 443
+    server: 150.241.79.106
+    skip-cert-verify: true
+    sni: de2.h.fastlanehosting.ru
     tls: false
     type: hysteria2
   - name: '@V2rayNG3 #4'
