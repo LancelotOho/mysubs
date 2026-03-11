@@ -9,7 +9,7 @@ log-level: warning
 external-controller: "0.0.0.0:9090"
 secret: "li19882008"
 bind-address: "*"
-ipv6: true
+ipv6: false
 tcp-concurrent: true
 unified-delay: true
 find-process-mode: strict
@@ -20,7 +20,7 @@ tun:
   auto-detect-interface: true
 dns:
   enable: true
-  ipv6: true
+  ipv6: false
   prefer-h3: false
   listen: "0.0.0.0:7874"
   use-hosts: false
