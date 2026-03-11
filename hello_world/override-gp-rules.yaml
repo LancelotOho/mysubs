@@ -240,6 +240,8 @@ rules:
   - DOMAIN-SUFFIX,cloudflare.com,🌈 Cloudflare
   - DOMAIN-SUFFIX,gstatic.com,🥳 打包代理
   - DOMAIN-SUFFIX,jsdelivr.net,🎯 全球直连
+  - DOMAIN-SUFFIX,lancelot1988.dpdns.org,🎯 全球直连
+  - DOMAIN-SUFFIX,lancelot.indevs.in,🎯 全球直连
   - DOMAIN-SUFFIX,19882008.xyz,🎯 全球直连
   - DOMAIN-SUFFIX,lancelot.dpdns.org,🎯 全球直连
   # 域名规则集
