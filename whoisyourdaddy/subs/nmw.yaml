@@ -1,4 +1,4 @@
-# updated 2026-03-13 00:07:07
+# updated 2026-03-13 03:05:00
 mixed-port: 7890
 port: 7891
 socks-port: 7892
@@ -742,12 +742,28 @@ proxies:
     sni: api.kermanshahi.org
     tls: false
     type: hysteria2
+  - name: "\U0001F4FB93@oneclickvpnkeys"
+    password: bd470fb8-73fd-455b-b8ae-e0fc9f44258b
+    port: 21150
+    server: tr.xn--ehqa22b.site
+    skip-cert-verify: true
+    sni: tr.xn--ehqa22b.site
+    tls: false
+    type: hysteria2
   - name: '@V2rayNG3 #4'
     password: linux.do
     port: 443
     server: 2a01:4f9:4b:f378::1
     skip-cert-verify: true
     sni: www.bing.com
+    tls: false
+    type: hysteria2
+  - name: "\U0001F4FB87@oneclickvpnkeys"
+    password: usa_hysteria2_fastlane_8f058mdni
+    port: 443
+    server: 138.124.183.9
+    skip-cert-verify: true
+    sni: us1.h.smartaisupport.ru
     tls: false
     type: hysteria2
   - cipher: aes-256-cfb
