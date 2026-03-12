@@ -6,18 +6,11 @@ proxy-providers:
     path: ./cm.yaml
     proxy: DIRECT
     header:
-      User-Agent: "mihomo/1.18.3"
+      User-Agent: ["mihomo/1.18.3"]
     override:
-      additional-prefix: [cm]
+      additional-prefix: "[cm]"
       skip-cert-verify: false
       udp: true
-    health-check:
-      enable: true
-      url: http://cp.cloudflare.com/generate_204
-      interval: 1800
-      timeout: 3000
-      lazy: true
-      expected-status: 204
       
   provider2:
     type: http
@@ -26,12 +19,12 @@ proxy-providers:
     path: ./kulao.yaml
     proxy: DIRECT 
     header:
-      User-Agent: "mihomo/1.18.3"     
+      User-Agent: ["mihomo/1.18.3"]    
     override: 
-      additional-prefix: [kulao]
+      additional-prefix: "[kulao]"
       skip-cert-verify: false
       udp: true
-      
+
   provider3:
     type: http
     url: "https://y3g2k1k5k.lancelot.dpdns.org/0148c0dc-8d10-4655-9242-e888f0a373af/pcl"
@@ -39,12 +32,12 @@ proxy-providers:
     path: ./ygkkk.yaml
     proxy: DIRECT 
     header:
-      User-Agent: "mihomo/1.18.3"    
+      User-Agent: ["mihomo/1.18.3"]    
     override: 
-      additional-prefix: [ygkkk]
+      additional-prefix: "[ygkkk]"
       skip-cert-verify: false
       udp: true
-      
+            
   provider4:
     type: http
     url: "https://c4f2n5e3w7p5a6g7e5s.lancelot.dpdns.org/admin/sub?target=clash"
@@ -52,8 +45,8 @@ proxy-providers:
     path: ./joey.yaml
     proxy: DIRECT
     header:
-      User-Agent: "mihomo/1.18.3"    
+      User-Agent: ["mihomo/1.18.3"]   
     override: 
-      additional-prefix: [joey]
+      additional-prefix: "[joey]"
       skip-cert-verify: false
       udp: true
