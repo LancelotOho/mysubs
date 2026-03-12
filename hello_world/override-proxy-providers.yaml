@@ -1,0 +1,59 @@
+proxy-providers:
+  provider1:
+    type: http
+    url: "https://c1m3p2a8g2e6s.lancelot.dpdns.org/sub?token=c241a812d6b3518cb12992c67d9efafd&clash"
+    interval: 10800
+    path: ./cm.yaml
+    proxy: DIRECT
+    header:
+      User-Agent: "mihomo/1.18.3"
+    override:
+      additional-prefix: [cm]
+      skip-cert-verify: false
+      udp: true
+    health-check:
+      enable: true
+      url: http://cp.cloudflare.com/generate_204
+      interval: 1800
+      timeout: 3000
+      lazy: true
+      expected-status: 204
+      
+  provider2:
+    type: http
+    url: "https://ghproxy.19882008.xyz/https://raw.githubusercontent.com/Jsnzkpg/Jsnzkpg/Jsnzkpg/Jsnzkpg"
+    interval: 10800
+    path: ./kulao.yaml
+    proxy: DIRECT 
+    header:
+      User-Agent: "mihomo/1.18.3"     
+    override: 
+      additional-prefix: [kulao]
+      skip-cert-verify: false
+      udp: true
+      
+  provider3:
+    type: http
+    url: "https://y3g2k1k5k.lancelot.dpdns.org/0148c0dc-8d10-4655-9242-e888f0a373af/pcl"
+    interval: 10800
+    path: ./ygkkk.yaml
+    proxy: DIRECT 
+    header:
+      User-Agent: "mihomo/1.18.3"    
+    override: 
+      additional-prefix: [ygkkk]
+      skip-cert-verify: false
+      udp: true
+      
+  provider4:
+    type: http
+    url: "https://c4f2n5e3w7p5a6g7e5s.lancelot.dpdns.org/admin/sub?target=clash"
+    interval: 10800
+    path: ./joey.yaml
+    proxy: DIRECT
+    header:
+      User-Agent: "mihomo/1.18.3"    
+    override: 
+      additional-prefix: [joey]
+      skip-cert-verify: false
+      udp: true
