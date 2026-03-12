@@ -17,9 +17,6 @@ proxy-groups:
 
   - name: 🫱 手动选择
     type: select
-    interval: 1800
-    lazy: true
-    url: https://cp.cloudflare.com/generate_204
     include-all: true
 
   - name: 🐟 漏网之鱼
@@ -61,11 +58,11 @@ proxy-groups:
   - name: 💯 Steam
     type: select
     proxies:
+      - 🎯 全球直连
       - ✅ 自动选择
       - ⚖️ 负载均衡
       - 🫱 手动选择
       - ⭕ 故障切换
-      - 🎯 全球直连
 
   - name: ⚖️ 负载均衡
     type: load-balance
@@ -86,10 +83,6 @@ proxy-groups:
     type: select
     proxies:
       - DIRECT
-      - ✅ 自动选择
-      - ⚖️ 负载均衡
-      - 🫱 手动选择
-      - ⭕ 故障切换
 
   - name: ⚠️ 屏蔽广告
     type: select

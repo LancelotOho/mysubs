@@ -29,7 +29,6 @@ dns:
   enhanced-mode: "fake-ip"
   fake-ip-range: "198.18.0.1/16"
   fake-ip-filter:
-    - "*"
     - +.lan
     - +.local
     - time.*.com
@@ -66,8 +65,9 @@ dns:
     - +.peiluyou.com
     - +.127.in-addr.arpa
   default-nameserver:
-    - tls://223.5.5.5
-    - tls://119.29.29.29
+    - 223.5.5.5
+    - 119.29.29.29
+    - 1.1.1.1
   nameserver:
     - https://dns.alidns.com/dns-query
     - https://doh.pub/dns-query
@@ -78,7 +78,10 @@ dns:
   direct-nameserver:
     - https://dns.alidns.com/dns-query
     - https://doh.pub/dns-query
-
+  fallback:
+    - https://1.1.1.1/dns-query
+    - https://8.8.8.8/dns-query
+    - tls://8.8.4.4
 sniffer:
   enable: true
   override-destination: true
