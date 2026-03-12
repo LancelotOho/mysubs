@@ -1,4 +1,4 @@
-# updated 2026-03-12 21:22:01
+# updated 2026-03-13 00:07:27
 mixed-port: 7890
 port: 7891
 socks-port: 7892
@@ -30,7 +30,6 @@ dns:
   enhanced-mode: "fake-ip"
   fake-ip-range: "198.18.0.1/16"
   fake-ip-filter:
-    - "*"
     - +.lan
     - +.local
     - time.*.com
@@ -67,8 +66,9 @@ dns:
     - +.peiluyou.com
     - +.127.in-addr.arpa
   default-nameserver:
-    - tls://223.5.5.5
-    - tls://119.29.29.29
+    - 223.5.5.5
+    - 119.29.29.29
+    - 1.1.1.1
   nameserver:
     - https://dns.alidns.com/dns-query
     - https://doh.pub/dns-query
@@ -79,7 +79,10 @@ dns:
   direct-nameserver:
     - https://dns.alidns.com/dns-query
     - https://doh.pub/dns-query
-
+  fallback:
+    - https://1.1.1.1/dns-query
+    - https://8.8.8.8/dns-query
+    - tls://8.8.4.4
 sniffer:
   enable: true
   override-destination: true
@@ -129,9 +132,6 @@ proxy-groups:
 
   - name: 🫱 手动选择
     type: select
-    interval: 1800
-    lazy: true
-    url: https://cp.cloudflare.com/generate_204
     include-all: true
 
   - name: 🐟 漏网之鱼
@@ -173,11 +173,11 @@ proxy-groups:
   - name: 💯 Steam
     type: select
     proxies:
+      - 🎯 全球直连
       - ✅ 自动选择
       - ⚖️ 负载均衡
       - 🫱 手动选择
       - ⭕ 故障切换
-      - 🎯 全球直连
 
   - name: ⚖️ 负载均衡
     type: load-balance
@@ -198,10 +198,6 @@ proxy-groups:
     type: select
     proxies:
       - DIRECT
-      - ✅ 自动选择
-      - ⚖️ 负载均衡
-      - 🫱 手动选择
-      - ⭕ 故障切换
 
   - name: ⚠️ 屏蔽广告
     type: select

@@ -1,4 +1,4 @@
-# updated 2026-03-12 21:22:02
+# updated 2026-03-13 00:07:42
 mixed-port: 7890
 port: 7891
 socks-port: 7892
@@ -30,7 +30,6 @@ dns:
   enhanced-mode: "fake-ip"
   fake-ip-range: "198.18.0.1/16"
   fake-ip-filter:
-    - "*"
     - +.lan
     - +.local
     - time.*.com
@@ -67,8 +66,9 @@ dns:
     - +.peiluyou.com
     - +.127.in-addr.arpa
   default-nameserver:
-    - tls://223.5.5.5
-    - tls://119.29.29.29
+    - 223.5.5.5
+    - 119.29.29.29
+    - 1.1.1.1
   nameserver:
     - https://dns.alidns.com/dns-query
     - https://doh.pub/dns-query
@@ -79,7 +79,10 @@ dns:
   direct-nameserver:
     - https://dns.alidns.com/dns-query
     - https://doh.pub/dns-query
-
+  fallback:
+    - https://1.1.1.1/dns-query
+    - https://8.8.8.8/dns-query
+    - tls://8.8.4.4
 sniffer:
   enable: true
   override-destination: true
@@ -129,9 +132,6 @@ proxy-groups:
 
   - name: 🫱 手动选择
     type: select
-    interval: 1800
-    lazy: true
-    url: https://cp.cloudflare.com/generate_204
     include-all: true
 
   - name: 🐟 漏网之鱼
@@ -173,11 +173,11 @@ proxy-groups:
   - name: 💯 Steam
     type: select
     proxies:
+      - 🎯 全球直连
       - ✅ 自动选择
       - ⚖️ 负载均衡
       - 🫱 手动选择
       - ⭕ 故障切换
-      - 🎯 全球直连
 
   - name: ⚖️ 负载均衡
     type: load-balance
@@ -198,10 +198,6 @@ proxy-groups:
     type: select
     proxies:
       - DIRECT
-      - ✅ 自动选择
-      - ⚖️ 负载均衡
-      - 🫱 手动选择
-      - ⭕ 故障切换
 
   - name: ⚠️ 屏蔽广告
     type: select
@@ -378,32 +374,24 @@ rules:
 proxies:
   - {name: 原生地址-443-WS-TLS, server: c4f2n5e3w7p5a6g7e5s.lancelot.dpdns.org, port: 443, type: vless, uuid: 0148c0dc-8d10-4655-9242-e888f0a373af, tls: true, alpn: [h3%2Ch2%2Chttp%2F1.1], tfo: false, skip-cert-verify: false, servername: c4f2n5e3w7p5a6g7e5s.lancelot.dpdns.org, client-fingerprint: chrome, network: ws, ws-opts: {path: "/?ed=2048", headers: {Host: c4f2n5e3w7p5a6g7e5s.lancelot.dpdns.org}}, ech-opts: {enable: true, query-server-name: cloudflare-ech.com}}
   - {name: 原生地址-443-Trojan-WS-TLS, server: c4f2n5e3w7p5a6g7e5s.lancelot.dpdns.org, port: 443, type: trojan, password: 0148c0dc-8d10-4655-9242-e888f0a373af, sni: c4f2n5e3w7p5a6g7e5s.lancelot.dpdns.org, alpn: [h3%2Ch2%2Chttp%2F1.1], skip-cert-verify: false, network: ws, ws-opts: {path: "/?ed=2048", headers: {Host: c4f2n5e3w7p5a6g7e5s.lancelot.dpdns.org}}, ech-opts: {enable: true, query-server-name: cloudflare-ech.com}}
-  - {name: '自定义优选-104.16.0.0:443-443-WS-TLS', server: 104.16.0.0, port: 443, type: vless, uuid: 0148c0dc-8d10-4655-9242-e888f0a373af, tls: true, alpn: [h3%2Ch2%2Chttp%2F1.1], tfo: false, skip-cert-verify: false, servername: c4f2n5e3w7p5a6g7e5s.lancelot.dpdns.org, client-fingerprint: chrome, network: ws, ws-opts: {path: "/?ed=2048", headers: {Host: c4f2n5e3w7p5a6g7e5s.lancelot.dpdns.org}}, ech-opts: {enable: true, query-server-name: cloudflare-ech.com}}
-  - {name: '自定义优选-104.17.0.0:443-443-WS-TLS', server: 104.17.0.0, port: 443, type: vless, uuid: 0148c0dc-8d10-4655-9242-e888f0a373af, tls: true, alpn: [h3%2Ch2%2Chttp%2F1.1], tfo: false, skip-cert-verify: false, servername: c4f2n5e3w7p5a6g7e5s.lancelot.dpdns.org, client-fingerprint: chrome, network: ws, ws-opts: {path: "/?ed=2048", headers: {Host: c4f2n5e3w7p5a6g7e5s.lancelot.dpdns.org}}, ech-opts: {enable: true, query-server-name: cloudflare-ech.com}}
-  - {name: '自定义优选-104.18.0.0:443-443-WS-TLS', server: 104.18.0.0, port: 443, type: vless, uuid: 0148c0dc-8d10-4655-9242-e888f0a373af, tls: true, alpn: [h3%2Ch2%2Chttp%2F1.1], tfo: false, skip-cert-verify: false, servername: c4f2n5e3w7p5a6g7e5s.lancelot.dpdns.org, client-fingerprint: chrome, network: ws, ws-opts: {path: "/?ed=2048", headers: {Host: c4f2n5e3w7p5a6g7e5s.lancelot.dpdns.org}}, ech-opts: {enable: true, query-server-name: cloudflare-ech.com}}
-  - {name: '自定义优选-104.19.0.0:443-443-WS-TLS', server: 104.19.0.0, port: 443, type: vless, uuid: 0148c0dc-8d10-4655-9242-e888f0a373af, tls: true, alpn: [h3%2Ch2%2Chttp%2F1.1], tfo: false, skip-cert-verify: false, servername: c4f2n5e3w7p5a6g7e5s.lancelot.dpdns.org, client-fingerprint: chrome, network: ws, ws-opts: {path: "/?ed=2048", headers: {Host: c4f2n5e3w7p5a6g7e5s.lancelot.dpdns.org}}, ech-opts: {enable: true, query-server-name: cloudflare-ech.com}}
-  - {name: '自定义优选-104.20.0.0:443-443-WS-TLS', server: 104.20.0.0, port: 443, type: vless, uuid: 0148c0dc-8d10-4655-9242-e888f0a373af, tls: true, alpn: [h3%2Ch2%2Chttp%2F1.1], tfo: false, skip-cert-verify: false, servername: c4f2n5e3w7p5a6g7e5s.lancelot.dpdns.org, client-fingerprint: chrome, network: ws, ws-opts: {path: "/?ed=2048", headers: {Host: c4f2n5e3w7p5a6g7e5s.lancelot.dpdns.org}}, ech-opts: {enable: true, query-server-name: cloudflare-ech.com}}
-  - {name: '自定义优选-104.21.0.0:443-443-WS-TLS', server: 104.21.0.0, port: 443, type: vless, uuid: 0148c0dc-8d10-4655-9242-e888f0a373af, tls: true, alpn: [h3%2Ch2%2Chttp%2F1.1], tfo: false, skip-cert-verify: false, servername: c4f2n5e3w7p5a6g7e5s.lancelot.dpdns.org, client-fingerprint: chrome, network: ws, ws-opts: {path: "/?ed=2048", headers: {Host: c4f2n5e3w7p5a6g7e5s.lancelot.dpdns.org}}, ech-opts: {enable: true, query-server-name: cloudflare-ech.com}}
-  - {name: '自定义优选-104.22.0.0:443-443-WS-TLS', server: 104.22.0.0, port: 443, type: vless, uuid: 0148c0dc-8d10-4655-9242-e888f0a373af, tls: true, alpn: [h3%2Ch2%2Chttp%2F1.1], tfo: false, skip-cert-verify: false, servername: c4f2n5e3w7p5a6g7e5s.lancelot.dpdns.org, client-fingerprint: chrome, network: ws, ws-opts: {path: "/?ed=2048", headers: {Host: c4f2n5e3w7p5a6g7e5s.lancelot.dpdns.org}}, ech-opts: {enable: true, query-server-name: cloudflare-ech.com}}
-  - {name: '自定义优选-104.24.0.0:443-443-WS-TLS', server: 104.24.0.0, port: 443, type: vless, uuid: 0148c0dc-8d10-4655-9242-e888f0a373af, tls: true, alpn: [h3%2Ch2%2Chttp%2F1.1], tfo: false, skip-cert-verify: false, servername: c4f2n5e3w7p5a6g7e5s.lancelot.dpdns.org, client-fingerprint: chrome, network: ws, ws-opts: {path: "/?ed=2048", headers: {Host: c4f2n5e3w7p5a6g7e5s.lancelot.dpdns.org}}, ech-opts: {enable: true, query-server-name: cloudflare-ech.com}}
-  - {name: '自定义优选-104.25.0.0:443-443-WS-TLS', server: 104.25.0.0, port: 443, type: vless, uuid: 0148c0dc-8d10-4655-9242-e888f0a373af, tls: true, alpn: [h3%2Ch2%2Chttp%2F1.1], tfo: false, skip-cert-verify: false, servername: c4f2n5e3w7p5a6g7e5s.lancelot.dpdns.org, client-fingerprint: chrome, network: ws, ws-opts: {path: "/?ed=2048", headers: {Host: c4f2n5e3w7p5a6g7e5s.lancelot.dpdns.org}}, ech-opts: {enable: true, query-server-name: cloudflare-ech.com}}
-  - {name: '自定义优选-104.26.0.0:443-443-WS-TLS', server: 104.26.0.0, port: 443, type: vless, uuid: 0148c0dc-8d10-4655-9242-e888f0a373af, tls: true, alpn: [h3%2Ch2%2Chttp%2F1.1], tfo: false, skip-cert-verify: false, servername: c4f2n5e3w7p5a6g7e5s.lancelot.dpdns.org, client-fingerprint: chrome, network: ws, ws-opts: {path: "/?ed=2048", headers: {Host: c4f2n5e3w7p5a6g7e5s.lancelot.dpdns.org}}, ech-opts: {enable: true, query-server-name: cloudflare-ech.com}}
-  - {name: '自定义优选-104.27.0.0:443-443-WS-TLS', server: 104.27.0.0, port: 443, type: vless, uuid: 0148c0dc-8d10-4655-9242-e888f0a373af, tls: true, alpn: [h3%2Ch2%2Chttp%2F1.1], tfo: false, skip-cert-verify: false, servername: c4f2n5e3w7p5a6g7e5s.lancelot.dpdns.org, client-fingerprint: chrome, network: ws, ws-opts: {path: "/?ed=2048", headers: {Host: c4f2n5e3w7p5a6g7e5s.lancelot.dpdns.org}}, ech-opts: {enable: true, query-server-name: cloudflare-ech.com}}
-  - {name: '自定义优选-172.66.0.0:443-443-WS-TLS', server: 172.66.0.0, port: 443, type: vless, uuid: 0148c0dc-8d10-4655-9242-e888f0a373af, tls: true, alpn: [h3%2Ch2%2Chttp%2F1.1], tfo: false, skip-cert-verify: false, servername: c4f2n5e3w7p5a6g7e5s.lancelot.dpdns.org, client-fingerprint: chrome, network: ws, ws-opts: {path: "/?ed=2048", headers: {Host: c4f2n5e3w7p5a6g7e5s.lancelot.dpdns.org}}, ech-opts: {enable: true, query-server-name: cloudflare-ech.com}}
-  - {name: '自定义优选-172.67.0.0:443-443-WS-TLS', server: 172.67.0.0, port: 443, type: vless, uuid: 0148c0dc-8d10-4655-9242-e888f0a373af, tls: true, alpn: [h3%2Ch2%2Chttp%2F1.1], tfo: false, skip-cert-verify: false, servername: c4f2n5e3w7p5a6g7e5s.lancelot.dpdns.org, client-fingerprint: chrome, network: ws, ws-opts: {path: "/?ed=2048", headers: {Host: c4f2n5e3w7p5a6g7e5s.lancelot.dpdns.org}}, ech-opts: {enable: true, query-server-name: cloudflare-ech.com}}
-  - {name: '自定义优选-162.159.0.0:443-443-WS-TLS', server: 162.159.0.0, port: 443, type: vless, uuid: 0148c0dc-8d10-4655-9242-e888f0a373af, tls: true, alpn: [h3%2Ch2%2Chttp%2F1.1], tfo: false, skip-cert-verify: false, servername: c4f2n5e3w7p5a6g7e5s.lancelot.dpdns.org, client-fingerprint: chrome, network: ws, ws-opts: {path: "/?ed=2048", headers: {Host: c4f2n5e3w7p5a6g7e5s.lancelot.dpdns.org}}, ech-opts: {enable: true, query-server-name: cloudflare-ech.com}}
-  - {name: '自定义优选-104.16.0.0:443-443-Trojan-WS-TLS', server: 104.16.0.0, port: 443, type: trojan, password: 0148c0dc-8d10-4655-9242-e888f0a373af, sni: c4f2n5e3w7p5a6g7e5s.lancelot.dpdns.org, alpn: [h3%2Ch2%2Chttp%2F1.1], skip-cert-verify: false, network: ws, ws-opts: {path: "/?ed=2048", headers: {Host: c4f2n5e3w7p5a6g7e5s.lancelot.dpdns.org}}, ech-opts: {enable: true, query-server-name: cloudflare-ech.com}}
-  - {name: '自定义优选-104.17.0.0:443-443-Trojan-WS-TLS', server: 104.17.0.0, port: 443, type: trojan, password: 0148c0dc-8d10-4655-9242-e888f0a373af, sni: c4f2n5e3w7p5a6g7e5s.lancelot.dpdns.org, alpn: [h3%2Ch2%2Chttp%2F1.1], skip-cert-verify: false, network: ws, ws-opts: {path: "/?ed=2048", headers: {Host: c4f2n5e3w7p5a6g7e5s.lancelot.dpdns.org}}, ech-opts: {enable: true, query-server-name: cloudflare-ech.com}}
-  - {name: '自定义优选-104.18.0.0:443-443-Trojan-WS-TLS', server: 104.18.0.0, port: 443, type: trojan, password: 0148c0dc-8d10-4655-9242-e888f0a373af, sni: c4f2n5e3w7p5a6g7e5s.lancelot.dpdns.org, alpn: [h3%2Ch2%2Chttp%2F1.1], skip-cert-verify: false, network: ws, ws-opts: {path: "/?ed=2048", headers: {Host: c4f2n5e3w7p5a6g7e5s.lancelot.dpdns.org}}, ech-opts: {enable: true, query-server-name: cloudflare-ech.com}}
-  - {name: '自定义优选-104.19.0.0:443-443-Trojan-WS-TLS', server: 104.19.0.0, port: 443, type: trojan, password: 0148c0dc-8d10-4655-9242-e888f0a373af, sni: c4f2n5e3w7p5a6g7e5s.lancelot.dpdns.org, alpn: [h3%2Ch2%2Chttp%2F1.1], skip-cert-verify: false, network: ws, ws-opts: {path: "/?ed=2048", headers: {Host: c4f2n5e3w7p5a6g7e5s.lancelot.dpdns.org}}, ech-opts: {enable: true, query-server-name: cloudflare-ech.com}}
-  - {name: '自定义优选-104.20.0.0:443-443-Trojan-WS-TLS', server: 104.20.0.0, port: 443, type: trojan, password: 0148c0dc-8d10-4655-9242-e888f0a373af, sni: c4f2n5e3w7p5a6g7e5s.lancelot.dpdns.org, alpn: [h3%2Ch2%2Chttp%2F1.1], skip-cert-verify: false, network: ws, ws-opts: {path: "/?ed=2048", headers: {Host: c4f2n5e3w7p5a6g7e5s.lancelot.dpdns.org}}, ech-opts: {enable: true, query-server-name: cloudflare-ech.com}}
-  - {name: '自定义优选-104.21.0.0:443-443-Trojan-WS-TLS', server: 104.21.0.0, port: 443, type: trojan, password: 0148c0dc-8d10-4655-9242-e888f0a373af, sni: c4f2n5e3w7p5a6g7e5s.lancelot.dpdns.org, alpn: [h3%2Ch2%2Chttp%2F1.1], skip-cert-verify: false, network: ws, ws-opts: {path: "/?ed=2048", headers: {Host: c4f2n5e3w7p5a6g7e5s.lancelot.dpdns.org}}, ech-opts: {enable: true, query-server-name: cloudflare-ech.com}}
-  - {name: '自定义优选-104.22.0.0:443-443-Trojan-WS-TLS', server: 104.22.0.0, port: 443, type: trojan, password: 0148c0dc-8d10-4655-9242-e888f0a373af, sni: c4f2n5e3w7p5a6g7e5s.lancelot.dpdns.org, alpn: [h3%2Ch2%2Chttp%2F1.1], skip-cert-verify: false, network: ws, ws-opts: {path: "/?ed=2048", headers: {Host: c4f2n5e3w7p5a6g7e5s.lancelot.dpdns.org}}, ech-opts: {enable: true, query-server-name: cloudflare-ech.com}}
-  - {name: '自定义优选-104.24.0.0:443-443-Trojan-WS-TLS', server: 104.24.0.0, port: 443, type: trojan, password: 0148c0dc-8d10-4655-9242-e888f0a373af, sni: c4f2n5e3w7p5a6g7e5s.lancelot.dpdns.org, alpn: [h3%2Ch2%2Chttp%2F1.1], skip-cert-verify: false, network: ws, ws-opts: {path: "/?ed=2048", headers: {Host: c4f2n5e3w7p5a6g7e5s.lancelot.dpdns.org}}, ech-opts: {enable: true, query-server-name: cloudflare-ech.com}}
-  - {name: '自定义优选-104.25.0.0:443-443-Trojan-WS-TLS', server: 104.25.0.0, port: 443, type: trojan, password: 0148c0dc-8d10-4655-9242-e888f0a373af, sni: c4f2n5e3w7p5a6g7e5s.lancelot.dpdns.org, alpn: [h3%2Ch2%2Chttp%2F1.1], skip-cert-verify: false, network: ws, ws-opts: {path: "/?ed=2048", headers: {Host: c4f2n5e3w7p5a6g7e5s.lancelot.dpdns.org}}, ech-opts: {enable: true, query-server-name: cloudflare-ech.com}}
-  - {name: '自定义优选-104.26.0.0:443-443-Trojan-WS-TLS', server: 104.26.0.0, port: 443, type: trojan, password: 0148c0dc-8d10-4655-9242-e888f0a373af, sni: c4f2n5e3w7p5a6g7e5s.lancelot.dpdns.org, alpn: [h3%2Ch2%2Chttp%2F1.1], skip-cert-verify: false, network: ws, ws-opts: {path: "/?ed=2048", headers: {Host: c4f2n5e3w7p5a6g7e5s.lancelot.dpdns.org}}, ech-opts: {enable: true, query-server-name: cloudflare-ech.com}}
-  - {name: '自定义优选-104.27.0.0:443-443-Trojan-WS-TLS', server: 104.27.0.0, port: 443, type: trojan, password: 0148c0dc-8d10-4655-9242-e888f0a373af, sni: c4f2n5e3w7p5a6g7e5s.lancelot.dpdns.org, alpn: [h3%2Ch2%2Chttp%2F1.1], skip-cert-verify: false, network: ws, ws-opts: {path: "/?ed=2048", headers: {Host: c4f2n5e3w7p5a6g7e5s.lancelot.dpdns.org}}, ech-opts: {enable: true, query-server-name: cloudflare-ech.com}}
-  - {name: '自定义优选-172.66.0.0:443-443-Trojan-WS-TLS', server: 172.66.0.0, port: 443, type: trojan, password: 0148c0dc-8d10-4655-9242-e888f0a373af, sni: c4f2n5e3w7p5a6g7e5s.lancelot.dpdns.org, alpn: [h3%2Ch2%2Chttp%2F1.1], skip-cert-verify: false, network: ws, ws-opts: {path: "/?ed=2048", headers: {Host: c4f2n5e3w7p5a6g7e5s.lancelot.dpdns.org}}, ech-opts: {enable: true, query-server-name: cloudflare-ech.com}}
-  - {name: '自定义优选-172.67.0.0:443-443-Trojan-WS-TLS', server: 172.67.0.0, port: 443, type: trojan, password: 0148c0dc-8d10-4655-9242-e888f0a373af, sni: c4f2n5e3w7p5a6g7e5s.lancelot.dpdns.org, alpn: [h3%2Ch2%2Chttp%2F1.1], skip-cert-verify: false, network: ws, ws-opts: {path: "/?ed=2048", headers: {Host: c4f2n5e3w7p5a6g7e5s.lancelot.dpdns.org}}, ech-opts: {enable: true, query-server-name: cloudflare-ech.com}}
-  - {name: '自定义优选-162.159.0.0:443-443-Trojan-WS-TLS', server: 162.159.0.0, port: 443, type: trojan, password: 0148c0dc-8d10-4655-9242-e888f0a373af, sni: c4f2n5e3w7p5a6g7e5s.lancelot.dpdns.org, alpn: [h3%2Ch2%2Chttp%2F1.1], skip-cert-verify: false, network: ws, ws-opts: {path: "/?ed=2048", headers: {Host: c4f2n5e3w7p5a6g7e5s.lancelot.dpdns.org}}, ech-opts: {enable: true, query-server-name: cloudflare-ech.com}}
+  - {name: "\U0001F1FA\U0001F1F8 _圣何塞-443-WS-TLS", server: 104.16.0.0, port: 443, type: vless, uuid: 0148c0dc-8d10-4655-9242-e888f0a373af, tls: true, alpn: [h3%2Ch2%2Chttp%2F1.1], tfo: false, skip-cert-verify: false, servername: c4f2n5e3w7p5a6g7e5s.lancelot.dpdns.org, client-fingerprint: chrome, network: ws, ws-opts: {path: "/?ed=2048", headers: {Host: c4f2n5e3w7p5a6g7e5s.lancelot.dpdns.org}}, ech-opts: {enable: true, query-server-name: cloudflare-ech.com}}
+  - {name: "\U0001F1FA\U0001F1F8 _圣何塞-443-WS-TLS 2", server: 104.17.0.0, port: 443, type: vless, uuid: 0148c0dc-8d10-4655-9242-e888f0a373af, tls: true, alpn: [h3%2Ch2%2Chttp%2F1.1], tfo: false, skip-cert-verify: false, servername: c4f2n5e3w7p5a6g7e5s.lancelot.dpdns.org, client-fingerprint: chrome, network: ws, ws-opts: {path: "/?ed=2048", headers: {Host: c4f2n5e3w7p5a6g7e5s.lancelot.dpdns.org}}, ech-opts: {enable: true, query-server-name: cloudflare-ech.com}}
+  - {name: "\U0001F1FA\U0001F1F8 _圣何塞-443-WS-TLS 3", server: 104.19.0.0, port: 443, type: vless, uuid: 0148c0dc-8d10-4655-9242-e888f0a373af, tls: true, alpn: [h3%2Ch2%2Chttp%2F1.1], tfo: false, skip-cert-verify: false, servername: c4f2n5e3w7p5a6g7e5s.lancelot.dpdns.org, client-fingerprint: chrome, network: ws, ws-opts: {path: "/?ed=2048", headers: {Host: c4f2n5e3w7p5a6g7e5s.lancelot.dpdns.org}}, ech-opts: {enable: true, query-server-name: cloudflare-ech.com}}
+  - {name: "\U0001F1E9\U0001F1EA _法兰克福-443-WS-TLS", server: 104.20.0.0, port: 443, type: vless, uuid: 0148c0dc-8d10-4655-9242-e888f0a373af, tls: true, alpn: [h3%2Ch2%2Chttp%2F1.1], tfo: false, skip-cert-verify: false, servername: c4f2n5e3w7p5a6g7e5s.lancelot.dpdns.org, client-fingerprint: chrome, network: ws, ws-opts: {path: "/?ed=2048", headers: {Host: c4f2n5e3w7p5a6g7e5s.lancelot.dpdns.org}}, ech-opts: {enable: true, query-server-name: cloudflare-ech.com}}
+  - {name: "\U0001F1F3\U0001F1F1 _阿姆斯特丹-443-WS-TLS", server: 104.21.0.0, port: 443, type: vless, uuid: 0148c0dc-8d10-4655-9242-e888f0a373af, tls: true, alpn: [h3%2Ch2%2Chttp%2F1.1], tfo: false, skip-cert-verify: false, servername: c4f2n5e3w7p5a6g7e5s.lancelot.dpdns.org, client-fingerprint: chrome, network: ws, ws-opts: {path: "/?ed=2048", headers: {Host: c4f2n5e3w7p5a6g7e5s.lancelot.dpdns.org}}, ech-opts: {enable: true, query-server-name: cloudflare-ech.com}}
+  - {name: "\U0001F1E9\U0001F1EA _法兰克福-443-WS-TLS 2", server: 104.24.0.0, port: 443, type: vless, uuid: 0148c0dc-8d10-4655-9242-e888f0a373af, tls: true, alpn: [h3%2Ch2%2Chttp%2F1.1], tfo: false, skip-cert-verify: false, servername: c4f2n5e3w7p5a6g7e5s.lancelot.dpdns.org, client-fingerprint: chrome, network: ws, ws-opts: {path: "/?ed=2048", headers: {Host: c4f2n5e3w7p5a6g7e5s.lancelot.dpdns.org}}, ech-opts: {enable: true, query-server-name: cloudflare-ech.com}}
+  - {name: "\U0001F1E9\U0001F1EA _法兰克福-443-WS-TLS 3", server: 104.25.0.0, port: 443, type: vless, uuid: 0148c0dc-8d10-4655-9242-e888f0a373af, tls: true, alpn: [h3%2Ch2%2Chttp%2F1.1], tfo: false, skip-cert-verify: false, servername: c4f2n5e3w7p5a6g7e5s.lancelot.dpdns.org, client-fingerprint: chrome, network: ws, ws-opts: {path: "/?ed=2048", headers: {Host: c4f2n5e3w7p5a6g7e5s.lancelot.dpdns.org}}, ech-opts: {enable: true, query-server-name: cloudflare-ech.com}}
+  - {name: _丹佛-443-WS-TLS, server: 103.31.4.0, port: 443, type: vless, uuid: 0148c0dc-8d10-4655-9242-e888f0a373af, tls: true, alpn: [h3%2Ch2%2Chttp%2F1.1], tfo: false, skip-cert-verify: false, servername: c4f2n5e3w7p5a6g7e5s.lancelot.dpdns.org, client-fingerprint: chrome, network: ws, ws-opts: {path: "/?ed=2048", headers: {Host: c4f2n5e3w7p5a6g7e5s.lancelot.dpdns.org}}, ech-opts: {enable: true, query-server-name: cloudflare-ech.com}}
+  - {name: "\U0001F1FA\U0001F1F8 _圣何塞-443-WS-TLS 4", server: 104.16.0.0, port: 443, type: vless, uuid: 0148c0dc-8d10-4655-9242-e888f0a373af, tls: true, alpn: [h3%2Ch2%2Chttp%2F1.1], tfo: false, skip-cert-verify: false, servername: c4f2n5e3w7p5a6g7e5s.lancelot.dpdns.org, client-fingerprint: chrome, network: ws, ws-opts: {path: "/?ed=2048", headers: {Host: c4f2n5e3w7p5a6g7e5s.lancelot.dpdns.org}}, ech-opts: {enable: true, query-server-name: cloudflare-ech.com}}
+  - {name: "\U0001F1F8\U0001F1EC _新加坡-443-WS-TLS", server: 108.162.192.0, port: 443, type: vless, uuid: 0148c0dc-8d10-4655-9242-e888f0a373af, tls: true, alpn: [h3%2Ch2%2Chttp%2F1.1], tfo: false, skip-cert-verify: false, servername: c4f2n5e3w7p5a6g7e5s.lancelot.dpdns.org, client-fingerprint: chrome, network: ws, ws-opts: {path: "/?ed=2048", headers: {Host: c4f2n5e3w7p5a6g7e5s.lancelot.dpdns.org}}, ech-opts: {enable: true, query-server-name: cloudflare-ech.com}}
+  - {name: "\U0001F1FA\U0001F1F8 _圣何塞-443-Trojan-WS-TLS", server: 104.16.0.0, port: 443, type: trojan, password: 0148c0dc-8d10-4655-9242-e888f0a373af, sni: c4f2n5e3w7p5a6g7e5s.lancelot.dpdns.org, alpn: [h3%2Ch2%2Chttp%2F1.1], skip-cert-verify: false, network: ws, ws-opts: {path: "/?ed=2048", headers: {Host: c4f2n5e3w7p5a6g7e5s.lancelot.dpdns.org}}, ech-opts: {enable: true, query-server-name: cloudflare-ech.com}}
+  - {name: "\U0001F1FA\U0001F1F8 _圣何塞-443-Trojan-WS-TLS 2", server: 104.17.0.0, port: 443, type: trojan, password: 0148c0dc-8d10-4655-9242-e888f0a373af, sni: c4f2n5e3w7p5a6g7e5s.lancelot.dpdns.org, alpn: [h3%2Ch2%2Chttp%2F1.1], skip-cert-verify: false, network: ws, ws-opts: {path: "/?ed=2048", headers: {Host: c4f2n5e3w7p5a6g7e5s.lancelot.dpdns.org}}, ech-opts: {enable: true, query-server-name: cloudflare-ech.com}}
+  - {name: "\U0001F1FA\U0001F1F8 _圣何塞-443-Trojan-WS-TLS 3", server: 104.19.0.0, port: 443, type: trojan, password: 0148c0dc-8d10-4655-9242-e888f0a373af, sni: c4f2n5e3w7p5a6g7e5s.lancelot.dpdns.org, alpn: [h3%2Ch2%2Chttp%2F1.1], skip-cert-verify: false, network: ws, ws-opts: {path: "/?ed=2048", headers: {Host: c4f2n5e3w7p5a6g7e5s.lancelot.dpdns.org}}, ech-opts: {enable: true, query-server-name: cloudflare-ech.com}}
+  - {name: "\U0001F1E9\U0001F1EA _法兰克福-443-Trojan-WS-TLS", server: 104.20.0.0, port: 443, type: trojan, password: 0148c0dc-8d10-4655-9242-e888f0a373af, sni: c4f2n5e3w7p5a6g7e5s.lancelot.dpdns.org, alpn: [h3%2Ch2%2Chttp%2F1.1], skip-cert-verify: false, network: ws, ws-opts: {path: "/?ed=2048", headers: {Host: c4f2n5e3w7p5a6g7e5s.lancelot.dpdns.org}}, ech-opts: {enable: true, query-server-name: cloudflare-ech.com}}
+  - {name: "\U0001F1F3\U0001F1F1 _阿姆斯特丹-443-Trojan-WS-TLS", server: 104.21.0.0, port: 443, type: trojan, password: 0148c0dc-8d10-4655-9242-e888f0a373af, sni: c4f2n5e3w7p5a6g7e5s.lancelot.dpdns.org, alpn: [h3%2Ch2%2Chttp%2F1.1], skip-cert-verify: false, network: ws, ws-opts: {path: "/?ed=2048", headers: {Host: c4f2n5e3w7p5a6g7e5s.lancelot.dpdns.org}}, ech-opts: {enable: true, query-server-name: cloudflare-ech.com}}
+  - {name: "\U0001F1E9\U0001F1EA _法兰克福-443-Trojan-WS-TLS 2", server: 104.24.0.0, port: 443, type: trojan, password: 0148c0dc-8d10-4655-9242-e888f0a373af, sni: c4f2n5e3w7p5a6g7e5s.lancelot.dpdns.org, alpn: [h3%2Ch2%2Chttp%2F1.1], skip-cert-verify: false, network: ws, ws-opts: {path: "/?ed=2048", headers: {Host: c4f2n5e3w7p5a6g7e5s.lancelot.dpdns.org}}, ech-opts: {enable: true, query-server-name: cloudflare-ech.com}}
+  - {name: "\U0001F1E9\U0001F1EA _法兰克福-443-Trojan-WS-TLS 3", server: 104.25.0.0, port: 443, type: trojan, password: 0148c0dc-8d10-4655-9242-e888f0a373af, sni: c4f2n5e3w7p5a6g7e5s.lancelot.dpdns.org, alpn: [h3%2Ch2%2Chttp%2F1.1], skip-cert-verify: false, network: ws, ws-opts: {path: "/?ed=2048", headers: {Host: c4f2n5e3w7p5a6g7e5s.lancelot.dpdns.org}}, ech-opts: {enable: true, query-server-name: cloudflare-ech.com}}
+  - {name: _丹佛-443-Trojan-WS-TLS, server: 103.31.4.0, port: 443, type: trojan, password: 0148c0dc-8d10-4655-9242-e888f0a373af, sni: c4f2n5e3w7p5a6g7e5s.lancelot.dpdns.org, alpn: [h3%2Ch2%2Chttp%2F1.1], skip-cert-verify: false, network: ws, ws-opts: {path: "/?ed=2048", headers: {Host: c4f2n5e3w7p5a6g7e5s.lancelot.dpdns.org}}, ech-opts: {enable: true, query-server-name: cloudflare-ech.com}}
+  - {name: "\U0001F1FA\U0001F1F8 _圣何塞-443-Trojan-WS-TLS 4", server: 104.16.0.0, port: 443, type: trojan, password: 0148c0dc-8d10-4655-9242-e888f0a373af, sni: c4f2n5e3w7p5a6g7e5s.lancelot.dpdns.org, alpn: [h3%2Ch2%2Chttp%2F1.1], skip-cert-verify: false, network: ws, ws-opts: {path: "/?ed=2048", headers: {Host: c4f2n5e3w7p5a6g7e5s.lancelot.dpdns.org}}, ech-opts: {enable: true, query-server-name: cloudflare-ech.com}}
+  - {name: "\U0001F1F8\U0001F1EC _新加坡-443-Trojan-WS-TLS", server: 108.162.192.0, port: 443, type: trojan, password: 0148c0dc-8d10-4655-9242-e888f0a373af, sni: c4f2n5e3w7p5a6g7e5s.lancelot.dpdns.org, alpn: [h3%2Ch2%2Chttp%2F1.1], skip-cert-verify: false, network: ws, ws-opts: {path: "/?ed=2048", headers: {Host: c4f2n5e3w7p5a6g7e5s.lancelot.dpdns.org}}, ech-opts: {enable: true, query-server-name: cloudflare-ech.com}}
 
