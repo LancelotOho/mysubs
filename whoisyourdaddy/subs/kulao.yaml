@@ -1,4 +1,4 @@
-# updated 2026-03-13 10:47:16
+# updated 2026-03-13 12:52:13
 mixed-port: 7890
 port: 7891
 socks-port: 7892
@@ -372,151 +372,154 @@ rules:
   - MATCH,🐟 漏网之鱼
 
 proxies:
-  - name: VPN地址https://kelayun.notepin.co
-    type: vless
-    server: 198.62.62.248
-    port: 443
-    skip-cert-verify: true
-    tls: true
-    servername: tar.alabama-tigr.info
-    network: ws
-    ws-opts:
-      headers:
-        Host: tar.alabama-tigr.info
-      path: /love
-    uuid: 5a4abb78-ecd7-4d68-ab2a-c11a3842f261
-    alterId: 0
-    cipher: ""
-    flow: ""
-    sni: tar.alabama-tigr.info
-  - name: 梯子地址https://kelayun.notepin.co
-    type: vless
-    server: 23.148.20.55
-    port: 443
-    client-fingerprint: chrome
-    tls: true
-    servername: www.apple.com
-    flow: xtls-rprx-vision
-    network: tcp
-    reality-opts:
-      public-key: R0M4F0Di9oppNbz_LRIkF08whSeXbBHMNkAKVq5l-U8
-      short-id: ea80ef
-    uuid: e5130eee-cf44-405e-ce04-25817f961399
-    alterId: 0
-    cipher: ""
-    sni: www.apple.com
-  - name: 加速器地址https://kelayun.notepin.co
-    type: vless
-    server: 198.62.62.235
-    port: 443
-    tls: true
-    servername: bank.alaska-tigr.info
-    network: ws
-    ws-opts:
-      headers:
-        Host: bank.alaska-tigr.info
-      path: /love
-    uuid: 5a4abb78-ecd7-4d68-ab2a-c11a3842f261
-    alterId: 0
-    cipher: ""
-    flow: ""
-    sni: bank.alaska-tigr.info
-  - name: 机场地址https://kelayun.notepin.co
-    type: anytls
-    server: us1.anliangjifei.top
-    port: 12053
-    password: ae74dd32-c336-4be4-9c15-f6108292b3e5
-    skip-cert-verify: true
-    sni: us1.anliangjifei.top
   - name: 付费地址https://kelayun.notepin.co
     type: vless
-    server: 143.20.236.51
+    server: 129.153.71.226
     port: 443
-    client-fingerprint: chrome
+    uuid: d46ad20a-4454-4da7-8f9c-87f9152bedee
+    udp: true
     tls: true
-    servername: yahoo.com
+    skip-cert-verify: null
     flow: xtls-rprx-vision
-    network: tcp
+    client-fingerprint: ios
+    servername: iosapps.itunes.apple.com
     reality-opts:
-      public-key: e2RLf57Li_-MDZGE9ss1BWPgP54mqRb5PfXhW2jcVVg
-      short-id: c39cc7310a
-    uuid: d65cc14c-f53f-4fe2-b262-97856601319c
+      public-key: qkP2pqQ3NHNBkyzqsC2W9wChp3OfeXdVjOhUv8vQW0o
+      short-id: aac4df9d05a5ba8f
     alterId: 0
     cipher: ""
-    sni: yahoo.com
+    sni: iosapps.itunes.apple.com
   - name: 购买地址https://kelayun.notepin.co
     type: vless
-    server: 198.62.62.248
+    server: 63.141.128.188
     port: 443
-    client-fingerprint: chrome
+    uuid: d46ad20a-4454-4da7-8f9c-87f9152bedee
+    udp: true
     tls: true
-    servername: tar.alabama-tigr.info
+    skip-cert-verify: null
+    flow: ''
+    client-fingerprint: chrome
+    servername: d2-us1.djwstlsweb.top
     network: ws
     ws-opts:
+      path: /djjc/us1
       headers:
-        Host: tar.alabama-tigr.info
-      path: /love
-    uuid: 5a4abb78-ecd7-4d68-ab2a-c11a3842f261
+        Host: d2-us1.djwstlsweb.top
     alterId: 0
     cipher: ""
-    flow: ""
-    sni: tar.alabama-tigr.info
+    sni: d2-us1.djwstlsweb.top
+  - name: 下单地址https://kelayun.notepin.co
+    type: vless
+    server: 63.141.128.188
+    port: 443
+    uuid: d46ad20a-4454-4da7-8f9c-87f9152bedee
+    udp: true
+    tls: true
+    skip-cert-verify: null
+    flow: ''
+    client-fingerprint: ios
+    servername: d2-us3.djwstlsweb.top
+    network: ws
+    ws-opts:
+      path: /djjc/us3
+      headers:
+        Host: d2-us3.djwstlsweb.top
+    alterId: 0
+    cipher: ""
+    sni: d2-us3.djwstlsweb.top
   - name: 官网地址https://kelayun.notepin.co
     type: vless
-    server: 104.18.32.47
-    port: 2052
+    server: 63.141.128.188
+    port: 443
+    uuid: d46ad20a-4454-4da7-8f9c-87f9152bedee
+    udp: true
+    tls: true
+    skip-cert-verify: null
+    flow: ''
+    client-fingerprint: ios
+    servername: d2-us4.djwstlsweb.top
     network: ws
     ws-opts:
+      path: /djjc/us4
       headers:
-        Host: oBEDiENt-noiseqJf5ja18yF.wIndLer.CO.UK.
-      path: /
-    uuid: 5e62ddcf-78c9-4b15-803a-436c8c839ddc
+        Host: d2-us4.djwstlsweb.top
     alterId: 0
     cipher: ""
-    flow: ""
+    sni: d2-us4.djwstlsweb.top
+  - name: 梯子地址https://kelayun.notepin.co
+    type: vless
+    server: 63.141.128.188
+    port: 443
+    uuid: d46ad20a-4454-4da7-8f9c-87f9152bedee
+    udp: true
+    tls: true
+    skip-cert-verify: null
+    flow: ''
+    client-fingerprint: safari
+    servername: d2-jp1.djwstlsweb.top
+    network: ws
+    ws-opts:
+      path: /djjc/jp1
+      headers:
+        Host: d2-jp1.djwstlsweb.top
+    alterId: 0
+    cipher: ""
+    sni: d2-jp1.djwstlsweb.top
   - name: 最低月付2块钱1000G流量
     type: vless
-    server: 198.62.62.124
+    server: 63.141.128.188
     port: 443
+    uuid: d46ad20a-4454-4da7-8f9c-87f9152bedee
+    udp: true
     tls: true
-    servername: war.connecticut-haloo.info
+    skip-cert-verify: null
+    flow: ''
+    client-fingerprint: safari
+    servername: d2-jp2.djwstlsweb.top
     network: ws
     ws-opts:
+      path: /djjc/jp2
       headers:
-        Host: war.connecticut-haloo.info
-      path: /love
-    uuid: 5a4abb78-ecd7-4d68-ab2a-c11a3842f261
+        Host: d2-jp2.djwstlsweb.top
     alterId: 0
     cipher: ""
-    flow: ""
-    sni: war.connecticut-haloo.info
-  - name: 不限速不限设备
+    sni: d2-jp2.djwstlsweb.top
+  - name: 不限速不限设备不限地区
     type: vless
-    server: 78.153.139.68
-    port: 8443
-    client-fingerprint: random
-    tls: true
-    servername: images.apple.com
-    flow: xtls-rprx-vision
-    network: tcp
-    reality-opts:
-      public-key: pekfYPV5U8EjfQ4_zS5c6I2NnOZ2jUlyMGAWa4FWPF4
-      short-id: 58c512b4422e2517
-    uuid: fd8972d7-cf5e-11f0-9970-45e1d80c4039
-    alterId: 0
-    cipher: ""
-    sni: images.apple.com
-  - name: 新疆西藏福建可用
-    type: trojan
-    server: 23.227.38.72
+    server: 63.141.128.188
     port: 443
-    password: 13d29042-ab82-4195-9cd4-2bafc518e201
-    skip-cert-verify: true
+    uuid: d46ad20a-4454-4da7-8f9c-87f9152bedee
+    udp: true
+    tls: true
+    skip-cert-verify: null
+    flow: ''
+    client-fingerprint: ios
+    servername: d2-jp2.djwstlsweb.top
     network: ws
     ws-opts:
+      path: /djjc/jp2
       headers:
-        Host: yss2o9nzv7hsgw2z.sggogo202510.top
-      path: /images
-    sni: yss2o9nzv7hsgw2z.sggogo202510.top
-    servername: yss2o9nzv7hsgw2z.sggogo202510.top
+        Host: d2-jp2.djwstlsweb.top
+    alterId: 0
+    cipher: ""
+    sni: d2-jp2.djwstlsweb.top
+  - name: 解锁谷歌gemini
+    type: vless
+    server: 63.141.128.188
+    port: 443
+    uuid: d46ad20a-4454-4da7-8f9c-87f9152bedee
+    udp: true
+    tls: true
+    skip-cert-verify: null
+    flow: ''
+    client-fingerprint: safari
+    servername: d2-jp2.djwstlsweb.top
+    network: ws
+    ws-opts:
+      path: /djjc/jp2
+      headers:
+        Host: d2-jp2.djwstlsweb.top
+    alterId: 0
+    cipher: ""
+    sni: d2-jp2.djwstlsweb.top
 
