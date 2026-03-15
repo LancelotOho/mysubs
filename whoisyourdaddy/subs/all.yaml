@@ -113,7 +113,7 @@ profile:
   store-fake-ip: true
 
 proxy-providers:
-  provider1:
+  cm:
     type: http
     url: "https://c1m3p2a8g2e6s.lancelot.dpdns.org/sub?token=c241a812d6b3518cb12992c67d9efafd&clash"
     interval: 10800
@@ -126,7 +126,7 @@ proxy-providers:
       skip-cert-verify: false
       udp: true
       
-  provider2:
+  kulao:
     type: http
     url: "https://ghproxy.19882008.xyz/https://raw.githubusercontent.com/Jsnzkpg/Jsnzkpg/Jsnzkpg/Jsnzkpg"
     interval: 10800
@@ -139,7 +139,7 @@ proxy-providers:
       skip-cert-verify: false
       udp: true
 
-  provider3:
+  ygkkk:
     type: http
     url: "https://y3g2k1k5k.lancelot.dpdns.org/0148c0dc-8d10-4655-9242-e888f0a373af/pcl"
     interval: 10800
@@ -152,7 +152,7 @@ proxy-providers:
       skip-cert-verify: false
       udp: true
             
-  provider4:
+  joey:
     type: http
     url: "https://c4f2n5e3w7p5a6g7e5s.lancelot.dpdns.org/admin/sub?target=clash"
     interval: 10800
