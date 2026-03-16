@@ -257,7 +257,7 @@ proxy-groups:
       - REJECT
 
 rule-providers:
-
+  
   # 域名规则集🔥☔️☃️🌲🌴🐁🌷
   reject:
     type: http
@@ -357,6 +357,15 @@ rule-providers:
     interval: 86400
     url: https://fastly.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@meta/geo/geosite/tiktok.mrs
     path: ./ruleset/DN/tiktok.mrs
+
+  Cloudflare:
+    type: http
+    behavior: domain
+    proxy: DIRECT
+    format: mrs
+    interval: 86400
+    url: https://fastly.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@meta/geo/geosite/cloudflare.mrs
+    path: ./ruleset/DN/cloudflare.mrs
     
   # IP规则集
   GoogleIP:
@@ -395,10 +404,17 @@ rule-providers:
     url: https://fastly.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@meta/geo/geoip/private.mrs
     path: ./ruleset/IP/private.mrs
 
+  CloudflareIP:
+    type: http
+    behavior: ipcidr
+    proxy: DIRECT
+    format: mrs
+    interval: 86400
+    url: https://fastly.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@meta/geo/geoip/cloudflare.mrs
+    path: ./ruleset/IP/cloudflare.mrs
+
 rules:
   # 自定义规则集
-  - DOMAIN-SUFFIX,cloudflare.com,🌈 Cloudflare
-  - DOMAIN-SUFFIX,gstatic.com,🥳 打包代理
   - DOMAIN-SUFFIX,jsdelivr.net,🎯 全球直连
   - DOMAIN-SUFFIX,lancelot1988.dpdns.org,🎯 全球直连
   - DOMAIN-SUFFIX,lancelot.indevs.in,🎯 全球直连
@@ -407,6 +423,7 @@ rules:
   # 域名规则集
   - RULE-SET,reject,REJECT
   - RULE-SET,Github,🥳 打包代理
+  - RULE-SET,Cloudflare,🌈 Cloudflare
   - RULE-SET,OneDrive,🤡 Onedrive
   - RULE-SET,Microsoft,🥌 Microsoft
   - RULE-SET,Google,🥳 打包代理
@@ -419,6 +436,7 @@ rules:
   # IP规则集
   - RULE-SET,GoogleIP,🥳 打包代理,no-resolve
   - RULE-SET,TelegramIP,🥳 打包代理,no-resolve
+  - RULE-SET,CloudflareIP,🌈 Cloudflare
   - RULE-SET,LanIP,🎯 全球直连
   - RULE-SET,ChinaIP,🎯 全球直连
   - MATCH,🐟 漏网之鱼
