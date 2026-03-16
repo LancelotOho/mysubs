@@ -178,7 +178,7 @@ proxy-groups:
   - name: ✅ 自动选择
     type: url-test
     interval: 1800
-    lazy: false
+    lazy: true
     url: https://cp.cloudflare.com/generate_204
     include-all: true
 
@@ -231,6 +231,15 @@ proxy-groups:
       - 🫱 手动选择
       - ⭕ 故障切换
 
+  - name: 🎨 Tailscale
+    type: select
+    proxies:
+      - 🎯 全球直连
+      - ✅ 自动选择
+      - ⚖️ 负载均衡
+      - 🫱 手动选择
+      - ⭕ 故障切换
+
   - name: ⚖️ 负载均衡
     type: load-balance
     interval: 600
@@ -257,7 +266,7 @@ proxy-groups:
       - REJECT
 
 rule-providers:
-  
+
   # 域名规则集🔥☔️☃️🌲🌴🐁🌷
   reject:
     type: http
@@ -366,7 +375,16 @@ rule-providers:
     interval: 86400
     url: https://fastly.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@meta/geo/geosite/cloudflare.mrs
     path: ./ruleset/DN/cloudflare.mrs
-    
+
+  Tailscale:
+    type: http
+    behavior: domain
+    proxy: DIRECT
+    format: mrs
+    interval: 86400
+    url: https://fastly.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@meta/geo/geosite/tailscale.mrs
+    path: ./ruleset/DN/tailscale.mrs
+
   # IP规则集
   GoogleIP:
     type: http
@@ -423,6 +441,7 @@ rules:
   # 域名规则集
   - RULE-SET,reject,REJECT
   - RULE-SET,Github,🥳 打包代理
+  - RULE-SET,Tailscale,🎨 Tailscale
   - RULE-SET,Cloudflare,🌈 Cloudflare
   - RULE-SET,OneDrive,🤡 Onedrive
   - RULE-SET,Microsoft,🥌 Microsoft
