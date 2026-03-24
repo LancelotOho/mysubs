@@ -6,7 +6,7 @@ tproxy-port: 7894
 allow-lan: true
 mode: rule
 log-level: warning
-external-controller: "0.0.0.0:9090"
+external-controller: 0.0.0.0:9090
 secret: "li19882008"
 bind-address: "*"
 ipv6: false
@@ -22,18 +22,18 @@ dns:
   enable: true
   ipv6: false
   prefer-h3: false
-  listen: "0.0.0.0:7874"
+  listen: 0.0.0.0:7874
   use-hosts: false
   use-system-hosts: false
   respect-rules: true
-  enhanced-mode: "fake-ip"
-  fake-ip-range: "198.18.0.1/16"
+  enhanced-mode: fake-ip
+  fake-ip-range: 198.18.0.1/16
   fake-ip-filter:
-    - +.lan
-    - +.local
+    - "+.lan"
+    - "+.local"
     - time.*.com
     - ntp.*.com
-    - +.market.xiaomi.com
+    - "+.market.xiaomi.com"
     - asusrouter.com
     - router.asus.com
     - www.asusrouter.com
@@ -43,27 +43,28 @@ dns:
     - tplogin.cn
     - miwifi.com
     - www.miwifi.com
-    - +.internal
-    - +.localdomain
-    - +.example
-    - +.invalid
-    - +.localhost
-    - +.test
-    - +.local
-    - +.lan
-    - +.zte.home
-    - +.my.router
-    - +.ts.net
-    - +.home.arpa
-    - +.hiwifi.com
-    - +.tplinkwifi.net
-    - +.tendawifi.com
-    - +.leike.cc
-    - +.plex.direct
-    - +.router.ctc
-    - +.phicomm.me
-    - +.peiluyou.com
-    - +.127.in-addr.arpa
+    - "+.internal"
+    - "+.localdomain"
+    - "+.example"
+    - "+.invalid"
+    - "+.localhost"
+    - "+.test"
+    - "+.local"
+    - "+.lan"
+    - "+.zte.home"
+    - "+.my.router"
+    - "+.ts.net"
+    - "+.home.arpa"
+    - "+.hiwifi.com"
+    - "+.tplinkwifi.net"
+    - "+.tendawifi.com"
+    - "+.leike.cc"
+    - "+.plex.direct"
+    - "+.router.ctc"
+    - "+.phicomm.me"
+    - "+.peiluyou.com"
+    - "+.127.in-addr.arpa"
+    - geosite:cn
   default-nameserver:
     - 223.5.5.5
     - 119.29.29.29
@@ -117,7 +118,7 @@ proxy-providers:
     type: http
     url: "https://c1m3p2a8g2e6s.lancelot.dpdns.org/sub?token=c241a812d6b3518cb12992c67d9efafd&clash"
     interval: 10800
-    path: ./cm.yaml
+    path: "./proxy_provider/cm.yaml"
     proxy: DIRECT
     header:
       User-Agent: ["mihomo/1.18.3"]
@@ -130,7 +131,7 @@ proxy-providers:
     type: http
     url: "https://ghproxy.19882008.xyz/https://raw.githubusercontent.com/Jsnzkpg/Jsnzkpg/Jsnzkpg/Jsnzkpg"
     interval: 10800
-    path: ./kulao.yaml
+    path: "./proxy_provider/kulao.yaml"
     proxy: DIRECT 
     header:
       User-Agent: ["mihomo/1.18.3"]    
@@ -143,7 +144,7 @@ proxy-providers:
     type: http
     url: "https://y3g2k1k5k.lancelot.dpdns.org/0148c0dc-8d10-4655-9242-e888f0a373af/pcl"
     interval: 10800
-    path: ./ygkkk.yaml
+    path: "./proxy_provider/ygkkk.yaml"
     proxy: DIRECT 
     header:
       User-Agent: ["mihomo/1.18.3"]    
@@ -156,7 +157,7 @@ proxy-providers:
     type: http
     url: "https://c4f2n5e3w7p5a6g7e5s.lancelot.dpdns.org/admin/sub?target=clash"
     interval: 10800
-    path: ./joey.yaml
+    path: "./proxy_provider/joey.yaml"
     proxy: DIRECT
     header:
       User-Agent: ["mihomo/1.18.3"]   
@@ -275,7 +276,7 @@ rule-providers:
     format: yaml
     interval: 86400
     url: https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/reject.txt
-    path: ./ruleset/DN/reject.yaml
+    path: "./ruleset/DN/reject.yaml"
 
   China:
     type: http
@@ -284,7 +285,7 @@ rule-providers:
     format: mrs
     interval: 86400
     url: https://fastly.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@meta/geo/geosite/cn.mrs
-    path: ./ruleset/DN/cn.mrs
+    path: "./ruleset/DN/cn.mrs"
 
   Github:
     type: http
@@ -293,7 +294,7 @@ rule-providers:
     format: mrs
     interval: 86400
     url: https://fastly.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@meta/geo/geosite/github.mrs
-    path: ./ruleset/DN/github.mrs
+    path: "./ruleset/DN/github.mrs"
 
   Lan:
     type: http
@@ -302,7 +303,7 @@ rule-providers:
     format: mrs
     interval: 86400
     url: https://fastly.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@meta/geo/geosite/private.mrs
-    path: ./ruleset/DN/private.mrs
+    path: "./ruleset/DN/private.mrs"
 
   Microsoft:
     type: http
@@ -311,7 +312,7 @@ rule-providers:
     format: mrs
     interval: 86400
     url: https://fastly.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@meta/geo/geosite/microsoft.mrs
-    path: ./ruleset/DN/microsoft.mrs
+    path: "./ruleset/DN/microsoft.mrs"
 
   OneDrive:
     type: http
@@ -320,7 +321,7 @@ rule-providers:
     format: mrs
     interval: 86400
     url: https://fastly.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@meta/geo/geosite/onedrive.mrs
-    path: ./ruleset/DN/onedrive.mrs
+    path: "./ruleset/DN/onedrive.mrs"
 
   Google:
     type: http
@@ -329,7 +330,7 @@ rule-providers:
     format: mrs
     interval: 86400
     url: https://fastly.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@meta/geo/geosite/google.mrs
-    path: ./ruleset/DN/google.mrs
+    path: "./ruleset/DN/google.mrs"
 
   Steam:
     type: http
@@ -338,7 +339,7 @@ rule-providers:
     format: mrs
     interval: 86400
     url: https://fastly.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@meta/geo/geosite/steam.mrs
-    path: ./ruleset/DN/steam.mrs
+    path: "./ruleset/DN/steam.mrs"
 
   GFW:
     type: http
@@ -347,7 +348,7 @@ rule-providers:
     format: mrs
     interval: 86400
     url: https://fastly.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@meta/geo/geosite/gfw.mrs
-    path: ./ruleset/DN/gfw.mrs
+    path: "./ruleset/DN/gfw.mrs"
 
   Telegram:
     type: http
@@ -356,7 +357,7 @@ rule-providers:
     format: mrs
     interval: 86400
     url: https://fastly.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@meta/geo/geosite/telegram.mrs
-    path: ./ruleset/DN/telegram.mrs
+    path: "./ruleset/DN/telegram.mrs"
 
   TikTok:
     type: http
@@ -365,7 +366,7 @@ rule-providers:
     format: mrs
     interval: 86400
     url: https://fastly.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@meta/geo/geosite/tiktok.mrs
-    path: ./ruleset/DN/tiktok.mrs
+    path: "./ruleset/DN/tiktok.mrs"
 
   Cloudflare:
     type: http
@@ -374,7 +375,7 @@ rule-providers:
     format: mrs
     interval: 86400
     url: https://fastly.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@meta/geo/geosite/cloudflare.mrs
-    path: ./ruleset/DN/cloudflare.mrs
+    path: "./ruleset/DN/cloudflare.mrs"
 
   Tailscale:
     type: http
@@ -383,7 +384,7 @@ rule-providers:
     format: mrs
     interval: 86400
     url: https://fastly.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@meta/geo/geosite/tailscale.mrs
-    path: ./ruleset/DN/tailscale.mrs
+    path: "./ruleset/DN/tailscale.mrs"
 
   # IP规则集
   GoogleIP:
@@ -393,7 +394,7 @@ rule-providers:
     format: mrs
     interval: 86400
     url: https://fastly.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@meta/geo/geoip/google.mrs
-    path: ./ruleset/IP/google.mrs
+    path: "./ruleset/IP/google.mrs"
 
   TelegramIP:
     type: http
@@ -402,7 +403,7 @@ rule-providers:
     format: mrs
     interval: 86400
     url: https://fastly.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@meta/geo/geoip/telegram.mrs
-    path: ./ruleset/IP/telegram.mrs
+    path: "./ruleset/IP/telegram.mrs"
 
   ChinaIP:
     type: http
@@ -411,7 +412,7 @@ rule-providers:
     format: mrs
     interval: 86400
     url: https://fastly.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@meta/geo/geoip/cn.mrs
-    path: ./ruleset/IP/cn.mrs
+    path: "./ruleset/IP/cn.mrs"
 
   LanIP:
     type: http
@@ -420,7 +421,7 @@ rule-providers:
     format: mrs
     interval: 86400
     url: https://fastly.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@meta/geo/geoip/private.mrs
-    path: ./ruleset/IP/private.mrs
+    path: "./ruleset/IP/private.mrs"
 
   CloudflareIP:
     type: http
@@ -429,7 +430,7 @@ rule-providers:
     format: mrs
     interval: 86400
     url: https://fastly.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@meta/geo/geoip/cloudflare.mrs
-    path: ./ruleset/IP/cloudflare.mrs
+    path: "./ruleset/IP/cloudflare.mrs"
 
 rules:
   # 自定义规则集
