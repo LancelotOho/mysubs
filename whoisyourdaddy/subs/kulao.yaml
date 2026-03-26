@@ -13,6 +13,11 @@ ipv6: false
 tcp-concurrent: true
 unified-delay: true
 find-process-mode: strict
+tun:
+  enable: false
+  stack: mixed
+  auto-route: true
+  auto-detect-interface: true
 dns:
   enable: true
   ipv6: false
@@ -109,45 +114,18 @@ profile:
   store-fake-ip: true
 
 proxy-providers:
-  cm:
-    type: http
-    url: "https://c1m3p2a8g2e6s.lancelot.dpdns.org/sub?token=c241a812d6b3518cb12992c67d9efafd&clash"
-    interval: 10800
-    path: "./proxy_provider/cm.yaml"
-    proxy: DIRECT
-    header:
-      User-Agent: 
-        - mihomo/1.18.3
-    override:
-      additional-prefix: "[cm]"
-      skip-cert-verify: false
-      udp: true
       
-  ygkkk:
+  kulao:
     type: http
-    url: "https://y3g2k1k5k.lancelot.dpdns.org/0148c0dc-8d10-4655-9242-e888f0a373af/pcl"
+    url: "https://ghproxy.19882008.xyz/https://raw.githubusercontent.com/Jsnzkpg/Jsnzkpg/Jsnzkpg/Jsnzkpg"
     interval: 10800
-    path: "./proxy_provider/ygkkk.yaml"
+    path: "./proxy_provider/kulao.yaml"
     proxy: DIRECT 
     header:
       User-Agent: 
-        - mihomo/1.18.3    
+        - mihomo/1.18.3 
     override: 
-      additional-prefix: "[ygkkk]"
-      skip-cert-verify: false
-      udp: true
-            
-  joey:
-    type: http
-    url: "https://c4f2n5e3w7p5a6g7e5s.lancelot.dpdns.org/admin/sub?target=clash"
-    interval: 10800
-    path: "./proxy_provider/joey.yaml"
-    proxy: DIRECT
-    header:
-      User-Agent: 
-        - mihomo/1.18.3   
-    override: 
-      additional-prefix: "[joey]"
+      additional-prefix: "[kulao]"
       skip-cert-verify: false
       udp: true
                
