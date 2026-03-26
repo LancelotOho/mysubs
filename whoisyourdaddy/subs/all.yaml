@@ -25,7 +25,7 @@ dns:
   listen: 0.0.0.0:7874
   use-hosts: false
   use-system-hosts: false
-  respect-rules: true
+  respect-rules: false
   enhanced-mode: fake-ip
   fake-ip-range: 198.18.0.1/16
   fake-ip-filter:
