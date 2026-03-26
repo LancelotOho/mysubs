@@ -121,7 +121,8 @@ proxy-providers:
     path: "./proxy_provider/cm.yaml"
     proxy: DIRECT
     header:
-      User-Agent: ["mihomo/1.18.3"]
+      User-Agent: 
+        - mihomo/1.18.3
     override:
       additional-prefix: "[cm]"
       skip-cert-verify: false
@@ -134,7 +135,8 @@ proxy-providers:
     path: "./proxy_provider/kulao.yaml"
     proxy: DIRECT 
     header:
-      User-Agent: ["mihomo/1.18.3"]    
+      User-Agent: 
+        - mihomo/1.18.3 
     override: 
       additional-prefix: "[kulao]"
       skip-cert-verify: false
@@ -147,7 +149,8 @@ proxy-providers:
     path: "./proxy_provider/ygkkk.yaml"
     proxy: DIRECT 
     header:
-      User-Agent: ["mihomo/1.18.3"]    
+      User-Agent: 
+        - mihomo/1.18.3    
     override: 
       additional-prefix: "[ygkkk]"
       skip-cert-verify: false
@@ -160,7 +163,8 @@ proxy-providers:
     path: "./proxy_provider/joey.yaml"
     proxy: DIRECT
     header:
-      User-Agent: ["mihomo/1.18.3"]   
+      User-Agent: 
+        - mihomo/1.18.3   
     override: 
       additional-prefix: "[joey]"
       skip-cert-verify: false
