@@ -33,6 +33,17 @@ ProxyIP.US.CMLiussss.net   区域: 🇺🇸 美国 | 维护频率: 3小时/次
 ProxyIP.CA.CMLiussss.net   区域: 🇨🇦 加拿大 | 维护频率: 3小时/次
 
 优选域名竖版：
+youxuan1.cf.090227.xyz#cm优选1
+youxuan2.cf.090227.xyz#cm优选2
+youxuan3.cf.090227.xyz#cm优选3
+youxuan4.cf.090227.xyz#cm优选4
+youxuan5.cf.090227.xyz#cm优选5
+cf1.tencentapp.cn#第三方优选1
+cf2.tencentapp.cn#第三方优选2
+cf3.tencentapp.cn#第三方优选3
+cf4.tencentapp.cn#第三方优选4
+cf5.tencentapp.cn#第三方优选5
+saas.sin.fan#saas.sin.fan
 www.visa.cn#visa中国优选
 mfa.gov.ua#乌克兰外交部
 www.shopify.com#Shopify官方优选
@@ -41,14 +52,9 @@ staticdelivery.nexusmods.com#NexusMods
 time.is#官方优选
 icook.hk#官方优选
 icook.tw#官方优选
-www.digitalocean.com#digitalocean
-www.csgo.com#csgo
-www.visakorea.com#visa韩国
-www.4chan.org#4chan
 
 优选域名横版：
-www.visa.cn#visa中国优选,mfa.gov.ua#乌克兰外交部,www.shopify.com#Shopify官方优选,store.ubi.com#Ubisoft,staticdelivery.nexusmods.com#NexusMods,time.is#官方优选,icook.hk#官方优选,icook.tw#官方优选,www.digitalocean.com#digitalocean,www.csgo.com#csgo,www.visakorea.com#visa韩国,www.4chan.org#4chan
-
+youxuan1.cf.090227.xyz#cm优选1,youxuan2.cf.090227.xyz#cm优选2,youxuan3.cf.090227.xyz#cm优选3,youxuan4.cf.090227.xyz#cm优选4,youxuan5.cf.090227.xyz#cm优选5,cf1.tencentapp.cn#第三方优选1,cf2.tencentapp.cn#第三方优选2,cf3.tencentapp.cn#第三方优选3,cf4.tencentapp.cn#第三方优选4,cf5.tencentapp.cn#第三方优选5,saas.sin.fan#saas.sin.fan,www.visa.cn#visa中国优选,mfa.gov.ua#乌克兰外交部,www.shopify.com#Shopify官方优选,store.ubi.com#Ubisoft,staticdelivery.nexusmods.com#NexusMods,time.is#官方优选,icook.hk#官方优选,icook.tw#官方优选
 
 A优选IP(ygkkk筛选)：
 104.16.0.0:443,104.17.0.0:443,104.18.0.0:443,104.19.0.0:443,104.20.0.0:443,104.21.0.0:443,104.22.0.0:443,104.24.0.0:443,104.25.0.0:443,104.26.0.0:443,104.27.0.0:443,172.66.0.0:443,172.67.0.0:443,162.159.0.0:443
