@@ -41,9 +41,13 @@ staticdelivery.nexusmods.com#NexusMods
 time.is#官方优选
 icook.hk#官方优选
 icook.tw#官方优选
+www.digitalocean.com#digitalocean
+www.csgo.com#csgo
+www.visakorea.com#visa韩国
+www.4chan.org#4chan
 
 优选域名横版：
-www.visa.cn#visa中国优选,mfa.gov.ua#乌克兰外交部,www.shopify.com#Shopify官方优选,store.ubi.com#Ubisoft,staticdelivery.nexusmods.com#NexusMods,time.is#官方优选,icook.hk#官方优选,icook.tw#官方优选
+www.visa.cn#visa中国优选,mfa.gov.ua#乌克兰外交部,www.shopify.com#Shopify官方优选,store.ubi.com#Ubisoft,staticdelivery.nexusmods.com#NexusMods,time.is#官方优选,icook.hk#官方优选,icook.tw#官方优选,www.digitalocean.com#digitalocean,www.csgo.com#csgo,www.visakorea.com#visa韩国,www.4chan.org#4chan
 
 
 A优选IP(ygkkk筛选)：
