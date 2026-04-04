@@ -419,6 +419,7 @@ rule-providers:
 
 rules:
   # 自定义规则集
+  - DOMAIN-SUFFIX,vsean.net,🎯 全球直连
   - DOMAIN-SUFFIX,jsdelivr.net,🎯 全球直连
   - DOMAIN-SUFFIX,lancelot1988.dpdns.org,🎯 全球直连
   - DOMAIN-SUFFIX,lancelot.indevs.in,🎯 全球直连
