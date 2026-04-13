@@ -33,26 +33,31 @@ ProxyIP.US.CMLiussss.net   区域: 🇺🇸 美国 | 维护频率: 3小时/次
 ProxyIP.CA.CMLiussss.net   区域: 🇨🇦 加拿大 | 维护频率: 3小时/次
 
 优选域名竖版：
-youxuan1.cf.090227.xyz#cm优选1
-youxuan2.cf.090227.xyz#cm优选2
-cf1.tencentapp.cn#第三方优选1
-cf2.tencentapp.cn#第三方优选2
+
+youxuan.cf.090227.xyz#cm优选
+cf.tencentapp.cn#tencentapp
 saas.sin.fan#saas.sin.fan
-www.visa.cn#visa中国优选
+www.visa.cn#www.visa.cn
 mfa.gov.ua#乌克兰外交部
 www.shopify.com#Shopify官方优选
 store.ubi.com#Ubisoft
 staticdelivery.nexusmods.com#NexusMods
-time.is#官方优选
-icook.hk#官方优选
-icook.tw#官方优选
 cloudflare.lingyucat.com#三网通用 V4+V6
 ct.cloudflare.lingyucat.com#电信 V4
 cm.cloudflare.lingyucat.com#移动 V4
 cu.cloudflare.lingyucat.com#联通 V4
 
+实际不好用：
+#time.is#官方优选
+#icook.hk#官方优选
+#icook.tw#官方优选
+
+优选IP URL：
+https://cf.090227.xyz/ct?port=443
+
+
 优选域名横版：
-youxuan1.cf.090227.xyz#cm优选1,youxuan2.cf.090227.xyz#cm优选2,cf1.tencentapp.cn#第三方优选1,cf2.tencentapp.cn#第三方优选2,saas.sin.fan#saas.sin.fan,www.visa.cn#visa中国优选,mfa.gov.ua#乌克兰外交部,www.shopify.com#Shopify官方优选,store.ubi.com#Ubisoft,staticdelivery.nexusmods.com#NexusMods,time.is#官方优选,icook.hk#官方优选,icook.tw#官方优选,cloudflare.lingyucat.com#三网通用 V4+V6,ct.cloudflare.lingyucat.com#电信 V4,cm.cloudflare.lingyucat.com#移动 V4,cu.cloudflare.lingyucat.com#联通 V4
+youxuan.cf.090227.xyz#cm优选,cf.tencentapp.cn#tencentapp,saas.sin.fan#saas.sin.fan,www.visa.cn#visa中国优选,mfa.gov.ua#乌克兰外交部,www.shopify.com#Shopify官方优选,store.ubi.com#Ubisoft,staticdelivery.nexusmods.com#NexusMods,cloudflare.lingyucat.com#三网通用 V4+V6,ct.cloudflare.lingyucat.com#电信 V4,cm.cloudflare.lingyucat.com#移动 V4,cu.cloudflare.lingyucat.com#联通 V4
 
 A优选IP(ygkkk筛选)：
 104.16.0.0:443,104.17.0.0:443,104.18.0.0:443,104.19.0.0:443,104.20.0.0:443,104.21.0.0:443,104.22.0.0:443,104.24.0.0:443,104.25.0.0:443,104.26.0.0:443,104.27.0.0:443,172.66.0.0:443,172.67.0.0:443,162.159.0.0:443
