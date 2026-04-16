@@ -95,15 +95,13 @@ sniffer:
         - 8080-8880
       override-destination: true
   parse-pure-ip: true
-geodata-mode: false
+geodata-mode: true
 geo-auto-update: true
 geo-update-interval: 24
 geodata-loader: standard
 geox-url:
   geoip: "https://cdn.jsdelivr.net/gh/Loyalsoldier/v2ray-rules-dat@release/geoip.dat"
   geosite: "https://cdn.jsdelivr.net/gh/Loyalsoldier/v2ray-rules-dat@release/geosite.dat"
-  mmdb: "https://cdn.jsdelivr.net/gh/Loyalsoldier/geoip@release/Country.mmdb"
-  asn: "https://cdn.jsdelivr.net/gh/Loyalsoldier/geoip@release/GeoLite2-ASN.mmdb"
 profile:
   store-selected: true
   store-fake-ip: true
@@ -256,174 +254,8 @@ proxy-groups:
     proxies:
       - REJECT
 
-rule-providers:
-
-  # 域名规则集🔥☔️☃️🌲🌴🐁
-  reject:
-    type: http
-    behavior: domain
-    proxy: DIRECT
-    format: yaml
-    interval: 86400
-    url: https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/reject.txt
-    path: "./ruleset/DN/reject.yaml"
-
-  China:
-    type: http
-    behavior: domain
-    proxy: DIRECT
-    format: mrs
-    interval: 86400
-    url: https://fastly.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@meta/geo/geosite/cn.mrs
-    path: "./ruleset/DN/cn.mrs"
-
-  Github:
-    type: http
-    behavior: domain
-    proxy: DIRECT
-    format: mrs
-    interval: 86400
-    url: https://fastly.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@meta/geo/geosite/github.mrs
-    path: "./ruleset/DN/github.mrs"
-
-  Lan:
-    type: http
-    behavior: domain
-    proxy: DIRECT
-    format: mrs
-    interval: 86400
-    url: https://fastly.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@meta/geo/geosite/private.mrs
-    path: "./ruleset/DN/private.mrs"
-
-  Microsoft:
-    type: http
-    behavior: domain
-    proxy: DIRECT
-    format: mrs
-    interval: 86400
-    url: https://fastly.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@meta/geo/geosite/microsoft.mrs
-    path: "./ruleset/DN/microsoft.mrs"
-
-  OneDrive:
-    type: http
-    behavior: domain
-    proxy: DIRECT
-    format: mrs
-    interval: 86400
-    url: https://fastly.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@meta/geo/geosite/onedrive.mrs
-    path: "./ruleset/DN/onedrive.mrs"
-
-  Google:
-    type: http
-    behavior: domain
-    proxy: DIRECT
-    format: mrs
-    interval: 86400
-    url: https://fastly.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@meta/geo/geosite/google.mrs
-    path: "./ruleset/DN/google.mrs"
-
-  Steam:
-    type: http
-    behavior: domain
-    proxy: DIRECT
-    format: mrs
-    interval: 86400
-    url: https://fastly.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@meta/geo/geosite/steam.mrs
-    path: "./ruleset/DN/steam.mrs"
-
-  GFW:
-    type: http
-    behavior: domain
-    proxy: DIRECT
-    format: mrs
-    interval: 86400
-    url: https://fastly.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@meta/geo/geosite/gfw.mrs
-    path: "./ruleset/DN/gfw.mrs"
-
-  Telegram:
-    type: http
-    behavior: domain
-    proxy: DIRECT
-    format: mrs
-    interval: 86400
-    url: https://fastly.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@meta/geo/geosite/telegram.mrs
-    path: "./ruleset/DN/telegram.mrs"
-
-  TikTok:
-    type: http
-    behavior: domain
-    proxy: DIRECT
-    format: mrs
-    interval: 86400
-    url: https://fastly.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@meta/geo/geosite/tiktok.mrs
-    path: "./ruleset/DN/tiktok.mrs"
-
-  Cloudflare:
-    type: http
-    behavior: domain
-    proxy: DIRECT
-    format: mrs
-    interval: 86400
-    url: https://fastly.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@meta/geo/geosite/cloudflare.mrs
-    path: "./ruleset/DN/cloudflare.mrs"
-
-  Tailscale:
-    type: http
-    behavior: domain
-    proxy: DIRECT
-    format: mrs
-    interval: 86400
-    url: https://fastly.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@meta/geo/geosite/tailscale.mrs
-    path: "./ruleset/DN/tailscale.mrs"
-
-  # IP规则集
-  GoogleIP:
-    type: http
-    behavior: ipcidr
-    proxy: DIRECT
-    format: mrs
-    interval: 86400
-    url: https://fastly.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@meta/geo/geoip/google.mrs
-    path: "./ruleset/IP/google.mrs"
-
-  TelegramIP:
-    type: http
-    behavior: ipcidr
-    proxy: DIRECT
-    format: mrs
-    interval: 86400
-    url: https://fastly.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@meta/geo/geoip/telegram.mrs
-    path: "./ruleset/IP/telegram.mrs"
-
-  ChinaIP:
-    type: http
-    behavior: ipcidr
-    proxy: DIRECT
-    format: mrs
-    interval: 86400
-    url: https://fastly.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@meta/geo/geoip/cn.mrs
-    path: "./ruleset/IP/cn.mrs"
-
-  LanIP:
-    type: http
-    behavior: ipcidr
-    proxy: DIRECT
-    format: mrs
-    interval: 86400
-    url: https://fastly.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@meta/geo/geoip/private.mrs
-    path: "./ruleset/IP/private.mrs"
-
-  CloudflareIP:
-    type: http
-    behavior: ipcidr
-    proxy: DIRECT
-    format: mrs
-    interval: 86400
-    url: https://fastly.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@meta/geo/geoip/cloudflare.mrs
-    path: "./ruleset/IP/cloudflare.mrs"
-
 rules:
-  # 自定义规则集
+  # 自定义规则集 🔥☔️☃️🌲🌴🐁
   - DOMAIN-SUFFIX,vsean.net,🎯 全球直连
   - DOMAIN-SUFFIX,jsdelivr.net,🎯 全球直连
   - DOMAIN-SUFFIX,lancelot1988.dpdns.org,🎯 全球直连
@@ -431,23 +263,21 @@ rules:
   - DOMAIN-SUFFIX,19882008.xyz,🎯 全球直连
   - DOMAIN-SUFFIX,lancelot.dpdns.org,🎯 全球直连
   # 域名规则集
-  - RULE-SET,reject,REJECT
-  - RULE-SET,Github,🥳 打包代理
-  - RULE-SET,Tailscale,🎨 Tailscale
-  - RULE-SET,Cloudflare,🌈 Cloudflare
-  - RULE-SET,OneDrive,🤡 Onedrive
-  - RULE-SET,Microsoft,🥌 Microsoft
-  - RULE-SET,Google,🥳 打包代理
-  - RULE-SET,Telegram,🥳 打包代理
-  - RULE-SET,TikTok,🥳 打包代理
-  - RULE-SET,Steam,💯 Steam
-  - RULE-SET,GFW,🥳 打包代理
-  - RULE-SET,Lan,🎯 全球直连
-  - RULE-SET,China,🎯 全球直连
+  - GEOSITE,category-ads-all,REJECT
+  - GEOSITE,private,🎯 全球直连
+  - GEOSITE,microsoft,🥌 Microsoft
+  - GEOSITE,onedrive,🤡 Onedrive
+  - GEOSITE,cloudflare,🌈 Cloudflare
+  - GEOSITE,tailscale,🎨 Tailscale
+  - GEOSITE,steam,💯 Steam    
+  - GEOSITE,category-games@cn,🎯 全球直连
+  - GEOSITE,gfw,🥳 打包代理
+  - GEOSITE,geolocation-!cn,🥳 打包代理
+  - GEOSITE,cn,🎯 全球直连
   # IP规则集
-  - RULE-SET,GoogleIP,🥳 打包代理,no-resolve
-  - RULE-SET,TelegramIP,🥳 打包代理,no-resolve
-  - RULE-SET,CloudflareIP,🌈 Cloudflare
-  - RULE-SET,LanIP,🎯 全球直连
-  - RULE-SET,ChinaIP,🎯 全球直连
+  - GEOIP,google,🥳 打包代理,no-resolve
+  - GEOIP,telegram,🥳 打包代理,no-resolve
+  - GEOIP,cloudflare,🌈 Cloudflare,no-resolve
+  - GEOIP,lan,🎯 全球直连
+  - GEOIP,CN,🎯 全球直连
   - MATCH,🐟 漏网之鱼
