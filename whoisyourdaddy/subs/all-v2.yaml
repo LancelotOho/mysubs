@@ -269,8 +269,8 @@ rules:
   - GEOSITE,onedrive,🤡 Onedrive
   - GEOSITE,cloudflare,🌈 Cloudflare
   - GEOSITE,tailscale,🎨 Tailscale
-  - GEOSITE,steam,💯 Steam    
   - GEOSITE,category-games@cn,🎯 全球直连
+  - GEOSITE,steam,💯 Steam
   - GEOSITE,gfw,🥳 打包代理
   - GEOSITE,geolocation-!cn,🥳 打包代理
   - GEOSITE,cn,🎯 全球直连
