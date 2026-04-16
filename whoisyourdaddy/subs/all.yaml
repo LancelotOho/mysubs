@@ -163,14 +163,17 @@ proxy-groups:
 
   - name: ✅ 自动选择
     type: url-test
-    interval: 1800
+    interval: 300
     lazy: true
+    tolerance: 200
     url: https://cp.cloudflare.com/generate_204
     include-all: true
+    timeout: 2000
 
   - name: 🫱 手动选择
     type: select
     include-all: true
+    timeout: 2000
 
   - name: 🐟 漏网之鱼
     type: select
@@ -228,18 +231,20 @@ proxy-groups:
 
   - name: ⚖️ 负载均衡
     type: load-balance
-    interval: 600
+    interval: 300
     lazy: true
     url: https://cp.cloudflare.com/generate_204
     strategy: round-robin
     include-all: true
+    timeout: 2000
 
   - name: ⭕ 故障切换
     type: fallback
-    interval: 600
+    interval: 300
     lazy: true
     url: https://cp.cloudflare.com/generate_204
     include-all: true
+    timeout: 2000
 
   - name: 🎯 全球直连
     type: select
