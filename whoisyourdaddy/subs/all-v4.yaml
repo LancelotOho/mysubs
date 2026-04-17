@@ -307,4 +307,4 @@ rules:
   - RULE-SET,lancidr,🎯全球直连
   - GEOIP,LAN,DIRECT,🎯全球直连
   - GEOIP,CN,DIRECT,🎯全球直连
-  - MATCH,🐟 漏网之鱼
+  - MATCH,🐟漏网之鱼
