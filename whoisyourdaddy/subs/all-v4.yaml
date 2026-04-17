@@ -150,7 +150,7 @@ proxy-providers:
       udp: true
                
 proxy-groups:
-  - name: 🥳 打包代理
+  - name: 🥳打包代理
     type: select
     proxies:
       - ✅ 自动选择
@@ -159,7 +159,7 @@ proxy-groups:
       - ⭕ 故障切换
       - 🎯 全球直连
 
-  - name: ✅ 自动选择
+  - name: ✅自动选择
     type: url-test
     interval: 300
     lazy: true
@@ -168,12 +168,12 @@ proxy-groups:
     include-all: true
     timeout: 2000
 
-  - name: 🫱 手动选择
+  - name: 🫱手动选择
     type: select
     include-all: true
     timeout: 2000
 
-  - name: 🐟 漏网之鱼
+  - name: 🐟漏网之鱼
     type: select
     proxies:
       - ✅ 自动选择
@@ -182,52 +182,7 @@ proxy-groups:
       - ⭕ 故障切换
       - 🎯 全球直连
 
-  - name: 🌈 Cloudflare
-    type: select
-    proxies:
-      - 🎯 全球直连
-      - ✅ 自动选择
-      - ⚖️ 负载均衡
-      - 🫱 手动选择
-      - ⭕ 故障切换
-
-  - name: 🤡 Onedrive
-    type: select
-    proxies:
-      - 🎯 全球直连
-      - ✅ 自动选择
-      - ⚖️ 负载均衡
-      - 🫱 手动选择
-      - ⭕ 故障切换
-
-  - name: 🥌 Microsoft
-    type: select
-    proxies:
-      - 🎯 全球直连
-      - ✅ 自动选择
-      - ⚖️ 负载均衡
-      - 🫱 手动选择
-      - ⭕ 故障切换
-
-  - name: 💯 Steam
-    type: select
-    proxies:
-      - 🎯 全球直连
-      - ✅ 自动选择
-      - ⚖️ 负载均衡
-      - 🫱 手动选择
-      - ⭕ 故障切换
-
-  - name: 🎨 Tailscale
-    type: select
-    proxies:
-      - 🎯 全球直连
-      - ✅ 自动选择
-      - ⚖️ 负载均衡
-      - 🫱 手动选择
-      - ⭕ 故障切换
-
-  - name: ⚖️ 负载均衡
+  - name: ⚖️负载均衡
     type: load-balance
     interval: 300
     lazy: true
@@ -236,7 +191,7 @@ proxy-groups:
     include-all: true
     timeout: 2000
 
-  - name: ⭕ 故障切换
+  - name: ⭕故障切换
     type: fallback
     interval: 300
     lazy: true
@@ -244,38 +199,112 @@ proxy-groups:
     include-all: true
     timeout: 2000
 
-  - name: 🎯 全球直连
+  - name: 🎯全球直连
     type: select
     proxies:
       - DIRECT
+      - ✅自动选择
+      - ⚖️负载均衡
+      - 🫱手动选择
+      - ⭕故障切换
 
-  - name: ⚠️ 屏蔽广告
+  - name: ⚠️屏蔽广告
     type: select
     proxies:
       - REJECT
+      - ✅自动选择
+      - ⚖️负载均衡
+      - 🫱手动选择
+      - ⭕故障切换
+
+rule-providers:
+
+  # 域名规则集🔥☔️☃️🌲🌴🐁
+  reject:
+    type: http
+    behavior: domain
+    proxy: DIRECT
+    interval: 86400
+    url: https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/reject.txt
+    path: "./ruleset/dn/reject.yaml"
+
+  direct:
+    type: http
+    behavior: domain
+    proxy: DIRECT
+    url: "https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/direct.txt"
+    path: ./ruleset/dn/direct.yaml
+    interval: 86400
+ 
+  proxy:
+    type: http
+    behavior: domain
+    proxy: DIRECT
+    url: "https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/proxy.txt"
+    path: ./ruleset/dn/proxy.yaml
+    interval: 86400 
+
+  private:
+    type: http
+    behavior: domain
+    proxy: DIRECT
+    url: "https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/private.txt"
+    path: ./ruleset/dn/private.yaml
+    interval: 86400
+
+  gfw:
+    type: http
+    behavior: domain
+    proxy: DIRECT
+    url: "https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/gfw.txt"
+    path: ./ruleset/dn/gfw.yaml
+    interval: 86400
+
+  tld-not-cn:
+    type: http
+    behavior: domain
+    proxy: DIRECT
+    url: "https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/tld-not-cn.txt"
+    path: ./ruleset/dn/tld-not-cn.yaml
+    interval: 86400
+  
+  # IP规则集
+  cncidr:
+    type: http
+    behavior: ipcidr
+    proxy: DIRECT
+    url: "https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/cncidr.txt"
+    path: ./ruleset/ip/cncidr.yaml
+    interval: 86400
+
+  lancidr:
+    type: http
+    behavior: ipcidr
+    proxy: DIRECT
+    url: "https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/lancidr.txt"
+    path: ./ruleset/ip/lancidr.yaml
+    interval: 86400
 
 rules:
-  # 自定义规则集 🔥☔️☃️🌲🌴🐁
-  - DOMAIN-SUFFIX,vsean.net,🎯 全球直连
-  - DOMAIN-SUFFIX,jsdelivr.net,🎯 全球直连
-  - DOMAIN-SUFFIX,lancelot1988.dpdns.org,🎯 全球直连
-  - DOMAIN-SUFFIX,lancelot.indevs.in,🎯 全球直连
-  - DOMAIN-SUFFIX,19882008.xyz,🎯 全球直连
-  - DOMAIN-SUFFIX,lancelot.dpdns.org,🎯 全球直连
+  # 自定义规则集
+  - DOMAIN-SUFFIX,vsean.net,🎯全球直连
+  - DOMAIN-SUFFIX,jsdelivr.net,🎯全球直连
+  - DOMAIN-SUFFIX,lancelot1988.dpdns.org,🎯全球直连
+  - DOMAIN-SUFFIX,lancelot.indevs.in,🎯全球直连
+  - DOMAIN-SUFFIX,19882008.xyz,🎯全球直连
+  - DOMAIN-SUFFIX,lancelot.dpdns.org,🎯全球直连
+  
   # 域名规则集
-  - GEOSITE,category-ads-all,REJECT
-  - GEOSITE,private,🎯 全球直连
-  - GEOSITE,cloudflare,🌈 Cloudflare
-  - GEOSITE,tailscale,🎨 Tailscale
-  - GEOSITE,category-games@cn,🎯 全球直连
-  - GEOSITE,steam,💯 Steam
-  - GEOSITE,gfw,🥳 打包代理
-  - GEOSITE,geolocation-!cn,🥳 打包代理
-  - GEOSITE,cn,🎯 全球直连
+  - RULE-SET,reject,⚠️屏蔽广告
+  - RULE-SET,private,🎯全球直连
+  - RULE-SET,direct,🎯全球直连
+  - RULE-SET,proxy,🥳打包代理
+  - RULE-SET,gfw,🥳打包代理
+  - RULE-SET,tld-not-cn,🥳打包代理
+
   # IP规则集
-  - GEOIP,google,🥳 打包代理,no-resolve
-  - GEOIP,telegram,🥳 打包代理,no-resolve
-  - GEOIP,cloudflare,🌈 Cloudflare,no-resolve
-  - GEOIP,lan,🎯 全球直连
-  - GEOIP,CN,🎯 全球直连
+  - RULE-SET,cncidr,🎯全球直连
+  - RULE-SET,lancidr,🎯全球直连
+  - GEOIP,LAN,DIRECT,🎯全球直连
+  - GEOIP,CN,DIRECT,🎯全球直连
   - MATCH,🐟 漏网之鱼
