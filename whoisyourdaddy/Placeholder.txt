@@ -1,6 +1,10 @@
 https://ghproxy.19882008.xyz/https://raw.githubusercontent.com/LancelotOho/mysubs/devdev/whoisyourdaddy/subs/all.yaml
 
+#依赖geoip,geosite规则集👇
+
 https://ghproxy.19882008.xyz/https://raw.githubusercontent.com/LancelotOho/mysubs/devdev/whoisyourdaddy/subs/all-v3.yaml
+
+#依赖Loyalsoldier/clash-rules规则集👇
 
 https://ghproxy.19882008.xyz/https://raw.githubusercontent.com/LancelotOho/mysubs/devdev/whoisyourdaddy/subs/all-v4.yaml
 
