@@ -153,11 +153,11 @@ proxy-groups:
   - name: 🥳打包代理
     type: select
     proxies:
-      - ✅ 自动选择
-      - ⚖️ 负载均衡
-      - 🫱 手动选择
-      - ⭕ 故障切换
-      - 🎯 全球直连
+      - ✅自动选择
+      - ⚖️负载均衡
+      - 🫱手动选择
+      - ⭕故障切换
+      - 🎯全球直连
 
   - name: ✅自动选择
     type: url-test
@@ -176,11 +176,11 @@ proxy-groups:
   - name: 🐟漏网之鱼
     type: select
     proxies:
-      - ✅ 自动选择
-      - ⚖️ 负载均衡
-      - 🫱 手动选择
-      - ⭕ 故障切换
-      - 🎯 全球直连
+      - ✅自动选择
+      - ⚖️负载均衡
+      - 🫱手动选择
+      - ⭕故障切换
+      - 🎯全球直连
 
   - name: ⚖️负载均衡
     type: load-balance
