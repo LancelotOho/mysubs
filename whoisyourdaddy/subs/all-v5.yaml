@@ -115,7 +115,7 @@ proxy-providers:
     proxy: DIRECT
     header:
       User-Agent: 
-        - mihomo/1.18.3
+        - clash.meta
     override:
       additional-prefix: "[cm]"
       skip-cert-verify: false
@@ -129,7 +129,7 @@ proxy-providers:
     proxy: DIRECT 
     header:
       User-Agent: 
-        - mihomo/1.18.3    
+        - clash.meta    
     override: 
       additional-prefix: "[ygkkk]"
       skip-cert-verify: false
@@ -143,7 +143,7 @@ proxy-providers:
     proxy: DIRECT
     header:
       User-Agent: 
-        - mihomo/1.18.3   
+        - clash.meta   
     override: 
       additional-prefix: "[joey]"
       skip-cert-verify: false
