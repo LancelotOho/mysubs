@@ -265,8 +265,6 @@ rules:
   # 域名规则集
   - GEOSITE,category-ads-all,REJECT
   - GEOSITE,private,🎯 全球直连
-  - GEOSITE,microsoft,🥌 Microsoft
-  - GEOSITE,onedrive,🤡 Onedrive
   - GEOSITE,cloudflare,🌈 Cloudflare
   - GEOSITE,tailscale,🎨 Tailscale
   - GEOSITE,category-games@cn,🎯 全球直连
