@@ -1,12 +1,8 @@
 https://ghproxy.19882008.xyz/https://raw.githubusercontent.com/LancelotOho/mysubs/devdev/whoisyourdaddy/subs/all.yaml
 
-#依赖geoip,geosite规则集👇
+#依赖Loyalsoldier/v2ray-rules-dat的geoip,geosite规则集👇
 
-https://ghproxy.19882008.xyz/https://raw.githubusercontent.com/LancelotOho/mysubs/devdev/whoisyourdaddy/subs/all-v3.yaml
-
-#依赖Loyalsoldier/clash-rules规则集👇
-
-https://ghproxy.19882008.xyz/https://raw.githubusercontent.com/LancelotOho/mysubs/devdev/whoisyourdaddy/subs/all-v4.yaml
+https://ghproxy.19882008.xyz/https://raw.githubusercontent.com/LancelotOho/mysubs/devdev/whoisyourdaddy/subs/all-v5.yaml
 
 https://ghproxy.19882008.xyz/https://raw.githubusercontent.com/LancelotOho/mysubs/devdev/whoisyourdaddy/subs/nmw.yaml
 
