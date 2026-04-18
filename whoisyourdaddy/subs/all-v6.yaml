@@ -88,6 +88,12 @@ dns:
     - https://1.1.1.1/dns-query
     - https://8.8.8.8/dns-query
     - tls://8.8.4.4
+  proxy-server-nameserver:
+    - https://dns.alidns.com/dns-query
+    - https://doh.pub/dns-query
+  direct-nameserver:
+    - https://dns.alidns.com/dns-query
+    - https://doh.pub/dns-query  
 
 sniffer:
   enable: true
