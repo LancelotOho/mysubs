@@ -184,7 +184,7 @@ proxy-groups:
     interval: 300
     lazy: true
     tolerance: 200
-    url: https://cp.cloudflare.com/generate_204
+    url: https://www.gstatic.com/generate_204
     include-all: true
     timeout: 2000
 
@@ -193,20 +193,11 @@ proxy-groups:
     include-all: true
     timeout: 2000
 
-  - name: 🐟漏网之鱼
-    type: select
-    proxies:
-      - ✅自动选择
-      - ⚖️负载均衡
-      - 🫱手动选择
-      - ⭕故障切换
-      - 🎯全球直连
-
   - name: ⚖️负载均衡
     type: load-balance
     interval: 300
     lazy: true
-    url: https://cp.cloudflare.com/generate_204
+    url: https://www.gstatic.com/generate_204
     strategy: round-robin
     include-all: true
     timeout: 2000
@@ -215,7 +206,7 @@ proxy-groups:
     type: fallback
     interval: 300
     lazy: true
-    url: https://cp.cloudflare.com/generate_204
+    url: https://www.gstatic.com/generate_204
     include-all: true
     timeout: 2000
 
@@ -255,4 +246,4 @@ rules:
   - GEOSITE,tld-cn,🎯全球直连
   - GEOSITE,cn,🎯全球直连
   - GEOIP,cn,🎯全球直连,no-resolve
-  - MATCH,🐟漏网之鱼
+  - MATCH,🥳打包代理
