@@ -220,7 +220,7 @@ rule-providers:
     behavior: domain
     proxy: DIRECT
     interval: 86400
-    url: https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/reject.txt
+    url: "https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/reject.txt"
     path: "./ruleset/dn/reject.yaml"
 
   direct:
@@ -240,8 +240,15 @@ rule-providers:
     path: ./ruleset/dn/private.yaml
     interval: 86400
 
-
   # IP规则集
+  telegramcidr:
+    type: http
+    behavior: ipcidr
+    proxy: DIRECT
+    url: "https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/telegramcidr.txt"
+    path: ./ruleset/ip/telegramcidr.yaml
+    interval: 86400
+
   cncidr:
     type: http
     behavior: ipcidr
@@ -259,8 +266,8 @@ rule-providers:
     interval: 86400
 
 rules:
-  # 白名单模式
   - RULE-SET,reject,⚠️屏蔽广告
+  - RULE-SET,telegramcidr,🥳打包代理
   # 自定义直连
   - DOMAIN-SUFFIX,vsean.net,🎯全球直连
   - DOMAIN-SUFFIX,jsdelivr.net,🎯全球直连
@@ -268,8 +275,9 @@ rules:
   - DOMAIN-SUFFIX,lancelot.indevs.in,🎯全球直连
   - DOMAIN-SUFFIX,19882008.xyz,🎯全球直连
   - DOMAIN-SUFFIX,lancelot.dpdns.org,🎯全球直连
+  # rule-set规则集
   - RULE-SET,private,🎯全球直连
   - RULE-SET,direct,🎯全球直连
-  - RULE-SET,cncidr,🎯全球直连
-  - RULE-SET,lancidr,🎯全球直连
+  - RULE-SET,lancidr,🎯全球直连,no-resolve
+  - RULE-SET,cncidr,🎯全球直连,no-resolve
   - MATCH,🥳打包代理
