@@ -2,7 +2,11 @@ https://ghproxy.19882008.xyz/https://raw.githubusercontent.com/LancelotOho/mysub
 
 #依赖Loyalsoldier/v2ray-rules-dat的geoip,geosite规则集👇
 
-https://ghproxy.19882008.xyz/https://raw.githubusercontent.com/LancelotOho/mysubs/devdev/whoisyourdaddy/subs/all-v6.yaml
+https://ghproxy.19882008.xyz/https://raw.githubusercontent.com/LancelotOho/mysubs/devdev/whoisyourdaddy/subs/all-v6-geo.yaml
+
+#依赖Loyalsoldier/v2ray-rules-dat的rule-set规则集👇
+
+https://ghproxy.19882008.xyz/https://raw.githubusercontent.com/LancelotOho/mysubs/devdev/whoisyourdaddy/subs/all-v7-set.yaml
 
 https://ghproxy.19882008.xyz/https://raw.githubusercontent.com/LancelotOho/mysubs/devdev/whoisyourdaddy/subs/nmw.yaml
 
