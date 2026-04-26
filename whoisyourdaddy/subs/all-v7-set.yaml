@@ -129,7 +129,7 @@ profile:
 proxy-providers:
   cm:
     type: http
-    url: "https://c1m3p2a8g2e6s.lancelot.dpdns.org/sub?token=c241a812d6b3518cb12992c67d9efafd&clash"
+    url: "https://c1m3p2a8g2e6s.lancelot.dpdns.org/sub?token=cc3a3c105a7512d49037a5c2a23c59b2&clash"
     interval: 10800
     path: "./proxy_provider/cm.yaml"
     proxy: DIRECT
