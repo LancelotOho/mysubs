@@ -1,18 +1,34 @@
+mode: rule
 mixed-port: 7890
 port: 7891
 socks-port: 7892
 redir-port: 7893
 tproxy-port: 7894
 allow-lan: true
-mode: rule
+global-ua: clash.meta
 log-level: warning
 external-controller: 0.0.0.0:9090
-secret: "li19882008"
 bind-address: "*"
 ipv6: true
 tcp-concurrent: true
 unified-delay: true
 find-process-mode: strict
+
+authentication:
+  - joinlidong:li19882008
+skip-auth-prefixes:
+  - 192.168.22.0/24
+
+tun:
+  enable: false
+  stack: mixed
+  dns-hijack:
+    - "any:53"
+    - "tcp://any:53"
+  auto-route: true
+  auto-redirect: true
+  auto-detect-interface: true
+
 dns:
   enable: true
   ipv6: true
@@ -20,7 +36,7 @@ dns:
   listen: 0.0.0.0:7874
   use-hosts: false
   use-system-hosts: false
-  respect-rules: false
+  respect-rules: true
   enhanced-mode: fake-ip
   fake-ip-range: 198.18.0.1/16
   fake-ip-filter:
@@ -59,6 +75,7 @@ dns:
     - "+.phicomm.me"
     - "+.peiluyou.com"
     - "+.127.in-addr.arpa"
+    - geosite:private
     - geosite:cn
   default-nameserver:
     - 223.5.5.5
@@ -67,17 +84,17 @@ dns:
   nameserver:
     - https://dns.alidns.com/dns-query
     - https://doh.pub/dns-query
-  proxy-server-nameserver:
-    - https://dns.google/dns-query
-    - https://cloudflare-dns.com/dns-query
-    - https://dns.alidns.com/dns-query
-  direct-nameserver:
-    - https://dns.alidns.com/dns-query
-    - https://doh.pub/dns-query
   fallback:
     - https://1.1.1.1/dns-query
     - https://8.8.8.8/dns-query
     - tls://8.8.4.4
+  proxy-server-nameserver:
+    - https://dns.alidns.com/dns-query
+    - https://doh.pub/dns-query
+  direct-nameserver:
+    - https://dns.alidns.com/dns-query
+    - https://doh.pub/dns-query  
+
 sniffer:
   enable: true
   override-destination: true
@@ -85,6 +102,7 @@ sniffer:
     QUIC:
       ports:
         - 443
+        - 8443
     TLS:
       ports:
         - 443
@@ -98,10 +116,12 @@ sniffer:
 geodata-mode: true
 geo-auto-update: true
 geo-update-interval: 24
-geodata-loader: standard
+geodata-loader: memconservative
 geox-url:
   geoip: "https://cdn.jsdelivr.net/gh/Loyalsoldier/v2ray-rules-dat@release/geoip.dat"
   geosite: "https://cdn.jsdelivr.net/gh/Loyalsoldier/v2ray-rules-dat@release/geosite.dat"
+  mmdb: "https://cdn.jsdelivr.net/gh/Loyalsoldier/geoip@release/Country.mmdb"
+  asn: "https://cdn.jsdelivr.net/gh/Loyalsoldier/geoip@release/GeoLite2-ASN.mmdb"
 profile:
   store-selected: true
   store-fake-ip: true
@@ -109,32 +129,18 @@ profile:
 proxy-providers:
   cm:
     type: http
-    url: "https://c1m3p2a8g2e6s.lancelot.dpdns.org/sub?token=c241a812d6b3518cb12992c67d9efafd&clash"
+    url: "https://c1m3p2a8g2e6s.lancelot.dpdns.org/sub?token=cc3a3c105a7512d49037a5c2a23c59b2&clash"
     interval: 10800
     path: "./proxy_provider/cm.yaml"
     proxy: DIRECT
     header:
       User-Agent: 
-        - mihomo/1.18.3
+        - clash.meta
     override:
       additional-prefix: "[cm]"
       skip-cert-verify: false
       udp: true
-      
-  ygkkk:
-    type: http
-    url: "https://y3g2k1k5k.lancelot.dpdns.org/0148c0dc-8d10-4655-9242-e888f0a373af/pcl"
-    interval: 10800
-    path: "./proxy_provider/ygkkk.yaml"
-    proxy: DIRECT 
-    header:
-      User-Agent: 
-        - mihomo/1.18.3    
-    override: 
-      additional-prefix: "[ygkkk]"
-      skip-cert-verify: false
-      udp: true
-            
+                  
   joey:
     type: http
     url: "https://c4f2n5e3w7p5a6g7e5s.lancelot.dpdns.org/admin/sub?target=clash"
@@ -143,7 +149,7 @@ proxy-providers:
     proxy: DIRECT
     header:
       User-Agent: 
-        - mihomo/1.18.3   
+        - clash.meta   
     override: 
       additional-prefix: "[joey]"
       skip-cert-verify: false
@@ -164,7 +170,7 @@ proxy-groups:
     interval: 300
     lazy: true
     tolerance: 200
-    url: https://cp.cloudflare.com/generate_204
+    url: https://www.gstatic.com/generate_204
     include-all: true
     timeout: 2000
 
@@ -173,20 +179,11 @@ proxy-groups:
     include-all: true
     timeout: 2000
 
-  - name: 🐟漏网之鱼
-    type: select
-    proxies:
-      - ✅自动选择
-      - ⚖️负载均衡
-      - 🫱手动选择
-      - ⭕故障切换
-      - 🎯全球直连
-
   - name: ⚖️负载均衡
     type: load-balance
     interval: 300
     lazy: true
-    url: https://cp.cloudflare.com/generate_204
+    url: https://www.gstatic.com/generate_204
     strategy: round-robin
     include-all: true
     timeout: 2000
@@ -195,7 +192,7 @@ proxy-groups:
     type: fallback
     interval: 300
     lazy: true
-    url: https://cp.cloudflare.com/generate_204
+    url: https://www.gstatic.com/generate_204
     include-all: true
     timeout: 2000
 
@@ -208,7 +205,7 @@ proxy-groups:
       - 🫱手动选择
       - ⭕故障切换
 
-  - name: ⚠️屏蔽广告
+  - name: ⚠️拒绝连接
     type: select
     proxies:
       - REJECT
@@ -218,44 +215,47 @@ proxy-groups:
       - ⭕故障切换
 
 rule-providers:
-
-  # 域名规则集🔥☔️☃️🌲🌴🐁
   reject:
     type: http
     behavior: domain
     proxy: DIRECT
-    interval: 86400
-    url: https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/reject.txt
+    format: yaml
+    url: "https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/reject.txt"
     path: "./ruleset/dn/reject.yaml"
+    interval: 86400
 
   direct:
     type: http
     behavior: domain
     proxy: DIRECT
+    format: yaml
     url: "https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/direct.txt"
     path: ./ruleset/dn/direct.yaml
     interval: 86400
- 
-  proxy:
-    type: http
-    behavior: domain
-    proxy: DIRECT
-    url: "https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/proxy.txt"
-    path: ./ruleset/dn/proxy.yaml
-    interval: 86400 
 
   private:
     type: http
     behavior: domain
     proxy: DIRECT
+    format: yaml
     url: "https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/private.txt"
     path: ./ruleset/dn/private.yaml
+    interval: 86400
+
+  google:
+    type: http
+    behavior: domain
+    proxy: DIRECT
+    format: yaml
+    url: "https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/google.txt"
+    path: ./ruleset/dn/google.yaml
     interval: 86400
 
   gfw:
     type: http
     behavior: domain
     proxy: DIRECT
+    format: yaml
     url: "https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/gfw.txt"
     path: ./ruleset/dn/gfw.yaml
     interval: 86400
@@ -264,15 +264,27 @@ rule-providers:
     type: http
     behavior: domain
     proxy: DIRECT
+    format: yaml
     url: "https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/tld-not-cn.txt"
     path: ./ruleset/dn/tld-not-cn.yaml
+    interval: 86400    
+
+  github:
+    type: http
+    behavior: domain
+    proxy: DIRECT
+    format: mrs
+    url: "https://fastly.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@meta/geo/geosite/github.mrs"
+    path: "./ruleset/dn/github.mrs"
     interval: 86400
-  
+
+
   # IP规则集
   telegramcidr:
     type: http
     behavior: ipcidr
     proxy: DIRECT
+    format: yaml
     url: "https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/telegramcidr.txt"
     path: ./ruleset/ip/telegramcidr.yaml
     interval: 86400
@@ -281,6 +293,7 @@ rule-providers:
     type: http
     behavior: ipcidr
     proxy: DIRECT
+    format: yaml
     url: "https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/cncidr.txt"
     path: ./ruleset/ip/cncidr.yaml
     interval: 86400
@@ -289,29 +302,37 @@ rule-providers:
     type: http
     behavior: ipcidr
     proxy: DIRECT
+    format: yaml
     url: "https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/lancidr.txt"
     path: ./ruleset/ip/lancidr.yaml
     interval: 86400
 
+  googleip:
+    type: http
+    behavior: ipcidr
+    proxy: DIRECT
+    format: mrs
+    url: "https://fastly.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@meta/geo/geoip/google.mrs"
+    path: "./ruleset/ip/google.mrs"  
+    interval: 86400
+
 rules:
-  # 自定义规则集
-  - DOMAIN-SUFFIX,vsean.net,🎯全球直连
-  - DOMAIN-SUFFIX,jsdelivr.net,🎯全球直连
-  - DOMAIN-SUFFIX,lancelot1988.dpdns.org,🎯全球直连
+  - AND,((DST-PORT,443),(NETWORK,UDP)),⚠️拒绝连接
+  - RULE-SET,reject,⚠️拒绝连接
+  # 自定义直连
   - DOMAIN-SUFFIX,lancelot.indevs.in,🎯全球直连
   - DOMAIN-SUFFIX,19882008.xyz,🎯全球直连
-  - DOMAIN-SUFFIX,lancelot.dpdns.org,🎯全球直连
-  
-  # 域名规则集
-  - RULE-SET,reject,⚠️屏蔽广告
+  - DOMAIN-SUFFIX,dpdns.org,🎯全球直连
+  - DOMAIN-SUFFIX,jsdelivr.net,🎯全球直连
+  - DOMAIN-SUFFIX,jsdelivr.com,🎯全球直连
+  # rule-set规则集
   - RULE-SET,private,🎯全球直连
   - RULE-SET,direct,🎯全球直连
-  - RULE-SET,proxy,🥳打包代理
+  - RULE-SET,lancidr,🎯全球直连,no-resolve
+  - RULE-SET,cncidr,🎯全球直连,no-resolve
+  - RULE-SET,telegramcidr,🥳打包代理,no-resolve
+  - RULE-SET,google,🥳打包代理
+  - RULE-SET,googleip,🥳打包代理,no-resolve  
   - RULE-SET,gfw,🥳打包代理
-  - RULE-SET,tld-not-cn,🥳打包代理
-
-  # IP规则集
-  - RULE-SET,telegramcidr,🥳打包代理
-  - RULE-SET,cncidr,🎯全球直连
-  - RULE-SET,lancidr,🎯全球直连
-  - MATCH,🐟漏网之鱼
+  - RULE-SET,tld-not-cn,🥳打包代理  
+  - MATCH,🥳打包代理
