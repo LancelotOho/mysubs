@@ -6,7 +6,7 @@ https://ghproxy.19882008.xyz/https://raw.githubusercontent.com/LancelotOho/mysub
 
 #依赖Loyalsoldier/clash-rules的rule-set规则集👇
 
-https://ghproxy.19882008.xyz/https://raw.githubusercontent.com/LancelotOho/mysubs/devdev/whoisyourdaddy/subs/all-v7-set.yaml
+https://ghproxy.19882008.xyz/https://raw.githubusercontent.com/LancelotOho/mysubs/devdev/whoisyourdaddy/subs/all-v8-set.yaml
 
 https://ghproxy.19882008.xyz/https://raw.githubusercontent.com/LancelotOho/mysubs/devdev/whoisyourdaddy/subs/nmw.yaml
 
