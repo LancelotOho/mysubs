@@ -8,6 +8,10 @@ https://ghproxy.19882008.xyz/https://raw.githubusercontent.com/LancelotOho/mysub
 
 https://ghproxy.19882008.xyz/https://raw.githubusercontent.com/LancelotOho/mysubs/devdev/whoisyourdaddy/subs/all-v8-set.yaml
 
+https://fastly.jsdelivr.net/gh/LancelotOho/mysubs@devdev/whoisyourdaddy/subs/all-v8-set.yaml
+
+https://cdn.jsdelivr.net/gh/LancelotOho/mysubs@devdev/whoisyourdaddy/subs/all-v8-set.yaml
+
 https://ghproxy.19882008.xyz/https://raw.githubusercontent.com/LancelotOho/mysubs/devdev/whoisyourdaddy/subs/nmw.yaml
 
 # https://ghproxy.19882008.xyz/https://raw.githubusercontent.com/LancelotOho/mysubs/devdev/whoisyourdaddy/subs/cm.yaml
