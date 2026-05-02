@@ -1,10 +1,5 @@
-https://ghproxy.19882008.xyz/https://raw.githubusercontent.com/LancelotOho/mysubs/devdev/whoisyourdaddy/subs/all.yaml
 
-#依赖Loyalsoldier/v2ray-rules-dat的geoip,geosite规则集👇
-
-https://ghproxy.19882008.xyz/https://raw.githubusercontent.com/LancelotOho/mysubs/devdev/whoisyourdaddy/subs/all-v6-geo.yaml
-
-#依赖Loyalsoldier/clash-rules的rule-set规则集👇
+#依赖Loyalsoldier/clash-rules的rule-set规则集👇,3种获取方式
 
 https://ghproxy.19882008.xyz/https://raw.githubusercontent.com/LancelotOho/mysubs/devdev/whoisyourdaddy/subs/all-v8-set.yaml
 
@@ -12,16 +7,9 @@ https://fastly.jsdelivr.net/gh/LancelotOho/mysubs@devdev/whoisyourdaddy/subs/all
 
 https://cdn.jsdelivr.net/gh/LancelotOho/mysubs@devdev/whoisyourdaddy/subs/all-v8-set.yaml
 
-https://ghproxy.19882008.xyz/https://raw.githubusercontent.com/LancelotOho/mysubs/devdev/whoisyourdaddy/subs/nmw.yaml
+#依赖Loyalsoldier/v2ray-rules-dat的geoip,geosite规则集👇
 
-# https://ghproxy.19882008.xyz/https://raw.githubusercontent.com/LancelotOho/mysubs/devdev/whoisyourdaddy/subs/cm.yaml
-
-# https://ghproxy.19882008.xyz/https://raw.githubusercontent.com/LancelotOho/mysubs/devdev/whoisyourdaddy/subs/kulao.yaml
-
-# https://ghproxy.19882008.xyz/https://raw.githubusercontent.com/LancelotOho/mysubs/devdev/whoisyourdaddy/subs/ygkkk.yaml
-
-# https://ghproxy.19882008.xyz/https://raw.githubusercontent.com/LancelotOho/mysubs/devdev/whoisyourdaddy/subs/joey.yaml
-
+https://ghproxy.19882008.xyz/https://raw.githubusercontent.com/LancelotOho/mysubs/devdev/whoisyourdaddy/subs/all-v6-geo.yaml
 
 反代IP（ProxyIP）(cmliu):
 

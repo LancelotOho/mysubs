@@ -9,15 +9,10 @@ global-ua: clash.meta
 log-level: warning
 external-controller: 0.0.0.0:9090
 bind-address: "*"
-ipv6: true
+ipv6: false
 tcp-concurrent: true
 unified-delay: true
 find-process-mode: strict
-
-authentication:
-  - joinlidong:li19882008
-skip-auth-prefixes:
-  - 192.168.22.0/24
 
 tun:
   enable: false
@@ -31,7 +26,7 @@ tun:
 
 dns:
   enable: true
-  ipv6: true
+  ipv6: false
   prefer-h3: false
   listen: 0.0.0.0:7874
   use-hosts: false
@@ -127,34 +122,20 @@ profile:
   store-fake-ip: true
 
 proxy-providers:
-  cm:
+  sub1:
     type: http
-    url: "https://c1m3p2a8g2e6s.lancelot.dpdns.org/sub?token=cc3a3c105a7512d49037a5c2a23c59b2&clash"
+    url: ""
     interval: 10800
-    path: "./proxy_provider/cm.yaml"
+    path: ./proxy_provider/sub1.yaml
     proxy: DIRECT
     header:
       User-Agent: 
         - clash.meta
     override:
-      additional-prefix: "[cm]"
+      additional-prefix: "[*]"
       skip-cert-verify: false
       udp: true
-                  
-  joey:
-    type: http
-    url: "https://c4f2n5e3w7p5a6g7e5s.lancelot.dpdns.org/admin/sub?target=clash"
-    interval: 10800
-    path: "./proxy_provider/joey.yaml"
-    proxy: DIRECT
-    header:
-      User-Agent: 
-        - clash.meta   
-    override: 
-      additional-prefix: "[joey]"
-      skip-cert-verify: false
-      udp: true
-               
+                                 
 proxy-groups:
   - name: 🥳打包代理
     type: select
@@ -205,7 +186,7 @@ proxy-groups:
       - 🫱手动选择
       - ⭕故障切换
 
-  - name: ⚠️屏蔽广告
+  - name: ⚠️拒绝连接
     type: select
     proxies:
       - REJECT
@@ -219,25 +200,72 @@ rule-providers:
     type: http
     behavior: domain
     proxy: DIRECT
-    interval: 86400
+    format: yaml
     url: "https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/reject.txt"
-    path: "./ruleset/dn/reject.yaml"
+    path: ./ruleset/dn/reject.yaml
+    interval: 86400
 
   direct:
     type: http
     behavior: domain
     proxy: DIRECT
+    format: yaml
     url: "https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/direct.txt"
     path: ./ruleset/dn/direct.yaml
     interval: 86400
-
 
   private:
     type: http
     behavior: domain
     proxy: DIRECT
+    format: yaml
     url: "https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/private.txt"
     path: ./ruleset/dn/private.yaml
+    interval: 86400
+
+  google:
+    type: http
+    behavior: domain
+    proxy: DIRECT
+    format: yaml
+    url: "https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/google.txt"
+    path: ./ruleset/dn/google.yaml
+    interval: 86400
+
+  gfw:
+    type: http
+    behavior: domain
+    proxy: DIRECT
+    format: yaml
+    url: "https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/gfw.txt"
+    path: ./ruleset/dn/gfw.yaml
+    interval: 86400
+
+  tld-not-cn:
+    type: http
+    behavior: domain
+    proxy: DIRECT
+    format: yaml
+    url: "https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/tld-not-cn.txt"
+    path: ./ruleset/dn/tld-not-cn.yaml
+    interval: 86400    
+
+  github:
+    type: http
+    behavior: domain
+    proxy: DIRECT
+    format: mrs
+    url: "https://fastly.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@meta/geo/geosite/github.mrs"
+    path: ./ruleset/dn/github.mrs
+    interval: 86400
+
+  microsoft:
+    type: http
+    behavior: domain
+    proxy: DIRECT
+    format: mrs
+    url: "https://fastly.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@meta/geo/geosite/microsoft.mrs"
+    path: ./ruleset/dn/microsoft.mrs
     interval: 86400
 
   # IP规则集
@@ -245,6 +273,7 @@ rule-providers:
     type: http
     behavior: ipcidr
     proxy: DIRECT
+    format: yaml
     url: "https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/telegramcidr.txt"
     path: ./ruleset/ip/telegramcidr.yaml
     interval: 86400
@@ -253,6 +282,7 @@ rule-providers:
     type: http
     behavior: ipcidr
     proxy: DIRECT
+    format: yaml
     url: "https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/cncidr.txt"
     path: ./ruleset/ip/cncidr.yaml
     interval: 86400
@@ -261,23 +291,35 @@ rule-providers:
     type: http
     behavior: ipcidr
     proxy: DIRECT
+    format: yaml
     url: "https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/lancidr.txt"
     path: ./ruleset/ip/lancidr.yaml
     interval: 86400
 
+  googleip:
+    type: http
+    behavior: ipcidr
+    proxy: DIRECT
+    format: mrs
+    url: "https://fastly.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@meta/geo/geoip/google.mrs"
+    path: ./ruleset/ip/google.mrs
+    interval: 86400
+
 rules:
-  - RULE-SET,reject,⚠️屏蔽广告
-  - RULE-SET,telegramcidr,🥳打包代理
+  - AND,((DST-PORT,443),(NETWORK,UDP)),⚠️拒绝连接
+  - RULE-SET,reject,⚠️拒绝连接
   # 自定义直连
-  - DOMAIN-SUFFIX,vsean.net,🎯全球直连
   - DOMAIN-SUFFIX,jsdelivr.net,🎯全球直连
-  - DOMAIN-SUFFIX,lancelot1988.dpdns.org,🎯全球直连
-  - DOMAIN-SUFFIX,lancelot.indevs.in,🎯全球直连
-  - DOMAIN-SUFFIX,19882008.xyz,🎯全球直连
-  - DOMAIN-SUFFIX,lancelot.dpdns.org,🎯全球直连
+  - DOMAIN-SUFFIX,jsdelivr.com,🎯全球直连
   # rule-set规则集
   - RULE-SET,private,🎯全球直连
   - RULE-SET,direct,🎯全球直连
   - RULE-SET,lancidr,🎯全球直连,no-resolve
   - RULE-SET,cncidr,🎯全球直连,no-resolve
+  - RULE-SET,telegramcidr,🥳打包代理,no-resolve
+  - RULE-SET,microsoft,🥳打包代理
+  - RULE-SET,google,🥳打包代理
+  - RULE-SET,googleip,🥳打包代理,no-resolve  
+  - RULE-SET,gfw,🥳打包代理
+  - RULE-SET,tld-not-cn,🥳打包代理  
   - MATCH,🥳打包代理

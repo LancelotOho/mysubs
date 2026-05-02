@@ -131,7 +131,7 @@ proxy-providers:
     type: http
     url: "https://c1m3p2a8g2e6s.lancelot.dpdns.org/sub?token=cc3a3c105a7512d49037a5c2a23c59b2&clash"
     interval: 10800
-    path: "./proxy_provider/cm.yaml"
+    path: ./proxy_provider/cm.yaml
     proxy: DIRECT
     header:
       User-Agent: 
@@ -145,7 +145,7 @@ proxy-providers:
     type: http
     url: "https://c4f2n5e3w7p5a6g7e5s.lancelot.dpdns.org/admin/sub?target=clash"
     interval: 10800
-    path: "./proxy_provider/joey.yaml"
+    path: ./proxy_provider/joey.yaml
     proxy: DIRECT
     header:
       User-Agent: 
