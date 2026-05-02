@@ -278,7 +278,7 @@ rule-providers:
     path: ./ruleset/dn/github.mrs
     interval: 86400
 
-  Microsoft:
+  microsoft:
     type: http
     behavior: domain
     proxy: DIRECT
@@ -339,6 +339,7 @@ rules:
   - RULE-SET,lancidr,🎯全球直连,no-resolve
   - RULE-SET,cncidr,🎯全球直连,no-resolve
   - RULE-SET,telegramcidr,🥳打包代理,no-resolve
+  - RULE-SET,microsoft,🥳打包代理
   - RULE-SET,google,🥳打包代理
   - RULE-SET,googleip,🥳打包代理,no-resolve  
   - RULE-SET,gfw,🥳打包代理
