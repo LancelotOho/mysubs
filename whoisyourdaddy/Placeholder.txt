@@ -1,11 +1,13 @@
 
 #依赖Loyalsoldier/clash-rules的rule-set规则集👇,3种获取方式
 
-https://ghproxy.19882008.xyz/https://raw.githubusercontent.com/LancelotOho/mysubs/devdev/whoisyourdaddy/subs/all-v8-set.yaml
+原生地址：https://raw.githubusercontent.com/LancelotOho/mysubs/devdev/whoisyourdaddy/subs/all-v8-set.yaml
 
-https://fastly.jsdelivr.net/gh/LancelotOho/mysubs@devdev/whoisyourdaddy/subs/all-v8-set.yaml
+加速地址：https://ghproxy.19882008.xyz/https://raw.githubusercontent.com/LancelotOho/mysubs/devdev/whoisyourdaddy/subs/all-v8-set.yaml
 
-https://cdn.jsdelivr.net/gh/LancelotOho/mysubs@devdev/whoisyourdaddy/subs/all-v8-set.yaml
+加速地址：https://fastly.jsdelivr.net/gh/LancelotOho/mysubs@devdev/whoisyourdaddy/subs/all-v8-set.yaml
+
+加速地址：https://cdn.jsdelivr.net/gh/LancelotOho/mysubs@devdev/whoisyourdaddy/subs/all-v8-set.yaml
 
 #依赖Loyalsoldier/v2ray-rules-dat的geoip,geosite规则集👇
 
@@ -42,12 +44,12 @@ mfa.gov.ua#乌克兰外交部
 www.shopify.com#www.shopify.com
 store.ubi.com#育碧
 staticdelivery.nexusmods.com#NexusMods
-pages.dev:443# Pages
+pages.dev:443#cf Pages
 r2.dev:443#R2
 cdnjs.com:443#CDNJS
-static.cloudflareinsights.com:443#Analytics
-cloudflare-dns.com:443#DNS
-cloudflare-ech.com:443#ECH
+static.cloudflareinsights.com:443#cf Analytics
+cloudflare-dns.com:443#cf DNS
+cloudflare-ech.com:443#cf ECH
 digitalocean.com:443#DigitalOcean
 hongkongairport.com:443#香港AirPort
 glassdoor.com:443#Glassdoor
@@ -68,7 +70,6 @@ livescore.co.kr:443#LiveScore
 csgo.com:443#CSGO
 cloudflare.182682.xyz:443#WeTest
 bestcf.top:443#VPS789
-cloudflare.byoip.top:443#NB
 
 实际不好用：
 #time.is#官方优选
