@@ -134,7 +134,6 @@ proxy-providers:
     override:
       additional-prefix: "[*]"
       skip-cert-verify: false
-      udp: true
                                  
 proxy-groups:
   - name: 🥳打包代理
@@ -319,7 +318,6 @@ rules:
   - RULE-SET,telegramcidr,🥳打包代理,no-resolve
   - RULE-SET,microsoft,🥳打包代理
   - RULE-SET,google,🥳打包代理
-  - RULE-SET,googleip,🥳打包代理,no-resolve  
   - RULE-SET,gfw,🥳打包代理
   - RULE-SET,tld-not-cn,🥳打包代理  
   - MATCH,🥳打包代理

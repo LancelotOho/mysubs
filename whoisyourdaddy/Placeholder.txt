@@ -79,6 +79,9 @@ bestcf.top:443#VPS789
 优选IP URL：
 https://cf.090227.xyz/ct
 
+bestcf cf优选资源汇总
+https://bestcf.pages.dev/
+
 
 优选域名横版：
 youxuan.cf.090227.xyz#youxuan.cf.090227.xyz,cf.tencentapp.cn#cf.tencentapp.cn,saas.sin.fan#saas.sin.fan,www.visa.cn#www.visa.cn,mfa.gov.ua#乌克兰外交部,[www.shopify.com](https://www.shopify.com)#[www.shopify.com](https://www.shopify.com),store.ubi.com#store.ubi.com,staticdelivery.nexusmods.com#NexusMods,cloudflare.lingyucat.com#三网通用 V4+V6,ct.cloudflare.lingyucat.com#电信 V4,cm.cloudflare.lingyucat.com#移动 V4,cu.cloudflare.lingyucat.com#联通 V4
