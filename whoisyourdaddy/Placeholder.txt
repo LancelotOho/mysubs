@@ -52,12 +52,35 @@ saas.sin.fan#saas.sin.fan
 www.visa.cn#www.visa.cn
 mfa.gov.ua#乌克兰外交部
 www.shopify.com#www.shopify.com
-store.ubi.com#store.ubi.com
+store.ubi.com#育碧
 staticdelivery.nexusmods.com#NexusMods
-cloudflare.lingyucat.com#三网通用 V4+V6
-ct.cloudflare.lingyucat.com#电信 V4
-cm.cloudflare.lingyucat.com#移动 V4
-cu.cloudflare.lingyucat.com#联通 V4
+pages.dev:443# Pages
+r2.dev:443#R2
+cdnjs.com:443#CDNJS
+static.cloudflareinsights.com:443#Analytics
+cloudflare-dns.com:443#DNS
+cloudflare-ech.com:443#ECH
+digitalocean.com:443#DigitalOcean
+hongkongairport.com:443#香港AirPort
+glassdoor.com:443#Glassdoor
+udemy.com:443#Udemy
+biomaterials.ust.hk:443#香港科大
+ln.edu.hk:443#岭南大学
+www.ntu.edu.sg:443#南洋理工
+www.ox.ac.uk:443#牛津大学
+www.researchgate.net:443#ResearchGate
+skk.moe:443#Sukka
+bestcf.030101.xyz:443#MingYu
+ip.cf.cname.vvhan.com:443#vvHan
+cdn.jsdelivr.net:443#jsDelivr
+openai.com:443#OpenAI
+markmonitor.com:443#MarkMonitor
+www.speedtest.net:443#SpeedTest
+livescore.co.kr:443#LiveScore
+csgo.com:443#CSGO
+cloudflare.182682.xyz:443#WeTest
+bestcf.top:443#VPS789
+cloudflare.byoip.top:443#NB
 
 实际不好用：
 #time.is#官方优选
