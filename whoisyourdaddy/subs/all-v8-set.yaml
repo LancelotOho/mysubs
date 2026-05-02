@@ -221,7 +221,7 @@ rule-providers:
     proxy: DIRECT
     format: yaml
     url: "https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/reject.txt"
-    path: "./ruleset/dn/reject.yaml"
+    path: ./ruleset/dn/reject.yaml
     interval: 86400
 
   direct:
@@ -275,9 +275,17 @@ rule-providers:
     proxy: DIRECT
     format: mrs
     url: "https://fastly.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@meta/geo/geosite/github.mrs"
-    path: "./ruleset/dn/github.mrs"
+    path: ./ruleset/dn/github.mrs
     interval: 86400
 
+  Microsoft:
+    type: http
+    behavior: domain
+    proxy: DIRECT
+    format: mrs
+    url: "https://fastly.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@meta/geo/geosite/microsoft.mrs"
+    path: ./ruleset/dn/microsoft.mrs
+    interval: 86400
 
   # IP规则集
   telegramcidr:
@@ -313,7 +321,7 @@ rule-providers:
     proxy: DIRECT
     format: mrs
     url: "https://fastly.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@meta/geo/geoip/google.mrs"
-    path: "./ruleset/ip/google.mrs"  
+    path: ./ruleset/ip/google.mrs
     interval: 86400
 
 rules:
