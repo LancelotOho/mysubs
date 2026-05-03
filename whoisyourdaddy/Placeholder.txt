@@ -5,8 +5,6 @@
 
 加速地址：https://ghproxy.19882008.xyz/https://raw.githubusercontent.com/LancelotOho/mysubs/devdev/whoisyourdaddy/subs/all-v8-set.yaml
 
-加速地址：https://fastly.jsdelivr.net/gh/LancelotOho/mysubs@devdev/whoisyourdaddy/subs/all-v8-set.yaml
-
 加速地址：https://cdn.jsdelivr.net/gh/LancelotOho/mysubs@devdev/whoisyourdaddy/subs/all-v8-set.yaml
 
 #依赖Loyalsoldier/v2ray-rules-dat的geoip,geosite规则集👇
@@ -63,7 +61,6 @@ skk.moe:443#Sukka
 bestcf.030101.xyz:443#MingYu
 ip.cf.cname.vvhan.com:443#vvHan
 cdn.jsdelivr.net:443#jsDelivr
-openai.com:443#OpenAI
 markmonitor.com:443#MarkMonitor
 www.speedtest.net:443#SpeedTest
 livescore.co.kr:443#LiveScore
