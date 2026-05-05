@@ -215,10 +215,9 @@ rules:
   # 自定义直连
   - DOMAIN-SUFFIX,vsean.net,🎯全球直连
   - DOMAIN-SUFFIX,jsdelivr.net,🎯全球直连
-  - DOMAIN-SUFFIX,lancelot1988.dpdns.org,🎯全球直连
   - DOMAIN-SUFFIX,lancelot.indevs.in,🎯全球直连
   - DOMAIN-SUFFIX,19882008.xyz,🎯全球直连
-  - DOMAIN-SUFFIX,lancelot.dpdns.org,🎯全球直连
+  - DOMAIN-SUFFIX,dpdns.org,🎯全球直连
   # geo规则规则
   - GEOSITE,private,🎯全球直连
   - GEOIP,private,🎯全球直连,no-resolve
