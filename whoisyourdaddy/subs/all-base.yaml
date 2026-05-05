@@ -226,9 +226,9 @@ rule-providers:
     type: http
     behavior: domain
     proxy: DIRECT
-    format: yaml
-    url: "https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/google.txt"
-    path: ./ruleset/dn/google.yaml
+    format: mrs
+    url: "https://cdn.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@meta/geo/geosite/google.mrs"
+    path: ./ruleset/dn/google.mrs
     interval: 86400
 
   gfw:
@@ -254,7 +254,7 @@ rule-providers:
     behavior: domain
     proxy: DIRECT
     format: mrs
-    url: "https://fastly.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@meta/geo/geosite/github.mrs"
+    url: "https://cdn.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@meta/geo/geosite/github.mrs"
     path: ./ruleset/dn/github.mrs
     interval: 86400
 
@@ -263,7 +263,7 @@ rule-providers:
     behavior: domain
     proxy: DIRECT
     format: mrs
-    url: "https://fastly.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@meta/geo/geosite/microsoft.mrs"
+    url: "https://cdn.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@meta/geo/geosite/microsoft.mrs"
     path: ./ruleset/dn/microsoft.mrs
     interval: 86400
 
